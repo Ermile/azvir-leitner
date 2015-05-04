@@ -1,0 +1,37 @@
+@import url("font-awesome.min.css");
+@import url("jquery.dataTables.css");
+
+
+
+.content_def{margin-bottom:80px}
+.cover{padding-top: 80px;margin-top:-45px;}
+#header-back {height: 45px;}
+
+.medium-editor-placeholder{background-color: #eee;}
+
+
+
+/* Admin */
+#options{position: relative;z-index:2;width:100%;line-height: 35px;height: 35px;overflow:hidden;}
+#options-meta{background-color:#f3f3f3;padding:0;padding-left:120px;
+transition: all .2s ease;-webkit-transition: all .2s ease;-o-transition: all .2s ease;-moz-transition: all .2s ease;}
+#options-link{font-size: 14px;padding:0 20px;position: absolute;left:0px;top:0;z-index:2;background-color: #363636;background-color:#f3f3f3;border-width: 0;border-width:0 3px;border-style: solid;border-color: transparent;}
+#options-link:hover{background-color: #E8E5E5;border-style: solid;border-left-color: #2DB2EA;}
+#options .disappear{opacity: 0}
+
+.rtl #options-meta{padding-right: 120px;}
+.rtl #options-link{right:0;left:auto;}
+.rtl #options-link:hover{border-left-color:transparent;border-right-color: #2DB2EA;}
+
+
+#options-meta input{vertical-align:middle;}
+#options-meta span{vertical-align:middle;}
+
+.form-element{transition: all .5s ease;-webkit-transition: all .5s ease;-o-transition: all .5s ease;-moz-transition: all .5s ease;
+  display: block;
+}
+.form-element.disappear{display: none;}
+.form-element.visuallyhidden {opacity: 0;}
+
+
+

@@ -1,0 +1,26 @@
+{%extends display.mvc%}
+
+{%block header_def%}
+{%endblock%}
+
+
+{%block content_def%}
+ <section>
+  <div class="topic cover light1">
+   <div class="row Slogan">
+    <h2>{{site.slogan}}</h2>
+   </div>
+   <div class="body">
+    <div class="row auto">
+     <div class="span7">
+      <h3>{%trans "Powered by Saloos"%}</h3>
+      <div class="desc">
+      </div>
+     </div>
+     <div class="span5"></div>
+     <img src="{{url.static}}images/logo.png" alt='{%trans "Powered by Saloos"%}'>
+    </div>
+   </div>
+  </div>
+ </section>
+{%endblock%}
