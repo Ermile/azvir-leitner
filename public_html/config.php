@@ -7,13 +7,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
  /** The name of the database */
- define("db_name", 'saloos');
+ define("db_name", 'azvir');
 
  /** MySQL database username */
- define("db_user", 'root');
+ define("db_user", 'ermile');
 
  /** MySQL database password */
- define("db_pass", '');
+ define("db_pass", 'ermile@#$567');
 
 /**
  * For developers: debugging mode.

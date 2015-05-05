@@ -1,5 +1,5 @@
 <?php
-namespace database\saloos;
+namespace database\azvir;
 class options 
 {
 	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];

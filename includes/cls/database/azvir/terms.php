@@ -1,5 +1,5 @@
 <?php
-namespace database\saloos;
+namespace database\azvir;
 class terms 
 {
 	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];

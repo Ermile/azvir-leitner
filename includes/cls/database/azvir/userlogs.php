@@ -1,5 +1,5 @@
 <?php
-namespace database\saloos;
+namespace database\azvir;
 class userlogs 
 {
 	public $id               = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2015 at 01:25 PM
+-- Generation Time: May 05, 2015 at 04:35 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -17,8 +17,72 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `saloos`
+-- Database: `azvir`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cardcats`
+--
+
+CREATE TABLE IF NOT EXISTS `cardcats` (
+  `id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned DEFAULT NULL,
+  `cardcats_type` varchar(50) DEFAULT NULL,
+  `cardcats_title` varchar(50) NOT NULL,
+  `cardcats_slug` varchar(50) NOT NULL,
+  `cardcats_desc` text,
+  `cardcats_url` varchar(200) NOT NULL,
+  `cardcats_parent` int(10) unsigned DEFAULT NULL,
+  `cardcats_count` smallint(5) unsigned DEFAULT NULL,
+  `cardcats_status` enum('enable','disable','expire','public','private','protected') NOT NULL DEFAULT 'enable',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carddetails`
+--
+
+CREATE TABLE IF NOT EXISTS `carddetails` (
+  `user_id` int(10) unsigned NOT NULL,
+  `card_id` bigint(20) unsigned NOT NULL,
+  `carddetails_date` datetime NOT NULL,
+  `carddetail_status` enum('success','fail','ignore','change') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cards`
+--
+
+CREATE TABLE IF NOT EXISTS `cards` (
+  `id` bigint(20) unsigned NOT NULL,
+  `card_front` text NOT NULL,
+  `card_back` text NOT NULL,
+  `card_createdate` datetime DEFAULT NULL,
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cardusages`
+--
+
+CREATE TABLE IF NOT EXISTS `cardusages` (
+  `card_id` bigint(20) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `cardcat_id` int(10) unsigned DEFAULT NULL,
+  `cardusage_deck` smallint(5) unsigned DEFAULT NULL,
+  `cardusage_try` smallint(5) unsigned DEFAULT NULL,
+  `cardusage_trysuccess` smallint(5) unsigned DEFAULT NULL,
+  `cardusage_expire` datetime DEFAULT NULL,
+  `cardusages_lasttry` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -161,28 +225,19 @@ CREATE TABLE IF NOT EXISTS `postmetas` (
 CREATE TABLE IF NOT EXISTS `posts` (
 `id` bigint(20) unsigned NOT NULL,
   `post_language` char(2) DEFAULT NULL,
-  `post_cat` varchar(50) DEFAULT NULL,
   `post_title` varchar(100) NOT NULL,
   `post_slug` varchar(100) NOT NULL,
   `post_content` text,
   `post_type` varchar(50) NOT NULL DEFAULT 'post',
-  `post_url` text,
+  `post_url` varchar(2000) NOT NULL,
   `post_comment` enum('open','closed') DEFAULT NULL,
   `post_count` smallint(5) unsigned DEFAULT NULL,
   `post_status` enum('publish','draft','schedule','deleted','expire') NOT NULL DEFAULT 'draft',
-  `post_parent` smallint(5) unsigned DEFAULT NULL,
+  `post_parent` bigint(20) unsigned DEFAULT NULL,
   `user_id` int(10) unsigned NOT NULL,
   `post_publishdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `posts`
---
-
-INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug`, `post_content`, `post_type`, `post_url`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `post_publishdate`, `date_modified`) VALUES
-(1, 'fa', NULL, 'test1', 'page1', 'salam. in test 1 ast', 'page', NULL, 'open', NULL, 'publish', NULL, 150, NULL, '2015-02-11 14:46:49'),
-(2, 'en', 'test', 'post1', 'post1', 'salam. post1 ast', 'post', NULL, 'open', NULL, 'publish', NULL, 150, NULL, '2015-02-11 14:46:52');
+) ENGINE=InnoDB AUTO_INCREMENT=297 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -193,25 +248,16 @@ INSERT INTO `posts` (`id`, `post_language`, `post_cat`, `post_title`, `post_slug
 CREATE TABLE IF NOT EXISTS `terms` (
 `id` int(10) unsigned NOT NULL,
   `term_language` char(2) DEFAULT NULL,
-  `term_cat` varchar(50) NOT NULL,
+  `term_type` varchar(50) NOT NULL DEFAULT 'tag',
   `term_title` varchar(50) NOT NULL,
   `term_slug` varchar(50) NOT NULL,
-  `term_desc` text NOT NULL,
+  `term_desc` text,
+  `term_url` varchar(200) NOT NULL,
   `term_parent` int(10) unsigned DEFAULT NULL,
   `term_count` smallint(5) unsigned DEFAULT NULL,
   `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `terms`
---
-
-INSERT INTO `terms` (`id`, `term_language`, `term_cat`, `term_title`, `term_slug`, `term_desc`, `term_parent`, `term_count`, `term_status`, `date_modified`) VALUES
-(1, NULL, '', 'news', 'news', '', NULL, NULL, 'enable', '0000-00-00 00:00:00'),
-(5, NULL, '', 'test', 'test', 't', NULL, NULL, 'enable', '2015-01-18 13:33:13'),
-(6, NULL, '', 'news2', 'news2', 'news 2', 1, NULL, 'enable', '2015-01-18 15:45:20'),
-(7, NULL, '', 'tag1', 'tag1', '', NULL, NULL, 'enable', NULL);
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -256,7 +302,14 @@ CREATE TABLE IF NOT EXISTS `usermetas` (
   `usermeta_value` varchar(500) DEFAULT NULL,
   `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `usermetas`
+--
+
+INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_key`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
+(1, 15, 'profile', 'year', '1369', 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -271,7 +324,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_pass` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `user_displayname` varchar(50) DEFAULT NULL,
   `user_status` enum('active','awaiting','deactive','removed','filter') DEFAULT 'awaiting',
-  `permission_id` smallint(5) unsigned DEFAULT NULL,
+  `user_permission` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=utf8;
@@ -280,7 +333,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `permission_id`, `user_createdate`, `date_modified`) VALUES
+INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `user_permission`, `user_createdate`, `date_modified`) VALUES
 (15, '989356032043', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Hasan', 'active', 1, '0000-00-00 00:00:00', NULL),
 (150, '989199840989', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Mahdi', 'active', 1, '0000-00-00 00:00:00', NULL),
 (190, '989357269759', NULL, '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', 'javad', 'active', 1, '2015-01-25 04:52:07', '2015-02-25 01:19:43'),
@@ -343,6 +396,30 @@ CREATE TABLE IF NOT EXISTS `visitors` (
 --
 
 --
+-- Indexes for table `cardcats`
+--
+ALTER TABLE `cardcats`
+ ADD PRIMARY KEY (`id`), ADD KEY `cardcats_users_id` (`user_id`);
+
+--
+-- Indexes for table `carddetails`
+--
+ALTER TABLE `carddetails`
+ ADD KEY `carddetails_users_id` (`user_id`), ADD KEY `carddetails_cards_id` (`card_id`);
+
+--
+-- Indexes for table `cards`
+--
+ALTER TABLE `cards`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cardusages`
+--
+ALTER TABLE `cardusages`
+ ADD KEY `cardusages_users_id` (`user_id`), ADD KEY `cardusages_cards_id` (`card_id`), ADD KEY `cardusages_cardcats_id` (`cardcat_id`);
+
+--
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
@@ -382,13 +459,13 @@ ALTER TABLE `postmetas`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug+catslug_unique` (`post_cat`,`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posturl_index` (`post_url`(255));
 
 --
 -- Indexes for table `terms`
 --
 ALTER TABLE `terms`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE;
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE, ADD UNIQUE KEY `termurl_unique` (`term_url`);
 
 --
 -- Indexes for table `termusages`
@@ -412,7 +489,7 @@ ALTER TABLE `usermetas`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE, ADD KEY `users_permissions_id` (`permission_id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE;
 
 --
 -- Indexes for table `verifications`
@@ -454,12 +531,12 @@ MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=297;
 --
 -- AUTO_INCREMENT for table `terms`
 --
 ALTER TABLE `terms`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `userlogs`
 --
@@ -469,7 +546,7 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `usermetas`
 --
 ALTER TABLE `usermetas`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -488,6 +565,27 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `cardcats`
+--
+ALTER TABLE `cardcats`
+ADD CONSTRAINT `cardcats_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `carddetails`
+--
+ALTER TABLE `carddetails`
+ADD CONSTRAINT `carddetails_cards_id` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `carddetails_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `cardusages`
+--
+ALTER TABLE `cardusages`
+ADD CONSTRAINT `cardusages_cardcats_id` FOREIGN KEY (`cardcat_id`) REFERENCES `cardcats` (`id`) ON UPDATE CASCADE,
+ADD CONSTRAINT `cardusages_cards_id` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `cardusages_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `comments`

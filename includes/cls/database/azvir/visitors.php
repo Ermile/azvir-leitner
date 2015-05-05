@@ -1,5 +1,5 @@
 <?php
-namespace database\saloos;
+namespace database\azvir;
 class visitors 
 {
 	public $id                 = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];

@@ -2,6 +2,55 @@
 function transtext()
 {
 
+	// ------------------------------------------------------------ Table cardcats
+	echo T_("cardcats");            // Table cardcats
+	echo T_("cardcat");             // cardcat
+	echo T_("enable");              // Enum enable
+	echo T_("disable");             // Enum disable
+	echo T_("expire");              // Enum expire
+	echo T_("public");              // Enum public
+	echo T_("private");             // Enum private
+	echo T_("protected");           // Enum protected
+	echo T_("id");                  // id
+	echo T_("user");                // user_id
+	echo T_("type");                // cardcats_type
+	echo T_("title");               // cardcats_title
+	echo T_("slug");                // cardcats_slug
+	echo T_("desc");                // cardcats_desc
+	echo T_("url");                 // cardcats_url
+	echo T_("parent");              // cardcats_parent
+	echo T_("count");               // cardcats_count
+	echo T_("status");              // cardcats_status
+	echo T_("modified");            // date_modified
+
+	// ------------------------------------------------------------ Table carddetails
+	echo T_("carddetails");         // Table carddetails
+	echo T_("carddetail");          // carddetail
+	echo T_("success");             // Enum success
+	echo T_("fail");                // Enum fail
+	echo T_("ignore");              // Enum ignore
+	echo T_("change");              // Enum change
+	echo T_("card");                // card_id
+	echo T_("date");                // carddetails_date
+	echo T_("status");              // carddetail_status
+
+	// ------------------------------------------------------------ Table cards
+	echo T_("cards");               // Table cards
+	echo T_("card");                // card
+	echo T_("front");               // card_front
+	echo T_("back");                // card_back
+	echo T_("createdate");          // card_createdate
+
+	// ------------------------------------------------------------ Table cardusages
+	echo T_("cardusages");          // Table cardusages
+	echo T_("cardusage");           // cardusage
+	echo T_("cardcat");             // cardcat_id
+	echo T_("deck");                // cardusage_deck
+	echo T_("try");                 // cardusage_try
+	echo T_("trysuccess");          // cardusage_trysuccess
+	echo T_("expire");              // cardusage_expire
+	echo T_("lasttry");             // cardusages_lasttry
+
 	// ------------------------------------------------------------ Table comments
 	echo T_("comments");            // Table comments
 	echo T_("comment");             // comment
@@ -9,7 +58,6 @@ function transtext()
 	echo T_("unapproved");          // Enum unapproved
 	echo T_("spam");                // Enum spam
 	echo T_("deleted");             // Enum deleted
-	echo T_("id");                  // id
 	echo T_("post");                // post_id
 	echo T_("product");             // product_id
 	echo T_("author");              // comment_author
@@ -18,9 +66,7 @@ function transtext()
 	echo T_("content");             // comment_content
 	echo T_("status");              // comment_status
 	echo T_("parent");              // comment_parent
-	echo T_("user");                // user_id
 	echo T_("visitor");             // Visitor_id
-	echo T_("modified");            // date_modified
 
 	// ------------------------------------------------------------ Table errorlogs
 	echo T_("errorlogs");           // Table errorlogs
@@ -43,7 +89,6 @@ function transtext()
 	echo T_("notification");        // notification
 	echo T_("read");                // Enum read
 	echo T_("unread");              // Enum unread
-	echo T_("expire");              // Enum expire
 	echo T_("user sender");         // user_idsender
 	echo T_("title");               // notification_title
 	echo T_("content");             // notification_content
@@ -53,8 +98,6 @@ function transtext()
 	// ------------------------------------------------------------ Table options
 	echo T_("options");             // Table options
 	echo T_("option");              // option
-	echo T_("enable");              // Enum enable
-	echo T_("disable");             // Enum disable
 	echo T_("cat");                 // option_cat
 	echo T_("key");                 // option_key
 	echo T_("value");               // option_value
@@ -144,7 +187,7 @@ function transtext()
 	echo T_("pass");                // user_pass
 	echo T_("displayname");         // user_displayname
 	echo T_("status");              // user_status
-	echo T_("permission");          // permission_id
+	echo T_("permission");          // user_permission
 	echo T_("createdate");          // user_createdate
 
 	// ------------------------------------------------------------ Table verifications
