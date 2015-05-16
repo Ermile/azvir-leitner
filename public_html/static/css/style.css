@@ -1,0 +1,11 @@
+@media only screen and (max-width : 992px) {
+	nav .brand-logo {
+		left: auto;
+	}
+}
+
+.xx div {
+	width: 20px;
+	height: 20px;
+	background: red;
+}
