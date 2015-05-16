@@ -1,5 +1,5 @@
 <?php
-namespace content\home;
+namespace content\cats;
 use \lib\saloos;
 
 class controller extends \mvc\controller
@@ -15,6 +15,7 @@ class controller extends \mvc\controller
 	// for routing check
 	function _route()
 	{
+		var_dump(20);
 
 	}
 }

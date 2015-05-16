@@ -1,5 +1,5 @@
 <?php
-namespace content\home;
+namespace content\cats;
 
 class view extends \mvc\view
 {
