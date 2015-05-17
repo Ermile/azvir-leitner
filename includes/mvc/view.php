@@ -27,6 +27,7 @@ class view extends \lib\mvc\view
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 
+		$this->data->display['cards']     = "content_cards/home/layout.html";
 		if(method_exists($this, 'options')){
 			$this->options();
 		}

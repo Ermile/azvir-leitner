@@ -5,9 +5,10 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		// $myform                 = $this->createform('@'.db_name.'.Cardcats', $this->data->child);
+		$this->data->datatable = $this->model()->get_cats();
+		// var_dump($this->data->datatable);
 
-		# code...
+		// $myform                 = $this->createform('@'.db_name.'.Cardcats', $this->data->child);
 	}
 }
 ?>

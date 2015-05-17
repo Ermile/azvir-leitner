@@ -1,12 +1,13 @@
 <?php
-namespace content\cats;
+namespace content_cards\cats;
 use \lib\debug;
 
 class model extends \mvc\model
 {
-	public function get_test($object)
+	public function get_cats()
 	{
-		return 1;
+		$datatable = $this->sql()->table('cardcats')->select()->allassoc();
+		return $datatable;
 	}
 
 	public function post_test($object)

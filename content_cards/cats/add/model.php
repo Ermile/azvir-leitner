@@ -1,5 +1,5 @@
 <?php
-namespace content\cats;
+namespace content_cards\cats\add;
 use \lib\debug;
 
 class model extends \mvc\model
