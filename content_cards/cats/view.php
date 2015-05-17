@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\cats\home;
+namespace content_cards\cats;
 
 class view extends \mvc\view
 {
@@ -18,6 +18,10 @@ class view extends \mvc\view
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get('cardcats');
 		}
+
+		if($this->child() === 'edit')
+			$this->data->datarow = $this->model()->datarow('cardcats', $this->childparam('edit'));
 	}
+
 }
 ?>
