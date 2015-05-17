@@ -5,9 +5,12 @@ class view extends \mvc\view
 {
 	public function config()
 	{
-		// $myform                 = $this->createform('@'.db_name.'.Cardcats', $this->data->child);
+		$this->data->bodyel     = "data-spy='scroll' data-offset='0' data-target='#navbar-main'";
 
-		# code...
+		$this->url->MainStatic       = false;
+		$this->include->css_main     = false;
+		$this->include->css          = false;
+		$this->include->js           = false;
 	}
 }
 ?>

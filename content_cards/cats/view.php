@@ -1,5 +1,5 @@
 <?php
-namespace content\cats;
+namespace content_cards\cats;
 
 class view extends \mvc\view
 {

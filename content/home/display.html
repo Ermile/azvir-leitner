@@ -1,113 +1,169 @@
 {%extends display.mvc%}
 
 {%block head_css%}
- <link rel="stylesheet"    href="{{url.myStatic}}css/materialize.min.css"/>
+
+<link href="{{url.myStatic}}assets/css/bootstrap.css" rel="stylesheet">
+
+
+<link href="{{url.myStatic}}assets/css/main.css" rel="stylesheet">
+<link href="{{url.myStatic}}assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{url.myStatic}}assets/css/animate-custom.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+<script src="{{url.myStatic}}assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{url.myStatic}}assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
 {%endblock%}
 
 
 {%block foot_js%}
-  <script src="{{url.myStatic}}js/materialize.min.js"></script>
-  <script src="{{url.myStatic}}js/highcharts/highcharts.js"></script>
-  <script src="{{url.myStatic}}js/script.js"></script>
+
+<script src="{{url.myStatic}}assets/js/bootstrap.min.js"></script> 
+<script src="{{url.myStatic}}assets/js/retina.js"></script> 
+<script src="{{url.myStatic}}assets/js/jquery.easing.1.3.js"></script> 
+<script src="{{url.myStatic}}assets/js/smoothscroll.js"></script> 
+<script src="{{url.myStatic}}assets/js/jquery-func.js"></script>
+
+
 {%endblock%}
 
 
 {%block body%}
-    <nav>
-      <div class="nav-wrapper light-blue darken-3">
-        <a href="#!" class="brand-logo center">Azvir</a>
-        
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        
-        <ul class="left hide-on-med-and-down">
-          <li><a href="#" class="waves-effect"><i class="mdi-action-search left"></i>New</a></li>
-          <li><a href="{{url.full}}#modal1" class="waves-effect modal-trigger">New Cat</a></li>
-        </ul>
-        
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="#" class="waves-effect"><i class="mdi-action-search left"></i>New</a></li>
-        </ul>
-      </div>
-    </nav>
-
-
-
-
-
-    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
-    <table class="striped">
-      <thead>
-        <tr>
-            <th data-field="id">Front Side</th>
-            <th data-field="name">Deck</th>
-            <th data-field="price">Category</th>
-            <th data-field="price">Last Test</th>
-            <th data-field="price">Expires</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
-        </tr>
-        <tr>
-          <td>Alan</td>
-          <td>Jellybean</td>
-          <td>$3.76</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
-        </tr>
-        <tr>
-          <td>Jonathan</td>
-          <td>Lollipop</td>
-          <td>$7.00</td>
-          <td>Eclair</td>
-          <td>$0.87</td>
-        </tr>
-      </tbody>
-    </table>
-
-
-
-
-<form method="post" id="addcat" action="/cat/add">
-  
- <div class="row auto container">
-  <div class="span12">
-    <input type="text" id="title" name="title" class="sp-title input" placeholder='{%trans "Enter title here"%}' />
-    <textarea name="desc" class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}'></textarea>
-    <button type="submit" value="submit" class="button positive">Add New Category</button>
+<div id="navbar-main"> 
+ <!-- Fixed navbar -->
+ <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    <a class="navbar-brand" href="#home">{{site.title}}</a> </div>
+   <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="#home" class="smoothScroll">Home</a></li>
+     <li> <a href="#about" class="smoothScroll">About</a></li>
+     <li> <a href="#services" class="smoothScroll">Services</a></li>
+     <li> <a href="#team" class="smoothScroll">Team</a></li>
+    </ul>
+   </div>
+   <!--/.nav-collapse --> 
   </div>
  </div>
+</div>
 
+<!-- ==== HEADERWRAP ==== -->
+<div id="headerwrap" name="home">
+ <header class="clearfix"> <i class="fa fa-language icon"></i>
+  <h1>Learn & Enjoy</h1>
+  <p>{{site.title}} uses Leitner flashcards to make memorizing facts<br />not only more efficient but also more fun.
+   </p>
+   <a href="http://account.{{url.raw}}/signup" class="btn btn-lg">Start learn with fun </a>
+  </header>
+</div>
+<!-- /headerwrap --> 
 
- </form>
-
-
-
-
-
-
-
-
-
-    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red">
-      <i class="large mdi-editor-mode-edit"></i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="large mdi-editor-insert-chart"></i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="large mdi-editor-format-quote"></i></a></li>
-      <li><a class="btn-floating green"><i class="large mdi-editor-publish"></i></a></li>
-      <li><a class="btn-floating blue"><i class="large mdi-editor-attach-file"></i></a></li>
-    </ul>
+<!-- ==== ABOUT ==== -->
+<div id="about" name="about">
+ <div class="container">
+  <div class="row white">
+   <h2 class="centered">ABOUT US</h2>
+   <hr>
+   <div class="col-md-6"> <img class="img-responsive" src="{{url.myStatic}}assets/img/about/about1.jpg" align=""> </div>
+   <div class="col-md-6">
+    <h3>Who we are</h3>
+    <p>We are some developer and try to create usefull tools. our another tools is comming soon</p>
+    <h3>Why choose our service?</h3>
+    <p>In past we use <a href="http://sourceforge.net/projects/jmemorize/" target="_blank">jmemorize</a> and enjoy using it. It written in Java and depending on Os. We decide to create a service like jmemorize and help people to learn with Leitner flashcard with fun and enjoy using it.
+     
+    </p>
+   </div>
   </div>
+  <!-- row --> 
+ </div>
+</div>
+<!-- container --> 
 
+<!-- ==== SERVICES ==== -->
+<div id="services" name="services">
+ <div class="container">
+  <div class="row">
+   <h2 class="centered">OUR FEATURES</h2>
+   <hr>
+   <div class="col-lg-8 col-lg-offset-2">
+    <p class="large">{{site.title}} manages your learn progress and features categories, Unicode flashcard texts, statistics and an intuitive interface.</p>
+   </div>
+   <div class="col-lg-4 callout"> <i class="fa fa-desktop fa-3x"></i>
+    <h3>Responsive Design</h3>
+    <p>You can use our service in all of your device in any resolution.</p>
+   </div>
+   <div class="col-lg-4 callout"> <i class="fa fa-gears fa-3x"></i>
+    <h3>Web Development</h3>
+    <p>We develope features and improve usability of this service.</p>
+   </div>
+   <div class="col-lg-4 callout"> <i class="fa fa-line-chart fa-3x"></i>
+    <h3>Learn Faster</h3>
+    <p>with this service based on Leitner flashcard we help you learn faster than usual and enjoy!</p>
+   </div>
+  </div>
+  <!-- row --> 
+ </div>
+</div>
+<!-- container --> 
 
-  
+<!-- ==== TEAM MEMBERS ==== -->
+<div id="team" name="team">
+ <div class="container">
+  <div class="row centered">
+   <h2 class="centered">MEET OUR TEAM</h2>
+   <hr>
+
+   <div class="col-lg-3 centered"> <img class="img img-circle" src="{{url.myStatic}}assets/img/team/javad.jpg" height="120px" width="120px" alt="">
+    <h4><strong>Javad</strong></h4>
+    <a href="twitter.com/evazzadeh" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://www.facebook.com/J.Evazzadeh" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://ir.linkedin.com/in/evazzadeh" target="_blank"><i class="fa fa-linkedin"></i></a>
+   </div>
+
+   <div class="col-lg-3 centered"> <img class="img img-circle" src="{{url.myStatic}}assets/img/team/ahmad.jpg" height="120px" width="120px" alt="">
+    <h4><b>Ahmad</b></h4>
+    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a> <a href="#" target="_blank"><i class="fa fa-facebook"></i></a> <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+   </div>
+
+   <div class="col-lg-3 centered"> <img class="img img-circle" src="{{url.myStatic}}assets/img/team/hasan.jpg" height="120px" width="120px" alt="">
+    <h4><b>Hasan</b></h4>
+   </div>
+
+   <div class="col-lg-3 centered"> <img class="img img-circle" src="{{url.myStatic}}assets/img/team/reza.jpg" height="120px" width="120px" alt="">
+    <h4><b>Reza</b></h4>
+   </div>
+
+   <div class="col-lg-8 col-lg-offset-2 centered">
+    <p class="large">You want to join our team?</p>
+   </div>
+  </div>
+ </div>
+ <!-- row --> 
+</div>
+<!-- container --> 
+
+<div id="footerwrap">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-8"> <span class="copyright">Copyright &copy; 2015 {{site.title}}.</span> </div>
+   <div class="col-md-4">
+    <ul class="list-inline social-buttons">
+     <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+     <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+     <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+     <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+ 
 {%endblock%}

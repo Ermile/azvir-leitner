@@ -7,7 +7,7 @@ class view extends \lib\mvc\view
 	{
 		// define default value for global
 
-		$this->data->site['title']   = T_("Ermile");
+		$this->data->site['title']   = T_("Azvir");
 		$this->data->site['desc']    = T_("Ermile is new");
 		$this->data->site['slogan']  = T_("Ermile is our company");
 
