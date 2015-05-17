@@ -1,29 +1,17 @@
 <?php
 namespace content_cards\cats\add;
 use \lib\debug;
-
+use \lib\utility;
 class model extends \mvc\model
 {
-	public function get_test($object)
+	public function post_add()
 	{
-		return 1;
-	}
+		$qry = $this->sql()->table('cardcats')
+			->set('user_id',       $this->login('id'))
+			->set('cardcat_title', utility::post('title'))
+			->set('cardcat_desc',  utility::post('desc'));
 
-	public function post_test($object)
-	{
-		var_dump(9);
-		return 2;
+		$this->insert($qry);
 	}
-
-	public function put_test($object)
-	{
-		return 3;
-	}
-
-	public function delete_test($object)
-	{
-		return 4;
-	}
-
 }
 ?>
