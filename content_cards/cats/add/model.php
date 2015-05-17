@@ -11,6 +11,7 @@ class model extends \mvc\model
 
 	public function post_test($object)
 	{
+		var_dump(9);
 		return 2;
 	}
 

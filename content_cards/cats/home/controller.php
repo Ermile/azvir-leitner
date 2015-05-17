@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\cats;
+namespace content_cards\cats\home;
 use \lib\saloos;
 
 class controller extends \mvc\controller
