@@ -17,13 +17,7 @@ class view extends \mvc\view
 			// get all fields of table and filter fields name for show in datatable, access from columns variable
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get('cardcats');
-			// var_dump($this->data->columns);
 		}
-
-
-		// var_dump($this->data->datatable);
-
-		// $myform                 = $this->createform('@'.db_name.'.Cardcats', $this->data->child);
 	}
 }
 ?>
