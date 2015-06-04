@@ -54,14 +54,6 @@ define('MultiLanguage', true);
 define('DefaultLanguage', 'en_US');
 
 /**
- * MainAccount
- * Default: true
- *
- * all service is managed via main account service.
- */
-// define('MainAccount', true);
-
-/**
  * SaveAsCookie
  * Default: true
  *
@@ -94,5 +86,13 @@ define('ControlPanel', true);
  * add saloos Account manager to this project
  */
 define('Account', true);
+
+/**
+ * LangList
+ * Default serialize (['fa_IR' => 'فارسی', 'en_US' => 'English'])
+ *
+ * List of Site languages
+ */
+define('LangList', serialize (['fa_IR' => 'فارسی', 'en_US' => 'English', 'ar_SA' => 'عربي']));
 
 ?>
