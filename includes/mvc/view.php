@@ -13,14 +13,8 @@ class view extends \lib\mvc\view
 
 		$this->data->page['desc']    = T_("Ermile is Inteligent.");
 
-		// add language list for use in display
-		$this->global->langlist		= array(
-												'fa_IR' => 'فارسی',
-												'en_US' => 'English',
-												'de_DE' => 'Deutsch'
-												);
 
-		$this->url->MainStatic       = false;
+		// $this->url->MainStatic       = false;
 		// $this->include->css_main     = false;
 		$this->include->css          = true;
 		$this->include->js           = false;
@@ -28,9 +22,6 @@ class view extends \lib\mvc\view
 		// $this->data->bodyclass      = null;
 
 		$this->data->display['cards']     = "content_cards/home/layout.html";
-		if(method_exists($this, 'options')){
-			$this->options();
-		}
 	}
 }
 ?>

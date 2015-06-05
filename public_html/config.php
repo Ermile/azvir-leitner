@@ -61,7 +61,7 @@ define('DefaultLanguage', 'en_US');
  * If this option is set to true then this event occur automatically for all pages
  * you can disable this event for specefic page with set parameter in controller of that pages
  */
-define('SaveAsCookie', false);
+define('SaveAsCookie', true);
 
 /**
  * LogVisitors
