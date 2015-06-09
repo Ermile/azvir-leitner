@@ -1,0 +1,15 @@
+{% extends display.cards %}
+
+{% block content %}
+<form method="post" id="addcard">
+  <div class="row auto container">
+    <div class="span12">
+      <input type="text" id="card_front" name="card_front" class="input" placeholder='{% trans "Enter card front here" %}' value="{{datarow.card_front}}">
+
+      <input type="text" id="card_back" name="card_back" class="input" placeholder='{% trans "Enter card back here" %}' value="{{datarow.card_back}}">
+
+      <button type="submit" value="submit" class="button positive">Add New Card</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

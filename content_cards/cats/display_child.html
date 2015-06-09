@@ -1,16 +1,15 @@
 {%extends display.cards%}
 
-
 {%block content%}
 
 <form method="post" id="addcat">
   <div class="row auto container">
-   <div class="span12">
-    <input type="text" id="title" name="title" class="sp-title input" placeholder='{%trans "Enter title here"%}' value='{{datarow.cardcat_title}}'/>
-    <textarea name="desc" class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}' value='{{datarow.cardcat_desc}}'></textarea>
-    <button type="submit" value="submit" class="button positive">Add New Category</button>
-   </div>
+    <div class="span12">
+      <input type="text" id="title" name="title" class="sp-title input" placeholder='{%trans "Enter title here"%}' value='{{datarow.cardcat_title}}'/>
+      <textarea name="desc" class="sp-content editor" data-placeholder='{%trans "Write your post content here"%}' value='{{datarow.cardcat_desc}}'></textarea>
+      <button type="submit" value="submit" class="button positive">Add New Category</button>
+    </div>
   </div>
- </form>
+</form>
 
 {%endblock%}

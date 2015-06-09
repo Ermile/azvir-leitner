@@ -6,7 +6,7 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-		
+		// Code
 	}
 
 	// for routing check
@@ -16,7 +16,6 @@ class controller extends \mvc\controller
 
 		if($mychild === 'add' || $mychild === 'edit')
 			$this->display_name	= 'content_cards/cats/display_child.html';
-
 
 		$this->get()->ALL();
 		

@@ -22,6 +22,5 @@ class view extends \mvc\view
 		if($this->child() === 'edit')
 			$this->data->datarow = $this->model()->datarow('cardcats', $this->childparam('edit'));
 	}
-
 }
 ?>

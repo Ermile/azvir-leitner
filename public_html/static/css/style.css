@@ -1,15 +1,24 @@
 @import url("font-awesome.min.css");
 @import url("jquery.dataTables.css");
 
-
-@media only screen and (max-width : 992px) {
-	nav .brand-logo {
-		left: auto;
-	}
+.nav {
+	height: 45px;
+	line-height: 45px;
+	background: #33414e;
 }
 
-.xx div {
-	width: 20px;
-	height: 20px;
-	background: red;
+.nav-ul > li {
+	display: inline-block;
+	padding: 0 15px;
+}
+
+.nav-ul > li:hover {
+	background: #3d4e5d;
+	color: #fff;
+}
+
+.nav-ul > li > a {
+	display: inline-block;
+	color: #ddd;
+	height: 100%;
 }

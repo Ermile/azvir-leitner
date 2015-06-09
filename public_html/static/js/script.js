@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	$(".button-collapse").sideNav();
-
 	$('#container').highcharts({
         chart: {
             type: 'column'
