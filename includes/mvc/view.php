@@ -23,5 +23,10 @@ class view extends \lib\mvc\view
 
 		$this->data->display['cards']     = "content_cards/home/layout.html";
 	}
+
+	function pushState()
+	{
+		$this->data->display['cards']     = "content_cards/home/layout-xhr.html";
+	}
 }
 ?>
