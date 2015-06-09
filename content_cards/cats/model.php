@@ -25,12 +25,24 @@ class model extends \mvc\model
 		$this->update($qry);
 	}
 
-	public function delete_delete()
+	// works
+	public function get_delete()
 	{
 		$qry = $this->sql()->table('cardcats')
 			->where('id',          $this->childparam('delete'));
 
 		$this->delete($qry);
 	}
+	public function post_delete()
+	{
+		var_dump(1);exit();
+		$qry = $this->sql()->table('cardcats')
+			->where('id',          $this->childparam('delete'));
+
+		$this->delete($qry);
+	}
+
+
+
 }
 ?>

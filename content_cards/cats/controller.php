@@ -7,24 +7,30 @@ class controller extends \mvc\controller
 	public function config()
 	{
 		// Code
-	}
-
-	// for routing check
-	function _route()
-	{
 		$mychild  = $this->child();
 
 		if($mychild === 'add' || $mychild === 'edit')
 			$this->display_name	= 'content_cards/cats/display_child.html';
 
-		$this->get()->ALL();
-		
-		$this->post('add')->ALL('cats/add');
-		// $this->post('edit')->ALL('cats/edit');
-		$this->put('edit')->ALL('/^[^\/]*\/[^\/]*$/');
+		switch ($mychild)
+		{
+			case 'add':
+				$this->post('add')->ALL('cats/add');
+				$this->get()->ALL();
+				break;
 
-		// $this->delete('delete')->ALL('cats/delete');
-		$this->delete('delete')->ALL('/^[^\/]*\/[^\/]*$/');
+			case 'edit':
+				// $this->post('edit')->ALL('cats/edit');
+				$this->put('edit')->ALL('/^[^\/]*\/[^\/]*$/');
+				$this->get()->ALL();
+				break;
+
+			case 'delete':
+				// $this->delete('delete')->ALL('cats/delete');
+				$this->post('delete')->ALL();
+				$this->get('delete')->ALL();
+				break;
+		}
 	}
 }
 ?>
