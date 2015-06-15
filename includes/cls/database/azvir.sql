@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2015 at 03:27 AM
+-- Generation Time: Jun 15, 2015 at 03:01 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -38,15 +38,15 @@ CREATE TABLE IF NOT EXISTS `cardcats` (
   `cardcat_count` smallint(5) unsigned DEFAULT NULL,
   `cardcat_status` enum('enable','disable','expire','public','private','protected') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `cardcats`
 --
 
 INSERT INTO `cardcats` (`id`, `user_id`, `cardcat_type`, `cardcat_title`, `cardcat_slug`, `cardcat_desc`, `cardcat_url`, `cardcat_parent`, `cardcat_count`, `cardcat_status`, `date_modified`) VALUES
-(1, 15, NULL, 'test1', 'test1', '', 'test1', NULL, NULL, 'enable', '2015-05-17 20:17:28'),
-(5, 15, NULL, 'test2aaaa', 'test2', '', 'test2', NULL, NULL, 'enable', '2015-05-17 20:17:36');
+(1, 15, NULL, 'cccc', 'test1', '', 'test1', NULL, NULL, 'enable', '2015-06-09 12:15:33'),
+(6, NULL, NULL, 'c1114', '', 'asd', '', NULL, NULL, 'enable', '2015-06-15 12:11:09');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,22 @@ CREATE TABLE IF NOT EXISTS `cards` (
   `card_back` text NOT NULL,
   `card_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `cards`
+--
+
+INSERT INTO `cards` (`id`, `card_front`, `card_back`, `card_createdate`, `date_modified`) VALUES
+(1, 'aaa', 'bbbb', NULL, NULL),
+(2, 'qqq', 'wwww', NULL, NULL),
+(3, '', '', NULL, NULL),
+(4, '', '', NULL, NULL),
+(5, '', '', NULL, NULL),
+(6, '', '', NULL, NULL),
+(7, '', '', NULL, NULL),
+(8, 'aa1', 'zz1', NULL, '2015-06-15 12:38:09'),
+(9, 'zzz', 'xx', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -99,9 +114,8 @@ CREATE TABLE IF NOT EXISTS `cardusages` (
 --
 
 CREATE TABLE IF NOT EXISTS `comments` (
-`id` int(10) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned DEFAULT NULL,
-  `product_id` int(10) unsigned DEFAULT NULL,
   `comment_author` varchar(50) DEFAULT NULL,
   `comment_email` varchar(100) DEFAULT NULL,
   `comment_url` varchar(100) DEFAULT NULL,
@@ -109,34 +123,48 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_status` enum('approved','unapproved','spam','deleted') NOT NULL DEFAULT 'unapproved',
   `comment_parent` smallint(5) unsigned DEFAULT NULL,
   `user_id` int(10) unsigned DEFAULT NULL,
-  `Visitor_id` bigint(20) unsigned NOT NULL,
+  `visitor_id` bigint(20) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `errorlogs`
+-- Table structure for table `logitems`
 --
 
-CREATE TABLE IF NOT EXISTS `errorlogs` (
-`id` int(10) unsigned NOT NULL,
+CREATE TABLE IF NOT EXISTS `logitems` (
+`id` smallint(5) unsigned NOT NULL,
+  `logitem_title` varchar(100) NOT NULL,
+  `logitem_desc` varchar(999) DEFAULT NULL,
+  `logitem_priority` enum('critical','high','medium','low') NOT NULL DEFAULT 'medium',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `logitems`
+--
+
+INSERT INTO `logitems` (`id`, `logitem_title`, `logitem_desc`, `logitem_priority`, `date_modified`) VALUES
+(1, 'account/login', NULL, 'medium', NULL),
+(2, 'account/signup', NULL, 'high', NULL),
+(3, 'account/recovery', NULL, 'medium', NULL),
+(4, 'account/change password', NULL, 'low', NULL),
+(5, 'db/error', NULL, 'medium', NULL),
+(6, 'php/error', NULL, 'high', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+
+CREATE TABLE IF NOT EXISTS `logs` (
+`id` bigint(20) unsigned NOT NULL,
+  `logitem_id` smallint(5) unsigned NOT NULL,
   `user_id` int(10) unsigned DEFAULT NULL,
-  `errorlog_id` smallint(5) unsigned NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `errors`
---
-
-CREATE TABLE IF NOT EXISTS `errors` (
-  `id` smallint(5) unsigned NOT NULL,
-  `error_title` varchar(100) NOT NULL,
-  `error_solution` varchar(999) DEFAULT NULL,
-  `error_priority` enum('critical','high','medium','low') NOT NULL DEFAULT 'medium',
+  `log_status` varchar(50) DEFAULT NULL,
+  `log_createdate` datetime NOT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -164,11 +192,12 @@ CREATE TABLE IF NOT EXISTS `notifications` (
 --
 
 CREATE TABLE IF NOT EXISTS `options` (
-`id` smallint(5) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
+  `user_id` int(10) unsigned DEFAULT NULL,
   `option_cat` varchar(50) NOT NULL,
   `option_key` varchar(50) NOT NULL,
-  `option_value` varchar(200) DEFAULT NULL,
-  `option_extra` varchar(400) DEFAULT NULL,
+  `option_value` varchar(255) DEFAULT NULL,
+  `option_extra` text,
   `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
@@ -177,53 +206,28 @@ CREATE TABLE IF NOT EXISTS `options` (
 -- Dumping data for table `options`
 --
 
-INSERT INTO `options` (`id`, `option_cat`, `option_key`, `option_value`, `option_extra`, `option_status`, `date_modified`) VALUES
-(1, 'global', 'language', 'fa', NULL, '', '2014-05-01 08:18:41'),
-(2, 'global', 'language', 'en', NULL, '', '2014-05-01 08:18:42'),
-(3, 'global', 'title', 'Jibres', NULL, '', '2014-11-07 17:29:37'),
-(4, 'global', 'desc', 'Jibres for all', NULL, '', '2014-11-07 17:29:46'),
-(5, 'global', 'keyword', 'Jibres, store, online store', NULL, '', '2014-11-07 17:30:07'),
-(6, 'global', 'url', 'http://jibres.ir', NULL, '', '2014-11-07 17:30:18'),
-(7, 'global', 'email', 'info@jibres.ir', NULL, '', '2014-11-07 17:30:22'),
-(8, 'global', 'auto_mail', 'no-reply@jibres.ir', NULL, '', '2014-11-07 17:30:27'),
-(9, 'users', 'user_degree', 'under diploma', NULL, '', '0000-00-00 00:00:00'),
-(10, 'users', 'user_degree', 'diploma', NULL, '', '0000-00-00 00:00:00'),
-(11, 'users', 'user_degree', '2-year collage', NULL, '', '0000-00-00 00:00:00'),
-(12, 'users', 'user_degree', 'bachelor', NULL, '', '0000-00-00 00:00:00'),
-(13, 'users', 'user_degree', 'master', NULL, '', '0000-00-00 00:00:00'),
-(14, 'users', 'user_degree', 'doctorate', NULL, '', '0000-00-00 00:00:00'),
-(15, 'users', 'user_degree', 'religious', NULL, '', '0000-00-00 00:00:00'),
-(16, 'users', 'user_activity', 'employee', NULL, '', '0000-00-00 00:00:00'),
-(17, 'users', 'user_activity', 'housekeeper ', NULL, '', '0000-00-00 00:00:00'),
-(18, 'users', 'user_activity', 'free lance', NULL, '', '0000-00-00 00:00:00'),
-(19, 'users', 'user_activity', 'retired', NULL, '', '0000-00-00 00:00:00'),
-(20, 'users', 'user_activity', 'student', NULL, '', '0000-00-00 00:00:00'),
-(21, 'users', 'user_activity', 'unemployed', NULL, '', '0000-00-00 00:00:00'),
-(22, 'users', 'user_activity', 'seminary student', NULL, '', '0000-00-00 00:00:00'),
-(23, 'permissions', 'permission_name', 'admin', NULL, '', '2014-11-07 17:30:55'),
-(24, 'permissions', 'permission_name', 'reseller', NULL, '', '2014-11-07 17:30:56'),
-(26, 'ships', 'post', '1', NULL, '', '2014-11-07 17:30:56'),
-(27, 'ships', 'tipax', '2', NULL, '', '2014-11-07 17:30:57'),
-(28, 'units', 'money_unit', 'toman', NULL, '', '2014-11-07 17:31:08'),
-(29, 'units', 'product_unit', 'adad', NULL, '', '2014-11-07 17:31:29'),
-(30, 'permissions', 'permission_name', 'viewer', NULL, '', '2014-05-17 21:28:51');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `permissions`
---
-
-CREATE TABLE IF NOT EXISTS `permissions` (
-  `id` smallint(5) unsigned NOT NULL,
-  `permission_title` varchar(50) NOT NULL,
-  `permission_object` varchar(100) NOT NULL,
-  `permission_read` bit(1) DEFAULT NULL,
-  `permission_add` bit(1) DEFAULT NULL,
-  `permission_edit` bit(1) DEFAULT NULL,
-  `permission_delete` bit(1) DEFAULT NULL,
-  `permission_type` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `options` (`id`, `user_id`, `option_cat`, `option_key`, `option_value`, `option_extra`, `option_status`, `date_modified`) VALUES
+(1, NULL, 'global', 'email', 'info@ermile.com', NULL, '', NULL),
+(2, NULL, 'global', 'auto_mail', 'no-reply@ermile.com', NULL, '', NULL),
+(3, NULL, 'user_degree', 'under diploma', NULL, NULL, '', NULL),
+(4, NULL, 'user_degree', 'diploma', NULL, NULL, '', NULL),
+(5, NULL, 'user_degree', '2-year collage', NULL, NULL, '', NULL),
+(6, NULL, 'user_degree', 'bachelor', NULL, NULL, '', NULL),
+(7, NULL, 'user_degree', 'master', NULL, NULL, '', NULL),
+(8, NULL, 'user_degree', 'doctorate', NULL, NULL, '', NULL),
+(9, NULL, 'user_degree', 'religious', NULL, NULL, '', NULL),
+(10, NULL, 'user_activity', 'employee', NULL, NULL, '', NULL),
+(11, NULL, 'user_activity', 'housekeeper ', NULL, NULL, '', NULL),
+(12, NULL, 'user_activity', 'free lance', NULL, NULL, '', NULL),
+(13, NULL, 'user_activity', 'retired', NULL, NULL, '', NULL),
+(14, NULL, 'user_activity', 'student', NULL, NULL, '', NULL),
+(15, NULL, 'user_activity', 'unemployed', NULL, NULL, '', NULL),
+(16, NULL, 'user_activity', 'seminary student', NULL, NULL, '', NULL),
+(17, NULL, 'ships', 'post', NULL, NULL, '', NULL),
+(18, NULL, 'ships', 'tipax', NULL, NULL, '', NULL),
+(19, NULL, 'permission_id', '1', 'admin', NULL, '', NULL),
+(20, NULL, 'permission_id', '2', 'editor', NULL, '', NULL),
+(21, NULL, 'permission_id', '3', 'viewer', NULL, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -232,11 +236,11 @@ CREATE TABLE IF NOT EXISTS `permissions` (
 --
 
 CREATE TABLE IF NOT EXISTS `postmetas` (
-  `id` bigint(20) unsigned NOT NULL,
+`id` bigint(20) unsigned NOT NULL,
   `post_id` bigint(20) unsigned NOT NULL,
   `postmeta_cat` varchar(50) NOT NULL,
   `postmeta_key` varchar(100) NOT NULL,
-  `postmeta_value` varchar(999) DEFAULT NULL,
+  `postmeta_value` text,
   `postmeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -252,9 +256,10 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_language` char(2) DEFAULT NULL,
   `post_title` varchar(100) NOT NULL,
   `post_slug` varchar(100) NOT NULL,
+  `post_url` varchar(255) NOT NULL,
   `post_content` text,
+  `post_excerpt` varchar(300) DEFAULT NULL,
   `post_type` varchar(50) NOT NULL DEFAULT 'post',
-  `post_url` varchar(2000) NOT NULL,
   `post_comment` enum('open','closed') DEFAULT NULL,
   `post_count` smallint(5) unsigned DEFAULT NULL,
   `post_status` enum('publish','draft','schedule','deleted','expire') NOT NULL DEFAULT 'draft',
@@ -262,7 +267,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `user_id` int(10) unsigned NOT NULL,
   `post_publishdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `post_language`, `post_title`, `post_slug`, `post_url`, `post_content`, `post_excerpt`, `post_type`, `post_comment`, `post_count`, `post_status`, `post_parent`, `user_id`, `post_publishdate`, `date_modified`) VALUES
+(1, NULL, 'سلام', 'hello', 'news/hello', 'سلام. این نوشته تست را ویرایش یا حذف کنید', NULL, 'post', NULL, NULL, 'draft', NULL, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -276,14 +288,19 @@ CREATE TABLE IF NOT EXISTS `terms` (
   `term_type` varchar(50) NOT NULL DEFAULT 'tag',
   `term_title` varchar(50) NOT NULL,
   `term_slug` varchar(50) NOT NULL,
-  `term_desc` text,
   `term_url` varchar(200) NOT NULL,
+  `term_desc` text,
   `term_parent` int(10) unsigned DEFAULT NULL,
-  `term_count` smallint(5) unsigned DEFAULT NULL,
-  `term_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `user_id` int(10) unsigned DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `terms`
+--
+
+INSERT INTO `terms` (`id`, `term_language`, `term_type`, `term_title`, `term_slug`, `term_url`, `term_desc`, `term_parent`, `user_id`, `date_modified`) VALUES
+(1, NULL, 'cat', 'news', 'news', 'news', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -301,45 +318,6 @@ CREATE TABLE IF NOT EXISTS `termusages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userlogs`
---
-
-CREATE TABLE IF NOT EXISTS `userlogs` (
-`id` bigint(20) unsigned NOT NULL,
-  `userlog_title` varchar(50) DEFAULT NULL,
-  `userlog_desc` varchar(999) DEFAULT NULL,
-  `userlog_priority` enum('high','medium','low') NOT NULL DEFAULT 'medium',
-  `userlog_type` enum('forgetpassword') DEFAULT NULL,
-  `user_id` int(10) unsigned DEFAULT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usermetas`
---
-
-CREATE TABLE IF NOT EXISTS `usermetas` (
-`id` bigint(20) unsigned NOT NULL,
-  `user_id` int(10) unsigned NOT NULL,
-  `usermeta_cat` varchar(50) NOT NULL,
-  `usermeta_key` varchar(100) NOT NULL,
-  `usermeta_value` varchar(500) DEFAULT NULL,
-  `usermeta_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `usermetas`
---
-
-INSERT INTO `usermetas` (`id`, `user_id`, `usermeta_cat`, `usermeta_key`, `usermeta_value`, `usermeta_status`, `date_modified`) VALUES
-(1, 15, 'profile', 'year', '1369', 'enable', NULL);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -352,21 +330,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_status` enum('active','awaiting','deactive','removed','filter') DEFAULT 'awaiting',
   `user_permission` smallint(5) unsigned DEFAULT NULL,
   `user_createdate` datetime NOT NULL,
-  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-  `permission_id` smallint(5) unsigned DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=utf8;
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `user_permission`, `user_createdate`, `date_modified`, `permission_id`) VALUES
-(15, '989356032043', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Hasan', 'active', NULL, '0000-00-00 00:00:00', NULL, NULL),
-(150, '989199840989', NULL, '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Mahdi', 'active', NULL, '0000-00-00 00:00:00', NULL, NULL),
-(190, '989357269759', NULL, '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', 'javad', 'active', NULL, '2015-01-25 04:52:07', '2015-02-25 01:19:43', NULL),
-(191, '989357269242', NULL, '$2y$07$csWDOaZJcBVPaTilCz/LbutO5HqBV72YW3HBAbxlvMm50SlzRtQ0W', NULL, 'awaiting', NULL, '2015-02-24 11:59:03', NULL, NULL),
-(192, '989120001111', NULL, '$2y$07$QUTZcP7LhWtVfHGINrwSy.VjV2WQN518Z.v16cRb7xEX.kwKj0l06', NULL, 'awaiting', NULL, '2015-02-25 02:08:40', '2015-02-25 21:24:06', NULL),
-(193, '989120002222', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', NULL, 'awaiting', NULL, '2015-02-25 02:13:26', '2015-02-25 21:24:09', NULL);
+INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `user_permission`, `user_createdate`, `date_modified`) VALUES
+(1, '989357269759', 'J.Evazzadeh@gmail.com', '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', 'Javad Evazzadeh', 'active', 1, '2015-01-01 00:00:00', NULL),
+(2, '989356032043', 'itb.baravak@gmail.com', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Hasan Salehi', 'active', 1, '2015-01-02 00:00:00', NULL),
+(3, '989120001111', NULL, '$2y$07$QUTZcP7LhWtVfHGINrwSy.VjV2WQN518Z.v16cRb7xEX.kwKj0l06', 'Test 1', 'awaiting', 1, '2015-02-01 00:00:00', NULL),
+(4, '989120002222', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', 'Test 2', 'awaiting', 2, '2015-02-01 00:00:00', NULL),
+(5, '989120003333', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', 'Test 3', 'awaiting', 3, '2015-02-01 00:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -375,7 +351,7 @@ INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displ
 --
 
 CREATE TABLE IF NOT EXISTS `verifications` (
-`id` smallint(5) unsigned NOT NULL,
+`id` int(10) unsigned NOT NULL,
   `verification_type` enum('emailsignup','emailchangepass','emailrecovery','mobilesignup','mobilechangepass','mobilerecovery') NOT NULL,
   `verification_value` varchar(50) NOT NULL,
   `verification_code` varchar(32) NOT NULL,
@@ -386,19 +362,6 @@ CREATE TABLE IF NOT EXISTS `verifications` (
   `verification_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Triggers `verifications`
---
-DELIMITER //
-CREATE TRIGGER `verification_AU_outline_update` AFTER UPDATE ON `verifications`
- FOR EACH ROW IF NEW.verification_verified <> OLD.verification_verified THEN
-   if new.verification_verified = 'yes' then
-       UPDATE users SET user_status = 'active' WHERE id = New.user_id;
-   END IF;
-END IF
-//
-DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -450,19 +413,19 @@ ALTER TABLE `cardusages`
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
- ADD PRIMARY KEY (`id`), ADD KEY `comments_posts_id` (`post_id`) USING BTREE, ADD KEY `comments_users_id` (`user_id`) USING BTREE, ADD KEY `comments_products_id` (`product_id`) USING BTREE, ADD KEY `comments_visitors_id` (`Visitor_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `comments_posts_id` (`post_id`) USING BTREE, ADD KEY `comments_users_id` (`user_id`) USING BTREE, ADD KEY `comments_visitors_id` (`visitor_id`);
 
 --
--- Indexes for table `errorlogs`
+-- Indexes for table `logitems`
 --
-ALTER TABLE `errorlogs`
- ADD PRIMARY KEY (`id`), ADD KEY `errorlogs_users_id` (`user_id`) USING BTREE, ADD KEY `errorlogs_errors_id` (`errorlog_id`) USING BTREE;
+ALTER TABLE `logitems`
+ ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `errors`
+-- Indexes for table `logs`
 --
-ALTER TABLE `errors`
- ADD PRIMARY KEY (`id`), ADD KEY `priotity_index` (`error_priority`);
+ALTER TABLE `logs`
+ ADD PRIMARY KEY (`id`), ADD KEY `logs_users_id` (`user_id`) USING BTREE, ADD KEY `logs_logitems_id` (`logitem_id`) USING BTREE;
 
 --
 -- Indexes for table `notifications`
@@ -474,13 +437,7 @@ ALTER TABLE `notifications`
 -- Indexes for table `options`
 --
 ALTER TABLE `options`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+name+value` (`option_cat`,`option_key`,`option_value`);
-
---
--- Indexes for table `permissions`
---
-ALTER TABLE `permissions`
- ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `cat+key+value` (`option_cat`,`option_key`,`option_value`) USING BTREE, ADD KEY `options_users_id` (`user_id`);
 
 --
 -- Indexes for table `postmetas`
@@ -492,13 +449,13 @@ ALTER TABLE `postmetas`
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`post_slug`), ADD KEY `posts_users_id` (`user_id`) USING BTREE, ADD KEY `posturl_index` (`post_url`(255));
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `url_unique` (`post_url`), ADD KEY `posts_users_id` (`user_id`) USING BTREE;
 
 --
 -- Indexes for table `terms`
 --
 ALTER TABLE `terms`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `slug_unique` (`term_slug`) USING BTREE, ADD UNIQUE KEY `termurl_unique` (`term_url`), ADD KEY `terms_users_id` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `termurl_unique` (`term_url`), ADD KEY `terms_users_id` (`user_id`);
 
 --
 -- Indexes for table `termusages`
@@ -507,22 +464,10 @@ ALTER TABLE `termusages`
  ADD UNIQUE KEY `term+type+object_unique` (`term_id`,`termusage_id`,`termusage_foreign`) USING BTREE;
 
 --
--- Indexes for table `userlogs`
---
-ALTER TABLE `userlogs`
- ADD PRIMARY KEY (`id`), ADD KEY `priority_index` (`userlog_priority`), ADD KEY `type_index` (`userlog_type`), ADD KEY `userlogs_users_id` (`user_id`) USING BTREE;
-
---
--- Indexes for table `usermetas`
---
-ALTER TABLE `usermetas`
- ADD PRIMARY KEY (`id`), ADD KEY `usermeta_users_id` (`user_id`) USING BTREE;
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE, ADD KEY `users_permissions_id` (`permission_id`);
+ ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `mobile_unique` (`user_mobile`) USING BTREE, ADD UNIQUE KEY `email_unique` (`user_email`) USING BTREE;
 
 --
 -- Indexes for table `verifications`
@@ -534,7 +479,7 @@ ALTER TABLE `verifications`
 -- Indexes for table `visitors`
 --
 ALTER TABLE `visitors`
- ADD PRIMARY KEY (`id`), ADD KEY `visitors_users_id` (`user_id`);
+ ADD PRIMARY KEY (`id`), ADD KEY `visitors_users_id` (`user_id`), ADD KEY `visitorip_index` (`visitor_ip`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -544,22 +489,27 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `cardcats`
 --
 ALTER TABLE `cardcats`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `errorlogs`
+-- AUTO_INCREMENT for table `logitems`
 --
-ALTER TABLE `errorlogs`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `logitems`
+MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `logs`
+--
+ALTER TABLE `logs`
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `notifications`
 --
@@ -569,37 +519,32 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `options`
 --
 ALTER TABLE `options`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT for table `postmetas`
+--
+ALTER TABLE `postmetas`
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=404;
 --
 -- AUTO_INCREMENT for table `terms`
 --
 ALTER TABLE `terms`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `userlogs`
---
-ALTER TABLE `userlogs`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `usermetas`
---
-ALTER TABLE `usermetas`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=194;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `verifications`
 --
 ALTER TABLE `verifications`
-MODIFY `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `visitors`
 --
@@ -613,55 +558,61 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- Constraints for table `cardcats`
 --
 ALTER TABLE `cardcats`
-ADD CONSTRAINT `cardcats_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `cardcats_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `carddetails`
 --
 ALTER TABLE `carddetails`
-ADD CONSTRAINT `carddetails_cards_id` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `carddetails_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `carddetails_ibfk_1` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `carddetails_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `cardusages`
 --
 ALTER TABLE `cardusages`
-ADD CONSTRAINT `cardusages_cardcats_id` FOREIGN KEY (`cardcat_id`) REFERENCES `cardcats` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `cardusages_cards_id` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `cardusages_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `cardusages_ibfk_1` FOREIGN KEY (`cardcat_id`) REFERENCES `cardcats` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `cardusages_ibfk_2` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `cardusages_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE,
-ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL,
-ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`Visitor_id`) REFERENCES `visitors` (`id`);
+ADD CONSTRAINT `comments_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `comments_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+ADD CONSTRAINT `comments_visitors_id` FOREIGN KEY (`visitor_id`) REFERENCES `visitors` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `errorlogs`
+-- Constraints for table `logs`
 --
-ALTER TABLE `errorlogs`
-ADD CONSTRAINT `errorlogs_errors_id` FOREIGN KEY (`errorlog_id`) REFERENCES `errors` (`id`) ON UPDATE CASCADE,
-ADD CONSTRAINT `errorlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+ALTER TABLE `logs`
+ADD CONSTRAINT `logs_logitems_id` FOREIGN KEY (`logitem_id`) REFERENCES `logitems` (`id`) ON UPDATE CASCADE,
+ADD CONSTRAINT `logs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `notifications`
 --
 ALTER TABLE `notifications`
-ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `notifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `options`
+--
+ALTER TABLE `options`
+ADD CONSTRAINT `options_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `postmetas`
 --
 ALTER TABLE `postmetas`
-ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `postmeta_posts_id` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `posts`
 --
 ALTER TABLE `posts`
-ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ADD CONSTRAINT `posts_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `terms`
@@ -673,37 +624,19 @@ ADD CONSTRAINT `terms_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`
 -- Constraints for table `termusages`
 --
 ALTER TABLE `termusages`
-ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `userlogs`
---
-ALTER TABLE `userlogs`
-ADD CONSTRAINT `userlogs_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION;
-
---
--- Constraints for table `usermetas`
---
-ALTER TABLE `usermetas`
-ADD CONSTRAINT `usermetas_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `users`
---
-ALTER TABLE `users`
-ADD CONSTRAINT `users_permissions_id` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `termusages_terms_id` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `verifications`
 --
 ALTER TABLE `verifications`
-ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+ADD CONSTRAINT `verifications_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `visitors`
 --
 ALTER TABLE `visitors`
-ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL;
+ADD CONSTRAINT `visitors_users_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
