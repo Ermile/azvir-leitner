@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\cats;
+namespace content_app\cats;
 use \lib\debug;
 use \lib\utility;
 class model extends \mvc\model
@@ -22,7 +22,14 @@ class model extends \mvc\model
 			->set('cardcat_desc',  utility::post('desc'))
 			->where('id',          $this->childparam('edit'));
 
-		$this->update($qry);
+		$qry = $qry->update();
+
+
+		$this->commit(function()
+		{
+			debug::true(T_("Update Successfully"));
+			$this->redirector()->set_url('cats');
+		});
 	}
 
 	// works
@@ -33,7 +40,7 @@ class model extends \mvc\model
 
 		$this->delete($qry);
 	}
-	public function post_delete()
+	public function post_delete33()
 	{
 		var_dump(1);exit();
 		$qry = $this->sql()->table('cardcats')

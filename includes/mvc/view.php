@@ -21,12 +21,12 @@ class view extends \lib\mvc\view
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 
-		$this->data->display['cards']     = "content_cards/home/layout.html";
+		$this->data->display['app']     = "content_app/home/layout.html";
 	}
 
 	function pushState()
 	{
-		$this->data->display['cards']     = "content_cards/home/layout-xhr.html";
+		$this->data->display['app']     = "content_app/home/layout-xhr.html";
 	}
 }
 ?>

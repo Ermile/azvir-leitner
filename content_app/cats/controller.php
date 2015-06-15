@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\cats;
+namespace content_app\cats;
 use \lib\saloos;
 
 class controller extends \mvc\controller
@@ -8,6 +8,8 @@ class controller extends \mvc\controller
 	{
 		// Code
 		$mychild  = $this->child();
+		// var_dump($this->model_name);
+		// var_dump(1);exit();
 
 		if($mychild === 'add' || $mychild === 'edit')
 			$this->display_name	= 'content_cards/cats/display_child.html';

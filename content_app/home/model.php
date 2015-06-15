@@ -1,10 +1,9 @@
 <?php
-namespace content_cards\settings;
+namespace content_app\home;
 use \lib\debug;
-use \lib\utility;
 
 class model extends \mvc\model
 {
-	
+
 }
 ?>

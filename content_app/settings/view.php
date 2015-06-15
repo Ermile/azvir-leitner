@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\settings;
+namespace content_app\settings;
 
 class view extends \mvc\view
 {

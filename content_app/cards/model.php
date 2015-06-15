@@ -1,5 +1,5 @@
 <?php
-namespace content_cards\cards;
+namespace content_app\cards;
 use \lib\debug;
 use \lib\utility;
 
@@ -24,8 +24,9 @@ class model extends \mvc\model
 		$this->update($qry);
 	}
 
-	public function delete_delete()
+	public function delete_delete33()
 	{
+		var_dump(2);exit();
 		$qry = $this->sql()->table('cards')
 					->where('id', $this->childparam('delete'));
 
