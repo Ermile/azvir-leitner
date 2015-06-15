@@ -6,9 +6,10 @@ class posts
 	public $post_language    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'language'        ,'type'=>'char@2'];
 	public $post_title       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@100'];
 	public $post_slug        = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'slug'            ,'type'=>'varchar@100'];
+	public $post_url         = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'url'             ,'type'=>'varchar@255'];
 	public $post_content     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'content'         ,'type'=>'text@'];
+	public $post_excerpt     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'excerpt'         ,'type'=>'varchar@300'];
 	public $post_type        = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'varchar@50!post'];
-	public $post_url         = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'url'             ,'type'=>'varchar@2000'];
 	public $post_comment     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'comment'         ,'type'=>'enum@open,closed'];
 	public $post_count       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'count'           ,'type'=>'smallint@5'];
 	public $post_status      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@publish,draft,schedule,deleted,expire!draft'];
@@ -35,19 +36,24 @@ class posts
 		$this->form('#slug')->type('text')->name('slug')->maxlength('100')->required();
 	}
 
+	public function post_url()
+	{
+		$this->form()->type('textarea')->name('url')->maxlength('255')->required();
+	}
+
 	public function post_content()
 	{
 		$this->form()->type('textarea')->name('content');
 	}
 
+	public function post_excerpt()
+	{
+		$this->form()->type('textarea')->name('excerpt')->maxlength('300');
+	}
+
 	public function post_type()
 	{
 		$this->form()->type('text')->name('type')->maxlength('50')->required();
-	}
-
-	public function post_url()
-	{
-		$this->form()->type('textarea')->name('url')->maxlength('2000')->required();
 	}
 
 	public function post_comment()

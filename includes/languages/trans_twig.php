@@ -2,21 +2,27 @@
 function transtext()
 {
 
-	//-------------------------------------------------content_cards\cats\display.html
-	echo T_("Actions");                                                               // Line 19
-	echo T_("Edit");                                                                  // Line 31
-	echo T_("Delete");                                                                // Line 61
-	echo T_("Add New Record");                                                        // Line 45 Seperate
-	echo T_("delete record");                                                         // Line 56 Seperate
-	echo T_("seriously, are you sure? There's no coming back.");                      // Line 57 Seperate
-	echo T_("Cancel");                                                                // Line 59
-	echo T_("or");                                                                    // Line 60
+	//--------------------------------------------------content_app\cards\display.html
+	echo T_("Actions");                                                               // Line 18
+	echo T_("Edit");                                                                  // Line 28
+	echo T_("Delete");                                                                // Line 57
+	echo T_("Add New Record");                                                        // Line 42 Seperate
+	echo T_("delete record");                                                         // Line 52 Seperate
+	echo T_("seriously, are you sure? There's no coming back.");                      // Line 53 Seperate
+	echo T_("Cancel");                                                                // Line 55
+	echo T_("or");                                                                    // Line 56
 
-	//-------------------------------------------content_cards\cats\display_child.html
-	echo T_("Enter title here");                                                      // Line 100
-	echo T_("Write your post content here");                                          // Line 101
+	//--------------------------------------------content_app\cards\display_child.html
+	echo T_("Enter card front here");                                                 // Line 7
+	echo T_("Enter card back here");                                                  // Line 9
 
-	//--------------------------------------------------content_cards\home\layout.html
+	//---------------------------------------------------content_app\cats\display.html
+
+	//---------------------------------------------content_app\cats\display_child.html
+	echo T_("Enter title here");                                                      // Line 8
+	echo T_("Write your post content here");                                          // Line 9
+
+	//---------------------------------------------content_app\home\display_child.html
 
 	//----------------------public_html\static\js\datatable\datatable-langs\index.html
 

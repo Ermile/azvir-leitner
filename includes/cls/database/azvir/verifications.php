@@ -2,7 +2,7 @@
 namespace database\azvir;
 class verifications 
 {
-	public $id                      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
+	public $id                      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'int@10'];
 	public $verification_type       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'type'            ,'type'=>'enum@emailsignup,emailchangepass,emailrecovery,mobilesignup,mobilechangepass,mobilerecovery'];
 	public $verification_value      = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'value'           ,'type'=>'varchar@50'];
 	public $verification_code       = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'code'            ,'type'=>'varchar@32'];

@@ -13,14 +13,14 @@ function transtext()
 	echo T_("protected");           // Enum protected
 	echo T_("id");                  // id
 	echo T_("user");                // user_id
-	echo T_("type");                // cardcats_type
-	echo T_("title");               // cardcats_title
-	echo T_("slug");                // cardcats_slug
-	echo T_("desc");                // cardcats_desc
-	echo T_("url");                 // cardcats_url
-	echo T_("parent");              // cardcats_parent
-	echo T_("count");               // cardcats_count
-	echo T_("status");              // cardcats_status
+	echo T_("type");                // cardcat_type
+	echo T_("title");               // cardcat_title
+	echo T_("slug");                // cardcat_slug
+	echo T_("desc");                // cardcat_desc
+	echo T_("url");                 // cardcat_url
+	echo T_("parent");              // cardcat_parent
+	echo T_("count");               // cardcat_count
+	echo T_("status");              // cardcat_status
 	echo T_("modified");            // date_modified
 
 	// ------------------------------------------------------------ Table carddetails
@@ -31,7 +31,7 @@ function transtext()
 	echo T_("ignore");              // Enum ignore
 	echo T_("change");              // Enum change
 	echo T_("card");                // card_id
-	echo T_("date");                // carddetails_date
+	echo T_("date");                // carddetail_date
 	echo T_("status");              // carddetail_status
 
 	// ------------------------------------------------------------ Table cards
@@ -49,7 +49,7 @@ function transtext()
 	echo T_("try");                 // cardusage_try
 	echo T_("trysuccess");          // cardusage_trysuccess
 	echo T_("expire");              // cardusage_expire
-	echo T_("lasttry");             // cardusages_lasttry
+	echo T_("lasttry");             // cardusage_lasttry
 
 	// ------------------------------------------------------------ Table comments
 	echo T_("comments");            // Table comments
@@ -59,30 +59,31 @@ function transtext()
 	echo T_("spam");                // Enum spam
 	echo T_("deleted");             // Enum deleted
 	echo T_("post");                // post_id
-	echo T_("product");             // product_id
 	echo T_("author");              // comment_author
 	echo T_("email");               // comment_email
 	echo T_("url");                 // comment_url
 	echo T_("content");             // comment_content
 	echo T_("status");              // comment_status
 	echo T_("parent");              // comment_parent
-	echo T_("visitor");             // Visitor_id
+	echo T_("visitor");             // visitor_id
 
-	// ------------------------------------------------------------ Table errorlogs
-	echo T_("errorlogs");           // Table errorlogs
-	echo T_("errorlog");            // errorlog
-	echo T_("errorlog");            // errorlog_id
-
-	// ------------------------------------------------------------ Table errors
-	echo T_("errors");              // Table errors
-	echo T_("error");               // error
+	// ------------------------------------------------------------ Table logitems
+	echo T_("logitems");            // Table logitems
+	echo T_("logitem");             // logitem
 	echo T_("critical");            // Enum critical
 	echo T_("high");                // Enum high
 	echo T_("medium");              // Enum medium
 	echo T_("low");                 // Enum low
-	echo T_("title");               // error_title
-	echo T_("solution");            // error_solution
-	echo T_("priority");            // error_priority
+	echo T_("title");               // logitem_title
+	echo T_("desc");                // logitem_desc
+	echo T_("priority");            // logitem_priority
+
+	// ------------------------------------------------------------ Table logs
+	echo T_("logs");                // Table logs
+	echo T_("log");                 // log
+	echo T_("logitem");             // logitem_id
+	echo T_("status");              // log_status
+	echo T_("createdate");          // log_createdate
 
 	// ------------------------------------------------------------ Table notifications
 	echo T_("notifications");       // Table notifications
@@ -123,9 +124,10 @@ function transtext()
 	echo T_("language");            // post_language
 	echo T_("title");               // post_title
 	echo T_("slug");                // post_slug
-	echo T_("content");             // post_content
-	echo T_("type");                // post_type
 	echo T_("url");                 // post_url
+	echo T_("content");             // post_content
+	echo T_("excerpt");             // post_excerpt
+	echo T_("type");                // post_type
 	echo T_("comment");             // post_comment
 	echo T_("count");               // post_count
 	echo T_("status");              // post_status
@@ -139,11 +141,9 @@ function transtext()
 	echo T_("type");                // term_type
 	echo T_("title");               // term_title
 	echo T_("slug");                // term_slug
-	echo T_("desc");                // term_desc
 	echo T_("url");                 // term_url
+	echo T_("desc");                // term_desc
 	echo T_("parent");              // term_parent
-	echo T_("count");               // term_count
-	echo T_("status");              // term_status
 
 	// ------------------------------------------------------------ Table termusages
 	echo T_("termusages");          // Table termusages
@@ -153,26 +153,9 @@ function transtext()
 	echo T_("attachments");         // Enum attachments
 	echo T_("comments");            // Enum comments
 	echo T_("term");                // term_id
-	echo T_("object");              // object_id
-	echo T_("type");                // termusage_type
+	echo T_("termusage");           // termusage_id
+	echo T_("foreign");             // termusage_foreign
 	echo T_("order");               // termusage_order
-
-	// ------------------------------------------------------------ Table userlogs
-	echo T_("userlogs");            // Table userlogs
-	echo T_("userlog");             // userlog
-	echo T_("forgetpassword");      // Enum forgetpassword
-	echo T_("title");               // userlog_title
-	echo T_("desc");                // userlog_desc
-	echo T_("priority");            // userlog_priority
-	echo T_("type");                // userlog_type
-
-	// ------------------------------------------------------------ Table usermetas
-	echo T_("usermetas");           // Table usermetas
-	echo T_("usermeta");            // usermeta
-	echo T_("cat");                 // usermeta_cat
-	echo T_("key");                 // usermeta_key
-	echo T_("value");               // usermeta_value
-	echo T_("status");              // usermeta_status
 
 	// ------------------------------------------------------------ Table users
 	echo T_("users");               // Table users

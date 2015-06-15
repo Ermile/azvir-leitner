@@ -9,7 +9,7 @@ class cardusages
 	public $cardusage_try        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'try'             ,'type'=>'smallint@5'];
 	public $cardusage_trysuccess = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'trysuccess'      ,'type'=>'smallint@5'];
 	public $cardusage_expire     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'expire'          ,'type'=>'datetime@'];
-	public $cardusages_lasttry   = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'lasttry'         ,'type'=>'timestamp@'];
+	public $cardusage_lasttry    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'lasttry'         ,'type'=>'timestamp@'];
 
 	//--------------------------------------------------------------------------------foreign
 	public function card_id()
@@ -50,7 +50,7 @@ class cardusages
 		$this->form()->type('text')->name('expire');
 	}
 
-	public function cardusages_lasttry()
+	public function cardusage_lasttry()
 	{
 		$this->form()->type('text')->name('lasttry');
 	}

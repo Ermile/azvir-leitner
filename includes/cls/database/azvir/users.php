@@ -25,10 +25,7 @@ class users
 		$this->form('#email')->type('email')->name('email')->maxlength('50');
 	}
 
-	public function user_pass()
-	{
-		$this->form('#pass')->type('password')->name('pass')->maxlength('64')->required();
-	}
+	public function user_pass(){}
 
 	public function user_displayname()
 	{

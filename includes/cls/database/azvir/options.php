@@ -2,16 +2,23 @@
 namespace database\azvir;
 class options 
 {
-	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'smallint@5'];
+	public $id            = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
+	public $user_id       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
 	public $option_cat    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'cat'             ,'type'=>'varchar@50'];
 	public $option_key    = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'key'             ,'type'=>'varchar@50'];
-	public $option_value  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'value'           ,'type'=>'varchar@200'];
-	public $option_extra  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'extra'           ,'type'=>'varchar@400'];
+	public $option_value  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'value'           ,'type'=>'varchar@255'];
+	public $option_extra  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'extra'           ,'type'=>'text@'];
 	public $option_status = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@enable,disable,expire!enable'];
 	public $date_modified = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
 	//--------------------------------------------------------------------------------id
 	public function id(){}
+	//--------------------------------------------------------------------------------foreign
+	public function user_id()
+	{
+		$this->form()->type('select')->name('user_');
+		$this->setChild();
+	}
 
 	public function option_cat()
 	{
@@ -25,12 +32,12 @@ class options
 
 	public function option_value()
 	{
-		$this->form()->type('textarea')->name('value')->maxlength('200');
+		$this->form()->type('textarea')->name('value')->maxlength('255');
 	}
 
 	public function option_extra()
 	{
-		$this->form()->type('textarea')->name('extra')->maxlength('400');
+		$this->form()->type('textarea')->name('extra');
 	}
 
 	public function option_status()

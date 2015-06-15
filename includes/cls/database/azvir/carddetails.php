@@ -4,7 +4,7 @@ class carddetails
 {
 	public $user_id           = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
 	public $card_id           = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'bigint@20'                       ,'foreign'=>'cards@id!card_title'];
-	public $carddetails_date  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'date'            ,'type'=>'datetime@'];
+	public $carddetail_date   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'date'            ,'type'=>'datetime@'];
 	public $carddetail_status = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@success,fail,ignore,change'];
 
 	//--------------------------------------------------------------------------------foreign
@@ -20,7 +20,7 @@ class carddetails
 		$this->setChild();
 	}
 
-	public function carddetails_date()
+	public function carddetail_date()
 	{
 		$this->form()->type('text')->name('date')->required();
 	}
