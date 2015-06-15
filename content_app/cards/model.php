@@ -24,7 +24,7 @@ class model extends \mvc\model
 		$this->update($qry);
 	}
 
-	public function delete_delete33()
+	public function delete_delete()
 	{
 		var_dump(2);exit();
 		$qry = $this->sql()->table('cards')

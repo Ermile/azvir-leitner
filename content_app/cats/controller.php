@@ -12,7 +12,7 @@ class controller extends \mvc\controller
 		// var_dump(1);exit();
 
 		if($mychild === 'add' || $mychild === 'edit')
-			$this->display_name	= 'content_cards/cats/display_child.html';
+			$this->display_name	= 'content_app/cats/display_child.html';
 
 		switch ($mychild)
 		{
@@ -29,7 +29,7 @@ class controller extends \mvc\controller
 
 			case 'delete':
 				// $this->delete('delete')->ALL('cats/delete');
-				$this->post('delete')->ALL();
+				$this->post('delete')->ALL('cats/delete');
 				$this->get('delete')->ALL();
 				break;
 		}

@@ -2,9 +2,9 @@
 namespace database\azvir;
 class cardusages 
 {
-	public $card_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'bigint@20'                       ,'foreign'=>'cards@id!card_title'];
+	public $card_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'bigint@20'                       ,'foreign'=>'cards@id!id'];
 	public $user_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
-	public $cardcat_id           = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'cardcat'         ,'type'=>'int@10'                          ,'foreign'=>'cardcats@id!cardcat_title'];
+	public $cardcat_id           = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'cardcat'         ,'type'=>'int@10'                          ,'foreign'=>'cardcats@id!id'];
 	public $cardusage_deck       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'deck'            ,'type'=>'smallint@5'];
 	public $cardusage_try        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'try'             ,'type'=>'smallint@5'];
 	public $cardusage_trysuccess = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'trysuccess'      ,'type'=>'smallint@5'];

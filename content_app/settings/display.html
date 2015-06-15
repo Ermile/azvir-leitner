@@ -1,8 +1,25 @@
 {%extends display.app%}
 
 {% block content %}
+<div class="container">
   <div class="row">
     <div class="span12">
+<form method="post" id="form_settings">
+	
+
+    <select name="schedule" class="sp-schedule" id='sp-schedule'>
+{%for key, value in scheduleList%}
+     <option value="{{value.option_key}}" {%if datarow.schedule == value.option_key%}selected="selected"{%endif%}>{{value.option_key}}</option>
+{% endfor %}
+    </select>
+    <input name='cardno' type='number' value='{{datarow.cardno}}' min="1" max="50"/>
+    
+
+     <button type="submit" value="submit" class="button positive">{%trans "Submit"%}</button>
+</form>
+
+
     </div>
   </div>
+</div>
 {% endblock %}

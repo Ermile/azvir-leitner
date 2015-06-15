@@ -40,7 +40,7 @@ class model extends \mvc\model
 
 		$this->delete($qry);
 	}
-	public function post_delete33()
+	public function post_delete()
 	{
 		var_dump(1);exit();
 		$qry = $this->sql()->table('cardcats')

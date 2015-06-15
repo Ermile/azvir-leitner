@@ -1,5 +1,5 @@
 <?php
-namespace content_app\settings;
+namespace content_app\learn;
 use lib\saloos;
 
 class controller extends \mvc\controller

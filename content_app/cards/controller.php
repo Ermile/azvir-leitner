@@ -10,20 +10,33 @@ class controller extends \mvc\controller
 	}
 
 	// // for routing check
-	// function _route()
-	// {
-	// 	$mychild = $this->child();
+	function _route()
+	{
+		$mychild = $this->child();
 
-	// 	if ($mychild === 'add' || $mychild === 'edit')
-	// 		$this->display_name = 'content_cards/cards/display_child.html';
-		
-	// 	$this->get()->ALL();
+		if ($mychild === 'add' || $mychild === 'edit')
+			$this->display_name = 'content_app/cards/display_child.html';
 
-	// 	$this->post('add')->ALL();
 
-	// 	$this->put('edit')->ALL();
+		switch ($mychild)
+		{
+			case 'add':
+				$this->post('add')->ALL();
+				$this->get()->ALL();
+				break;
 
-	// 	$this->delete('delete')->ALL();
-	// }
+			case 'edit':
+				// $this->post('edit')->ALL('cats/edit');
+				$this->put('edit')->ALL('/^[^\/]*\/[^\/]*$/');
+				$this->get()->ALL();
+				break;
+
+			case 'delete':
+				// $this->delete('delete')->ALL('cats/delete');
+				$this->post('delete')->ALL();
+				$this->get('delete')->ALL();
+				break;
+		}
+	}
 }
 ?>

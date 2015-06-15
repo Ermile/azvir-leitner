@@ -1,5 +1,5 @@
 <?php
-namespace content_app\settings;
+namespace content_app\learn;
 use \lib\debug;
 use \lib\utility;
 
@@ -36,6 +36,16 @@ class model extends \mvc\model
 		});
 		
 		// var_dump(4);exit();
+	}
+
+	function get_list()
+	{
+		$user_id = $this->login('id');
+		$qry = $this->sql()->table('cards')->limit(0,20);
+		$qry->joinCarddetails()->on('#id', '#cards.id')->and('user_id', $user_id)->groupby('#cards.id');
+
+		$qry = $qry->select()->allassoc();
+		return $qry;
 	}
 }
 ?>
