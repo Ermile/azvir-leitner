@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2015 at 03:01 PM
+-- Generation Time: Jun 15, 2015 at 06:38 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -61,6 +61,17 @@ CREATE TABLE IF NOT EXISTS `carddetails` (
   `carddetail_status` enum('success','fail','ignore','change') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `carddetails`
+--
+
+INSERT INTO `carddetails` (`user_id`, `card_id`, `carddetail_date`, `carddetail_status`) VALUES
+(1, 1, '0000-00-00 00:00:00', 'success'),
+(1, 2, '0000-00-00 00:00:00', 'success'),
+(1, 3, '0000-00-00 00:00:00', 'success'),
+(1, 4, '0000-00-00 00:00:00', 'success'),
+(1, 5, '0000-00-00 00:00:00', 'success');
+
 -- --------------------------------------------------------
 
 --
@@ -73,22 +84,23 @@ CREATE TABLE IF NOT EXISTS `cards` (
   `card_back` text NOT NULL,
   `card_createdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `cards`
 --
 
 INSERT INTO `cards` (`id`, `card_front`, `card_back`, `card_createdate`, `date_modified`) VALUES
-(1, 'aaa', 'bbbb', NULL, NULL),
-(2, 'qqq', 'wwww', NULL, NULL),
-(3, '', '', NULL, NULL),
-(4, '', '', NULL, NULL),
-(5, '', '', NULL, NULL),
-(6, '', '', NULL, NULL),
-(7, '', '', NULL, NULL),
-(8, 'aa1', 'zz1', NULL, '2015-06-15 12:38:09'),
-(9, 'zzz', 'xx', NULL, NULL);
+(1, 'a1', '1', NULL, NULL),
+(2, 'a2', '2', NULL, NULL),
+(3, 'a3', '3', NULL, NULL),
+(4, 'a4', '4', NULL, NULL),
+(5, 'a5', '5', NULL, NULL),
+(6, 'a6', '6', NULL, NULL),
+(7, 'a7', '7', NULL, NULL),
+(8, 'a8', '8', NULL, NULL),
+(9, 'a9', '9', NULL, NULL),
+(10, 'a10', '0', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -200,15 +212,15 @@ CREATE TABLE IF NOT EXISTS `options` (
   `option_extra` text,
   `option_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `options`
 --
 
 INSERT INTO `options` (`id`, `user_id`, `option_cat`, `option_key`, `option_value`, `option_extra`, `option_status`, `date_modified`) VALUES
-(1, NULL, 'global', 'email', 'info@ermile.com', NULL, '', NULL),
-(2, NULL, 'global', 'auto_mail', 'no-reply@ermile.com', NULL, '', NULL),
+(1, NULL, 'global', 'email', 'info@azvir.com', NULL, '', NULL),
+(2, NULL, 'global', 'auto_mail', 'no-reply@azvir.com', NULL, '', NULL),
 (3, NULL, 'user_degree', 'under diploma', NULL, NULL, '', NULL),
 (4, NULL, 'user_degree', 'diploma', NULL, NULL, '', NULL),
 (5, NULL, 'user_degree', '2-year collage', NULL, NULL, '', NULL),
@@ -227,7 +239,15 @@ INSERT INTO `options` (`id`, `user_id`, `option_cat`, `option_key`, `option_valu
 (18, NULL, 'ships', 'tipax', NULL, NULL, '', NULL),
 (19, NULL, 'permission_id', '1', 'admin', NULL, '', NULL),
 (20, NULL, 'permission_id', '2', 'editor', NULL, '', NULL),
-(21, NULL, 'permission_id', '3', 'viewer', NULL, '', NULL);
+(21, NULL, 'permission_id', '3', 'viewer', NULL, '', NULL),
+(31, NULL, 'schedule', 'linear', '123', NULL, '', NULL),
+(32, NULL, 'schedule', 'exponential', '45', NULL, '', NULL),
+(33, NULL, 'schedule', 'constant', '67', NULL, '', NULL),
+(34, NULL, 'schedule', 'quadratic', '89', NULL, '', NULL),
+(35, NULL, 'schedule', 'cram', '01', NULL, '', NULL),
+(50, 1, 'options', 'schedule', 'cram', NULL, '', '2015-06-15 13:44:44'),
+(51, 1, 'options', 'maxtime', '10', NULL, '', NULL),
+(52, 1, 'options', 'cardno', '24', NULL, '', '2015-06-15 13:49:28');
 
 -- --------------------------------------------------------
 
@@ -267,7 +287,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `user_id` int(10) unsigned NOT NULL,
   `post_publishdate` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=406 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `posts`
@@ -315,6 +335,14 @@ CREATE TABLE IF NOT EXISTS `termusages` (
   `termusage_order` smallint(5) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `termusages`
+--
+
+INSERT INTO `termusages` (`term_id`, `termusage_id`, `termusage_foreign`, `termusage_order`) VALUES
+(1, 404, 'posts', NULL),
+(1, 405, 'posts', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -339,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `user_mobile`, `user_email`, `user_pass`, `user_displayname`, `user_status`, `user_permission`, `user_createdate`, `date_modified`) VALUES
 (1, '989357269759', 'J.Evazzadeh@gmail.com', '$2y$07$9wj8/jDeQKyY0t0IcUf.xOEy98uf6BaSS7Tg28swrKUDxdKzUVfsy', 'Javad Evazzadeh', 'active', 1, '2015-01-01 00:00:00', NULL),
-(2, '989356032043', 'itb.baravak@gmail.com', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Hasan Salehi', 'active', 1, '2015-01-02 00:00:00', NULL),
+(2, '989126528210', 'me@eahmad.ir', '$2y$07$ZRUphEsEn9bK8inKBfYt.efVoZDgBaoNfZz0uVRqRGvH9.che.Bqq', 'Ahmad Karimi', 'active', 1, '2015-01-02 00:00:00', NULL),
 (3, '989120001111', NULL, '$2y$07$QUTZcP7LhWtVfHGINrwSy.VjV2WQN518Z.v16cRb7xEX.kwKj0l06', 'Test 1', 'awaiting', 1, '2015-02-01 00:00:00', NULL),
 (4, '989120002222', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', 'Test 2', 'awaiting', 2, '2015-02-01 00:00:00', NULL),
 (5, '989120003333', NULL, '$2y$07$QT5xKQWR8LxTSgDSmK2Wg.b7pK/6slmmFTTqTPq3GGKlj1OpY4gOC', 'Test 3', 'awaiting', 3, '2015-02-01 00:00:00', NULL);
@@ -494,7 +522,7 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `cards`
 --
 ALTER TABLE `cards`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `comments`
 --
@@ -519,7 +547,7 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `options`
 --
 ALTER TABLE `options`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `postmetas`
 --
@@ -529,7 +557,7 @@ MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=404;
+MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=406;
 --
 -- AUTO_INCREMENT for table `terms`
 --
