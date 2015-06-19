@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2015 at 01:17 PM
+-- Generation Time: Jun 19, 2015 at 09:03 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `post_slug` varchar(100) NOT NULL,
   `post_url` varchar(255) NOT NULL,
   `post_content` text,
-  `post_excerpt` varchar(300) DEFAULT NULL,
+  `post_excerpt` text,
   `post_type` varchar(50) NOT NULL DEFAULT 'post',
   `post_comment` enum('open','closed') DEFAULT NULL,
   `post_count` smallint(5) unsigned DEFAULT NULL,
