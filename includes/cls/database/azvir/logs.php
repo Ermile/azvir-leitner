@@ -1,11 +1,13 @@
 <?php
 namespace database\azvir;
-class logs 
+class logs
 {
 	public $id             = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
-	public $logitem_id     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'logitem'         ,'type'=>'smallint@5'                      ,'foreign'=>'logitems@id!id'];
+	public $logitem_id     = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'logitem'         ,'type'=>'smallint@5'                      ,'foreign'=>'logitems@id!logitem_title'];
 	public $user_id        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
-	public $log_status     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'varchar@50'];
+	public $log_data       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'data'            ,'type'=>'varchar@200'];
+	public $log_meta       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'meta'            ,'type'=>'mediumtext@'];
+	public $log_status     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@enable,disable,expire,deliver'];
 	public $log_createdate = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'createdate'      ,'type'=>'datetime@'];
 	public $date_modified  = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
 
@@ -24,15 +26,20 @@ class logs
 		$this->setChild();
 	}
 
-	public function log_status()
+	public function log_data()
 	{
-		$this->form()->type('text')->name('status')->maxlength('50');
+		$this->form()->type('textarea')->name('data')->maxlength('200');
 	}
 
-	public function log_createdate()
+	public function log_meta(){}
+
+	public function log_status()
 	{
-		$this->form()->type('text')->name('createdate')->required();
+		$this->form()->type('radio')->name('status');
+		$this->setChild();
 	}
+
+	public function log_createdate(){}
 
 	public function date_modified(){}
 }

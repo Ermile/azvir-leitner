@@ -1,12 +1,13 @@
 <?php
 namespace database\azvir;
-class notifications 
+class notifications
 {
 	public $id                   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'id'              ,'type'=>'bigint@20'];
 	public $user_idsender        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'user sender'     ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_sende_displayname'];
 	public $user_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
 	public $notification_title   = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'title'           ,'type'=>'varchar@50'];
 	public $notification_content = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'content'         ,'type'=>'varchar@200'];
+	public $notification_meta    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'meta'            ,'type'=>'mediumtext@'];
 	public $notification_url     = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'url'             ,'type'=>'varchar@100'];
 	public $notification_status  = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'status'          ,'type'=>'enum@read,unread,expire!unread'];
 	public $date_modified        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'modified'        ,'type'=>'timestamp@'];
@@ -35,6 +36,8 @@ class notifications
 	{
 		$this->form()->type('textarea')->name('content')->maxlength('200');
 	}
+
+	public function notification_meta(){}
 
 	public function notification_url()
 	{
