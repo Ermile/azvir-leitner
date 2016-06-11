@@ -1,5 +1,5 @@
 <?php
-function transtext()
+private function transtext()
 {
 
 	//--------------------------------------------------content_app\cards\display.html
@@ -23,6 +23,11 @@ function transtext()
 	echo T_("Write your post content here");                                          // Line 9
 
 	//---------------------------------------------content_app\home\display_child.html
+
+	//--------------------------------------------------content_app\learn\display.html
+	echo T_("Submit");                                                                // Line 18
+
+	//-----------------------------------------------content_app\settings\display.html
 
 	//----------------------public_html\static\js\datatable\datatable-langs\index.html
 
