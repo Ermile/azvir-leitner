@@ -1,6 +1,6 @@
 <?php
 namespace database\azvir;
-class cardusages 
+class cardusages
 {
 	public $card_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'bigint@20'                       ,'foreign'=>'cards@id!id'];
 	public $user_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
