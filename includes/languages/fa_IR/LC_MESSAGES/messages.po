@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
 "POT-Creation-Date: 2016-06-11 18:14+0430\n"
-"PO-Revision-Date: 2016-06-11 18:28+0430\n"
+"PO-Revision-Date: 2016-06-11 18:32+0430\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -870,14 +870,12 @@ msgstr "چکیده"
 #: ../../../.././includes/languages/trans_addon.php:61
 #: ../../../.././includes/languages/trans_addons.php:140
 msgid "If excerpt is empty we get it automatically from content"
-msgstr ""
-"اگر چکیده را خالی بگذارید ما آن را به صورت خودکار از روی نوشته پر میکنیم"
+msgstr "اگر چکیده را خالی بگذارید ما آن را به صورت خودکار از روی نوشته پر میکنیم"
 
 #: ../../../.././includes/languages/trans_addon.php:62
 #: ../../../.././includes/languages/trans_addons.php:141
 msgid "Summaries of your content that can be used as page description."
-msgstr ""
-"خلاصه ای از نوشته شما که برای نمایش به عنوان توضیح نوشته استفاده می شود."
+msgstr "خلاصه ای از نوشته شما که برای نمایش به عنوان توضیح نوشته استفاده می شود."
 
 #: ../../../.././includes/languages/trans_addon.php:63
 #: ../../../.././includes/languages/trans_addons.php:143
@@ -897,13 +895,13 @@ msgstr "افزودن"
 #: ../../../.././includes/languages/trans_addon.php:66
 #: ../../../.././includes/languages/trans_addons.php:145
 msgid ""
-"Normally, tags are ad-hoc keywords that identify important information in "
-"your post (names, subjects, etc) that may or may not recur in other posts, "
-"while categories are pre-determined sections."
+"Normally, tags are ad-hoc keywords that identify important information in your "
+"post (names, subjects, etc) that may or may not recur in other posts, while "
+"categories are pre-determined sections."
 msgstr ""
-"به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در "
-"نوشته شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها "
-"مشخص نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
+"به طول معمول، کلیدواژه ها عبارات تک کاربره ای برای شناسایی اطلاعات مهم در نوشته "
+"شما مانند نام، موضوع یا .. هستند که امکان تکرار آن ها در سایر نوشته ها مشخص "
+"نیست، این در حالی است که دسته ها از قبل مشخص شده هستند."
 
 #: ../../../.././includes/languages/trans_addon.php:67
 #: ../../../.././includes/languages/trans_addons.php:222
@@ -913,12 +911,12 @@ msgstr "تفاوت بین نوشته و برگه در چیست؟"
 #: ../../../.././includes/languages/trans_addon.php:68
 #: ../../../.././includes/languages/trans_addons.php:223
 msgid ""
-"Pages are similar to Posts in that they have a title, body text, and "
-"associated metadata, but they are different in that they are not part of the "
-"chronological blog stream, kind of like permanent posts."
+"Pages are similar to Posts in that they have a title, body text, and associated "
+"metadata, but they are different in that they are not part of the chronological "
+"blog stream, kind of like permanent posts."
 msgstr ""
-"برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی "
-"آن ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در "
+"برگه ها در عنوان، متن و سایر ویژگی ها شبیه به نوشته ها هستند، اما تفاوت اصلی آن "
+"ها در این است که به مانند نوشته ها دارای جریان زمانی دنباله دار نیستند، در "
 "حقیقت شبیه به یک پست دائمی هستند."
 
 #: ../../../.././includes/languages/trans_addon.php:69
@@ -1486,8 +1484,7 @@ msgstr "تغییر گذرواژه"
 
 #: ../../../.././includes/languages/trans_addons.php:76
 msgid "We glad to working for you and hope you enjoy using our system"
-msgstr ""
-"ما از کار برای شما خوشحال بوده و امیدواریم شما نیز از سیستم ما لذت ببرید"
+msgstr "ما از کار برای شما خوشحال بوده و امیدواریم شما نیز از سیستم ما لذت ببرید"
 
 #: ../../../.././includes/languages/trans_addons.php:77
 msgid "Some right reserved"
@@ -1592,8 +1589,7 @@ msgid "Edit permission of"
 msgstr "ویرایش دسترسی به"
 
 #: ../../../.././includes/languages/trans_addons.php:118
-msgid ""
-"Allow or disallow user to access all part of service with full permission!"
+msgid "Allow or disallow user to access all part of service with full permission!"
 msgstr "اجازه یا عدم اجازه به کاربر برای دسترسی کامل به تمام بخش‌های سرویس!"
 
 #: ../../../.././includes/languages/trans_addons.php:119
@@ -1639,8 +1635,7 @@ msgstr "عنوان مطلب خود را در اینجا وارد کنید"
 #: ../../../.././includes/languages/trans_addons.php:135
 msgid "Url of your content appear here, click on it to view"
 msgstr ""
-"آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده "
-"کنید"
+"آدرس مطلب شما در این بخش نمایش داده می‌شود که با کلیک می‌توانید آن را مشاهده کنید"
 
 #: ../../../.././includes/languages/trans_addons.php:136
 msgid "Check result"
@@ -1652,8 +1647,7 @@ msgstr "نمایش در تب جدید"
 
 #: ../../../.././includes/languages/trans_addons.php:142
 msgid "Write your tag and press enter to add new keyword to content"
-msgstr ""
-"کلیدواژه‌ی مورد نظر خود را نوشته و با فشردن انتر آن را به مطلب اضافه کنید"
+msgstr "کلیدواژه‌ی مورد نظر خود را نوشته و با فشردن انتر آن را به مطلب اضافه کنید"
 
 #: ../../../.././includes/languages/trans_addons.php:146
 msgid "View list of tags"
@@ -1690,8 +1684,8 @@ msgstr ""
 
 #: ../../../.././includes/languages/trans_addons.php:158
 msgid ""
-"All of content set as draft in default, for showing it to visitors you must "
-"set it to publish"
+"All of content set as draft in default, for showing it to visitors you must set "
+"it to publish"
 msgstr ""
 "تمام مطالب به صورت پیش فرض در حالت پیش نویس قرار می‌گیرند که شما برای انتشار و "
 "نمایش آن به بازدیدکنندگان باید وضعیت آن را به منتشرشده تغییر دهید"
@@ -1729,11 +1723,10 @@ msgid "Set featured image"
 msgstr "تنظیم تصویر شاخص"
 
 #: ../../../.././includes/languages/trans_addons.php:175
-msgid ""
-"You can see type of your file and click on image to direct access to file"
+msgid "You can see type of your file and click on image to direct access to file"
 msgstr ""
-"شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی "
-"داشته باشید"
+"شما می‌توانید نوع فایل را دیده و با کلیک روی عکس آن، مستقیما به آن دسترسی داشته "
+"باشید"
 
 #: ../../../.././includes/languages/trans_addons.php:176
 msgid "Click to view"
@@ -1752,8 +1745,7 @@ msgid ""
 "You can nest category under other category by making one the “Parent” of the "
 "other."
 msgstr ""
-"شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت "
-"کنید."
+"شما می‌توانید یک دسته را با کمک ویژگی والد به عنوان زیرشاخه دسته‌ای دیگر ثبت کنید."
 
 #: ../../../.././includes/languages/trans_addons.php:204
 msgid "Change type of chart to"
@@ -2166,8 +2158,8 @@ msgstr "سایت"
 #: ../../../.././includes/languages/trans_addons.php:407
 msgid "For multilanguage sites enter title in English and translate it"
 msgstr ""
-"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم "
-"آن را به سایر زبان‌ها ترجمه کنید"
+"برای سایت‌های چندزبانه، این بخش را به انگلیسی وارد نموده و توسط برنامه مترجم آن "
+"را به سایر زبان‌ها ترجمه کنید"
 
 #: ../../../.././includes/languages/trans_addons.php:408
 msgid "main URL"
@@ -2510,8 +2502,7 @@ msgid "You can edit this permission"
 msgstr "در این قسمت شما می‌توانید دسترسی به این بخش را ویرایش کنید"
 
 #: ../../../.././includes/languages/trans_addons.php:496
-msgid ""
-"Define or edit user permissions to allow or block access to special pages"
+msgid "Define or edit user permissions to allow or block access to special pages"
 msgstr "تعریف یا ویرایش سطوح‌دسترسی برای اجازه یا ممنوع کردن دسترسی به صفحات خاص"
 
 #: ../../../.././includes/languages/trans_addons.php:497
@@ -2587,8 +2578,8 @@ msgid ""
 "We are some developer and try to create usefull tools. our another tools is "
 "comming soon"
 msgstr ""
-"ما چند توسعه‌دهنده بوده و تلاش برای ساخت ابزارهای کارآمد هستیم. سایر ابزارهای "
-"ما نیز در راه است"
+"ما چند توسعه‌دهنده بوده و تلاش برای ساخت ابزارهای کارآمد هستیم. سایر ابزارهای ما "
+"نیز در راه است"
 
 #: ../../../.././includes/languages/trans_twig.php:16
 msgid "Why choose our service?"
@@ -2612,7 +2603,7 @@ msgid ""
 "Leitner flashcard with fun and enjoy using it."
 msgstr ""
 "ما برآن شدیم تا یک سرویس مشابه جی‌ممورایز ایجاد کنیم و به شما برای یادگیری با "
-"روش فلش‌کارت لایتنر کمک کنیم. الته همراه با تفریح و لذت استفاده از آن."
+"روش فلش‌کارت لایتنر کمک کنیم. البته همراه با تفریح و لذت استفاده از آن."
 
 #: ../../../.././includes/languages/trans_twig.php:20
 msgid "OUR FEATURES"
@@ -2623,8 +2614,8 @@ msgid ""
 "manages your learn progress and features categories, Unicode flashcard texts, "
 "statistics and an intuitive interface."
 msgstr ""
-"مدیریت فرآیند یادگیری به همراه ویژگی دسته‌بندی و بدون محدودیت در متون "
-"فلش‌کارت‌ها همراه با آمار و رابط کاربری ساده"
+"مدیریت فرآیند یادگیری به همراه ویژگی دسته‌بندی و بدون محدودیت در متون فلش‌کارت‌ها "
+"همراه با آمار و رابط کاربری ساده"
 
 #: ../../../.././includes/languages/trans_twig.php:22
 msgid "Responsive Design"
@@ -2653,8 +2644,8 @@ msgid ""
 "with this service based on Leitner flashcard we help you learn faster than "
 "usual and enjoy!"
 msgstr ""
-"با کمک این سرویس که بر پایه فلش‌کارت لایتنر است، ما به شما کمک می‌کنیم که سریع "
-"و ساده و لذت بخش یاد بگیرید."
+"با کمک این سرویس که بر پایه فلش‌کارت لایتنر است، ما به شما کمک می‌کنیم که سریع و "
+"ساده و لذت بخش یاد بگیرید."
 
 #: ../../../.././includes/languages/trans_twig.php:28
 msgid "Copyright"

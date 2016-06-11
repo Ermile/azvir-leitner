@@ -9,6 +9,7 @@ class view extends \mvc\view
 
 		$this->url->MainStatic       = false;
 		$this->include->css_main     = false;
+		$this->include->fontawesome  = true;
 		$this->include->css          = false;
 		$this->include->js           = false;
 	}
