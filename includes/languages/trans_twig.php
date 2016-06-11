@@ -2,6 +2,32 @@
 private function transtext()
 {
 
+	//-------------------------------------------------------content\home\display.html
+	echo T_("Home");                                                                  // Line 49
+	echo T_("About");                                                                 // Line 50
+	echo T_("Features");                                                              // Line 51
+	echo T_("Learn & Enjoy");                                                         // Line 62
+	echo T_("uses Leitner flashcards to make memorizing facts");                      // Line 63
+	echo T_("not only more efficient but also more fun.");                            // Line 63
+	echo T_("Start learn with fun");                                                  // Line 65
+	echo T_("ABOUT US");                                                              // Line 74
+	echo T_("Who we are");                                                            // Line 78
+	echo T_("We are some developer and try to create usefull tools. our another tools is comming soon");// Line 79
+	echo T_("Why choose our service?");                                               // Line 80
+	echo T_("In past we use <a href='http://sourceforge.net/projects/jmemorize/' target='_blank'>jmemorize</a> and enjoy using it.");// Line 81
+	echo T_("It written in Java and depending on Os.");                               // Line 81
+	echo T_("We decide to create a service like jmemorize and help people to learn with Leitner flashcard with fun and enjoy using it.");// Line 81
+	echo T_("OUR FEATURES");                                                          // Line 94
+	echo T_("manages your learn progress and features categories, Unicode flashcard texts, statistics and an intuitive interface.");// Line 97
+	echo T_("Responsive Design");                                                     // Line 100
+	echo T_("You can use our service in all of your device in any resolution.");      // Line 101
+	echo T_("Web Development");                                                       // Line 104
+	echo T_("We develope features and improve usability of this service.");           // Line 105
+	echo T_("Learn Faster");                                                          // Line 108
+	echo T_("with this service based on Leitner flashcard we help you learn faster than usual and enjoy!");// Line 109
+	echo T_("Copyright");                                                             // Line 121
+	echo T_("2015");                                                                  // Line 121
+
 	//--------------------------------------------------content_app\cards\display.html
 	echo T_("Actions");                                                               // Line 18
 	echo T_("Edit");                                                                  // Line 28

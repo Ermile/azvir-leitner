@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2016-06-11 18:06+0430\n"
-"PO-Revision-Date: 2016-06-11 18:07+0430\n"
+"POT-Creation-Date: 2016-06-11 18:14+0430\n"
+"PO-Revision-Date: 2016-06-11 18:28+0430\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -569,6 +569,7 @@ msgstr "خانه"
 #: ../../../.././includes/languages/static_translation.php:41
 #: ../../../.././includes/languages/trans_addon.php:165
 #: ../../../.././includes/languages/trans_addons.php:301
+#: ../../../.././includes/languages/trans_twig.php:6
 msgid "Home"
 msgstr "صفحه نخست"
 
@@ -609,49 +610,49 @@ msgstr "برگشت به"
 #: ../../../.././includes/languages/static_translation.php:51
 #: ../../../.././includes/languages/trans_addon.php:106
 #: ../../../.././includes/languages/trans_addons.php:193
-#: ../../../.././includes/languages/trans_twig.php:6
+#: ../../../.././includes/languages/trans_twig.php:32
 msgid "Actions"
 msgstr "عملیات"
 
 #: ../../../.././includes/languages/static_translation.php:52
 #: ../../../.././includes/languages/trans_addon.php:39
 #: ../../../.././includes/languages/trans_addons.php:51
-#: ../../../.././includes/languages/trans_twig.php:9
+#: ../../../.././includes/languages/trans_twig.php:35
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:53
 #: ../../../.././includes/languages/trans_addon.php:108
 #: ../../../.././includes/languages/trans_addons.php:195
-#: ../../../.././includes/languages/trans_twig.php:10
+#: ../../../.././includes/languages/trans_twig.php:36
 msgid "delete record"
 msgstr "حذف رکورد"
 
 #: ../../../.././includes/languages/static_translation.php:54
 #: ../../../.././includes/languages/trans_addon.php:109
 #: ../../../.././includes/languages/trans_addons.php:110
-#: ../../../.././includes/languages/trans_twig.php:11
+#: ../../../.././includes/languages/trans_twig.php:37
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بعد از حذف امکان  بازگشت وجود ندارد."
 
 #: ../../../.././includes/languages/static_translation.php:55
 #: ../../../.././includes/languages/trans_addon.php:110
 #: ../../../.././includes/languages/trans_addons.php:111
-#: ../../../.././includes/languages/trans_twig.php:12
+#: ../../../.././includes/languages/trans_twig.php:38
 msgid "Cancel"
 msgstr "انصراف"
 
 #: ../../../.././includes/languages/static_translation.php:56
 #: ../../../.././includes/languages/trans_addon.php:92
 #: ../../../.././includes/languages/trans_addons.php:112
-#: ../../../.././includes/languages/trans_twig.php:13
+#: ../../../.././includes/languages/trans_twig.php:39
 msgid "or"
 msgstr "یا"
 
 #: ../../../.././includes/languages/static_translation.php:57
 #: ../../../.././includes/languages/trans_addon.php:111
 #: ../../../.././includes/languages/trans_addons.php:113
-#: ../../../.././includes/languages/trans_twig.php:8
+#: ../../../.././includes/languages/trans_twig.php:34
 msgid "Delete"
 msgstr "حذف"
 
@@ -846,7 +847,7 @@ msgstr "آخرین بروزرسانی در"
 
 #: ../../../.././includes/languages/trans_addon.php:57
 #: ../../../.././includes/languages/trans_addons.php:133
-#: ../../../.././includes/languages/trans_twig.php:22
+#: ../../../.././includes/languages/trans_twig.php:48
 msgid "Enter title here"
 msgstr "عنوان را اینجا وارد کنید"
 
@@ -857,7 +858,7 @@ msgstr "برای مشاهده نتیجه کلیک کنید"
 
 #: ../../../.././includes/languages/trans_addon.php:59
 #: ../../../.././includes/languages/trans_addons.php:138
-#: ../../../.././includes/languages/trans_twig.php:23
+#: ../../../.././includes/languages/trans_twig.php:49
 msgid "Write your post content here"
 msgstr "محتوای نوشته خود را اینجا بنویسید"
 
@@ -1236,7 +1237,7 @@ msgstr "ضمیمه"
 
 #: ../../../.././includes/languages/trans_addon.php:189
 #: ../../../.././includes/languages/trans_addons.php:125
-#: ../../../.././includes/languages/trans_twig.php:7
+#: ../../../.././includes/languages/trans_twig.php:33
 msgid "Edit"
 msgstr "ویرایش"
 
@@ -2549,15 +2550,129 @@ msgstr "متشکریم که از سرویس ما استفاده می‌کنید"
 msgid " "
 msgstr " "
 
+#: ../../../.././includes/languages/trans_twig.php:7
+msgid "About"
+msgstr "درباره"
+
+#: ../../../.././includes/languages/trans_twig.php:8
+msgid "Features"
+msgstr "امکانات"
+
+#: ../../../.././includes/languages/trans_twig.php:9
+msgid "Learn & Enjoy"
+msgstr "یاد بگیرید و لذت ببرید"
+
+#: ../../../.././includes/languages/trans_twig.php:10
+msgid "uses Leitner flashcards to make memorizing facts"
+msgstr "با کمک فلش کارت‌های لایتنر به دقت به خاطر بسپارید"
+
+#: ../../../.././includes/languages/trans_twig.php:11
+msgid "not only more efficient but also more fun."
+msgstr "نه تنها با کارایی بیشتر بله همراه با تفریح."
+
+#: ../../../.././includes/languages/trans_twig.php:12
+msgid "Start learn with fun"
+msgstr "یادگیری با تفریح را شروع کنید"
+
+#: ../../../.././includes/languages/trans_twig.php:13
+msgid "ABOUT US"
+msgstr "درباره ما"
+
+#: ../../../.././includes/languages/trans_twig.php:14
+msgid "Who we are"
+msgstr "ما کی هستیم"
+
+#: ../../../.././includes/languages/trans_twig.php:15
+msgid ""
+"We are some developer and try to create usefull tools. our another tools is "
+"comming soon"
+msgstr ""
+"ما چند توسعه‌دهنده بوده و تلاش برای ساخت ابزارهای کارآمد هستیم. سایر ابزارهای "
+"ما نیز در راه است"
+
 #: ../../../.././includes/languages/trans_twig.php:16
+msgid "Why choose our service?"
+msgstr "چرا از این سرویس استفاده کنم؟"
+
+#: ../../../.././includes/languages/trans_twig.php:17
+msgid ""
+"In past we use <a href='http://sourceforge.net/projects/jmemorize/' "
+"target='_blank'>jmemorize</a> and enjoy using it."
+msgstr ""
+"در گذشته ما از  <a href='http://sourceforge.net/projects/jmemorize/' "
+"target='_blank'>جی‌ممورایز</a> استفاده کرده و لذت میبردیم"
+
+#: ../../../.././includes/languages/trans_twig.php:18
+msgid "It written in Java and depending on Os."
+msgstr "اون با زبان جاوا و وابسته به سیستم عامل بود."
+
+#: ../../../.././includes/languages/trans_twig.php:19
+msgid ""
+"We decide to create a service like jmemorize and help people to learn with "
+"Leitner flashcard with fun and enjoy using it."
+msgstr ""
+"ما برآن شدیم تا یک سرویس مشابه جی‌ممورایز ایجاد کنیم و به شما برای یادگیری با "
+"روش فلش‌کارت لایتنر کمک کنیم. الته همراه با تفریح و لذت استفاده از آن."
+
+#: ../../../.././includes/languages/trans_twig.php:20
+msgid "OUR FEATURES"
+msgstr "امکانات ما"
+
+#: ../../../.././includes/languages/trans_twig.php:21
+msgid ""
+"manages your learn progress and features categories, Unicode flashcard texts, "
+"statistics and an intuitive interface."
+msgstr ""
+"مدیریت فرآیند یادگیری به همراه ویژگی دسته‌بندی و بدون محدودیت در متون "
+"فلش‌کارت‌ها همراه با آمار و رابط کاربری ساده"
+
+#: ../../../.././includes/languages/trans_twig.php:22
+msgid "Responsive Design"
+msgstr "طراحی واکنش‌گرا"
+
+#: ../../../.././includes/languages/trans_twig.php:23
+msgid "You can use our service in all of your device in any resolution."
+msgstr ""
+"شما می‌توانید از سرویس‌های ما در تمامی دستگاه‌ها با هر سایز صفحه نمایشی استفاده "
+"کنید."
+
+#: ../../../.././includes/languages/trans_twig.php:24
+msgid "Web Development"
+msgstr "توسعه تحت وب"
+
+#: ../../../.././includes/languages/trans_twig.php:25
+msgid "We develope features and improve usability of this service."
+msgstr "ما امکانات این سرویس را ساخته و آن را به صورت کاربردی ارتقا خواهیم داد."
+
+#: ../../../.././includes/languages/trans_twig.php:26
+msgid "Learn Faster"
+msgstr "یادگیری سریع"
+
+#: ../../../.././includes/languages/trans_twig.php:27
+msgid ""
+"with this service based on Leitner flashcard we help you learn faster than "
+"usual and enjoy!"
+msgstr ""
+"با کمک این سرویس که بر پایه فلش‌کارت لایتنر است، ما به شما کمک می‌کنیم که سریع "
+"و ساده و لذت بخش یاد بگیرید."
+
+#: ../../../.././includes/languages/trans_twig.php:28
+msgid "Copyright"
+msgstr "کپی‌رایت"
+
+#: ../../../.././includes/languages/trans_twig.php:29
+msgid "2015"
+msgstr "۱۳۹۴"
+
+#: ../../../.././includes/languages/trans_twig.php:42
 msgid "Enter card front here"
 msgstr "بخش جلوی کارت را وارد کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:17
+#: ../../../.././includes/languages/trans_twig.php:43
 msgid "Enter card back here"
 msgstr "بخش پشت کارت را وارد کنید"
 
-#: ../../../.././includes/languages/trans_twig.php:28
+#: ../../../.././includes/languages/trans_twig.php:54
 msgid "Submit"
 msgstr "تایید"
 
