@@ -23,16 +23,11 @@ private function transtext()
 	echo T_("status");              // cardcat_status
 	echo T_("modified");            // date_modified
 
-	// ------------------------------------------------------------ Table carddetails
-	echo T_("carddetails");         // Table carddetails
-	echo T_("carddetail");          // carddetail
-	echo T_("success");             // Enum success
-	echo T_("fail");                // Enum fail
-	echo T_("ignore");              // Enum ignore
-	echo T_("change");              // Enum change
+	// ------------------------------------------------------------ Table cardlists
+	echo T_("cardlists");           // Table cardlists
+	echo T_("cardlist");            // cardlist
+	echo T_("cardcat");             // cardcat_id
 	echo T_("card");                // card_id
-	echo T_("date");                // carddetail_date
-	echo T_("status");              // carddetail_status
 
 	// ------------------------------------------------------------ Table cards
 	echo T_("cards");               // Table cards
@@ -44,7 +39,7 @@ private function transtext()
 	// ------------------------------------------------------------ Table cardusages
 	echo T_("cardusages");          // Table cardusages
 	echo T_("cardusage");           // cardusage
-	echo T_("cardcat");             // cardcat_id
+	echo T_("cardlist");            // cardlist_id
 	echo T_("deck");                // cardusage_deck
 	echo T_("try");                 // cardusage_try
 	echo T_("trysuccess");          // cardusage_trysuccess

@@ -1,0 +1,3 @@
+"id"	"user_id"	"cardcat_type"	"cardcat_title"	"cardcat_slug"	"cardcat_desc"	"cardcat_url"	"cardcat_parent"	"cardcat_count"	"cardcat_status"	"date_modified"
+"1"	""	"english"	"504"	"504"	""	"504"	""	""	"enable"	""
+"2"	""	"english"	"450"	"450"	""	"450"	""	""	"enable"	""

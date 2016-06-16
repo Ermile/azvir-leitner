@@ -1,0 +1,4668 @@
+"id"	"paper_text"
+"1"	"Abandon"
+"2"	"Keen"
+"3"	"Jealous"
+"4"	"Tact"
+"5"	"Oath"
+"6"	"Vacant"
+"7"	"Hardship"
+"8"	"Gallant"
+"9"	"Data"
+"10"	"Unaccustomed"
+"11"	"Bachelor"
+"12"	"Qualify"
+"13"	"Corpse"
+"14"	"Conceal"
+"15"	"Dismal"
+"16"	"Frigid"
+"17"	"Inhabit"
+"18"	"Numb"
+"19"	"Peril"
+"20"	"Recline"
+"21"	"Shriek"
+"22"	"Sinister"
+"23"	"Tempt"
+"24"	"Wager"
+"25"	"Typical"
+"26"	"Minimum"
+"27"	"Scarce"
+"28"	"Annual"
+"29"	"Persuade"
+"30"	"Essential"
+"31"	"Blend"
+"32"	"Visible"
+"33"	"Expensive"
+"34"	"Talent"
+"35"	"Devise"
+"36"	"Wholesale"
+"37"	"Vapor"
+"38"	"Eliminate"
+"39"	"Villain"
+"40"	"Dense"
+"41"	"Utilize"
+"42"	"Humid"
+"43"	"Theory"
+"44"	"Descend"
+"45"	"Circulate"
+"46"	"Enormous"
+"47"	"Predict"
+"48"	"Vanish"
+"49"	"Tradition"
+"50"	"Rural"
+"51"	"Burden"
+"52"	"Campus"
+"53"	"Majority"
+"54"	"Assemble"
+"55"	"Explore"
+"56"	"Topic"
+"57"	"Debate"
+"58"	"Evade"
+"59"	"Probe"
+"60"	"Reform"
+"61"	"Approach"
+"62"	"Detect"
+"63"	"Defect"
+"64"	"Employee"
+"65"	"Neglect"
+"66"	"Deceive"
+"67"	"Undoubtedly"
+"68"	"Popular"
+"69"	"Thorough"
+"70"	"Client"
+"71"	"Comprehensive"
+"72"	"Defraud"
+"73"	"Postpone"
+"74"	"Consent"
+"75"	"Massive"
+"76"	"Capsule"
+"77"	"Preserve"
+"78"	"Denounce"
+"79"	"Unique"
+"80"	"Torrent"
+"81"	"Resent"
+"82"	"Molest"
+"83"	"Gloomy"
+"84"	"Unforeseen"
+"85"	"Exaggerate"
+"86"	"Amateur"
+"87"	"Mediocre"
+"88"	"Variety"
+"89"	"Valid"
+"90"	"Survive"
+"91"	"Weird"
+"92"	"Prominent"
+"93"	"Security"
+"94"	"Bulky"
+"95"	"Reluctant"
+"96"	"Obvious"
+"97"	"Vicinity"
+"98"	"Century"
+"99"	"Rage"
+"100"	"Document"
+"101"	"Conclude"
+"102"	"Undeniable"
+"103"	"Resist"
+"104"	"Lack"
+"105"	"Ignore"
+"106"	"Challenge"
+"107"	"Miniature"
+"108"	"Source"
+"109"	"Excel"
+"110"	"Feminine"
+"111"	"Mount"
+"112"	"Compete"
+"113"	"Dread"
+"114"	"Masculine"
+"115"	"Menace"
+"116"	"Tendency"
+"117"	"Underestimate"
+"118"	"Victorious"
+"119"	"Numerous"
+"120"	"Flexible"
+"121"	"Evidence"
+"122"	"Solitary"
+"123"	"Vision"
+"124"	"Frequent"
+"125"	"Glimpse"
+"126"	"Recent"
+"127"	"Decade"
+"128"	"Hesitate"
+"129"	"Absurd"
+"130"	"Conflict"
+"131"	"Minority"
+"132"	"Fiction"
+"133"	"Ignite"
+"134"	"Abolish"
+"135"	"Urban"
+"136"	"Population"
+"137"	"Frank"
+"138"	"Pollute"
+"139"	"Reveal"
+"140"	"Prohibit"
+"141"	"Urgent"
+"142"	"Adequate"
+"143"	"Decrease"
+"144"	"Audible"
+"145"	"Journalist"
+"146"	"Famine"
+"147"	"Revive"
+"148"	"Commence"
+"149"	"Observant"
+"150"	"Identify"
+"151"	"Migrate"
+"152"	"Vessel"
+"153"	"Persist"
+"154"	"Hazy"
+"155"	"Gleam"
+"156"	"Editor"
+"157"	"Unruly"
+"158"	"Rival"
+"159"	"Violent"
+"160"	"Brutal"
+"161"	"Opponent"
+"162"	"Brawl"
+"163"	"Duplicate"
+"164"	"Vicious"
+"165"	"Whirling"
+"166"	"Underdog"
+"167"	"Thrust"
+"168"	"Bewildered"
+"169"	"Expand"
+"170"	"Alter"
+"171"	"Mature"
+"172"	"Sacred"
+"173"	"Revise"
+"174"	"Pledge"
+"175"	"Casual"
+"176"	"Pursue"
+"177"	"Unanimous"
+"178"	"Fortunate"
+"179"	"Pioneer"
+"180"	"Innovative"
+"181"	"Slender"
+"182"	"Surpass"
+"183"	"Vast"
+"184"	"Doubt"
+"185"	"Capacity"
+"186"	"Penetrate"
+"187"	"Pierce"
+"188"	"Accurate"
+"189"	"Microscope"
+"190"	"Grateful"
+"191"	"Cautions"
+"192"	"Confident"
+"193"	"Appeal"
+"194"	"Addict"
+"195"	"Wary"
+"196"	"Aware"
+"197"	"Misfortune"
+"198"	"Avoid"
+"199"	"Wretched"
+"200"	"Keg"
+"201"	"Nourish"
+"202"	"Harsh"
+"203"	"Quantity"
+"204"	"Opt"
+"205"	"Tragedy"
+"206"	"Pedestrian"
+"207"	"Glance"
+"208"	"Budget"
+"209"	"Nimble"
+"210"	"Manipulate"
+"211"	"Reckless"
+"212"	"Horrid"
+"213"	"Rave"
+"214"	"Economical"
+"215"	"Lubricate"
+"216"	"Ingenious"
+"217"	"Harvest"
+"218"	"Abundant"
+"219"	"Uneasy"
+"220"	"Calculate"
+"221"	"Absorb"
+"222"	"Estimate"
+"223"	"Morsel"
+"224"	"Quota"
+"225"	"Threat"
+"226"	"Ban"
+"227"	"Panic"
+"228"	"Appropriate"
+"229"	"Emerge"
+"230"	"Jagged"
+"231"	"Linger"
+"232"	"Ambush"
+"233"	"Crafty"
+"234"	"Defiant"
+"235"	"Vigor"
+"236"	"Perish"
+"237"	"Fragile"
+"238"	"Captive"
+"239"	"Prosper"
+"240"	"Devour"
+"241"	"Plea"
+"242"	"Weary"
+"243"	"Collide"
+"244"	"Confirm"
+"245"	"Verify"
+"246"	"Anticipate"
+"247"	"Dilemma"
+"248"	"Detour"
+"249"	"Merit"
+"250"	"Transmit"
+"251"	"Relieve"
+"252"	"Baffle"
+"253"	"Warden"
+"254"	"Acknowledge"
+"255"	"Justice"
+"256"	"Delinquent"
+"257"	"Reject"
+"258"	"Deprive"
+"259"	"Spouse"
+"260"	"Vocation"
+"261"	"Unstable"
+"262"	"Homicide"
+"263"	"Penalize"
+"264"	"Beneficiary"
+"265"	"Reptile"
+"266"	"Rarely"
+"267"	"Forbid"
+"268"	"Logical"
+"269"	"Exhibit"
+"270"	"Proceed"
+"271"	"Precaution"
+"272"	"Extract"
+"273"	"Prior"
+"274"	"Embrace"
+"275"	"Valiant"
+"276"	"Partial"
+"277"	"Fierce"
+"278"	"Detest"
+"279"	"Sneer"
+"280"	"Scowl"
+"281"	"Encourage"
+"282"	"Consider"
+"283"	"Vermin"
+"284"	"Wail"
+"285"	"Symbol"
+"286"	"Authority"
+"287"	"Neutral"
+"288"	"Trifle"
+"289"	"Architect"
+"290"	"Matrimony"
+"291"	"Baggage"
+"292"	"Squander"
+"293"	"Abroad"
+"294"	"Fugitive"
+"295"	"Calamity"
+"296"	"Pauper"
+"297"	"Envy"
+"298"	"Collapse"
+"299"	"Prosecute"
+"300"	"Bigamy"
+"301"	"Possible"
+"302"	"Compel"
+"303"	"Awkward"
+"304"	"Venture"
+"305"	"Awesome"
+"306"	"Guide"
+"307"	"Quench"
+"308"	"Betray"
+"309"	"Utter"
+"310"	"Pacify"
+"311"	"Respond"
+"312"	"Beckon"
+"313"	"Despite"
+"314"	"Disrupt"
+"315"	"Rash"
+"316"	"Rapid"
+"317"	"Exhaust"
+"318"	"Severity"
+"319"	"Feeble"
+"320"	"Unite"
+"321"	"Cease"
+"322"	"Thrifty"
+"323"	"Miserly"
+"324"	"Monarch"
+"325"	"Outlaw"
+"326"	"Promote"
+"327"	"Undernourished"
+"328"	"Illustrate"
+"329"	"Disclose"
+"330"	"Excessive"
+"331"	"Disaster"
+"332"	"Censor"
+"333"	"Culprit"
+"334"	"Juvenile"
+"335"	"Bait"
+"336"	"Insist"
+"337"	"Toil"
+"338"	"Blunder"
+"339"	"Daze"
+"340"	"Mourn"
+"341"	"Subside"
+"342"	"Maim"
+"343"	"Comprehend"
+"344"	"Commend"
+"345"	"Final"
+"346"	"Exempt"
+"347"	"Vain"
+"348"	"Repetition"
+"349"	"Depict"
+"350"	"Mortal"
+"351"	"Novel"
+"352"	"Occupant"
+"353"	"Appoint"
+"354"	"Quarter"
+"355"	"Site"
+"356"	"Quote"
+"357"	"Verse"
+"358"	"Morality"
+"359"	"Roam"
+"360"	"Attract"
+"361"	"Commuter"
+"362"	"Confine"
+"363"	"Idle"
+"364"	"Idol"
+"365"	"Jest"
+"366"	"Patriotic"
+"367"	"Dispute"
+"368"	"Valor"
+"369"	"Lunatic"
+"370"	"Vein"
+"371"	"Uneventful"
+"372"	"Fertile"
+"373"	"Refer"
+"374"	"Distress"
+"375"	"Diminish"
+"376"	"Maximum"
+"377"	"Flee"
+"378"	"Vulnerable"
+"379"	"Signify"
+"380"	"Mythology"
+"381"	"Colleague"
+"382"	"Torment"
+"383"	"Provide"
+"384"	"Loyalty"
+"385"	"Volunteer"
+"386"	"Prejudice"
+"387"	"Shrill"
+"388"	"Jolly"
+"389"	"Witty"
+"390"	"Hinder"
+"391"	"Lecture"
+"392"	"Abuse"
+"393"	"Mumble"
+"394"	"Mute"
+"395"	"Wad"
+"396"	"Retain"
+"397"	"Candidate"
+"398"	"Precede"
+"399"	"Adolescent"
+"400"	"Coeducational"
+"401"	"Radical"
+"402"	"Spontaneous"
+"403"	"Skim"
+"404"	"Vaccinate"
+"405"	"Untidy"
+"406"	"Utensil"
+"407"	"Sensitive"
+"408"	"Temperate"
+"409"	"Vague"
+"410"	"Elevate"
+"411"	"Lottery"
+"412"	"Finance"
+"413"	"Obtain"
+"414"	"Cinema"
+"415"	"Event"
+"416"	"Discard"
+"417"	"Soar"
+"418"	"Subsequent"
+"419"	"Related"
+"420"	"Stationary"
+"421"	"Prompt"
+"422"	"Hasty"
+"423"	"Scorch"
+"424"	"Tempest"
+"425"	"Soothe"
+"426"	"Sympathetic"
+"427"	"Redeem"
+"428"	"Resume"
+"429"	"Harmony"
+"430"	"Refrain"
+"431"	"Illegal"
+"432"	"Narcotic"
+"433"	"Heir"
+"434"	"Majestic"
+"435"	"Dwindle"
+"436"	"Surplus"
+"437"	"Traitor"
+"438"	"Deliberate"
+"439"	"Vandal"
+"440"	"Drought"
+"441"	"Abide"
+"442"	"Unify"
+"443"	"Summit"
+"444"	"Heed"
+"445"	"Biography"
+"446"	"Drench"
+"447"	"Swarm"
+"448"	"Wobble"
+"449"	"Tumult"
+"450"	"Kneel"
+"451"	"Dejected"
+"452"	"Obedient"
+"453"	"Recede"
+"454"	"Tyrant"
+"455"	"Charity"
+"456"	"Verdict"
+"457"	"Unearth"
+"458"	"Depart"
+"459"	"Coincide"
+"460"	"Cancel"
+"461"	"Debtor"
+"462"	"Legible"
+"463"	"Placard"
+"464"	"Contagious"
+"465"	"Clergy"
+"466"	"Customary"
+"467"	"Transparent"
+"468"	"Scald"
+"469"	"Epidemic"
+"470"	"Obesity"
+"471"	"Magnify"
+"472"	"Chiropractor"
+"473"	"Obstacle"
+"474"	"Ventilate"
+"475"	"Jeopardize"
+"476"	"Negative"
+"477"	"Pension"
+"478"	"Vital"
+"479"	"Municipal"
+"480"	"Oral"
+"481"	"Complacent"
+"482"	"Wasp"
+"483"	"Rehabilitate"
+"484"	"Parole"
+"485"	"Vertical"
+"486"	"Multitude"
+"487"	"Nominate"
+"488"	"Potential"
+"489"	"Morgue"
+"490"	"Preoccupied"
+"491"	"Upholstery"
+"492"	"Indifference"
+"493"	"Maintain"
+"494"	"Snub"
+"495"	"Endure"
+"496"	"Wrath"
+"497"	"Expose"
+"498"	"Legend"
+"499"	"Ponder"
+"500"	"Resign"
+"501"	"Drastic"
+"502"	"Wharf"
+"503"	"Amend"
+"504"	"Ballot"
+"505"	"quit, desert ,leave without planning to come back
+
+ترک کردن، دست کشیدن"
+"506"	"sharp, intense, eager
+
+تیز،مشتاق، شدید، حساس"
+"507"	"wanting what s.o else has, afraid that the one you love might prefer someone else,wanting what someone else has
+
+حسود، ترس از اینکه شخصی که شما دوست دارید دیگری را ترجیح دهد"
+"508"	"ability to say the right thing
+
+توانایی در بیان سخن، تدبر، کاردانی"
+"509"	"promise, solemn promise; blasphemous use of sacred words to express strong feelings; swear-word; Ex. For Christ's sake
+
+سوگند، قسم، وعده دادن به اینکه چیزی درست است"
+"510"	"empty, unoccupied
+
+خال، تهی"
+"511"	"difficulty, trouble; pain and suffering
+
+سختی، تنگدستی"
+"512"	"brave, heroic
+
+شجاع، دلیر، زن نواز"
+"513"	"information
+
+شواهد، اطلاعات"
+"514"	"unusual
+
+عادت نکرده، ناآشنا"
+"515"	"a man who has not married
+
+مرد مجرد"
+"516"	"become fit, add a modifier to a constituent
+
+صلاحیت داشتن، شایستگی داشتن"
+"517"	"a dead body
+
+جسد، انسان مرده"
+"518"	"hide
+
+پنهان کردن"
+"519"	"dark & depressing
+
+افسرده، دلتنگ، گرفته"
+"520"	"very cold
+
+خیلی سرد"
+"521"	"live in
+
+اقامت داشتن در"
+"522"	"without the power of feeling
+
+بی حس، بن بست"
+"523"	"danger
+
+خطر"
+"524"	"lie down
+
+خوابیدن، دراز کشیدن، لم دادن"
+"525"	"scream
+
+جیغ زدن"
+"526"	"evil
+
+پلید، شرور، وحشتناک"
+"527"	"test
+
+امتحان کردن، وسوسه کردن"
+"528"	"bet
+
+شرط"
+"529"	"usual
+
+نوعی، نمادین"
+"530"	"the lowest amount
+
+حداقل، کمترین حد"
+"531"	"hard to get
+
+کم، کمیاب"
+"532"	"once a year
+
+سالیانه، یک ساله"
+"533"	"make willing
+
+متقاعد کردن، تشویق کردن"
+"534"	"necessary
+
+لازم، اصلی"
+"535"	"a mixture
+
+مخلوط کردن، ترکیب کردن"
+"536"	"able to bee seen
+
+پیدا، قابل روئیت"
+"537"	"costly
+
+گران، پرقیمت"
+"538"	"natural ability
+
+استعداد، نعمت"
+"539"	"plan
+
+اندیشیدن، برنامه ریزی کردن"
+"540"	"in large quantity
+
+عمده فروشی، بهطور عمده، گسترده"
+"541"	"fog
+
+بخار، مه"
+"542"	"remove
+
+رفع کردن، بیرون کردن، خذف کردن"
+"543"	"a very wicked person
+
+آدم شرور، تبهکار"
+"544"	"thick
+
+انبوه، غلیظ، متراکم"
+"545"	"make use of
+
+استفاده کردن"
+"546"	"moist
+
+مرطوب، نم"
+"547"	"explanation based on thought
+
+نظریه"
+"548"	"go down
+
+پایین آمدن، فرود آمدن"
+"549"	"go around
+
+گردش کردن، منتشر کردن، حرکت کردن"
+"550"	"huge
+
+بسیار بزرگ"
+"551"	"tell beforehand
+
+پیش بینی کردن"
+"552"	"disappear
+
+محو شدن، ناپدید شدن، غیب شدن"
+"553"	"beliefs handed down from one generation to another
+
+باورها، سنت ها و اعتقادات"
+"554"	"in the country
+
+روستایی"
+"555"	"a load
+
+بار، مسئولیت"
+"556"	"grounds of a university
+
+محوطه دانشگاه یا مدرسه"
+"557"	"the large number
+
+اکثریت، قسمت عمده"
+"558"	"bring together
+
+ساختن، گرد آوردن"
+"559"	"examine
+
+اکتشاف کردن، گردش کردن"
+"560"	"subject that people think
+
+موضوع، عنوان"
+"561"	"a discussion against something
+
+مناظره، مباحثه"
+"562"	"get away from by cleverness
+
+طفره رفتن، فرار کردن"
+"563"	"search into
+
+بررسی کردن، کاوش کردن"
+"564"	"make better
+
+اصلاح کردن، بهبود"
+"565"	"come near
+
+نزدیک شدن، پذیرفتن"
+"566"	"discover
+
+پیدا کردن، فهمیدن"
+"567"	"fault
+
+عیب، نقص"
+"568"	"a person who work for pay
+
+کارمند، کارگر، مستخدم"
+"569"	"give too little care
+
+اهمیت ندادن، غفلت کردن"
+"570"	"mislead
+
+فریب دادن، گول زدن"
+"571"	"certainly
+
+مطمئنا، بدون شک"
+"572"	"liked by most people
+
+رایج، عمومی، مشهور"
+"573"	"complete
+
+کامل، کافی"
+"574"	"customer
+
+موکل، مشتری"
+"575"	"completely
+
+جامع، وسیع، فراگیر"
+"576"	"take something by cheating
+
+کلاهبرداری کردن، فریب دادن"
+"577"	"delay
+
+به تاخیر انداختن، به زمان دیگری موکول کردن"
+"578"	"agree
+
+موافقت کردن، رضایت دادن"
+"579"	"bulky
+
+بزرگ، درشت، سنگین"
+"580"	"a small case
+
+کپسول، جعبه یا روکش کوچک"
+"581"	"protect
+
+نگه داشتن، حفظ کردن"
+"582"	"express strong disapproval
+
+محکوم کردن،متهم کردن، سرزنش کردن"
+"583"	"having no like
+
+بی نظیر، منحصر به فرد"
+"584"	"flood
+
+سیلاب، تند آب، هرچیز شدید"
+"585"	"feel injured and angered at something
+
+رنجیدن، اظهار تنفر از"
+"586"	"disturb
+
+آزار دادن، اذیت کردن"
+"587"	"dark
+
+تاریک، ابری، افسرده، دلگیر، کم نور"
+"588"	"unexpected
+
+غیر منتظره، پیش بینی نشده"
+"589"	"overstate
+
+مبالغه کردن، غلو کردن"
+"590"	"amateur
+
+کسی که کاری را برای تفریح انجام می دهد نه برای پول یا حرفه، آماتور"
+"591"	"average
+
+نه خوب، نه بد، معمولی"
+"592"	"lack of sameness
+
+گوناگون، انواع مختلف"
+"593"	"TRUE
+
+معتبر، موثق، محکم، درست"
+"594"	"live longer than
+
+زنده ماندن، باقی ماندن"
+"595"	"mysterious
+
+خارق العاده، عجیب، غیر طبیعی"
+"596"	"important
+
+مشهور، مهم، برجسته"
+"597"	"care
+
+امنیت، اطمینان خاطر، رها ازخطر"
+"598"	"large
+
+بزرگ، حجیم، جاگیر"
+"599"	"unwilling
+
+بی میل، ناراضی، بی رغبت"
+"600"	"plain
+
+آشکار، روشن، مشهود"
+"601"	"neighborhood
+
+مجاورت، همسایگی، اطراف، نسبت"
+"602"	"100 years
+
+قرن، سده"
+"603"	"violent anger
+
+خشم، غصب"
+"604"	"document
+
+سند، مدرک"
+"605"	"finish
+
+به پایان رساندن، تصمیم گرفتن"
+"606"	"not to be denied
+
+انکار ناپذیر، مسلم، بی تردید"
+"607"	"oppose
+
+مقاومت کردن، ایستادگی کردن"
+"608"	"have not enough
+
+فاقد بودن، بی بهره بودن"
+"609"	"disregard
+
+نادیده گرفتن، رد کردن"
+"610"	"call to a fight
+
+چالش، زیر سوال بردن"
+"611"	"small scale
+
+مینیاتور، عکس کوچک، ماکت"
+"612"	"source
+
+منبع، منشا، مرجع"
+"613"	"do better than
+
+برتری داشتن، بهتر بودن"
+"614"	"of women or girls
+
+زنانه، دخترانه"
+"615"	"get up on
+
+سوار شدن، بالا رفتن"
+"616"	"be a rival
+
+رقابت کردن، مسابقه دادن"
+"617"	"causing great fear
+
+ترسیدن از، وحشت داشتن از"
+"618"	"male
+
+مردانه"
+"619"	"threat
+
+تهدید، خطر، مزاحم"
+"620"	"leaning
+
+گرایش، تمایل"
+"621"	"set too low a value
+
+دست کم گرفتن، کمتر از حد براورد کردن"
+"622"	"having won a victory
+
+پیروز، برنده، پیروزی"
+"623"	"several
+
+زیاد، متعدد، سنگین"
+"624"	"easily bent
+
+قبل انعطاف، نرم"
+"625"	"that which makes clear the truth
+
+مدرک، اثر، گواه"
+"626"	"alone
+
+تنها، گوشه گیرانه، مجرد، منزوی"
+"627"	"power of seeing
+
+بینایی، دید، بصیرت"
+"628"	"happening often
+
+مکرر، پی در پی، سریع"
+"629"	"quick view
+
+نظر اجمالی، اشاره"
+"630"	"done not long ago
+
+تازه، اخیر"
+"631"	"ten years
+
+دوره ده ساله، دهه"
+"632"	"fail to act quickly
+
+درنگ کردن، تردید کردن، گیر کردن"
+"633"	"foolish
+
+احمقانه، بی معنی، پوچ"
+"634"	"disagreement
+
+اختلاف نظر، درگیری، تضاد"
+"635"	"less than half
+
+اقلیت، بخش، کمتر"
+"636"	"that which is imagined
+
+تخیلی، بی اساس، ساختگی، افسانه، قصه"
+"637"	"set on fire
+
+آتش گرفتن، سوزاندن، آتش زدن، برانگیختن"
+"638"	"put an end to
+
+منسوخ کردن، لغو کردن"
+"639"	"having to do with cities
+
+شهری"
+"640"	"people of the city or country
+
+جمعیت"
+"641"	"free in expressing
+
+بی پرده، رک و راست، صریح"
+"642"	"make dirty
+
+آلوده کردن"
+"643"	"make known
+
+آشکار کردن، فاش کردن، برملا کردن"
+"644"	"forbid by law
+
+منع کردن، ممانعت کردن"
+"645"	"important
+
+فوری، ضروری، مهم"
+"646"	"as much as is needed
+
+کافی، مناسب"
+"647"	"become less
+
+کاستن، کم کردن"
+"648"	"able to be heard
+
+شنیدنی، قابل شنیدن"
+"649"	"writer for newspaper
+
+روزنامه نگار"
+"650"	"starvation
+
+گرسنگی، قحطی، کمبود شدید"
+"651"	"come back to life
+
+زنده کردن، زنده شدن، احیا، به هوش آمدن"
+"652"	"start
+
+آغاز کردن، شروع کردن"
+"653"	"watchful
+
+هوشیار، تیز بین، متوجه"
+"654"	"recognize as being
+
+شناختن،، شناسایی کردن، تعیین کردن"
+"655"	"move from one lace to another
+
+مهاجرت کردن، جا به جا شدن"
+"656"	"a ship
+
+کشتی، ظرف گود، رگ"
+"657"	"continue firmly
+
+پافشاری، اصرار، تداوم"
+"658"	"misty
+
+مه آلود ، پردود، نامشخص"
+"659"	"a flash
+
+درخشش نور، برق زدن"
+"660"	"person who prepare a publication
+
+ناشر، ویراستار، مدیر، سردبیر"
+"661"	"lawless
+
+نافرمان، سرکش، خلافکار، غیر قانونی"
+"662"	"opponent
+
+رقیب، حریف"
+"663"	"rough force
+
+پرخاشگر، تند، سخت، شدید"
+"664"	"cruel
+
+بی ادب، وحشی، بی رحم"
+"665"	"rival
+
+حریف، رقیب، مخالف"
+"666"	"a noisy fight
+
+داد و بیداد کردن، نزاع کردن"
+"667"	"an exact copy
+
+کپی دقیق، دقیقا کاری را تکرار کردن"
+"668"	"evil
+
+بدکار، رذل، بی رحم"
+"669"	"turn round
+
+چرخاندن، چرخیدن، چرخ زدن، تاب خوردن"
+"670"	"one who is expected to lose
+
+طرف بازنده، طرف ضعیف تر"
+"671"	"push with force
+
+هل دادن، بلند کردن، انداختن، سوراخ کردن"
+"672"	"confused completely
+
+گیج شده، متحیر، شگفت زده"
+"673"	"enlarge
+
+گسترش دادن، بهبود دادن، توسعه دادن، منبسط کردن"
+"674"	"change
+
+تغییر دادن، عوض کردن"
+"675"	"fully grown
+
+رسیده، شخص بالغ، باتجربه، هدفمند"
+"676"	"holy
+
+پاک، مقدس، روحانی، شایسته"
+"677"	"change
+
+تغییر دادن، تجدید نظر کردن"
+"678"	"promise
+
+قول دادن، پیمان بستن، گرو گذاشتن"
+"679"	"happening by chance
+
+اتفاقی، سرسری، حساب نشده، تصادفی"
+"680"	"follow
+
+دنبال کردن، پیش رفتن، ادامه دادن"
+"681"	"in complete agreement
+
+هم رای، یک دل، موافق"
+"682"	"lucky
+
+خوشبخت، خوش شانس، سعادتمند"
+"683"	"one who goes first
+
+پیشقدم، پیشتاز، پیشرو، مهندس"
+"684"	"fresh
+
+باهوش، مبتکر، سازنده، طراح، نوآور، خلاق"
+"685"	"slim
+
+لاغر، باریک، ناچیز، کم، ضعیف"
+"686"	"excel
+
+پیش افتادن، جلو زدن"
+"687"	"very great
+
+بزرگ، گسترده، متراکم، عمیق، وسیع"
+"688"	"not believe
+
+باور نکردن، شک داشتن"
+"689"	"amount of space
+
+گنجایش، ظرفیت"
+"690"	"get into
+
+رخنه کردن، نفوذ کردن"
+"691"	"go into
+
+سوراخ کردن، شکافتن، نفوذ کردن، پاره کردن، کر کردن"
+"692"	"exactly right
+
+درست، دقیق، کامل، با دقت"
+"693"	"microscope
+
+میکروسکوپ"
+"694"	"thankful
+
+سپاسگزار، ممنون، خشنود، راضی"
+"695"	"very careful
+
+محتاط، مواظب، هوشیار، مراقب"
+"696"	"sure
+
+مطمئن، خونسرد، خاطر جمع، محرم اسرار"
+"697"	"attraction
+
+جلب توجه، علاقه، در خواست کردن"
+"698"	"one who cannot break away from a habit
+
+عادت کردن، معتاد به کاری"
+"699"	"cautious
+
+محتاط، ملاحظه کار، مراقب"
+"700"	"knowing
+
+آگاه، با اطلاع، باخبر، مراقب"
+"701"	"bad luck
+
+بدبختی، بدشانسی"
+"702"	"keep away from
+
+اجتناب کردن، دوری کردن"
+"703"	"miserable
+
+تاسف بار، مصیبت انگیز، پست، بسیار بد"
+"704"	"small barrel
+
+بشکه ای کوچک، با ظرفیت کمتر از 10 گالن، جعبه"
+"705"	"feed
+
+تغذیه کردن، تقویت کردن، پرورش دادن"
+"706"	"rough to the touch
+
+زمخت، زننده، تند، خشن"
+"707"	"amount
+
+مقدار، کمیت"
+"708"	"select
+
+انتخاب کردن، برگزیدن، ملحق شدن"
+"709"	"a sad play
+
+مصیبت، فاجعه، نمایش فاجعه، تراژدی"
+"710"	"walker
+
+پیاده رو،عابر پیاده"
+"711"	"a quick look
+
+نگاه مختصر و اجمالی، اشاره کردن"
+"712"	"amount of money that can be spend
+
+بودجه"
+"713"	"quick moving
+
+چابک، فرز، تند، زرنگ"
+"714"	"handle skilfully
+
+با مهارت انجام دادن، درست به کار بردن، با دست انجام دادن"
+"715"	"careless
+
+بی دقت، بی ملاحظه، بی توجه"
+"716"	"terrible
+
+وحشتناک، ترسناک"
+"717"	"talk wildly
+
+غلو کردن، یاوه گفتن"
+"718"	"not wasting money or time
+
+صرفه جویی، اقتصادی، مقرون به صرفه"
+"719"	"grease
+
+روغن کاری، گریس زدن، روان کردن"
+"720"	"clever
+
+باهوش، هنرمند، صاحب"
+"721"	"gathering in of grain
+
+درو کردن، جمع کردن"
+"722"	"more than enough
+
+بیش از اندازه، خیلی زیاد"
+"723"	"restless
+
+ناآرام، ناراحت، مضطرب"
+"724"	"find out by adding....
+
+حساب کردن، برآورد کردن"
+"725"	"take in or suck up
+
+جذب کردن، مجذوب کردن"
+"726"	"form a judgment
+
+قضاوت کردن، تخمین زدن، پیش بینی کردن"
+"727"	"a small bite
+
+لقمه، تیکه، مقدار کم"
+"728"	"share of a total due from or to a particular state
+
+سهمیه"
+"729"	"sign or cause of possible evil or harm
+
+تهدید کردن"
+"730"	"prohibit
+
+ممنوع کردن، قدغن کردن، محروم کردن"
+"731"	"unreasoning fear
+
+ترس بدون دلیل"
+"732"	"fit
+
+اختصاص دادن، تصرف کردن"
+"733"	"come out
+
+بیرون آمدن، اعلام کردن، طلوع کردن، خارج شدن"
+"734"	"with sharp points sticking out
+
+دندانه دار،، اره مانند، لبه تیز"
+"735"	"stay on
+
+ماندن، تاخیر کردن، دیر راه رفتن"
+"736"	"panahgah
+
+کمین، کمین گاه"
+"737"	"skillful in deceiving others
+
+حیله گر، حقه باز، زیرک"
+"738"	"openly resisting
+
+بی اعتنا، جسور، گستاخانه"
+"739"	"active strength or force
+
+نیرو، قدرت، توان"
+"740"	"be destroyed
+
+ویران کردن، مردن، نابود شدن"
+"741"	"easy broken
+
+شکننده، آسیب پذیر، ضعیف، حساس"
+"742"	"prisoner
+
+اسیر، گرفتار، زندانی"
+"743"	"be successful
+
+موفق بودن، آینده روشن، درست"
+"744"	"eat hungrily
+
+خوردن، بلعیدن، جذب کردن"
+"745"	"request
+
+عنوان، درخواست، خواسته"
+"746"	"tired
+
+خسته، کسل، مانده"
+"747"	"come together with force
+
+به هم خوردن، تصادف کردن"
+"748"	"verify
+
+تایید کردن، تصدیق کردن"
+"749"	"confirm
+
+رسیدگی کردن، وارسی کردن"
+"750"	"expect
+
+پیش بینی کردن، منتظر چیزی بودن"
+"751"	"a difficult choice
+
+معما، مخمصه، وضع دشوار"
+"752"	"a roundabout way
+
+جاده انحرافی، مسیر فرعی"
+"753"	"goodness
+
+شایستگی، خوبی، ارزش، فایده"
+"754"	"send over
+
+انتقال دادن، فرستادن، پخش کردن، ارسال کردن"
+"755"	"replace
+
+کاستن، راحت کردن، مرخص کردن، برکنار کردن"
+"756"	"be to hard to understand
+
+برهم زدن، گیج کردن، گیج کننده"
+"757"	"keeper
+
+سرپرست، ناظر، نگهبان، زندانبان، رئیس زندان"
+"758"	"admit to be true
+
+اعتراف کردن، قبول کردن، تایید کردن"
+"759"	"fair dealing
+
+عدالت، رفتار منصفانه"
+"760"	"an offender
+
+بزه کار مجرم، غفلت کار، مقصر، داری تاخیر در پرداخت"
+"761"	"refuse to take
+
+نپذیرفتن، رد کردن"
+"762"	"take away from by force
+
+بی بهره کردن، محروم کردن"
+"763"	"husband or wife
+
+همسر، زن یا شوهر"
+"764"	"occupation
+
+حرفه، شغل، کار"
+"765"	"not firmly fixed
+
+ناپایدار، بی ثبات"
+"766"	"murder
+
+قتل، آدم کشی، قتل عام"
+"767"	"set a penalty for
+
+مجازات کردن، جریمه کردن"
+"768"	"person who receive benefit
+
+وارث، بهره مند، ذینفع"
+"769"	"khazande
+
+خزنده، آدم پست، چاپلوس"
+"770"	"seldom
+
+خیلی کم، به ندرت"
+"771"	"make a rule against
+
+ممنوع کردن، منع کردن"
+"772"	"reasonable
+
+منطقی، عاقلانه"
+"773"	"show
+
+نشان دادن، جلوه دادن"
+"774"	"move forward
+
+پیش رفتن، عمل کردن، رهسپار شدن"
+"775"	"foresight
+
+احتیاط، پیش بینی، دور اندیشی"
+"776"	"pull out
+
+بیرون کشیدن، استخراج کردن"
+"777"	"earlier
+
+از پیش، قبلی"
+"778"	"a hug
+
+درآغوش کشیدن، بغل کردن"
+"779"	"brave
+
+دلیر، دلاور، شجاع"
+"780"	"not total
+
+جزئی، بخشی، قسمتی"
+"781"	"savage
+
+درنده، خشمگین، عصبانی"
+"782"	"hate
+
+نفرت داشتن، بیزار بودن"
+"783"	"show scorn
+
+با ناگه مسخره کردن، تحقیر کردن"
+"784"	"frown
+
+اخم کردن"
+"785"	"give courage to
+
+تشویق کردن، ترغیب کردن"
+"786"	"think about to decide
+
+رسیدگی کردن، توجه کردن"
+"787"	"moozy animal
+
+حیوانات موزی"
+"788"	"cry loudly
+
+شیون کردن، ناله کردن"
+"789"	"symbol
+
+نشان، سمبل، نشانه"
+"790"	"power delegated to another
+
+قدرت، اقتدار، توانایی"
+"791"	"on neither side of a quarrel
+
+بیطرف، بی علاقه، نامعلوم"
+"792"	"a small about
+
+مقدار کم، مختصر"
+"793"	"creator
+
+سازنده، مهندس معمار، خالق"
+"794"	"married life
+
+زناشویی، ازدواج، عروسی"
+"795"	"suitcases
+
+چمدان، تجهیزات نظامی"
+"796"	"spend foolishly
+
+به هدر دادن، اسراف کردن، تلف کردن"
+"797"	"going around
+
+در خارج از کشور، بیرون، همه جا، شایع"
+"798"	"a runaway
+
+فراری، آواره گریخته، متواری"
+"799"	"serious trouble
+
+مصیبت، فاجعه، بلا"
+"800"	"a very poor person
+
+مسکین، بسیار فقیر"
+"801"	"jealousy
+
+حسادت، مایه حسادت"
+"802"	"a breakdown
+
+فروپاشیدن، سقوط کردن، تاکردن، بهم ریختن"
+"803"	"bring before a court
+
+به دادگاه احضار کردن، پیگرد، اقدام، ادامه دادن"
+"804"	"having two wives at the same time
+
+دو همسر داشتن"
+"805"	"able to be
+
+ممکن، شدنی، امکان پذیر، احتمالی"
+"806"	"force
+
+اجبار، مجبور کردن، وادار کردن"
+"807"	"clumsy
+
+زشت، ناهموار، دست و پاچلفتی، خجالتی"
+"808"	"to expose to risk
+
+جرأت،، ریسک، دادوستد، به مخاطره انداختن"
+"809"	"showing great respect
+
+هراس انگیز، هیبت، حرمت، احترام، وحشتناک"
+"810"	"to manage
+
+راهنما، راهنمایی کردن، اداره کردن"
+"811"	"put an end to
+
+پایان دادن، فرونشاندن، رفع کردن"
+"812"	"be unfaithful
+
+خیانت کردن، لو دادن، آشکار کردن، تسلیم کردن"
+"813"	"express
+
+صحبت کردن، بیان کردن، کامل"
+"814"	"make calm
+
+آرام کردن، دلجویی کردن"
+"815"	"answer
+
+پاسخ دادن، متاثر شدن، عکی العمل نشان دادن"
+"816"	"attract
+
+اشاره کردن، جلب کردن"
+"817"	"in spite of
+
+باوجود اینکه، علیرغم"
+"818"	"cause to break down
+
+به هم زدن،مختل کردن، چند تیکه کردن"
+"819"	"too hasty
+
+جوش، دانه، بی ملاحظه، نسنجیده، عجولانه"
+"820"	"very quick
+
+تند سریع، ناگهانی"
+"821"	"tire out
+
+ته کشیدن، مصرف کردن، خالی کردن"
+"822"	"harshness
+
+سختی، دشواری، سخت گیری، شدت"
+"823"	"weak
+
+ضعیف، کم زور، ناتوان"
+"824"	"join together
+
+متحد شدن، یکی  شدن، به پیوستن"
+"825"	"stop
+
+متوقف کردن یا شدن، بازایستادن، دست کشیدن"
+"826"	"careful in spending
+
+خانه دار، صرفه جو، رشد کننده"
+"827"	"stingy
+
+خسیس، کم، اندک"
+"828"	"king or queen
+
+شاه یا ملکه، حاکم، فرمانروا"
+"829"	"an exile
+
+یاغی، قاون شکن، طرد شده"
+"830"	"help to grow and develop
+
+بالا بردن، ترفیع دادن، ترویج داد، افزایش دادن"
+"831"	"not fed
+
+دچار سوء تغذیه، گرسنگی شدید"
+"832"	"make clear or explain
+
+توضیح دادن، بیان کردن، شرح دادن"
+"833"	"uncover
+
+آشکار کردن، فاش کردن، نشان دادن"
+"834"	"too much
+
+بیش از حد، خیلی زیاد، گزاف"
+"835"	"a great misfortune
+
+فاجعه، مصیبت، بلا"
+"836"	"to make change in
+
+سانسور کننده، سانسور کردن"
+"837"	"offender
+
+متهم، مقصر، مجرم"
+"838"	"young
+
+نوجوان"
+"839"	"food used to attract fish
+
+طعمه، طعمه گذاشتن، جذب کردن، اذیت کردن"
+"840"	"keep firmy to some position
+
+اصرار کردن، پافشاری کردن، سخت گرفتن، اعلام کردن، ادعا کردن"
+"841"	"hard work
+
+رنج، زحمت، زحمت کشیدن، به سختی حرکت کردن"
+"842"	"stupid mistake
+
+اشتباه بزرگ، اشتباه، ناشیانه حرف زدن"
+"843"	"confuse
+
+گیج کردن، خیره کردن"
+"844"	"grieve
+
+سوگواری کردن، غصه دار کردن، اندوه زیاد"
+"845"	"grow less
+
+نشست کردن، فروکش کردن"
+"846"	"disable
+
+نقص عضو، ناتوان کردن، فلج کردن"
+"847"	"understand
+
+فهمیدن، دریفت کردن، درک کردن"
+"848"	"praise
+
+ستودن، ستایش کردن، سپردن"
+"849"	"coming last
+
+نهایی، قطعی، پایانی"
+"850"	"make free from
+
+معاف کردن، رها کردن"
+"851"	"having to much pride
+
+بیهوده، بی فایده"
+"852"	"act of saying or doing again
+
+بازگویی کردن، تکرار کردن"
+"853"	"describe
+
+بیان کردن، کشیدن، توصیف کردن، نشان دادن"
+"854"	"sure to die sometime
+
+مردنی، فانی، کشنده"
+"855"	"new
+
+نو، جدید، عجیب، داستان"
+"856"	"person in possession of a position
+
+متصرف، صاحب خانه، ساکن"
+"857"	"decide on
+
+تعیین کردن، نصب کردن، انتخاب کردن، مامور کردن"
+"858"	"region
+
+بخش،منطقه، اقامتگاه، ربع"
+"859"	"place
+
+محل، ایستگاه"
+"860"	"repeat exactly the words
+
+نقل قول کردن، اعلام کردن"
+"861"	"a short division in bible
+
+به نظم درآوردن، شعر گفتن، آیه"
+"862"	"the right or wrong of a action
+
+اخلاق، تقوا، درستی یا نادرستی یک عمل"
+"863"	"wander
+
+پرسه زدن، گشتن، سرگردان بودن"
+"864"	"draw to oneself
+
+جذب کردن، جلب کردن"
+"865"	"one who travels regularly
+
+کسی که مصافت زیادی بین خانه و محل کار را طی می کند، مسافرت روزانه"
+"866"	"keep in
+
+نگه داشتن، محدود کردن، محبوس کردن"
+"867"	"not busy
+
+بیکار، تنبل، بی فایده"
+"868"	"person who loved very much
+
+بت، محبوب"
+"869"	"joke
+
+لطیفه، شوخی، مزاح، تمسخر"
+"870"	"loving one`s country
+
+میهن پرست"
+"871"	"disagree
+
+اختلاف، مجادله، مبارزه کردن، مقاومت کردن"
+"872"	"bravery
+
+شجاعت، دلیری"
+"873"	"crazy person
+
+دیوانه، مجنون، بسیار احمق"
+"874"	"a blood vessel
+
+حالت روحی، رگ، رگه"
+"875"	"without important happiness
+
+یکنوات، بدون حادثه"
+"876"	"producing much of anything
+
+حاصلخیز، پر ثمر، پربار، خلاق"
+"877"	"hand over
+
+سپردن، ارجاع دادن، اشاره کردن"
+"878"	"great pain
+
+پریشانی، دلتنگی، اندوه شدید، مخمصه"
+"879"	"make smaller in size
+
+کاهش یافتن، بی ارزش جلوه دادن"
+"880"	"greatest amount
+
+حداکثر، بیشترین"
+"881"	"go quickly
+
+گریختن، فرار کردن"
+"882"	"open to attack
+
+آسیب پذیر، شکننده، ضعیف"
+"883"	"mean
+
+دلالت داشتن، اهمیت داشتن، معنی داشتن"
+"884"	"stories that attempt to explain something in nature
+
+اسطوره، افسانه"
+"885"	"associate
+
+تهیه کردن، آماده کردن"
+"886"	"cause very great pain to
+
+همقطار، شریک، همکار"
+"887"	"to supply
+
+زجر دادن، بهستوه آوردن، عذاب"
+"888"	"faithfulness
+
+وفاداری، صداقت، پایبندی"
+"889"	"person who offer one`s service
+
+داوطلب، داوطلبانه"
+"890"	"to harm or injure
+
+خسارت، لطمه"
+"891"	"having a high pitch
+
+تیز، روشن، صدای بالا داشتن، شدید"
+"892"	"full of fun
+
+خوشحال، بذله گو"
+"893"	"cleverly amusing
+
+زیرک، شوخ طبع، زیرک"
+"894"	"hold back
+
+مانع شدن، جلوگیری کردن"
+"895"	"speech
+
+سخنرانی کردن، سرزنش کردن"
+"896"	"make bad use
+
+سوء استفاده کردن، بهرکشی کردن، رفتار بد"
+"897"	"speak indistinctly
+
+زیر لب سخن گفتن، زمزمه کردن"
+"898"	"silent
+
+گنگ، لال، بی صدا"
+"899"	"small
+
+توده، لایه پر کننده، کیپ کردن"
+"900"	"keep
+
+نگه داشتن، حفظ کردن"
+"901"	"person who is proposed for office
+
+کاندیدا، نامزد، داوطلب"
+"902"	"go before
+
+جلوتر بودن، بیشتر بودن"
+"903"	"growing up to manhood
+
+نوجوان، بالغ، بین 13 – 22 سال"
+"904"	"educating both sexes
+
+آموزش دختر و پسر با هم، مختلط"
+"905"	"fundamental
+
+اساسی، کلی، ریشه، بنیاد"
+"906"	"natural
+
+خود به خود، میل شخصی، طبیعی"
+"907"	"remove from the top
+
+سطحی خواندن، قسمت بالای چیزی را بر داشتن، به آرامی تکان دادن"
+"908"	"vaccinate
+
+واکسن زدن"
+"909"	"not in order
+
+درهم بر هم، آشفته، نامرتب"
+"910"	"tool used for practical purpose
+
+آلت، ابزار"
+"911"	"easily affected
+
+حساس، مهم، مستعد تغییر"
+"912"	"moderate
+
+ملایم، معتدل، میانه رو، آرام"
+"913"	"not clear
+
+مبهم، نامعلوم، گنگ"
+"914"	"raise
+
+بلند کردن، ارتقا دادن، بالا بردن"
+"915"	"lottery
+
+قرعه کشی، بخت آزمایی"
+"916"	"money matters
+
+امور مالی، تهیه کردن"
+"917"	"get
+
+بدست آوردن، کسب کردن"
+"918"	"moving picture
+
+سینما، فیلم سازی"
+"919"	"happening
+
+واقعه، حادثه، پیشامد"
+"920"	"throw aside
+
+دور انداختن، کنار گذاشتن"
+"921"	"aspire
+
+بلند کردن، اوج گرفتن، پرواز کردن"
+"922"	"later
+
+بعدی، متعاقبا، پس از آن"
+"923"	"tell
+
+ربط دادن، شرح دادن، گفتن، تعریف کردن"
+"924"	"not moving
+
+ساکن، ایستاده، ثابت، بی حرکت"
+"925"	"quick
+
+فوری، سریع، بیدرنگ"
+"926"	"quick
+
+عجول شتاب، زده، سریع"
+"927"	"burn slightly
+
+سوزاندن، بو دادن، خشک کردن"
+"928"	"a violent disturbance
+
+طوفان، جوش، خروش، مزاحمت"
+"929"	"calm
+
+آرام کردن، دلجویی کردن، بدست آوردن"
+"930"	"having kind feeling toward others
+
+همدردی، دلسوزی، غم خوار"
+"931"	"buy back
+
+بازخریدن، ازگرو درآوردن، رهایی دادن"
+"932"	"begin again
+
+ادامه دادن، ازسر گرفتن؛ دوباره شروع کردن"
+"933"	"going well together
+
+تطبیق، توازن، هماهنگی، موافقت"
+"934"	"hold back
+
+خوداری کردن، منع کردن، اجتناب کردن"
+"935"	"not lawful
+
+غیر قانونی، نامشروع، غیر مجاز"
+"936"	"drug
+
+خواب آور، ماده مخدر، آرام بخش"
+"937"	"person who inherit anything
+
+وارث، ارث بر"
+"938"	"kingly
+
+بزرگ، باشکوه، باعظمت"
+"939"	"become smaller
+
+رفته رفته کوچک شدن، کمک شدن، ضعیف شدن"
+"940"	"extra
+
+مازاد، اضافه، زیادی"
+"941"	"person who betray
+
+خائن، خیانت کار"
+"942"	"consider carefully
+
+عمدی، قصد داشتن، سنجیدن"
+"943"	"person who destroy
+
+خراب کار، آدم مخرب"
+"944"	"lack of rain
+
+خشکی، خشکسالی"
+"945"	"remain faithful
+
+تحمل کردن، وفادار ماندن، اقامت کردن"
+"946"	"unite
+
+متحد کردن، یکی کردن"
+"947"	"top
+
+قلعه، نوک، اجلاس"
+"948"	"give careful attention
+
+اعتنا کردن، توجه کردن"
+"949"	"biography
+
+شرح حال، زندگی نامه"
+"950"	"soak
+
+خیس کردن، خیساندن"
+"951"	"crowd number
+
+گروه، دسته، خیل"
+"952"	"move unsteadily from side to side
+
+جنبیدن، لرزیدن، تلوتلو خوردن"
+"953"	"noise
+
+همهمه، غوغا، سروصدا، آشوب"
+"954"	"go down on one`s kneel
+
+زانو زدن، به زانو درآوردن"
+"955"	"sad
+
+مایوس، افسرده، دلگیر، اندوهگین"
+"956"	"willing to obey
+
+فرمانبردار، مطیع، حرف شنو،"
+"957"	"go back
+
+کنار کشیدن، عقب رفتن، دست کشیدن"
+"958"	"absolute ruler
+
+حاکم ستمگرد، حاکم مستبد، آدم زورگو"
+"959"	"generous giving to the poor
+
+صدقه، مهربانی، موسسه خیریه، کمک"
+"960"	"decision of a jury
+
+رای هیئت منصفه، قضاوت، حکم، رای"
+"961"	"discover
+
+حفر کردن، کشف کردن، از زیرخا ک درآوردن، افشا کردن"
+"962"	"go away
+
+رفتن، دور شدن، تغیی کردن، فوت کردن"
+"963"	"agree
+
+منطبق شدن، توافق کردن، روی هم قرار گرفتن"
+"964"	"call off
+
+باطل کردن، لغو کردن، حذف کردن"
+"965"	"person who owes something
+
+بدهکار، مقروض"
+"966"	"able t be read
+
+قابل خواندن، خوانا، روشن"
+"967"	"poster
+
+شعار، اعلامیه، آگهی دادن"
+"968"	"spreading by contact
+
+مسری، آلوده"
+"969"	"persons prepare for religious work
+
+کشیش ها، روحانیون"
+"970"	"usual
+
+مرسوم، معمول، رایج"
+"971"	"clear
+
+شفاف، روشن، بی پرده"
+"972"	"pour boiling liquid over
+
+باآب گرم شستن، با آب جوش سوختن"
+"973"	"widespread
+
+شایع، متداول، فراگیر، همه گیر، بیماری مسری"
+"974"	"extreme fatness
+
+چاقی زیاد، فربهی"
+"975"	"make too much of
+
+بزرگ کردن، درشت کردن، بزرگنمایی، غلو کردن"
+"976"	"chiropractor
+
+طبیب مفصلی"
+"977"	"obstruction
+
+مانع، سد"
+"978"	"change the air in
+
+تهویه کردن، مطرح کردن"
+"979"	"endanger
+
+خطر کردن، به مخاطره انداختن"
+"980"	"saying no
+
+منفی، معکوس، فیلم نگاتیو، نفی کردن، تفریق"
+"981"	"payment
+
+مستمری بگیر، جیره، حقوق بازنشستگی"
+"982"	"lively
+
+حیاتی، وابسته، ضروری"
+"983"	"of a city
+
+شهری، وابسته به شهر یا شهرداری"
+"984"	"spoken
+
+زبانی، شفاهی، گفتاری، دهانی"
+"985"	"self-satisfied
+
+ازخود راضی، خود پسند، خشنود"
+"986"	"wasp
+
+زنبور"
+"987"	"restore to good condition
+
+احیا کردن، بازسازی کردن، شهرت، آبرو"
+"988"	"conditional freedom
+
+قول، پیمان، آزادی مشروط"
+"989"	"not horizontal
+
+عمودی، قائم، سرپا"
+"990"	"a great number
+
+کثرت، جماعت فراوان"
+"991"	"appoint to an office
+
+نامزد کردن، کاندید کردن، نامیدن"
+"992"	"capability
+
+پتانسیل، استعداد توانایی، احتمال"
+"993"	"reference library
+
+سردخانه مردهای بی هویت، آرشیو، بایگانی"
+"994"	"took up all the attention
+
+حواس پرت، گیج، ازقبل اشغال شده"
+"995"	"covering for furniture
+
+پرده، رویه، روکش برای کاناپه و مبل"
+"996"	"lack of interest
+
+بی علاقه، بی اهمیت، بی توجهی، بی اعتنایی"
+"997"	"keep
+
+نگهداری کردن، ادامه دادن، حمایت کردن"
+"998"	"treat coldly
+
+رفتار سرد، کم محلی، توهین، تمسخر، پهن . کوتاه"
+"999"	"stand
+
+تحمل کردن، ادامه دادن، تاب آوردن"
+"1000"	"very great anger
+
+خشم غضب، عصبانیت"
+"1001"	"uncover
+
+روباز گذاردن، بی حفاظ گذاشتن، افشا کردن"
+"1002"	"story coming from the past
+
+افسانه، داستان، نوشته روی سکه و امثال آن"
+"1003"	"consider carefully
+
+اندیشه کردن، تفکر کردن"
+"1004"	"submit
+
+دست کشیدن،تسلیم شدن، واگذار کردن"
+"1005"	"
+
+موثر، شدید، بانیرو و شتاب کار"
+"1006"	"
+
+اسکله، لنگرگاه"
+"1007"	"
+
+اصلاح کردن، بهتر کردن"
+"1008"	"
+
+ورقه رای، روش رای، رای مخفی"
+"1009"	"Abrupt"
+"1010"	"Acceptable"
+"1011"	"Acclaim"
+"1012"	"Actually"
+"1013"	"Adverse"
+"1014"	"Advice"
+"1015"	"Attractive"
+"1016"	"Autonomous"
+"1017"	"Disapproval"
+"1018"	"Disruptive"
+"1019"	"Haphazardly"
+"1020"	"Ideal"
+"1021"	"Persistent"
+"1022"	"Wide"
+"1023"	"Advanced"
+"1024"	"Advantage"
+"1025"	"Advent"
+"1026"	"Agile"
+"1027"	"Albeit"
+"1028"	"Allow"
+"1029"	"Appealing"
+"1030"	"Celebrated"
+"1031"	"Contemporary"
+"1032"	"Distribute"
+"1033"	"Energetic"
+"1034"	"Frail"
+"1035"	"Refine"
+"1036"	"Worthwhile"
+"1037"	"Analyze"
+"1038"	"Ancient"
+"1039"	"Annoying"
+"1040"	"Conform"
+"1041"	"Enrich"
+"1042"	"Intensify"
+"1043"	"Intolerable"
+"1044"	"Observe"
+"1045"	"Ongoing"
+"1046"	"Propose"
+"1047"	"Restore"
+"1048"	"Ambiguous"
+"1049"	"Apparent"
+"1050"	"Arbitrary"
+"1051"	"Assert"
+"1052"	"Astounding"
+"1053"	"Astute"
+"1054"	"Authorize"
+"1055"	"Deceptively"
+"1056"	"Determined"
+"1057"	"Elicit"
+"1058"	"Petition"
+"1059"	"Relinquish"
+"1060"	"Resilient"
+"1061"	"Amaze"
+"1062"	"Bear"
+"1063"	"Block"
+"1064"	"Blur"
+"1065"	"Brilliant"
+"1066"	"Caution"
+"1067"	"Delicate"
+"1068"	"Enhance"
+"1069"	"Intrigue"
+"1070"	"Replace"
+"1071"	"Shed"
+"1072"	"Chiefly"
+"1073"	"Coarse"
+"1074"	"Commonplace"
+"1075"	"Comparatively"
+"1076"	"Complex"
+"1077"	"Conventional"
+"1078"	"Curious"
+"1079"	"Exceedingly"
+"1080"	"Exclusively"
+"1081"	"Immense"
+"1082"	"Indeed"
+"1083"	"Rigid"
+"1084"	"Routinely"
+"1085"	"Sufficiently"
+"1086"	"Visibly"
+"1087"	"Clarify"
+"1088"	"Constantly"
+"1089"	"Convenient"
+"1090"	"Core"
+"1091"	"Critical"
+"1092"	"Distort"
+"1093"	"Diverse"
+"1094"	"Prosperous"
+"1095"	"Purposefully"
+"1096"	"Scarcely"
+"1097"	"Theoretically"
+"1098"	"Accelerate"
+"1099"	"Crack"
+"1100"	"Create"
+"1101"	"Creep"
+"1102"	"Crush"
+"1103"	"Cultivate"
+"1104"	"Dictate"
+"1105"	"Distinguish"
+"1106"	"Flaw"
+"1107"	"Mirror"
+"1108"	"Particle"
+"1109"	"Settle"
+"1110"	"Transport"
+"1111"	"Classify"
+"1112"	"Currency"
+"1113"	"Deep"
+"1114"	"Depend on"
+"1115"	"Dim"
+"1116"	"Display"
+"1117"	"Exports"
+"1118"	"Gigantic"
+"1119"	"Impressive"
+"1120"	"Lasting"
+"1121"	"Treasury"
+"1122"	"Uniform"
+"1123"	"Vibrant"
+"1124"	"Distinct"
+"1125"	"Dominant"
+"1126"	"Dormant"
+"1127"	"Drab"
+"1128"	"Dramatic"
+"1129"	"Elaborate"
+"1130"	"Exceptional"
+"1131"	"Hazardous"
+"1132"	"Minuscule"
+"1133"	"Prime"
+"1134"	"Rudimentary"
+"1135"	"Superficial"
+"1136"	"Terrifying"
+"1137"	"Vigorous"
+"1138"	"Amenity"
+"1139"	"Destroy"
+"1140"	"Disperse"
+"1141"	"Dwelling"
+"1142"	"Element"
+"1143"	"Elementary"
+"1144"	"Emphasize"
+"1145"	"Encircle"
+"1146"	"Erratic"
+"1147"	"Mention"
+"1148"	"Pier"
+"1149"	"Prevalent"
+"1150"	"Release"
+"1151"	"Benefit"
+"1152"	"Blind"
+"1153"	"Broaden"
+"1154"	"Burgeon"
+"1155"	"Conspicuously"
+"1156"	"Demand"
+"1157"	"Endorse"
+"1158"	"Entirely"
+"1159"	"Erode"
+"1160"	"Evaporate"
+"1161"	"Recover"
+"1162"	"Reportedly"
+"1163"	"Shift"
+"1164"	"Suffer"
+"1165"	"Crucial"
+"1166"	"Dignitary"
+"1167"	"Elude"
+"1168"	"Evident"
+"1169"	"Extensive"
+"1170"	"Extremely"
+"1171"	"Face"
+"1172"	"Facet"
+"1173"	"Hero"
+"1174"	"Inaccessible"
+"1175"	"Obviously"
+"1176"	"Predictably"
+"1177"	"Solve"
+"1178"	"Suitable"
+"1179"	"Ample"
+"1180"	"Arid"
+"1181"	"Defy"
+"1182"	"Enact"
+"1183"	"Even"
+"1184"	"Feign"
+"1185"	"Freshly"
+"1186"	"Function"
+"1187"	"Fundamental"
+"1188"	"Indiscriminate"
+"1189"	"Selective"
+"1190"	"Spacious"
+"1191"	"Withstand"
+"1192"	"Durable"
+"1193"	"Favor"
+"1194"	"Gain"
+"1195"	"Generate"
+"1196"	"Halt"
+"1197"	"Handle"
+"1198"	"Harbor"
+"1199"	"Harmful"
+"1200"	"Insignificant"
+"1201"	"Mysterious"
+"1202"	"Perilous"
+"1203"	"Substantial"
+"1204"	"Conscientious"
+"1205"	"Convey"
+"1206"	"Encompass"
+"1207"	"Expansion"
+"1208"	"Heighten"
+"1209"	"Highlight"
+"1210"	"Inadvertently"
+"1211"	"Inevitable"
+"1212"	"Infancy"
+"1213"	"Miraculously"
+"1214"	"Retrieve"
+"1215"	"Systematically"
+"1216"	"Unlikely"
+"1217"	"Unwarranted"
+"1218"	"Zenith"
+"1219"	"Agitate"
+"1220"	"Confidential"
+"1221"	"Delighted"
+"1222"	"Discreetly"
+"1223"	"Documented"
+"1224"	"Gradually"
+"1225"	"Influence"
+"1226"	"Inordinate"
+"1227"	"Instantly"
+"1228"	"Intentionally"
+"1229"	"Intrinsic"
+"1230"	"Inundate"
+"1231"	"Involve"
+"1232"	"Nominal"
+"1233"	"Presumably"
+"1234"	"Allocation"
+"1235"	"Balanced"
+"1236"	"Conservation"
+"1237"	"Fallacious"
+"1238"	"Feasible"
+"1239"	"Limber"
+"1240"	"Means"
+"1241"	"Narrow"
+"1242"	"Preconception"
+"1243"	"Robust"
+"1244"	"Steady"
+"1245"	"Swift"
+"1246"	"Antiquated"
+"1247"	"Coherent"
+"1248"	"Develop"
+"1249"	"Fabricate"
+"1250"	"Investigation"
+"1251"	"Normally"
+"1252"	"Notice"
+"1253"	"Notion"
+"1254"	"Opposition"
+"1255"	"Record"
+"1256"	"Relate"
+"1257"	"Suspect"
+"1258"	"Unbiased"
+"1259"	"Varied"
+"1260"	"Accentuate"
+"1261"	"Disguise"
+"1262"	"Initiate"
+"1263"	"Narrate"
+"1264"	"Nevertheless"
+"1265"	"Occasionally"
+"1266"	"Omit"
+"1267"	"Outlandish"
+"1268"	"Overcome"
+"1269"	"Partially"
+"1270"	"Pass"
+"1271"	"Portray"
+"1272"	"Submit"
+"1273"	"Decline"
+"1274"	"Gather"
+"1275"	"Motion"
+"1276"	"Partisan"
+"1277"	"Pattern"
+"1278"	"Phenomena"
+"1279"	"Philanthropic"
+"1280"	"Placid"
+"1281"	"Plentiful"
+"1282"	"Reaction"
+"1283"	"Rhythm"
+"1284"	"Scenic"
+"1285"	"Shallow"
+"1286"	"Sheltered"
+"1287"	"Vanishing"
+"1288"	"Account"
+"1289"	"Archaic"
+"1290"	"Hasten"
+"1291"	"Hue"
+"1292"	"Illustration"
+"1293"	"Inactive"
+"1294"	"Intricate"
+"1295"	"Magnitude"
+"1296"	"Oblige"
+"1297"	"Overlook"
+"1298"	"Poll"
+"1299"	"Position"
+"1300"	"Practical"
+"1301"	"Predominant"
+"1302"	"Analogous"
+"1303"	"Approximately"
+"1304"	"Formidable"
+"1305"	"Intrusive"
+"1306"	"Periodically"
+"1307"	"Prone"
+"1308"	"Prophetic"
+"1309"	"Proportions"
+"1310"	"Readily"
+"1311"	"Reliably"
+"1312"	"Reluctantly"
+"1313"	"Renown"
+"1314"	"Sacrifice"
+"1315"	"Triumph"
+"1316"	"Affordable"
+"1317"	"Contaminated"
+"1318"	"Discernible"
+"1319"	"Flourishing"
+"1320"	"Negligible"
+"1321"	"Parallel"
+"1322"	"Peculiar"
+"1323"	"Potent"
+"1324"	"Remarkable"
+"1325"	"Scattered"
+"1326"	"Solid"
+"1327"	"Somewhat"
+"1328"	"Tedious"
+"1329"	"Briefly"
+"1330"	"Consistently"
+"1331"	"Found"
+"1332"	"Improperly"
+"1333"	"Impulsively"
+"1334"	"Infrequently"
+"1335"	"Isolated"
+"1336"	"Overtly"
+"1337"	"Profoundly"
+"1338"	"Sharply"
+"1339"	"Situated"
+"1340"	"Subsequently"
+"1341"	"Unmistakable"
+"1342"	"Chaotic"
+"1343"	"Characteristic"
+"1344"	"Controversial"
+"1345"	"Exemplify"
+"1346"	"Gratifying"
+"1347"	"Interpret"
+"1348"	"Launch"
+"1349"	"Legitimate"
+"1350"	"Particular"
+"1351"	"Radiant"
+"1352"	"Ridge"
+"1353"	"Span"
+"1354"	"Stream"
+"1355"	"Striking"
+"1356"	"Aptly"
+"1357"	"Demonstration"
+"1358"	"Ingredients"
+"1359"	"Involuntarily"
+"1360"	"Marvel"
+"1361"	"Measurable"
+"1362"	"Moderate"
+"1363"	"Odd"
+"1364"	"Reflection"
+"1365"	"Supposedly"
+"1366"	"Sustained"
+"1367"	"Symbols"
+"1368"	"Synthesis"
+"1369"	"Tangible"
+"1370"	"Tightly"
+"1371"	"Aggravating"
+"1372"	"Amusement"
+"1373"	"Conceivably"
+"1374"	"Convert"
+"1375"	"Curative"
+"1376"	"Debilitating"
+"1377"	"Deplete"
+"1378"	"Finite"
+"1379"	"Perceive"
+"1380"	"Toxic"
+"1381"	"Tranquility"
+"1382"	"Trap"
+"1383"	"Undeniably"
+"1384"	"Underestimated"
+"1385"	"Acquire"
+"1386"	"Assimilate"
+"1387"	"Assortment"
+"1388"	"Caliber"
+"1389"	"Condensed"
+"1390"	"Contradictory"
+"1391"	"Disregard"
+"1392"	"Precious"
+"1393"	"Requisite"
+"1394"	"Unravel"
+"1395"	"Volume"
+"1396"	"Charisma"
+"1397"	"Clever"
+"1398"	"Convince"
+"1399"	"Forfeit"
+"1400"	"Precarious"
+"1401"	"Severe"
+"1402"	"Sporadic"
+"1403"	"Superior"
+"1404"	"Wanton"
+"1405"	"Weak"
+"1406"	"Widespread"
+"1407"	"Wisdom"
+"1408"	"Witticism"
+"1409"	"Woo"
+"1410"	" Adv. to or in another country  ~  Syn. overseas, internationally
+ پهن، گسترش یافته، وسیع، بیرون، خارج از کشور، ممالک بیگانه
+
+-Louis Armstrong often traveled abroad
+-The Passage of The resolution is In doubt."
+"1411"	" Adv. abruptlyn. abruptness ~  Adj. quick, without warning ~  Syn. sudden
+ تند، پرتگاه‌دار، سراشیبى، ناگهان، ناگهانى، بی‌خبر، درشت، جداکردن
+
+-There was an abrupt change In The weather.
+-The book's portrayal of Mozart as a calm, mature individual is absurd."
+"1412"	"V. accept ~  Adv. acceptablyn. acceptability ~  Adj. accepting, allowable or satisfactory ~  Syn. permissible
+ پذیرا، پذیرفتنى، پسندیده، قابل قبول، قابل پذیرش
+
+-The idea was acceptable to everyone.
+-The submission of the application must be made by February 13."
+"1413"	" n. acclamation, enthusiastic approval, applause ~  Adj. acclaimed ~  Syn. praise
+ تحسین، ادعا کردن، آفرین گفتن، اعلام کردن، جارکشیدن، ندا دادن، هلهله کردن، فریاد کردن، کف زدن
+
+-Isaac Stem has won acclaim abroad.
+-Serious communicable diseases are on The decline In most parts of The world."
+"1414"	" Adv. being in existence, real or factual ~  Adj. actual ~  Syn. truly
+ واقعاً، بالفعل، عملاً، درحقیقت
+
+-They were actually very Good soccer players.
+-a gathering of citizens developed outside The courthouse."
+"1415"	" Adv. adverselyn. adversity, adversary ~  Adj. displeasing, objectionable, or bad ~  Syn. unfavorable
+ مخالف، ناسازگار، مضر، روبرو
+
+-Adverse weather conditions made It difficult to play The game.
+-They motioned Her to leave The area."
+"1416"	"V. advise n. advisability, a recommendation given by someone not associated with the problem or situation ~  Adj. advisable ~  Syn. suggestion
+ ابلاغیه، اندرز، رایزنى، صوابدید، مشورت، مصلحت، نظر، عقیده، پند، نصیحت، آگاهى، خبر، اطلاع
+
+-Good advice is hard to find.
+-His views reflected His Partisan bins."
+"1417"	"V. attract ~  Adv. attractivelyn. attraction, attractiveness ~  Adj. calling attention to, pleasing, creating interest, pretty ~  Syn. appealing
+ جاذب، جالب، دلکش، دلربا، فریبنده
+
+-The idea of working four, 10-hour work days was attractive to the employees.
+-The new stadium was patterned After The old traditional ballparks."
+"1418"	" Adv. autonomously ~  Adj. by itself, with no association ~  Syn. independent
+ خود مختار، داراى حکومت مستقل، خودگردان
+
+-Mexico became an autonomous state in 1817.
+-a balanced diet normally provides plenty of The necessary vitamins."
+"1419"	"V. disapprove ~  Adv. disapprovinglyn. the act of disagreeing, not giving approval  ~  Syn. objection
+ عدم رضایت، عدم تصویب
+
+-Their disapproval of The plan caused The experiment to be abandoned.
+-They reacted to The report by making Some swift changes In management."
+"1420"	"V. disrupt ~  Adv. disruptivelyn. disruption ~  Adj. causing confusion and interruption ~  Syn. Disturbing
+ درهم گسیخته، نفاق افکن
+
+-Frequent questions during lectures can be disruptive
+-She noticed The rhythmic beating of Her heart as The moment of truth arrived."
+"1421"	" Adv. having no order or pattern, by chancen. haphazardness ~  Adj. haphazard ~  Syn. arbitrarily, carelessly
+ اتفاقی‌، برحسب‌ تصادف‌، اتفاقاً
+
+-It was obvious that The house was built haphazardly
+-The scenery In rural Japan is impressive."
+"1422"	" Adv. ideallyn. ideal ~  Adj. having no flaw or mistake, excellent ~  Syn. perfect
+ ایده ال، نمونه کامل فرضى، آرمانى، کمال مطلوب، هدف زندگى، آرزو، دلخواه
+
+-The beach is an ideal place to relax.
+-The musician' s phenomenal performance was applauded by the critics."
+"1423"	"V. persist ~  Adv. persistentlyn. persistence ~  Adj. continuous, refusing to give up, firm in action or decision ~  Syn. constant
+ پایدار، دیرپاى، ماندگار، مزمن، مداوم، ایستادگى کننده، سمج
+
+-The attorney's persistent questioning weakened the witness.
+-His philanthropy is recognized around The world."
+"1424"	" Adv. widelyn. wideness ~  Adj. extending over a large area ~  Syn. broad
+ توپ خارج از خط کنارى، خط کنارى والیبال، پهن، عریض، گشاد، فراخ، پهناور، زیاد، پرت، کاملا باز، عمومى، نامحدود، وسیع
+
+-Pine forests are found over a wide area of The Pacific Northwest.
+-The waves moved placidly toward shore."
+"1425"	"V. advance n. advancement ~  Adj. ahead of current thought or practice forward thinking, new ~  Syn. progressive
+ عالى، جلویى
+
+-Advanced technology is changing The world.
+-The result of Their research demonstrated The shallowness of The hypothesis."
+"1426"	" Adv. advantageouslyn. something that may help one to be successful or to gain something ~  Adj. advantageous ~  Syn. benefit
+ اوانتاژ، فایده، صرفه، برترى، سودمند بودن، مفید بودن
+
+-is There any advantage In arriving early?
+-No one knows With certainty what caused The dinosaurs to vanish From The face of The earth."
+"1427"	" n. the coming or appearance of something  ~  Syn. arrival
+ ظهور و ورود
+
+-With The advent of computers, Many tasks have been made easier.
+-We need an accounting of all The Money that was spent."
+"1428"	" Adv. agilelyn. agileness, agility ~  Adj. able to move in a quick and easy way ~  Syn. nimble
+ چابک، زرنگ، فرز، زیرک، سریع الانتقال
+
+-Deer are very agile animals.
+-His speech was full of archaic expressions."
+"1429"	"  Conj. in spite of the facts, regardless of the fact ~  Syn. although
+ اگرچه، ولواینکه
+
+-His trip was successful, albeit tiring.
+-you should not make important decisions hastily."
+"1430"	"V. to agree to let something happen, not to interfere with an action ~  Adv. allowablen. allowance ~  Adj. allowable ~  Syn. permit
+ رخصت دادن، اجازه دادن، ستودن، پسندیدن، تصویب کردن، روا دانستن، پذیرفتن
+
+-Arthur's natural agility will allow him to excel in sports.
+-The hue of The room gave It a warm feeling."
+"1431"	"V. appeal ~  Adv. appealinglyn. appeal ~  Adj. attractive or interesting, able to move feelings ~  Syn. alluring
+ جذاب، خوش آیند
+
+-working abroad is appealing to Many people.
+-This experiment illustrates How certain chemicals can react violently When combined."
+"1432"	"  ~  Adj. acclaimed, well-known, and popular ~  Syn. renown
+ مشهور، مجلل
+
+-The celebrated pianist Will give a concert This weekend.
+-Her inaction has caused Her to miss Many opportunities to advance Her career."
+"1433"	" n. contemporary ~  Adj. modern, up-to-date; also a person living at the same time as another person ~  Syn. current
+ معاصر، همزمان، هم دوره
+
+-Contemporary architecture makes very Good Use of space.
+-I cannot begin to understand all of The intricacies of modern automobile motors."
+"1434"	"V. to divide among people or to give out n. distribution  ~  Syn. dispense
+ پخش کردن، تقسیم کردن، تعمیم دادن، توزیع کردن
+
+-Many publishers distribute Their newspapers directly to homes In Their area.
+-The invention of The telephone was a magnificent achievement for mankind."
+"1435"	"V. to give courage or hope to someone ~  Adv. encouraginglyn. encouragement ~  Adj. encouraging ~  Syn. inspire
+ ترغیب کردن، تشویق کردن، دلگرم کردن، تقویت کردن، پیش بردن، پروردن
+
+-Even though The runner finished second, he was encouraged by His performance.
+-Payment of The student activity fee was obligatory."
+"1436"	" Adv. energeticallyn. energy ~  Adj. full of life, action, or power ~  Syn. vigorous
+ پرتکاپو، کارمایه اى، جدى، کارى، فعال، داراى انرژى
+
+-Sam hasn't been as energetic as he usually is.
+-The overlooked error raised His score on The test."
+"1437"	" n. trade ~  Adj. weak in health or in body ~  Syn. fragile
+ نازک، نحیف، شکننده، زودگذر، سست در برابر وسوسه شیطانى، گول خور، بى مایه
+
+-The frail wings of The newborn bird could not lift It off The ground.
+-The pollster asked The questions In a nonpartisan manner."
+"1438"	"V. to make pure, to improve n. refinement ~  Adj. refined ~  Syn. perfect (v.)
+ تصفیه شدن، پالاییدن، پالودن، تصفیه کردن، خالص کردن، پاک شدن، تصحیح کردن
+
+-Factories must to refine oil before It can be used as fuel.
+-The position of aircraft wings causes The lift that allows The plane to leave The ground."
+"1439"	"  ~  Adj. value in doing something ~  Syn. rewarding
+ ارزنده، قابل صرف وقت، ارزش دار
+
+-It was worthwhile waiting 10 hours in line for the tickets.
+-three fundamental issues In measurement are reliability, validity, and practicality."
+"1440"	"V. altered, to change or make different ~  Adv. alterablyn. alteration ~  Adj. alterable ~  Syn. modify
+ تغییردادن، عوض کردن، اصلاح کردن، تغییر یافتن، دگرگون کردن، دگرگون شدن
+
+-I Will The starlit alter its course and miss The coast?
+-Many cities In The southwest are predominantly hispanic."
+"1441"	"V. to study something carefully, to separate into parts for study n. analyzed, analysis  ~  Syn. examine
+ تجزیه کردن، تحلیل کردن، کاویدن، موشکافى کردن، جداکردن، جزئیات را مطالعه کردن، پاره پاره کردن، تشریح کردن
+
+-Scientists must analyze problems thoroughly.
+-Promptness is an important factor In Many societies."
+"1442"	"  ~  Adj. something from a long time ago, very old. ~  Syn. old
+ باستانى، دیرینه، قدیمى، کهن، کهنه، پیر
+
+-Archaeologists analyze ancient civilizations.
+-The analogy between The behavior of The Bacteria In The lab and In The Human body is not clear."
+"1443"	"V. annoy ~  Adv. annoyinglyn. annoyance ~  Adj. a slight bother, disturbing to a person ~  Syn. bothersome
+ رنجش آور
+
+-Mosquitoes can be an annoying part of a vacation at The beach.
+-The results of This study approximate those of a previous study."
+"1444"	"V. to think about or prepare for something ahead of time n. anticipation ~  Adj. anticipatory ~  Syn. predict
+ پیش بینى کردن، انتظار داشتن، پیشدستى کردن، جلوانداختن، پیش گرفتن بر، سبقت جستن بر
+
+-No one can anticipate The results of The games.
+-The lawyer's plea was made in a compelling manner."
+"1445"	"V. to follow established rules or patterns of behavior n. conformity, conformist  ~  Syn. adapt
+ همنوایى کردن، مطابقت کردن، وفق دادن، پیروى کردن
+
+-Yon must conform to The rules or leave The club.
+-The man's voice echoed formidably throughout the hallway."
+"1446"	"V. to find out, to observe something n. detection, detective  ~  Syn. notice
+ یافتن، پیدا کردن، کشف کردن، نمایان ساختن
+
+-He detected a smile on his girlfriend's face.
+-The intrusion of The hazardous gas made It difficult to live In The house."
+"1447"	"V. to make rich, to make something of&nbsp;&nbsp;greater value n. enrichment ~  Adj. enriching ~  Syn. enhance
+ توسعه دادن، پر قوت کردن، غنى کردن، توانگرکردن
+
+-The fine arts enrich our lives.
+-She has periodic desires to get a job."
+"1448"	"V. to make stronger in feeling or quality ~  Adv. intensely, intensivelyn. intensity ~  Adj. intense, intensive ~  Syn. heighten
+ تقویت کردن، افزایش دادن، سخت کردن، تشدید کردن، شدید شدن
+
+-The importance of The test Will sometimes intensify The nervousness of The students.
+-She is prone to study hard The night before Her tests."
+"1449"	" Adv. intolerantly, intolerablyn. intolerance ~  Adj. intolerant, difficult or painful to experience, not able to accept different ways of thought or behavior ~  Syn. unbearable
+ تحمل ناپذیر، سخت، غیر قابل تحمل، دشوار، بى نهایت
+
+-any opposition to The rules is intolerable
+-The brilliant student fulfilled his teacher's prophecy that he would be a successful doctor."
+"1450"	"V. to see and watch carefully, to examine n. observation, observer ~  Adj. observant, observable ~  Syn. notice
+ معاینه کردن، اظهار عقیده کردن، نظر دادن، بجا آوردن، دیدبانى کردن، رعایت کردن، مراعات کردن، مشاهده کردن، ملاحظه کردن، دیدن، گفتن، برپاداشتن
+
+-Human beings like to observe The behavior of monkeys.
+-The pilot's salary is proportional to that of pilots of other airlines."
+"1451"	"  ~  Adj. continuing ~  Syn. current
+ درحال پیشرفت، مداوم
+
+-The tutoring project is an ongoing program of The school.
+-Her readiness to cooperate was an important factor In The investigation."
+"1452"	"V. to suggest or plan to do something n. proposal, proposition ~  Adj. proposed ~  Syn. suggest
+ پیشنهاد کردن، پیشنهاد ازدواج کردن
+
+-The governor is going to propose new taxes.
+-Satellite photos show The smallest details With great reliability."
+"1453"	"V. to give back or bring back something; to return to the original condition n. restoration ~  Adj. restored ~  Syn. revitalize
+ پس دادن، بحال اول بر گرداندن، تعمیر کردن، اعاده کردن، ترمیم کردن، باز دادن
+
+-he restored my confidence In hint.
+-The electrician was reluctant to estimate The cost of The repair work."
+"1454"	" Adv. vitallyn. vitality ~  Adj. of great importance, full of life ~  Syn. indispensable
+ حیاتى، وابسته به زندگى، واجب، اساسى
+
+-Money is vital to The success of The program.
+-The renowned conductor made a guest appearance at The concert."
+"1455"	" Adv. ambiguouslyn. ambiguity ~  Adj. of unclear meaning, something that can be understood in more than one way ~  Syn. vague
+ باابهام، تاریک( از لحاظ مفهوم)، دوپهلو، مبهم
+
+-The men received an ambiguous message From Their boss.
+-She made sacrifices In order to be able to attend The university."
+"1456"	" Adv. apparently ~  Adj. to be clear in meaning or open to view, easily understood ~  Syn. visible
+ ظاهرى، مشهود، پیدا، آشکار، ظاهر، معلوم
+
+-It was apparent that he needed to rest.
+-he triumphed over all of His difficulties."
+"1457"	" Adv. arbitrarilyn. arbitrariness ~  Adj. an action or decision made with little thought, order, or reason ~  Syn. haphazard
+ استبدادى، ارادى، اختیارى، دلخواه، مطلق، مستبدانه، قراردادى
+
+-Her choice of clothing seemed arbitrary
+-he could afford The house Because of current low interest rates."
+"1458"	" Adv. assertivelyn. assertiveness, assertion, to express or defend oneself strongly, to state positively ~  Adj. assertive ~  Syn. declare
+ دفاع کردن از، حمایت کردن، آزاد کردن، اظهار قطعى کردن، ادعا کردن، اثبات کردن
+
+-The government asserted its control over The banking system.
+-Bacteria and insects are frequently agents of food contamination."
+"1459"	"V. astound ~  Adv. astoundingly ~  Adj. very surprising ~  Syn. astonishing
+ گیج، متحیر، مبهوت کردن
+
+-The Scientists made an astounding discovery.
+-The new student was unable to discern the humor of the teacher's joke."
+"1460"	" n. astuteness ~  Adj. astutely, very intelligent, smart, clever ~  Syn. perceptive
+ زیرک، ناقلا، دانا، هوشیار، دقیق، موشکاف
+
+-he was an astute worker, Finishing In half The Time It took The others to finish.
+-a young mind Will flourish With The proper guidance."
+"1461"	"V. to give permission or power to do something n. authority ~  Adj. authorized ~  Syn. empower
+ اجازه دادن، اختیار دادن، تصویب کردن
+
+-Only authorized employees are allowed In The laboratory.
+-Proper maintenance of a car's engine will preserve its performance and value."
+"1462"	"V. deceive ~  Adv. to make someone think that something is true or good when it is false or badn. deception ~  Adj. deceptive ~  Syn. misleadingly
+ بطور فریب آمیز
+
+-The magician deceptively made The rabbit disappear.
+-The mediocrity of His work was disappointing."
+"1463"	"V. determine n. determination ~  Adj. to be strong in one's opinion, to be firm in conviction ~  Syn. resolute
+ مصمم، ثابت قدم
+
+-They were determined to go to graduate school.
+-His negligence caused him to lose all of The work he had done on The computer."
+"1464"	"V. to get the facts, to draw out, to evoke n. elicitation  ~  Syn. extract
+ بیرون کشیدن، استخراج کردن، استنباط کردن
+
+-a lawyer Will elicit all The facts necessary to prove Her case.
+-Her background parallels mine."
+"1465"	"V. to command not to do something to have a dangerous look, bad feeling ~  Adv. forbiddingly ~  Adj. forbidden, forbidding ~  Syn. ban
+ قدغن کردن، منع کردن، بازداشتن، اجازه ندادن
+
+-His father Will forbid him to Use The car.
+-The puffin has Many peculiarities not shared by other birds."
+"1466"	"V. to make a request n. petition  ~  Syn. appeal
+ شکایت کردن، دادخواست دادن، دادخواست، عریضه، دادخواهى کردن، درخواست کردن
+
+-Canada petitioned The United nations to consider its case.
+-The venom of The coral snake is extremely potent."
+"1467"	"V. to give up control n. relinquishment  ~  Syn. abdicate
+ ول کردن، ترک کردن، چشم پوشیدن
+
+-The troubled executive relinquished His control of The company.
+-The actor was remarkably calm before His performance."
+"1468"	" Adv. resilientlyn. resilience ~  Adj. strong enough to recover from difficulty or disease ~  Syn. tenacious
+ عکس العمل، نشان دهنده، فنرى
+
+-She has a resilient personality and Will Soon feel better.
+-The crowd scattered When It began to rain heavily."
+"1469"	"V. to make it attractive to do something wrong ~  Adv. temptinglyn. temptation ~  Adj. tempting ~  Syn. entice
+ فریفتن، دچار وسوسه کردن
+
+-The idea of getting rich quickly tempted him to invest His life savings.
+-The union attempted to solidify its position In The workplace."
+"1470"	"V. to fill with great surprise ~  Adv. amazinglyn. amazement ~  Adj. amazing ~  Syn. astonish
+ متحیرساختن، مبهوت کردن، مات کردن، سردرگم کردن، سردرگم، متحیر
+
+-I was amazed that I received an a on The calculus test.
+-Buying food at a convenience store can be somewhat expensive."
+"1471"	"V. to confuse to a point at which no progress can be made n. bafflement ~  Adj. baffling ~  Syn. puzzle
+ سپر، صفحه منعکس کننده، تیغه بلندگو، گیج یا گمراه کردن، مغشوش کردن، دستپاچه کردن، بى نتیجه کردن، پریشانى، اهانت
+
+-The causes of Many harmful diseases have baffled doctors for centuries.
+-Some people become frustrated by The tedium of daily living."
+"1472"	"V. to produce, to carry; to show; to endure  ~  Adj. bearably, bearable ~  Syn. yield
+ در بر داشتن، تأثیر داشتن، حمل کردن، دربرداشتن، داشتن، زاییدن، تاب آوردن، تحمل کردن، مربوط بودن
+
+-This orchard bears Many fine harvests of apples.
+-Solar eclipses are brief moments when the Earth and Moon cross the Sun's fixed position in the solar system."
+"1473"	"V. to prevent movement progress, or success n. blockage ~  Adj. blocked ~  Syn. obstruct
+ بلاک، بلوک ساختن، سد کردن، دفاع، قطعه زمین، یک دستگاه ساختمان، قرقره طناب خور، پارازیت، سد قالب، سد کردن، وقفه، منطقه، بندآوردن، انسداد، جعبه قرقره، اتحاد دو یاچند دسته به منظور خاصى، بلوک، کنده، قطعه، بستن، مانع شدن از، توده، قلنبه
+
+-The government blocked The sale of The airline.
+-a dollar bill remains In circulation for approximately one and a half years."
+"1474"	"V. to make something difficult to see n. blur ~  Adj. blurred ~  Syn. cloud
+ مرکبى کردن، لکه، تیرگى، منظره مه آلود، لک کردن، تیره کردن، محو کردن، نامشخص به نظر آمدن
+
+-The rain blurred everyone's view of the valley.
+-The policy of The government concerning unemployment has been consistent."
+"1475"	" Adv. brilliantlyn. brilliance ~  Adj. intensely bright or colorful, intelligent ~  Syn. radiant
+ تابان، مشعشع، زیرک، بااستعداد، برلیان، الماس درخشان
+
+-Einstein was a brilliant thinker.
+-It was The best exhibition of talent that I have ever seen."
+"1476"	"V. to alert someone of danger, the act of taking care of, or paying attention to, something ~  Adv. cautiouslyn. caution ~  Adj. cautious, cautionary ~  Syn. warn
+ توجه کنید، احتیاط، پیش بینى، هوشیارى، وثیقه، ضامن، هوشیار کردن، اخطار کردن به
+
+-The office cautioned The motorist to slow down.
+-The foundation maintained a number of philanthropic activities."
+"1477"	"V. challenge n. an invitation to complete, something that demands competitive action or much thought ~  Adj. challenging ~  Syn. dare
+ چالش، بمبارزه طلبیدن، رقابت کردن، سرپیچى کردن، سرتافتن، متهم کردن،طلب حق، گردن کشى، دعوت به جنگ
+
+-Finishing the 26-mile race was a challenge for most of the participants.
+-There was an impropriety With The way The funds were spent."
+"1478"	" Adv. delicately ~  Adj. needing careful treatment, sensitive, easily broken ~  Syn. fragile
+ ظریف، خوشمزه، لطیف، نازک بین، حساس
+
+-Because of its controversial nature, It was a challenge to discuss such a delicate issue In public.
+-Many shoppers buy items on impulse."
+"1479"	"V. to increase in a positive way, such as in value, power, or beauty n. enhancement ~  Adj. enhanced ~  Syn. strengthen
+ کمک کردن، تسهیل کردن، بالابردن، افزودن، زیادکردن، بلندکردن
+
+-Passing The exam should enhance your chances of being, admitted to college.
+-Deserts are characterized by Their infrequent rainfall."
+"1480"	" Adv. intriguinglyn. intrigue ~  Adj. intriguing ~  Syn. fascinate
+ دسیسه کردن، توطئه چیدن، فریفتن
+
+-he was intrigued by The acclaim flat he received.
+-The doctors were unable to isolate The cause of The epidemic."
+"1481"	"V. to change a belief or behavior by argument or reason ~  Adv. persuasivelyn. persuasion ~  Adj. persuasive ~  Syn. convince
+ وادار کردن، برآن داشتن، ترغیب کردن
+
+-They couldn't persuade their critics to see their point of view.
+-Her overt attempt to take control of The discussion failed."
+"1482"	"V. to change for another thing; to take the place of n. replacement ~  Adj. replaceable ~  Syn. substitute
+ عوض کردن، جانشین شدن یا کردن، چیزى را تعویض کردن، جابجا کردن، جایگزین کردن
+
+-They have replaced all of The old office equipment.
+-The Nobel Prize is a profound recognition of outstanding achievement."
+"1483"	"V. to throw off naturally, to give out   ~  Syn. discard
+ انداختن، افشاندن، افکندن، خون جارى ساختن، جارى ساختن، پوست انداختن، برگ ریزان کردن، کارخانه سرپوشیده، آلونک
+
+-In order to grow, crabs must shed Their shells.
+-There was a sharp change In The humidity After The storm."
+"1484"	" Adv. uniquelyn. uniqueness ~  Adj. to be the only one of a kind; special ~  Syn. rare
+ منحصر بفرد، بى مانند، بیتا، بى همتا، بى نظیر، یکتا، یگانه
+
+-he was presented With a unique opportunity to attend The conference.
+-They found themselves In a very difficult situation."
+"1485"	" Adv. most importantly or most commonly ~  Adj. chief ~  Syn. mostly
+ مخصوصاً، بطور عمده
+
+-Houses are made chiefly of wood products.
+-This report, and all subsequent reports, must be written In The appropriate style."
+"1486"	" Adv. coarselyn. coarseness ~  Adj. not fine or smooth, not delicate ~  Syn. rough
+ شیب، درشت، زبر، خشن، زمخت، بى ادب
+
+-Sandpaper is an extremely coarse material.
+-It is unmistakably clear that The report must be finished by noon."
+"1487"	"  ~  Adj. ordinary ~  Syn. frequent
+ پیش پا افتاده، معمولى، مبتذل، همه جایى
+
+-Soon It Will be commonplace to see The person to whom you are talking on The phone.
+-There was complete chaos When The world champions arrived at The airport."
+"1488"	"V. compare ~  Adv. being measured or judged by comparisonn. comparison ~  Adj. comparative ~  Syn. relatively
+ نسبتاً، بطور مقایسه
+
+-It was comparatively easy for him to learn baseball Because he had been a cricket player.
+-I would characterize him as a diligent professional."
+"1489"	" n. complexity ~  Adj. difficult to understand or explain;having many parts ~  Syn. complicated
+ پیچیده، مرکب از چند جزء، بغرنج، مختلط
+
+-The businessmen astutely approached The complex production problem.
+-The controversy was caused by The proposal to build an airport In The area."
+"1490"	" Adv. conventionallyn. convention ~  Adj. following accepted rules or standards ~  Syn. traditional
+ جنگ افزارهاى معمولى( غیر اتمى)، متداول، متعارف، عرفى، قراردادى، مرسوم، مطابق ایین وقاعده، پیرو سنت ورسوم
+
+-Professor Canfield agreed With The conventional theory about The origin of The Basque language.
+-Her exemplary academic achievement is representative of most students at This institution."
+"1491"	" Adv. curiouslyn. curiosity ~  Adj. odd or strange; eager to learn ~  Syn. peculiar
+ کنجکاو، نادر، غریب
+
+-a curious object was discovered In The remains.
+-She was grateful for all The work he had done for her."
+"1492"	"V. exceed ~  Adv. excessively, very; to an unusual degreen. excess ~  Adj. excessive ~  Syn. extremely
+ به حد زیاد
+
+-In tropical zones, It is exceedingly hot and humid.
+-Their interpretation of The story generated Some interesting discussion."
+"1493"	"V. exclude ~  Adv. no one else; nothing else; not shared with othersn. exclusion ~  Adj. exclusive ~  Syn. restrictively
+ منحصراً،مخصوصاً
+
+-This room is used exclusively by The faculty.
+-The launching of The first Soviet Satellite, Sputnik, created concern among The American public."
+"1494"	" Adv. immenselyn. immensity ~  Adj. extremely large ~  Syn. massive
+ بى اندازه، گزاف، بیکران، پهناور، وسیع، کلان، بسیار خوب، ممتاز، عالى
+
+-From The mountaintop you can see The immense valley.
+-The legitimacy of The theory has yet to be determined."
+"1495"	" Adv. certainly; really (used to make a statement stronger)  ~  Syn. truly
+ براستى، حقیقتاً، واقعاً، در واقع، همانا، فى الواقع
+
+-Did he indeed go to The infirmary.
+-that group of workers is particularly difficult to satisfy."
+"1496"	" Adv. rigidly ~  Adj. not easy to bend; firm, inflexible ~  Syn. stiff
+ سخت، سفت و محکم، جدى، جامد، صلب
+
+-The teacher was very rigid In His ideas about class attendance.
+-The radiance of The fire prevented The firefighters From entering The house."
+"1497"	" Adv. regularly, usually donen. routine ~  Adj. routine ~  Syn. ordinarily
+ روزمره‌، كار عادی‌، جریان‌ عادی‌، عادت‌ جاری‌
+
+-She routinely gets a physical examination.
+-The mountain ridge was heavily forested."
+"1498"	"V. suffice ~  Adv. enough, in a satisfying mannern. sufficiency ~  Adj. sufficient ~  Syn. adequately
+ به قدر کفایت
+
+-Jenny is sufficiently mature to make Her own decisions.
+-The span of The bridge is three miles."
+"1499"	"V. view ~  Adv. can be seen power of imagination or wisdom, especially with regard to the futuren. vision ~  Adj. visible, visionary ~  Syn. noticeably
+ بطور مرئى
+
+-Ken was visibly upset about His performance evaluation.
+-The crowd reacted spontaneously to The danger."
+"1500"	" Adv. appropriatelyn. appropriateness ~  Adj. correct or good for the purpose ~  Syn. proper
+ اختصاص دادن، براى خود برداشتن، ضبط کردن، درخور، مناسب، مقتضى
+
+-It is not appropriate to cheat on tests.
+-water streamed From The dam as workers attempted to make The repairs."
+"1501"	"V. to make more easily understood, to make clear n. clarification  ~  Syn. explain
+ تصفیه شدن، صاف کردن یا شدن، روشن کردن، واضح کردن، توضیح دادن
+
+-Chapter 2 in the textbook clarifies the process of osmosis.
+-that was a strikingly convincing argument that The speaker delivered."
+"1502"	"V. to prevent from being seen or discovered n. concealment  ~  Syn. hide
+ پنهان کردن، نهان کردن، نهفتن
+
+-The students concealed Their feelings about The course.
+-emotional problems are apt to damage personal relationships."
+"1503"	"V. to make certain, given support n. confirmation ~  Adj. confirmed ~  Syn. prove
+ تایید کردن، تصدیق کردن، تثبیت کردن
+
+-The director confirmed that The meeting would be on The tenth.
+-The lawyer was demonstrative In making His impassioned plea before The jury."
+"1504"	" Adv. in an unchanging manner; happening all the time ~  Adj. constant ~  Syn. continually
+ دائماً، ازروى ثبات، بدون تغییر
+
+-Philosophy constantly questions The nature of Human existence.
+-Good style, punctuation and grammar are important ingredients of a Good essay."
+"1505"	" Adv. convenientlyn. convenience ~  Adj. easy to reach, near; suitable to one's needs ~  Syn. practical
+ راحت، مناسب
+
+-The student union is convenient to The physical sciences building.
+-Reflexes are involuntary reactions to external stimuli."
+"1506"	" n. core ~  Adj. the central or most important part ~  Syn. chief
+ هسته، مغز ودرون هرچیزى، رشته سیم، هسته سنگ، هسته یا دیوار هسته اى، مغزى،
+
+-The core of The curriculum consists of courses that are required of all students.
+-The weather was marvelous for an afternoon get-together In The park."
+"1507"	"V. critique ~  Adv. criticallyn. criticism, critic ~  Adj. very serious or requiring careful judgment; finding fault ~  Syn. dangerous
+ خطرناک، حساس، مهم، حیاتى، شاخص، بحرانى، وخیم، نکوهشى، منتقدانه
+
+-It is critical to follow The directions for The experiment exactly as The instructor indicates.
+-a yardstick is used to measure lengths up to three feet."
+"1508"	"V. to change from the original shape or condition, usually in an unnatural way n. distortion ~  Adj. distorted ~  Syn. deform
+ شکسته شدن، خمیدن، بد شکل کردن، کج کردن، تحریف کردن، ازشکل طبیعى انداختن
+
+-Time and space are distorted When traveling at The speed of light.
+-The Broadway play was moderately successful."
+"1509"	"V. diversify ~  Adv. diverselyn. diversity ~  Adj. various; distinct from others ~  Syn. Different
+ متضاد، متنوع، مخالف، گوناگون، مختلف، متغیر، متمایز
+
+-Freud had Many diverse interests In psychology.
+-The Moon rock is an oddity available at The museum for all to view."
+"1510"	"V. prosper ~  Adv. prosperouslyn. prosperity ~  Adj. successful, wealthy ~  Syn. thriving
+ شکوفا، پررونق، کامیاب، موفق، کامکار
+
+-In the early 1900s, San Francisco was a prosperous city.
+-In order to perceive something visually, light must be reflected from the object's surface."
+"1511"	" Adv. purposely, done for a special reasonn. purpose ~  Adj. purposeful ~  Syn. deliberately
+ با داشتنِ مقصود
+
+-The course syllabus was designed purposefully to be easy to follow.
+-The stockbroker's supposition is that the economy will improve."
+"1512"	"V. to uncover, to expose ~  Adv. revealinglyn. revelation ~  Adj. revealing ~  Syn. disclose
+ آشکار کردن، فاش کردن، معلوم کردن
+
+-The president revealed Some of His ideas before he gave His speech.
+-The trees could not sustain The attack of The locusts."
+"1513"	" Adv. almost notn. scarcity ~  Adj. scarce ~  Syn. hardly
+ به دشوارى، زورکى
+
+-The woman scarcely spoke a word of English.
+-I think This painting symbolizes The universal themes of humanity."
+"1514"	"V. theorize ~  Adv. according to a reasoned, but not proven, point of viewn. theory ~  Adj. theoretical ~  Syn. hypothetically
+ از لحاظ فرض علمى
+
+-His argument was theoretically appealing but not realistic.
+-Vitamins are synthetically produced."
+"1515"	"V. to go faster n. acceleration, accelerator  ~  Syn. hasten
+ تسریع کردن، تند کردن، شتاب دادن، بر سرعت( چیزى )افزودن، سرعت دادن، سرعت گرفتن، تند شدن، تندتر شدن
+
+-The action of molecules accelerates When They are heated.
+-The solution to This problem can be tangibly demonstrated."
+"1516"	"V. crack n. a thin opening caused by breaking, a flaw  ~  Syn. fracture
+ ترک خوردن، شکستگى، پریدگى، رخنه، ترک، ضربت، تولید صداى ناگهانى وبلند کردن، شکاف برداشتن، ترکیدن
+
+-Cracks In The ice allowed for fishing.
+-The government is tightening The regulations on The Use of seat belts."
+"1517"	"V. to make something new ~  Adv. creativelyn. creation, creator, creativity, creativeness ~  Adj. creative ~  Syn. produce
+ خلق شدن، آفریدن، ایجاد کردن
+
+-Thomas Edison created numerous inventions.
+-The shortage of work aggravated The crisis In The Small town."
+"1518"	"V. to move slowly and quietly close to the ground; to begin to happen  ~  Adj. creeping ~  Syn. crawl
+ مرحله به مرحله جلو رفتن، وارفتگى، خزیدن، مورمور شدن، وارفتگى بتن، چهار دست و پا رفتن
+
+-Some mistakes are beginning to creep into His work.
+-His amusing comment made Everyone laugh."
+"1519"	"V. to press together so as to completely distort the shape or nature of the object n. crush ~  Adj. crushing ~  Syn. grind
+ مچاله کردن، سانحه هوایى، تصادف کردن، له کردن، خرد کردن، فشردن، پیروزشدن بر
+
+-The machine crushes Corn to produce Corn meal.
+-It is conceivable that humans Will travel to distant planets one day."
+"1520"	"V. to plant and raise a crop; to encourage growth of a relationship or friendship n. cultivation ~  Adj. cultivated ~  Syn. grow
+ کِشت کردن، زراعت کردن، ترویج کردن
+
+-The professionals had common interests that allowed them to cultivate a working relationship With each other.
+-The conversion From Fahrenheit to centigrade can be easily made."
+"1521"	"V. to state demands with the power to enforce n. dictator ~  Adj. dictatorial ~  Syn. impose
+ دستور دادن، دیکته کردن، با صداى بلند خواندن، امر کردن
+
+-The workers were not In a position to dictate demands to management.
+-There is No simple cure for The ills of society."
+"1522"	"V. to hear, see, or recognize differences  ~  Adj. distinguishable, distinguished, distinguishing ~  Syn. discriminate
+ تشخیص دادن، دیفرانسیل گرفتن، دیدن، مشهورکردن
+
+-Some people cannot distinguish colors well.
+-The patient's debility restricted him to the room."
+"1523"	" n. a small sign of damage that makes an item imperfect ~  Adj. flawed ~  Syn. defect
+ نقص، مو برداشتن، درز، رخنه، خدشه، عیب دار کردن، ترک برداشتن، تند باد، آشوب ناگهانى
+
+-There is a flaw In His theory.
+-The depletion of the Earth's oil reserves poses a threat to our current style of life."
+"1524"	"V. harvest n. the act of collecting a crop; the crops gathered ~  Adj. harvested ~  Syn. harvest
+ نتیجه، حاصل، محصول، هنگام درو، وقت خرمن، درو کردن وبرداشتن
+
+-The United States had a comparatively Good grain harvest This year.
+-is There a finite number of Stars In The universe?"
+"1525"	"V. to show, as in a mirror n. mirror  ~  Syn. reflect
+ آیینه، درآینه منعکس ساختن، بازتاب کردن
+
+-The results of The study mirror public opinion.
+-Porpoises are very perceptive mammals."
+"1526"	"V. to gain or secure something  ~  Adj. obtainable ~  Syn. gain
+ بدست آوردن ،فراهم کردن ،گرفتن، احراز
+
+-The university obtained a new particle accelerator.
+-We secured all of The doors of The lab before leaving."
+"1527"	" n. a very small piece of something  ~  Syn. fragment
+ خرده، ریزه، ذره، لفظ، حرف
+
+-Particles of dust can destroy electronic instruments.
+-This product has The highest toxicity of any known to science."
+"1528"	"V. to establish a home; to resolve a disagreement n. settlement ~  Adj. settled ~  Syn. colonize
+ نشاندن، قرار دادن، تصفیه کردن، فرو کردن، جا دادن، ماندن، ساکن کردن، واریز کردن، تصفیه کردن، معین کردن، ته نشین شدن، تصفیه حساب کردن
+
+-people arriving From The south settled In California.
+-His tranquil manner of expression made us all feel more secure."
+"1529"	"V. to move from one place to another n. transportation ~  Adj. transportable, transported ~  Syn. carry
+ نقل و انتقال، حمل و نقل، بردن، حمل کردن، از خود بیخودشدن، از جا در رفتن، بارکش، وسیله نقلیه، ترابرى، حامل
+
+-Flying is not always The fastest way to transport passengers to Their destination.
+-The trapped animals were released After being tagged by The wildlife conservationists."
+"1530"	" Adv. accuratelyn. accuracy ~  Adj. careful and exact ~  Syn. precise
+ درست، دقیق، صحیح
+
+-She was able to make accurate observations With The new telescope.
+-It is undeniable that he has skill, but he needs to show more initiative."
+"1531"	"V. to place into groups according to type n. classification ~  Adj. classified ~  Syn. to place into groups according to type
+ رده بندى کردن، دسته بندى کردن، طبقه بندى کردن
+
+-Biologists classify life forms into Many phyla.
+-The treasurer underestimated The cost of The new furniture."
+"1532"	" n. monetary unit  ~  Syn. money
+ پول قانونى و رایج هر کشور، وجه، ارز، جدید بودن نقشه، پول نقد، پول رایج، رواج، انتشار
+
+-The purchase must be paid for In The national currency
+-The promotion he received was an acknowledgment of His excellent work."
+"1533"	"V. deepen ~  Adv. deeplyn. depth ~  Adj. far below the surface; complete understanding ~  Syn. thorough
+ گود، ژرف، عمیق
+
+-Lake Baikal is The deepest Lake In The world.
+-The office's most recent acquisition was a new photocopier."
+"1534"	" Adv. denselyn. density ~  Adj. closely packed or crowded, difficult to see through  ~  Syn. thick
+ چگال، غلیظ، متراکم، انبوه، احمق، خنگ
+
+-The boating accident was caused by The dense fog.
+-Assimilation of a new cultural environment can be difficult."
+"1535"	"V. to count on; to be supported by ~  Adv. dependablyn. dependence, dependency, dependent ~  Adj. dependable ~  Syn. trust
+ وابسته بودن به، مربوط بودن به، منوط بودن به، توکل کردن به
+
+-The farmers depend on rain to produce a Good harvest.
+-he bought a box of assorted books at The book fair."
+"1536"	"V. dim ~  Adv. dimlyn. dimness ~  Adj. not bright or clear ~  Syn. faint
+ کم نور، تاریک، تار، مبهم
+
+-The light was too dim for studying.
+-Only parts of The highest caliber can be used to make repairs on The spacecraft."
+"1537"	"V. to show, reveal n. display  ~  Syn. exhibit
+ نمایشگر، صفحه نمایش، در معرض نمایش، نشان دادن، آشکارکردن، نمایش، تظاهر، جلوه، نمایاندن
+
+-The model displayed The details of The Human hand.
+-Try to condense The two chapters into one."
+"1538"	"V. export n. products sold abroad ~  Adj. exported ~  Syn. foreign sales
+ کالاهاى صادراتى، صدور، صادر کردن، بیرون بردن، کالاى صادره، صادرات
+
+-Until recently the United States' exports exceeded its imports.
+-The expert contradicted himself during His presentation."
+"1539"	" Adv. gigantically ~  Adj. very large ~  Syn. enormous
+ غول پیکر
+
+-Reaching The Moon was a gigantic step In space exploration for mankind.
+-His disregard of The lab instructions caused him to make Many errors."
+"1540"	"V. impress ~  Adv. impressivelyn. impression ~  Adj. causing admiration because of an object's importance, size, or quality ~  Syn. imposing
+ مؤثر، برانگیزنده احساسات، گیرا
+
+-Lincoln's power of persuasion was impressive
+-The precious stone was one of a kind."
+"1541"	"V. last  ~  Adj. forever, without end ~  Syn. enduring
+ دیرپاى، بادوام، ماندنى، ثابت، پاینده، پایا
+
+-Kennedy left a lasting impression on The people who heard His inaugural address.
+-he gained prominence Through His television appearances."
+"1542"	"V. treasure n. the agency that controls and spends money; a collection of valued things ~  Adj. treasured ~  Syn. bank
+ خزانه دارى، گنجینه، گنج، خزانه
+
+-The treasury was under pressure to lower interest rates.
+-The project team made a requisition for a new set of reference books."
+"1543"	" Adv. uniformlyn. uniformity ~  Adj. every part being the same. ~  Syn. consistent
+ لباس فرم، اونیفرم، لباس متحدالشکل، یک شکل، یکسان، متحد الشکل، یکنواخت کردن
+
+-Bread has a uniform texture.
+-The unraveling of The Soviet union took place In The span of a few months."
+"1544"	" Adv. vibrantlyn. vibrancy ~  Adj. lively, powerful, full of action, bright ~  Syn. brilliant
+ مرتعش ،لرزان ،به تپش در امده ،در حال جنبش ،تکریرى ،پرطراوت و چالاک
+
+-His vibrant personality made him well liked by everyone.
+-The vagueness of His directions caused us to get lost."
+"1545"	" Adv. distinctlyn. distinct ~  Adj. distinctive, clearly noticed; different ~  Syn. definite
+ مشخص، مجزا، جدا، واضح، شمرده، ممتاز
+
+-There was a distinct aroma of coffee In The restaurant.
+-Unfortunately, The water quality has deteriorated vastly since my last visit here."
+"1546"	"V. dominate ~  Adv. dominantlyn. domination ~  Adj. primary or principal; having or exercising control over something ~  Syn. major
+ حاکم، حکم فرما، سلطه گر، چیره، مسلط، نافذ، غالب، برجسته، نمایان، عمده، مشرف، متعادل، مقتدر، مافوق، برتر
+
+-The dominant life forms of The paleozoic era lived In The water.
+-This voluminous report Will erase your doubt about The financial condition of The company."
+"1547"	" n. dormitory ~  Adj. not growing or producing; asleep ~  Syn. inactive
+ خوابیده، ساکت، وسیله تأخیرى
+
+-The volcano had been dormant for hundreds of years before The eruption last month.
+-John F. Kennedy was known for His charismatic personality."
+"1548"	" Adv. drablyn. drabness ~  Adj. lacking color; uninteresting, boring ~  Syn. colorless
+ یکنواخت وخسته کننده، خاکسترى، کسل کننده، زن شلخته، فاحشه،
+
+-Their clothing was quite drab
+-His cleverness enabled him to rise quickly In The organization."
+"1549"	"V. dramatize ~  Adv. dramaticallyn. drama ~  Adj. something that captures the imagination;exciting ~  Syn. emotional
+ چشمگیر، نمایشى، مهیّج
+
+-The dramatic finish to The game left us speechless.
+-The video made a convincing argument for The recycling of paper and plastic materials."
+"1550"	"V. elaborate ~  Adv. elaboratelyn. elaboration ~  Adj. something with a large number of parts; full of details ~  Syn. complex
+ پرکار، استادانه درست شده، بزحمت درست شده، به زحمت ساختن، داراى جزئیات
+
+-an elaborate headdress indicated rank within The Aztec community.
+-The endurance displayed by The athlete gave evidence of His rigorous training."
+"1551"	" Adv. exceptionally ~  Adj. unusual in a positive way ~  Syn. phenomenal
+ استثنایى
+
+-The orchestra's performance was exceptional
+-The forfeit occurred Because not enough players showed up."
+"1552"	" Adv. hazardouslyn. hazard ~  Adj. very risky, unsafe ~  Syn. dangerous
+ اتفاقى، تصادفى، مضر، زیان آور، پرخطر، معاملات قمارى
+
+-Handling flammable liquids is hazardous
+-The cup was positioned precariously on The edge of The table."
+"1553"	" n. minitia ~  Adj. minute, of little consequence; very small  ~  Syn. tiny
+ خرد، حرف کوچک
+
+-The sale of The building had a minuscule effect on The profits of The corporation.
+-The severity of His condition Will not be known Until The test results are studied."
+"1554"	"V. to make ready;&nbsp;&nbsp;first in importance or in time n. prime ~  Adj. primed, prime ~  Syn. prepare
+ مهمترین، راه انداختن، گرم کردن موتور، اول، زبده، درجه یک، آغاز، بهار جوانى، کمال، اصلى، برجسته، مجهز ساختن، تحریک کردن
+
+-The directors primed The actors before The performance.
+-violent storms occur sporadically In The southwest."
+"1555"	" n. rudiment ~  Adj. simple; not complex ~  Syn. basic
+ اولیه، بدوى، ابتدایى
+
+-he has a rudimentary knowledge of computers.
+-The restaurant's superiority was established shortly after it opened."
+"1556"	" Adv. sensitivelyn. sensitivity ~  Adj. easily affected ~  Syn. delicate
+ مهم، حساس، نفوذ پذیر، داراى حساسیت
+
+-Film varies according to its sensitivity to light.
+-The jealous man was wantonly impolite to The winner."
+"1557"	" Adv. superficially ~  Adj. simple; not deep; near the surface ~  Syn. shallow
+ سطحى، سرسرى، ظاهرى
+
+-The inspector determined that The crack In The bridge was Only superficial
+"
+"1558"	"V. terrify ~  Adv. terrifyingly ~  Adj. filled with fear ~  Syn. frightening
+ وحشت زده کردن
+
+-to be In a violent storm is a terrifying experience.
+"
+"1559"	" Adv. vigorouslyn. vigor ~  Adj. powerful, full of action ~  Syn. strong
+ پرزور، نیرومند، زورمند، قوى، شدید
+
+-His vigorous defense of The issues impressed everyone.
+-most people have at least one area of weakness."
+"1560"	" n. something that makes life easier or more enjoyable  ~  Syn. convenience
+ سازگارى، مطبوعیت، نرمى، ملایمت
+
+-She had all The amenities of home When She went camping.
+-The political influence of The developed countries of The world is widespread."
+"1561"	"V. to put an end to the existence of something ~  Adv. destructivelyn. destructiveness, destruction, destroyer ~  Adj. destructive ~  Syn. ruin
+ تلف کردن، تخریب کردن، خراب کردن، ویران کردن، نابود ساختن
+
+-The factory was destroyed by The fire.
+-It was a wise decision for you to buy a car."
+"1562"	"V. to cause to move in many different directions  ~  Adj. dispersed ~  Syn. circulate
+ پراکنده شدن، متفرق شدن، پراکنده کردن، متفرق ساختن، متفرق کردن
+
+-The high winds and rain dispersed The crowd.
+-Mark Twain was famous for His sharp wit."
+"1563"	"V. dwell n. dweller, where people live  ~  Syn. house
+ خانه، منزلگاه، منزل کردن، پیاده شدن براى استراحت، مسکن
+
+-Cave-like dwellings have been discovered throughout The world.
+-The opponents of The proposed highway wooed nearby residents to defend Their position."
+"1564"	" n. element, a part of the whole environment ~  Adj. elemental ~  Syn. component
+ عامل اصلى، عنصر عملیاتى، رکن، سازه برقى، عنصر( شیمیایى)، اصل، محیط طبیعى، عامل
+
+-City dwellers are out of Their element In The country.
+-you should not Try to answer The question superficially."
+"1565"	"  ~  Adj. simple in structure, easy to do ~  Syn. primary
+ بنیادى، مقدماتى، ابتدایى، اصلى
+
+-The solution to The problem was actually quite elementary
+-They are terrified by dogs."
+"1566"	"V. to remove, free oneself of something n. elimination ~  Adj. eliminated ~  Syn. delete
+ زدودن، حذف کردن، محو کردن، رفع کردن، برطرف کردن
+
+-mistakes must be eliminated before you hand In a term paper.
+-Everyone looked for shelter from the blazing sun.""color:#0000ff;"""">shelter from the blazing sun."
+"1567"	"V. to show that something is especially important or exceptional ~  Adv. emphaticallyn. emphasis ~  Adj. emphatic ~  Syn. highlight
+ باقوت تلفظ کردن، تایید کردن، اهمیت دادن، نیرو دادن به
+
+-The Professor emphasized certain aspects of The historical period.
+"
+"1568"	"V. to make a circle around  ~  Adj. encircled ~  Syn. surround
+ محاصره کردن، دورگرفتن، احاطه کردن، حلقه زدن، دورچیزى گشتن، دربرداشتن
+
+-The players encircled Their coach After winning The big game.
+"
+"1569"	" Adv. erratically ~  Adj. no regular pattern in thinking or movement; changeable without reason ~  Syn. inconsistent
+ نامنظم، سرگردان، غیرمعقول، غیرقابل پیش بینى، دمدمى مزاج
+
+-The artist's paintings have an erratic qualify, some being excellent, and others mediocre.
+"
+"1570"	"V. to make something more than what it is n. exaggeration ~  Adj. exaggerated ~  Syn. overstate
+ اغراق آمیز کردن، مبالغه کردن در، گزافه گویى کردن
+
+-The federal government exaggerated The success of its programs.
+"
+"1571"	"V. to say; relate in written form n. mention ~  Adj. mentioned ~  Syn. remark
+ تذکر، یادآورى، نام بردن، ذکر کردن، اشاره کردن
+
+-Theater-goers often mention that They enjoy watching movies on a large screen.
+"
+"1572"	" n. a place where boats arrive to take on or unload cargo and passengers  ~  Syn. dock
+ اسکله، ستون، جرز، موج شکن، پایه پل، لنگرگاه
+
+-The submarine arrived at The pier on time.
+"
+"1573"	" n. prevalence ~  Adj. existing widely or commonly ~  Syn. commonplace
+ رایج، شایع، متداول، مرسوم، برتر
+
+-Comfortable trade winds are prevalent In The Caribbean islands.
+"
+"1574"	"V. to allow to come out; to give freedom n. release  ~  Syn. free
+ آزاد سازى، خارج کردن، واگذار کردن، بخشودگى، رهایى، ترخیص، بخشش
+
+-a new movie was just released
+"
+"1575"	"V. to be useful or helpful ~  Adv. beneficiallyn. benefit, beneficiary ~  Adj. beneficial ~  Syn. assist
+ سود بردن، مزایا، نفع، منفعت، استفاده، فایده رساندن، مفید بودن، فایده بردن
+
+-Use of solar power Will benefit all mankind.
+"
+"1576"	" Adv. blindlyn. blindness ~  Adj. unable to see or understand, to conceal;showing poor judgment or understanding ~  Syn. unaware
+ چراغ چشمک زن، چراغ اعلام خطر، کور، تاریک، ناپیدا، غیر خوانایى، بى بصیرت، کورکردن، خیره کردن ،پناه، سنگر، هرچیزى که مانع عبور نور شود، پرده
+
+-They were blind to The fact that They had little chance to succeed.
+"
+"1577"	"V. to make larger or greater ~  Adv. broadlyn. breadth ~  Adj. broad ~  Syn. enlarge
+ پهن کردن، وسیع کردن، منتشر کردن
+
+-Education Will broaden your opportunities to land a Good job.
+"
+"1578"	"V. grow at a fast pace  ~  Adj. burgeoning ~  Syn. thrive
+ جوانه زدن، درآمدن، شروع به رشدکردن
+
+-The burgeoning population of major cities is creating a demand for more services.
+"
+"1579"	" Adv. attracting attention ~  Adj. conspicuous ~  Syn. noticeably
+ واضحاً، به طور مشخص
+
+-His name was conspicuously absent From The list of winners.
+"
+"1580"	"V. to ask for something in a strong way ~  Adv. demandinglyn. demand ~  Adj. demanding ~  Syn. insist
+ درخواست کردن، خواستارشدن، طلب، تقاضا کردن، تقاضا، نیاز، مطالبه کردن
+
+-She demanded to know The truth.
+"
+"1581"	"V. to express approval n. endorsement  ~  Syn. support
+ پشت نویسى کردن، امضاء کردن
+
+-The union endorsed The new contract.
+"
+"1582"	" Adv. enormouslyn. enormity ~  Adj. very large ~  Syn. Tremendous
+ بزرگ، عظیم، هنگفت
+
+-His enormous wealth allows him to contribute to Many charities.
+"
+"1583"	" Adv. completelyn. entirety ~  Adj. entire ~  Syn. Thoroughly
+ کاملا، کلاً، سراسر
+
+-They are entirely right about The economy.
+"
+"1584"	"V. to wear away, disappear slowly n. erosion  ~  Syn. deteriorate
+ فرسودن، ساییدن، فاسدکردن، ساییده شدن
+
+-The senator's support is eroding because of his unpopular positions on the major issues.
+"
+"1585"	"V. to vanish n. evaporation  ~  Syn. disappear
+ تبخیر شدن، تبخیر کردن، خشک کردن، بربادرفتن
+
+-The chances of The two sides Reaching an agreement have evaporated
+"
+"1586"	"V. to get back; to have something returned n. recovery ~  Adj. recovered, recoverable ~  Syn. retrieve
+ جمع اورى کردن، نجات دادن، به حالت اول درآمدن، دوباره بدست آوردن، ترمیم شدن، بهبود یافتن، بهوش آمدن، دریافت کردن
+
+-The NASA team was unable to recover The space capsule.
+"
+"1587"	"V. report ~  Adv. to know by report; unconfirmed; supposedlyn. report ~  Adj. reported ~  Syn. Rumored
+ شایعه، شایعه گفتن و یا پخش کردن
+
+-The students reportedly sent a representative, but She has not arrived yet.
+"
+"1588"	"V. shift n. change in position or direction ~  Adj. shifting, shifty ~  Syn. Switch
+ کلید مبدل، تغییر دادن، شیفت کار، جابجائى، تغییر جهت ، تعویض کردن، تغییر مکان دادن، انتقال دادن، نوبت کار
+
+-The shift In The wind was helpful to The sailors.
+"
+"1589"	"V. to experience difficulty; to worsen in quality; to experience pain n. suffering, sufferer ~  Adj. suffering ~  Syn. endure
+ اجازه دادن، زحمت، زیان دیدن، تحمل کردن، تن در دادن به، رنج بردن
+
+-The old man suffers From loss of memory.
+"
+"1590"	" Adv. crucially ~  Adj. of great importance; extremely necessary ~  Syn. critical
+ وخیم، بسیار سخت، قاطع
+
+-Favorable weather is crucial to a Good harvest.
+"
+"1591"	" n. a very important or famous person, usually associated with a high position in government  ~  Syn. notable
+ شخص بزرگ، عالى مقام
+
+-Every dignitary In Washington was invited to The wedding.
+"
+"1592"	"V. to escape in a tricky way n. elusiveness ~  Adj. elusive ~  Syn. evade
+ اجتناب کردن از، طفره زدن، دورى کردن از
+
+-The criminal has eluded The police for months.
+"
+"1593"	" Adv. evidentlyn. evidence ~  Adj. easy to see, usually because of some proof ~  Syn. apparent
+ بدیهى، آشکار، مشهود
+
+-It is evident that you are not feeling.
+"
+"1594"	"V. to use completely; to expend all energy; very thorough ~  Adv. exhaustivelyn. exhaustion ~  Adj. exhaustive, exhausting, exhausted ~  Syn. deplete
+ تخلیه کردن، لوله اگزوز، خروج گاز یا بخار، تمام شدن انرژى، تهى کردن، خسته کردن، ازپاى در آوردن، تمام کردن، بادقت بحث کردن
+
+-They exhausted their energy in 10 minutes.
+"
+"1595"	"V. extend ~  Adv. extensivelyn. extension ~  Adj. large in area or number to offer; to make longer.&nbsp;&nbsp;an extending; an additional part ~  Syn. comprehensive
+ شدید، زیاد، پهن، عریض، گسترده، پهناور، وسیع، بزرگ
+
+-The extensive snowfall caused problems throughout The city.
+"
+"1596"	" Adv. very; to the very end, the highest extentn. extreme, extremist ~  Adj. extreme, extremist ~  Syn. highly
+ بشدت، به افراط
+
+-When The concert was canceled, Some customers became extremely upset.
+"
+"1597"	"V. to be in the presence of an oppose   ~  Syn. confront
+ پیشانى، رخ، رخسار، صورت، نما، مواجه شدن، چهره، طرف، سمت، وجه ،ظاهر، منظر، روبروایستادن، مواجه شدن، رویاروى شدن
+
+-The mountain climbers faced grave danger on The cliff.
+"
+"1598"	" n. element or component ~  Adj. faceted ~  Syn. aspect
+ صورت کوچک، تراش، شکل، منظر، بند، مفصل
+
+-The proposal had Many beneficial facets
+"
+"1599"	" Adv. heroicallyn. heroine (female), heroics, a person remembered for an act of goodness or bravery ~  Adj. heroic ~  Syn. idol
+ قهرمان، دلاور، پهلوان داستان
+
+-he is a hero In The eyes of His admirers.
+"
+"1600"	" Adv. inaccessiblyn. inaccessibility ~  Adj. something that cannot be reached or communicated with ~  Syn. remote
+ ارتباط ناپذیر، خارج از دسترس
+
+-The summit of The mountain was inaccessible
+"
+"1601"	" Adv. in a clear, easy to understand way ~  Adj. obvious ~  Syn. evidently
+ بطورآشکار یا معلوم، بدیهى است که
+
+-It had obviously rained.
+"
+"1602"	"V. predict ~  Adv. in a way that foretells future eventsn. prediction ~  Adj. predictable ~  Syn. expectedly
+ پیشگویى کردن، پیش بینى کردن
+
+-She predictably forgot to do Her assignment.
+"
+"1603"	"V. to find the answer n. solution  ~  Syn. resolve
+ حل کردن، رفع کردن، گشادن، باز کردن
+
+-They solved The problem In a way that benefited The entire neighborhood.
+"
+"1604"	"V. suit ~  Adv. suitably ~  Adj. appropriate, correct; convenient ~  Syn. appropriate
+ درخورد، مناسب، شایسته، فراخور
+
+-Her dress was not suitable for The occasion.
+"
+"1605"	" Adv. amply ~  Adj. more than enough ~  Syn. sufficient
+ فراخ، پهناور، وسیع، فراوان، مفصل، پر، بیش از اندازه
+
+-There is ample evidence that The young man was speeding When The accident occurred.
+"
+"1606"	"  ~  Adj. having little rain or water ~  Syn. dry
+ کم آب، خشک، بایر، لم یزرع، خالى، بیمزه، بیروح، بى لطافت
+
+-The area known as The Sahara Desert is one of The most arid place In The world.
+"
+"1607"	"V. to miss or keep away from n. avoidance ~  Adj. avoidable ~  Syn. avert
+ دورى کردن از، احتراز کردن، اجتناب کردن، طفره رفتن از، موقوف کردن
+
+-She could not avoid letting Her feelings show.
+"
+"1608"	"V. to show little fear or regard for rules or established norms; to challenge ~  Adv. defyingly ~  Adj. defying ~  Syn. resist
+ به مبارزه طلبیدن، تحریک جنگ کردن
+
+-I defy you to find that book in the library's collection.
+"
+"1609"	"V. to pass a law n. enactment ~  Adj. enacted ~  Syn. Legislate
+ بصورت قانون درآوردن، وضع کردن(قانون )، تصویب کردن، نمایش دادن
+
+-Congress enacted The legislation during its last session.
+"
+"1610"	" Adv. evenlyn. evenness ~  Adj. regular, smooth; in equal parts ~  Syn. Equitable
+ مسطح، تراز، مساوى، هموارکردن، صاف کردن، واریز کردن، اعداد جفت، عدد زوج
+
+-The sound isn't even turn up the left speaker.
+"
+"1611"	"V. to pretend, make believe  ~  Adj. feigned ~  Syn. simulate
+ وانمود کردن، بخود بستن، جعل کردن
+
+-She feigned illness When It was Time to visit The dentist.
+"
+"1612"	"V. fertilize n. fertility, fertilizer ~  Adj. able to produce abundantly ~  Syn. Rich
+ حاصلخیز، پرثمر، بارور، پربرکت
+
+-The delta areas of rivers are known for Their fertile soil.
+"
+"1613"	"V. freshen ~  Adv. caught or produced not long agon. freshness ~  Adj. fresh ~  Syn. recently
+ به تازگى، از روى بى تجربگى، با نفس یا نیروى تازه
+
+-Freshly harvested produce is hard to find In The winter months.
+"
+"1614"	"V. function ~  Adv. functionallyn. the normal purpose of something ~  Adj. functional ~  Syn. Role
+ طرزکار، کارایى، فعالیت، تابع، پیشه، مقام، ماموریت، عمل کردن، کارکردن، وظیفه داشتن، آیین رسمى
+
+-It is The function of The director to organize and lead The department.
+"
+"1615"	" Adv. fundamentally ~  Adj. a primary or basic element ~  Syn. essential
+ ابتدایى، پایه اى، اصولى، اساسى، اولیه، اساس، اصلى، بنیادى
+
+-The student government promised fundamental changes In The registration process.
+"
+"1616"	" Adv. indiscriminately ~  Adj. not chosen carefully; unplanned ~  Syn. arbitrary
+ یکسره، ناشى از عدم تبعیض، خالى از تبعیض
+
+-The indiscriminate arrangement of The products made The store confusing.
+"
+"1617"	"V. select ~  Adv. selectivelyn. selection, selectivity ~  Adj. select, carefully chosen ~  Syn. discriminating
+ برگزیننده، انتخابى، گزینشى، انتخاب کننده، داراى حسن انتخاب
+
+-They were very selective When They chose The members of The academic team.
+"
+"1618"	" n. space, spaciousness ~  Adj. spaciously, having a lot of room ~  Syn. expansive
+ فراخ، جادار، وسیع، جامع، گشاد، مفصل
+
+-The spacious plains of the Midwest make up the nation's breadbasket.
+"
+"1619"	"V. to fight without surrender; to persist   ~  Syn. survive
+ تاب آوردن، مقاومت کردن با، ایستادگى کردن در برابر، تحمل کردن، مخالفت کردن، استقامت ورزیدن
+
+-She cannot withstand The pressures of Her job.
+"
+"1620"	" n. durability, duration ~  Adj. something that lasts a long time&nbsp;&nbsp;time during which something lasts ~  Syn. sturdy
+ پایدار، باودام، پایا، دیرپاى
+
+-It was a durable refrigerator, but It finally broke.
+"
+"1621"	"V. to prefer&nbsp;&nbsp;advantageous ~  Adv. favorablyn. favor ~  Adj. favorable, favorite ~  Syn. support
+ توجه، مساعدت، مرحمت کردن، نیکى کردن به، طرفدارى کردن
+
+-The supervisor favored The first of The two plans.
+"
+"1622"	" n. gain, to obtain something needed or useful; to increase the amount of something ~  Adj. gainful ~  Syn. attain
+ منفعت، نفع، بهره، تقویت، حصول، صرفه، استفاده، افزایش، سود بردن، فایده بردن، پیدا کردن، کسب کردن، باز یافتن، بهبودى یافتن، رسیدن، زیاد شدن
+
+-he gained a lot of experience working as a volunteer.
+"
+"1623"	"V. to produce n. generation, generator ~  Adj. generated ~  Syn. create
+ گسترش یافتن، آفریدن، ساختن، زاییدن، تولید کردن، احداث کردن، به وجود آوردن، حاصل کردن، تولید نیرو کردن
+
+-The appearance of The dance troupe generated a lot of excitement.
+"
+"1624"	"V. to stop or discontinue ~  Adv. haltinglyn. halt ~  Adj. halting ~  Syn. stop
+ متوقف کردن، متوقف، درنگ، سکته، ایست کردن، مکث کردن، لنگیدن
+
+-Bus service to The City was halted due to poor road conditions.
+"
+"1625"	"V. to deal with or control n. handle  ~  Syn. manage
+ با دست عمل کردن، نگهدارنده، دستگیره جابجا کردن، وسیله، لمس، دست زدن به، بکار بردن، سرو کارداشتن با، رفتار کردن، استعمال کردن
+
+-They handled themselves very well given The circumstances.
+"
+"1626"	"V. to give protection; not to express a desire or opinion, usually bad   ~  Syn. shelter
+ لنگرگاه، بندرگاه، پناهگاه، پناه دادن، پناه بردن، لنگر انداختن، پروردن
+
+-he harbors ill feelings for her.
+"
+"1627"	"V. hair ~  Adv. harmfullyn. harm ~  Adj. something that causes pain or damage ~  Syn. unhealthy
+ مضر، پرگزند
+
+-Excessive radiation is harmful to The body.
+"
+"1628"	" Adv. insignificantlyn. insignificance ~  Adj. not important; of little value ~  Syn. Meaningless
+ ناچیز
+
+-The amount of rainfall This summer has been insignificantly
+"
+"1629"	" Adv. mysteriouslyn. mystery, mysteriousness ~  Adj. not easily understood or figured out ~  Syn. baffling
+ اسرار آمیز، مرموز، مبهم
+
+-he had a mysterious effect on Everyone who heard him speak.
+"
+"1630"	" Adv. perilouslyn. peril ~  Adj. threatening or risky; harmful ~  Syn. Dangerous
+ مخاطره آمیز، خطرناک
+
+-It is perilous to exceed The speed limit.
+"
+"1631"	"V. reschedule at a later time; put off n. postponement  ~  Syn. delay
+ به تاخیر انداختن، بتعویق افتادن، عقب انداختن، پست تر دانستن، در درجه دوم گذاشتن
+
+-The teacher postponed The lab experiment.
+"
+"1632"	"V. to encourage or advertise; to elevate in rank or grade n. promoter, promotion  ~  Syn. boost
+ تأسیس کردن، توسعه دادن، بالا بردن، ترفیع دادن، ترویج کردن
+
+-Many nations promote tourism to lure foreign currency.
+"
+"1633"	"V. to refuse n. rejection  ~  Syn. refuse
+ پس زدن، عقب زدن دشمن، رد کردن، نپذیرفتن
+
+-The insurance company rejected The claim.
+"
+"1634"	" Adv. substantial ~  Adj. substantive, important; strongly made; of value ~  Syn. significant
+ ذاتى، جسمى، اساسى، مهم، محکم، قابل توجه
+
+-The discovery of a vaccine for smallpox was a substantial medical achievement.
+"
+"1635"	" Adv. conscientiously ~  Adj. showing serious purpose; one who works carefully and with enthusiasm ~  Syn. meticulous
+ باوجدان، وظیفه شناس
+
+-She is a conscientious representative of The student body.
+"
+"1636"	"V. to make something known to others; to communicate   ~  Syn. communicate
+ هدایت کردن، رساندن، بردن، حمل کردن
+
+-The manager of The store conveyed His displeasure directly to The workers.
+"
+"1637"	"V. to surround completely; to envelop   ~  Syn. include
+ احاطه کردن، حلقه زدن، دارا بودن، شامل بودن، دربرگرفتن، محاصره کردن
+
+-Her plan of The study encompasses Every aspect of computer science.
+"
+"1638"	"V. expand n. expansion, the act of making larger ~  Adj. expandable ~  Syn. growth
+ وسعت، افزایش، گسترش، توسعه، انبساط
+
+-Expansion occurs When matter is heated.
+"
+"1639"	"V. to cause to become greater n. height ~  Adj. heightened ~  Syn. intensify
+ بلند کردن، بلندتر کردن، بالا بردن، زیاد کردن
+
+-A very successful interview can heighten a candidate's chances to get a job.
+"
+"1640"	"V. to emphasize the part of a greater whole n. highlight  ~  Syn. emphasize
+ مشخص، نشان شده، پررنگ
+
+-The manual highlights basic operation of The videotape player.
+"
+"1641"	" Adv. by accident; without paying attention; unexpectedly ~  Adj. inadvertent ~  Syn. carelessly
+ از روى بى احتیاطى، سهواً
+
+-The reporters had inadvertently failed to include The name of one of The dignitaries.
+"
+"1642"	" Adv. inevitablyn. inevitability ~  Adj. something that cannot be prevented from happening ~  Syn. unavoidable
+ نا چار، ناگزیر، اجتناب ناپذیر، حتمى، بدیهى
+
+-When two weather systems meet, unsettled weather conditions are inevitable
+"
+"1643"	" n. infant, in the beginning stages of development ~  Adj. infantile ~  Syn. beginning
+ طفولیت، نوباوگى، کودکى، خردى، ابتدا، شروع
+
+-The new theory is In its infancy and Will be thoroughly tested by its critics.
+"
+"1644"	" Adv. caused by something that cannot be explained by the laws of nature.n. miracle ~  Adj. miraculous ~  Syn. astonishingly
+ بطور حیرت انگیز، معجزآسا
+
+-Miraculously, he was unharmed After being hit by lightning.
+"
+"1645"	"V. to find and bring back n. retrieval ~  Adj. retrieve ~  Syn. recover
+ بازیافتن، دوباره بدست آوردن، پس گرفتن، جبران کردن
+
+-Will Detroit retrieve its status as The Car manufacturing center of The world?
+"
+"1646"	" Adv. done according to a plann. system ~  Adj. systematic ~  Syn. methodically
+ با روش معین، مرتباً، از روى یک اسلوب معین
+
+-The plan was developed systematically by a team of experts.
+"
+"1647"	"  ~  Adj. not probable ~  Syn. doubtful
+ غیر جذاب، قابل اعتراض، بعید
+
+-rain is unlikely during The summer.
+"
+"1648"	"  ~  Adj. without good reason or cause; inappropriate ~  Syn. unjustified
+ غیرقابل ضمانت، توجیه نکردنى، بیجا
+
+-His negative reaction was unwarranted
+"
+"1649"	" n. the highest point  ~  Syn. apex
+ سمت الرأس، نقطه قائم برناظر، اوج محور قائم بر افق نقاط، بالاترین نقطه آسمان، قلّه، اوج
+
+-he reached The zenith of His profession at a very young age.
+"
+"1650"	"V. to shake or move; to cause worry n. agitation, agitator  ~  Syn. disturb
+ بهم زدن، بکارانداختن، تحریک کردن، تکان دادن، آشفتن، پریشان کردن، سراسیمه کردن
+
+-The fact that She had not arrived by midnight agitated Her parents.
+"
+"1651"	"V. confide ~  Adv. confidentiallyn. confidant ~  Adj. confidential, to be said or written in secret ~  Syn. secret
+ خیلى محرمانه، داراى مأموریت محرمانه، راز دار
+
+-We were told that The information is strictly confidential
+"
+"1652"	" Adv. delightfullyn. delight ~  Adj. delightful, to be satisfied; very happy ~  Syn. elated
+ محظوظ
+
+-he was delighted With The result of The experiment.
+"
+"1653"	" Adv. in a careful, polite mannern. discretion ~  Adj. discreet ~  Syn. cautiously
+ محتاطانه، از روى بصیرت
+
+-The teacher discreetly told The parents about Her problems.
+"
+"1654"	"V. document n. documentation ~  Adj. documentary, proven with written evidence ~  Syn. proven
+ مدرک، دستاویز، ملاک، سندیّت دادن
+
+-he had documented proof that The bank had made an error.
+"
+"1655"	" Adv. slowly but surely ~  Adj. gradual ~  Syn. steadily
+ بتدریج، رفته رفته
+
+-The bay has gradually deteriorated over The years.
+"
+"1656"	"V. to have an effect on a person's point of view or behavior; to change the course of events n. influence ~  Adj. influential ~  Syn. affect
+ اعتبار، برترى، توانایى، تجلّى، نفوذ کردن بر، تحت نفوذ خود قرار دادن، تأثیر کردن بر، وادار کردن، ترغیب کردن
+
+-He was unable to influence his friend's decision.
+"
+"1657"	" Adv. inordinately ~  Adj. a large amount or quality; more than reasonable ~  Syn. excessive
+ بى اندازه، بیش از حد، مفرط، غیر معتدل
+
+-The airlines had to cancel an inordinate number of flights due to The fog.
+"
+"1658"	" Adv. happening immediately; in a short period of timen. instant ~  Adj. instantaneous, instant ~  Syn. immediately
+ فوراً، بیدرنگ، به محض اینکه
+
+-The computer finished The job instantly
+"
+"1659"	" Adv. with definite purpose and planningn. intention, intent ~  Adj. intentional ~  Syn. deliberately
+ دانسته، عمداً، قصدا
+
+-The machine was left on intentionally
+"
+"1660"	" Adv. intrinsically ~  Adj. belonging to the essential nature of something ~  Syn. inherent
+ بی واسطه، ذاتى، اصلى، باطنى، طبیعى، ذهنى، روحى، حقیقى، مرتب، شایسته
+
+-a penny has little intrinsic value.
+"
+"1661"	"V. to flood n. inundation  ~  Syn. overwhelm
+ از آب پوشانیدن، زیر سیل پوشاندن، اشباع کردن
+
+-The radio stations were inundated With reports of a severe traffic accident.
+"
+"1662"	"V. to become concerned with or connected to n. involvement ~  Adj. involved ~  Syn. include
+ گرفتار کردن، گیر انداختن، وارد کردن، گرفتارشدن، در گیر کردن یا شدن
+
+-She involved herself In Many activities to meet new friends.
+"
+"1663"	" Adv. nominally ~  Adj. very small; in form but not in substance ~  Syn. moderate
+ غیر واقعى، اسمى، صورى، جزئى، کم قیمت
+
+-The office building was sold at a nominal price.
+"
+"1664"	"V. presume ~  Adv. reported but not confirmedn. presumption ~  Adj. presumable ~  Syn. supposedly
+ احتمالاً
+
+-The old wreck was presumably located to The southwest of Florida.
+"
+"1665"	" Adv. absurdlyn. absurdity ~  Adj. clearly false, without reason ~  Syn. ridiculous
+ پوچ، ناپسند، یاوه، مزخرف، بى معنى، نامعقول، عبث، مضحک
+
+-Confidentially, I think His suggestion is absurd
+"
+"1666"	"V. abuse ~  Adv. abusivelyn. the act of using or treating things in an incorrect way ~  Adj. abusive ~  Syn. misuse
+ سوء مصرف، بد بکار بردن، سوء استفاده کردن از، ضایع کردن، تجاوز به حقوق کسى کردن، ننگین کردن
+
+-The constant abuse of The environment Will have grave consequences In The future.
+"
+"1667"	"V. allocate n. a share; a part set aside for a special purpose; an assignment of portions ~  Adj. allocated ~  Syn. distribution
+ واگذار کردن، سهمیه دادن، تخحیص
+
+-His allocation of materials was gradually used up.
+"
+"1668"	"V. balance n. balance ~  Adj. a state where everything is of the same size or weight; an element on one side that counters an equal element on the other ~  Syn. equalized
+ متعادل، متوازن
+
+-he made a balanced presentation of both points of view.
+"
+"1669"	"V. conserve n. conservative, conservationist, conservatism, the act of using carefully; setting aside for future use favoring traditional values  ~  Syn. preservation
+ نگهدارى، حفاظت، حفظ منابع طبیعى
+
+-Conservation of forest land is The primary objective of The national forest service.
+"
+"1670"	" Adv. fallaciouslyn. fallacy ~  Adj. having errors ~  Syn. incorrect
+ غلط، سفسطه آمیز، مغالطه آمیز
+
+-Her fallacious argument could not be defended.
+"
+"1671"	" Adv. feasiblyn. feasibility ~  Adj. able to be done ~  Syn. possible
+ شدنى، عملى، امکان پذیر، میسر، ممکن، محتمل
+
+-It is a feasible design for The high-rise building.
+"
+"1672"	"V. lack n. a need for; an insufficient amount  ~  Syn. shortage
+ کمبود، نبودن، نداشتن، احتیاج، فقدان، کسرى، فاقد بودن، ناقص بودن، کم داشتن
+
+-There was an inordinate lack of rain last fall.
+"
+"1673"	"  ~  Adj. to be stretched, easily shaped ~  Syn. flexible
+ سربزیر، مطیع، تاشو، نرم، خم کردن، تاکردن، تمرین نرمش کردن
+
+-The dancer has a limber body.
+"
+"1674"	" n. ways  ~  Syn. methods
+ دارایى، استطاعت، وسایل، توانایى، درآمد
+
+-he was told to finish The joy by any means available to him.
+"
+"1675"	" Adv. narrowlyn. narrowness ~  Adj. small from one side to the other; limited ~  Syn. thin
+ تنگ،دراز و باریک، کم پهنا، باریک کردن، محدود کردن، کوته فکر
+
+-The canal was extremely narrow
+"
+"1676"	"V. preconceive n. an opinion formed in advance without experience or knowledge of something ~  Adj. preconceived ~  Syn. bias
+ حضور پیش از وقت، تصدیق بلا تصور، تعصب
+
+-It is difficult to overcome preconceptions If We are not open to new ideas.
+"
+"1677"	" Adv. robustlyn. robustness ~  Adj. showing good health; in good shape ~  Syn. energetic
+ قوى هیکل، تنومند، ستبر، هیکل دار
+
+-The robust economy is expected to continue growing quickly.
+"
+"1678"	"V. steady ~  Adv. steadilyn. steadiness ~  Adj. firm; in a fixed position; without change; reliable, dependable ~  Syn. constant
+ پابرجا، مسیر ثابت، روى مسیر، پرپشت، ثابت، پى درپى، مداوم، پیوسته ویکنواخت کردن، استوار یا محکم کردن
+
+-Steady growth is projected for companies involved In genetic engineering.
+"
+"1679"	" Adv. swiftlyn. swiftness ~  Adj. quick ~  Syn. fast
+ سریع، چابک، تندرو، فرز، باسرعت
+
+-The contestants were swift thinkers.
+"
+"1680"	" n. antique ~  Adj. too old to be presently useful; outmoded ~  Syn. old-fashioned
+ کهنه، منسوخ، متروک، قدیمى
+
+-This antiquated machinery breaks down too frequently.
+"
+"1681"	"V. cohere ~  Adv. coherentlyn. coherence, cohesion ~  Adj. cohesive, well reasoned; ideas that are clearly presented sticking together as a group ~  Syn. logical
+ مربوط، داراى ارتباط یا نتیجه منطقى، منسجم
+
+-It was a well-balanced, coherent presentation.
+"
+"1682"	"V. to grow; to increase; to become more complete n. development, developer ~  Adj. developing ~  Syn. evolve
+ گسترش دادن، گسترش وضعیت، آشکار کردن، توسعه دادن، بسط دادن، پرورش دادن، ایجاد کردن
+
+-The management team developed The idea over a period of years.
+"
+"1683"	"V. to make up, usually with an intent to fool or trick; to lie n. fabrication ~  Adj. fabricated ~  Syn. invent
+ سوار کردن، ساختن، بافتن، از کار درآوردن، تقلید کردن، جعل کردن
+
+-The executive fabricated The story about The merger.
+"
+"1684"	"V. investigate n. investigator, a careful examination in order to determine facts ~  Adj. investigative ~  Syn. probe
+ تجسس، جستجو، بازجویى، بررسى، تحقیق، رسیدگى
+
+-The comprehensive investigation of The bank revealed No illegal activity.
+"
+"1685"	"V. normalize ~  Adv. commonly, usuallyn. normalization, norm ~  Adj. normal ~  Syn. typically
+ معمولاً، به طور عادى
+
+-It is normally quite cold This Time of The year.
+"
+"1686"	"V. to sense; to be aware ~  Adv. noticeablyn. notice ~  Adj. noticeable ~  Syn. observe
+ تذکر، آگاهى، اعلامیه، خبر، توجه، اطلاع، اخطار، ملتفت شدن، دیدن، شناختن، ملاحضه کردن
+
+-The doctor noticed a small fracture in the patient's finger.
+"
+"1687"	" n. an idea, belief, or opinion  ~  Syn. concept
+ تصور، اندیشه، نظریه، خیال، ادراک، فکرى، مفهوم
+
+-She has The notion that She wants to become an architect.
+"
+"1688"	"  ~  Adj. something unusual, uncommon; new ~  Syn. original
+ نو، جدید، بدیع، رمان، کتاب داستان
+
+-The physicist had Some novel ideas about traveling at The speed of light.
+"
+"1689"	"V. oppose n. the state of acting against; not being in agreement ~  Adj. oppositional, oppositionary ~  Syn. resistance
+ تناقض، تقابل، اقلیت، دشمنى، ضدیت، مخالفت، مقاومت، تضاد، مقابله
+
+-The students voiced Their opposition to The rise In tuition.
+"
+"1690"	"V. to make a written or oral notation; to copy n. record, recording, recorder ~  Adj. recorded ~  Syn. register
+ نگاشتن، ضبط کردن، ضبط شدن، دفتر، مدرک کتبى
+
+-The coldest temperatures In The United States have been recorded at International Falls, Minnesota.
+"
+"1691"	"V. to tell; to show a connection between two things n. relation, relationship ~  Adj. related ~  Syn. communicate
+ باز گو کردن، گزارش دادن، شرح دادن، نقل کردن
+
+-Although They Did not agree With The plan, They Did not relate Their opposition to it.
+"
+"1692"	"V. to think that something is true, but having no proof n. suspicion, suspect ~  Adj. suspected ~  Syn. speculate
+ بدگمان شدن از، گمان کردن، شک داشتن، مظنون، موردشک
+
+-he suspected that The substance was not present In The compound.
+"
+"1693"	"  ~  Adj. with no preconceptions ~  Syn. objective
+ بیغرض، عارى از تعصب، بدون تبعیض، تحت تأثیر واقع نشده
+
+-Her unbiased Analysis of The problem allowed Her to find The solution more rapidly.
+"
+"1694"	"V. vary ~  Adv. variablyn. variant, variety, variation, variability ~  Adj. variable, various, being of many different types ~  Syn. diverse
+ رنگارنگ، گوناگون، متنوع
+
+-The class expressed varied opinions about The movie.
+"
+"1695"	"V. to highlight; to give more importance to n. accentuation ~  Adj. accentuated ~  Syn. emphasize
+ با تکیه تلفظ کردن، تکیه دادن، تأکید کردن، اهمیت دادن، برجسته نمودن
+
+-The colorful dress accentuated The joy of The occasion.
+"
+"1696"	"V. to hide the usual appearance of something n. disguise ~  Adj. disguised ~  Syn. conceal
+ استتار، پوشش، تغییر قیافه دادن، جامه مبدل پوشیدن، نهان داشتن، پنهان کردن، لباس مبدل، تغییر قیافه
+
+-It is hard to disguise The fact that business is slow.
+"
+"1697"	"V. financed, to provide money ~  Adv. financiallyn. finance, finances ~  Adj. financial ~  Syn. fund
+ قسمت مالى یا دارایى، پرداخت هزینه، علم دارایى، تهیه پول کردن، سرمایه تهیه کردن، سرمایه گذارى
+
+-The art exhibition was financed by a private foundation.
+"
+"1698"	"V. to begin; to establish; to take decisive action without help n. initiation, initiative ~  Adj. initiated ~  Syn. launch
+ ابداع کردن، ابتکار کردن، تازه وارد کردن، بنیاد نهادن، نخستین قدم را برداشتن
+
+-The newcomer initiated The long citizenship process.
+"
+"1699"	" n. innovator, innovation ~  Adj. something newly introduced; creative ~  Syn. creative
+ نو
+
+-This innovative project is worthy of support.
+"
+"1700"	"V. to tell a story; relate n. narrative, narration, narrator ~  Adj. narrative ~  Syn. relate
+ داستانى را تعریف کردن، داستان سرایى کردن، نقالى کردن، شرح دادن
+
+-Walter Cronkite narrated The documentary film.
+"
+"1701"	"  Conj. in spite of that ~  Syn. nonetheless
+ با این حال، با این وجود، علیرغم، هنوز، باز
+
+-She was quite sick; nevertheless, she attended all of her classes.
+"
+"1702"	" Adv. now and then; once in a whilen. occasion ~  Adj. occasional ~  Syn. sometimes
+ گهگاه، گاه و بیگاه، بعضى از اوقات
+
+-Extreme heat occasionally causes health problems.
+"
+"1703"	"V. to leave out, not include n. omission ~  Adj. omitted ~  Syn. neglect
+ حذف کردن، از قلم انداختن
+
+-he inadvertently omitted Some important data From The report.
+"
+"1704"	" Adv. outlandishly ~  Adj. strange and unpleasant; beyond accepted norms ~  Syn. bizarre
+ بیگانه وار، عجیب وغریب
+
+-His outlandish dens demonstrated His creativity.
+"
+"1705"	"V. to defeat, fight with success; to take control of an individual   ~  Syn. conquer
+ غلبه کردن، چیره شدن، پیروز شدن بر، مغلوب ساختن، غلبه یافتن
+
+-The young woman was overcome With emotion When She learned She had won a scholarship.
+"
+"1706"	"-The clerk was Only partially responsible for The error.
+ اندکى، تا یک اندازه
+
+-The business venture was Only a partial success.
+"
+"1707"	"V. to accept formally by vote n. passage ~  Adj. passable ~  Syn. approve
+ صادر شدن، اجازه عبور، گذشتن، عبور کردن، تصویب کردن، قبول شدن، پاس دادن، رایج شدن، اجتناب کردن، جواز، گذرنامه، بلیط
+
+-The proposed amendment passed unanimously.
+"
+"1708"	"V. to represent; to act n. portrayal  ~  Syn. depict
+ تصویر کشیدن، توصیف کردن، مجسم کردن
+
+-The girl portrayed an orphan.
+"
+"1709"	"V. to turn in, offer for evaluation n. submission  ~  Syn. propose
+ تسلیم کردن، تسلیم شدن، تقدیم داشتن، ارائه دادن، پیشنهادکردن، گردن نهادن، مطیع شدن
+
+-The architects had to submit plans reflecting The new specifications.
+"
+"1710"	"V. to move from good to bad, or from much to little, to refuse n. decline  ~  Syn. decrease
+ کاهش، شیب پیدا کردن، رد کردن، نپذیرفتن، خم شدن، مایل شدن، تنزل کردن، کاستن
+
+-The old man's health has declined since he retired.
+"
+"1711"	"V. to collect n. gathering  ~  Syn. collect
+ گرد آمدن، جمع شدن، بزرگ شدن، جمع کردن، گرد کردن، گردآورى کردن، نتیجه گرفتن، استباط کردن
+
+-he carefully gathered His thoughts just before The interview.
+"
+"1712"	"V. motion n. the state of changing one's position to direct by moving   ~  Syn. movement
+ جنبش، تکان، حرکت، جنب وجوش، پیشنهاد کردن، طرح دادن، اشاره کردن
+
+-The motion of The flame was hypnotic.
+"
+"1713"	"  ~  Adj. strongly supporting a group or point of view ~  Syn. biased
+ طرفدار، حامى، پیرو متعصب
+
+-Partisan political infighting caused Congress's influence to decline.
+"
+"1714"	"V. pattern n. a regular, repeated arrangement or action ~  Adj. patterned ~  Syn. habit
+ بطورنمونه ساختن، شکل، الگو قالب، نقش، صفات فردى، خصوصیات، نظیربودن، همتا بودن، تقلید کردن، نقشه ساختن، به عنوان الگو بکاربردن
+
+-The bright pattern of The monarch butterfly distracts its predators.
+"
+"1715"	" Adv. phenomenallyn. phenomenon, natural events or facts; strange or notable happenings ~  Adj. phenomenal ~  Syn. events
+ پدیده ها، حادثه، واقعه، رویداد، پیشامد
+
+-rain showers are almost unknown phenomena In The Atacama Desert of Chile.
+"
+"1716"	" n. philanthropist, philanthropy ~  Adj. a feeling of love for people, usually resulting in financial aid to worthy causes ~  Syn. humanitarian
+ نوع پرست، بشردوست
+
+-The philanthropic work of The foundation benefits all sectors of society.
+"
+"1717"	" Adv. placidly ~  Adj. quiet, not easily upset ~  Syn. calm
+ آرام، راحت، متین
+
+-The placid nature of Her personality made Her easy to work with.
+"
+"1718"	" Adv. plentifullyn. plenty ~  Adj. more than sufficient ~  Syn. abundant
+ وافر، فراوان
+
+-Examples of Miro's art plentiful
+"
+"1719"	"V. react ~  Adv. reactivelyn. a reply; a change that occurs when substances are mixed ~  Adj. reactive, reactionary ~  Syn. response
+ واکنش، انفعال، عکس العمل، انعکاس، واکنشى
+
+-When chlorine and ammonia are mixed, The chemical reaction causes chlorine gas.
+"
+"1720"	" Adv. rhythmicallyn. a regular pattern, usually in music ~  Adj. rhythmic ~  Syn. pulse
+ وزن، سجع، میزان، آهنگ موزون، نواخت
+
+-The rhythm of The rain hitting The roof put him to sleep.
+"
+"1721"	" Adv. scenicallyn. scenery, scene ~  Adj. concerning pleasant natural surroundings ~  Syn. picturesque
+ صحنه اى، نمایشى، مجسم کننده، خوش منظر
+
+-The scenic route to The summit is much more interesting than The fastest route.
+"
+"1722"	" Adv. shallowlyn. shallowness ~  Adj. not far from top to bottom ~  Syn. superficial
+ کم ژرفا، کم آب، سطحى، کم عمق کردن
+
+-Estuaries are typically shallow bodies of water.
+"
+"1723"	"V. shelter n. shelter ~  Adj. protected from harmful elements; isolated from reality ~  Syn. shelter
+ پناهنده شدن، پناه گرفتن، سرپناه، حفاظ، پناه بردن، پناه دادن، پناهگاه، حمایت، محافظت کردن، پناه دادن
+
+-She has led a sheltered life since Her parents have done everything for her.
+Everyone looked for shelter from the blazing sun."
+"1724"	"V. vanish  ~  Adj. going out of sight ~  Syn. disappearing
+ ناپدید شدن، غیب شدن
+
+-The red squirrel is a vanishing species that needs a protected habitat to survive.
+"
+"1725"	"V. account n. accounting, accountant, a report of an event; money kept in a bank; a statement of something used or received, usually a financial reportaccount ~  Adj. accountable ~  Syn. story
+ شمردن، حساب کردن، محاسبه نمودن، صورت حساب، گزارش، بیان علت
+
+-His account of The incident varied From that of The other witnesses.
+"
+"1726"	"  ~  Adj. very old, old-fashioned; no longer used ~  Syn. ancient
+ کهنه، قدیمى، غیر مصطلح( بواسطه قدمت)
+
+-These archaic methods of farming must be brought up to date.
+"
+"1727"	"V. to cause to go faster; move forward more quickly ~  Adv. hastilyn. hastiness ~  Adj. hasty ~  Syn. accelerate
+ شتاباندن، شتافتن
+
+-After notifying His family of The accident, he hastened to add that he had not been hurt.
+"
+"1728"	" n. color  ~  Syn. color
+ رنگمایه، رنگ، شکل، تصویر، ظاهر، نما، صورت، منظر
+
+-The hue of The sunset was beautiful.
+"
+"1729"	"V. illustrate n. illustrator, a visual image, typically used to explain ~  Adj. illustrated, illustrative ~  Syn. picture
+ تشریح، عکس، شرح، توضیح، مثال، تصویر
+
+-The illustration makes The process of condensation more understandable.
+"
+"1730"	" n. inaction, inactivity ~  Adj. not moving; not involved ~  Syn. idle
+ غیرفعال، بى کاره، سست، بى حال، بى اثر، خنثى، کساد
+
+-The virus remains inactive for a long period of time.
+"
+"1731"	" Adv. intricatelyn. intricacy ~  Adj. having many parts; finely detailed ~  Syn. complex
+ بغرنج، پیچیده
+
+-The intricate design of The vase made It a valuable piece for Her collection.
+"
+"1732"	"V. magnify ~  Adv. magnificentlyn. magnification, of great size or importance to increase ~  Adj. magnificant ~  Syn. dimension
+ دامنه، حیطه عمل، کشش، تعداد، بزرگى، اهمیت، شکوه، اندازه، مقدار
+
+-The magnitude of shock waves determines The damage that occurs during an earthquake.
+"
+"1733"	"V. to have to do something ~  Adv. obliginglyn. obligation ~  Adj. obliging, obligatory ~  Syn. require
+ مجبور کردن، وادار کردن، متعهد شدن، لطف کردن
+
+-She obliged he friend to choose a new lab partner.
+"
+"1734"	"V. to ignore or neglect  ~  Adj. overlooked ~  Syn. disregard
+ مسلط یا مشرف بودن بر، چشم پوشى کردن، چشم انداز
+
+-Scientists must not overlook any aspect of experimental procedure.
+"
+"1735"	" n. polling, pollster, questionnaire; a vote of public opinion  ~  Syn. survey
+ رأى شمارى، حوزه رأى گیرى، رأى دادن، نمونه برداشتن، سر شمارى کردن
+
+-The poll indicated that Conservation of The environment was The number one issue With college students.
+"
+"1736"	" n. place where something can be found; job  ~  Syn. location
+ شغل رسمى، موقعیت، وضعیت، موضع، مرتبه، جایگاه، قراردادن یاگرفتن
+
+-he held a very high position In The firm.
+"
+"1737"	" n. practicality ~  Adj. convenient or effective ~  Syn. functional
+ قابل استفاده، سودمند، آزموده، کابردى، عملى، اهل عمل
+
+-Her ambitious plan was not very practical
+"
+"1738"	"V. predominate ~  Adv. predominantlyn. predominance ~  Adj. the most noticeable or powerful element ~  Syn. principal
+ غالب، مسلط، حکمفرما، نافذ، عمده، برجسته
+
+-The predominant export of The Middle East is petroleum.
+"
+"1739"	"V. to cause something to happen; to do quickly; to be on time ~  Adv. promptlyn. promptness  ~  Syn. induce
+ اعلان، فورى، بیدرنگ، سریع کردن، به فعالیت واداشتن، برانگیختن، سریع، عاجل، چالاک
+
+-His emotional plea prompted The director to give him a second chance.
+"
+"1740"	" n. analogy ~  Adj. alike in some way ~  Syn. similar to
+ مانند، قابل مقایسه، قابل قیاس، مشابه
+
+-The action of light waves is analogous to The action of sound waves.
+"
+"1741"	"V. approximate ~  Adv. almost correct; not exactn. approximation ~  Adj. approximate ~  Syn. around
+ تقریباً
+
+-There are approximately 100 billion galaxies in the universe.
+"
+"1742"	"V. to make something happen by necessity or force ~  Adv. compellingly ~  Adj. compelling ~  Syn. obliged
+ مجبورکردن، وادار کردن
+
+-The representatives were compelled to vote In favor of The legislation despite Their personal opposition to it.
+"
+"1743"	" Adv. formidably ~  Adj. difficult; causing worry or fear ~  Syn. overwhelming
+ ترسناک، سخت، دشوار، نیرومند، قوى، سهمگین
+
+-Their formidable opponents gave No sign of weakness.
+"
+"1744"	"V. intrude n. intrusion, intruder ~  Adj. intrusively, the state of being inside or upon something when not desired to be there by others ~  Syn. annoying
+ فضول، سرزده، ناخوانده، به زورداخل شونده، فرو رونده
+
+-The intrusive Bacteria caused His condition to worsen.
+"
+"1745"	" Adv. happening repeatedly, occurring at regular intervals Something published at regular intervalsn. periodical ~  Adj. periodic, periodical ~  Syn. sometimes
+ به صورت دوره اى، در فواصل معین
+
+-Some materials periodically demonstrate unusual behavior When frozen.
+"
+"1746"	"  ~  Adj. likely to do something ~  Syn. inclined to
+ حالت درازکش، در معرض، متمایل، مستعد، مهیا، درازکش، دمر
+
+-most liquids are prone to contract When frozen.
+"
+"1747"	"V. prophesy ~  Adv. propheticallyn. prophecy, prophet ~  Adj. correctly telling about future events ~  Syn. predictive
+ مبنى بر پیشگویى، پیشگویانه
+
+-His prophetic power were investigated by a team of psychologists.
+"
+"1748"	" Adv. proportionally, proportionatelyn. relationship of size or importance when compared to another object or person. ~  Adj. proportional, proportionate ~  Syn. dimensions
+ اندازه گرفتن، حجم، اندازه، اهمیت
+
+-The goal of establishing a space station Will take a team effort of major proportions
+"
+"1749"	"V. ready ~  Adv. willingly; easilyn. readiness ~  Adj. ready ~  Syn. freely
+ با میل، به آسانى، به سهولت
+
+-The workers readily complained about The food In The cafeteria.
+"
+"1750"	"V. rely ~  Adv. in a trusted wayn. reliability, reliance ~  Adj. reliable, reliant ~  Syn. dependably
+ به طور قابل اعتماد
+
+-an appliance must perform its task reliably to be popular With consumers.
+"
+"1751"	" Adv. unwillinglyn. reluctance ~  Adj. reluctant ~  Syn. hesitatingly
+ با اکراه، از روى تأمل، با دودلى
+
+-Although not completely satisfied With The contract, The officials reluctantly agreed to sign it.
+"
+"1752"	" n. fame ~  Adj. renowned ~  Syn. prominence
+ آوازه، نام، شهرت، معروفیت، مشهور کردن
+
+-This school is of great renown
+"
+"1753"	"V. to give up something of value for the common good n. sacrifice ~  Adj. sacrificial ~  Syn. concession
+ از دست دادن، قربانى براى شفاعت، قربانى دادن، فداکارى کردن
+
+-he sacrificed His day off to help clean up The neighborhood.
+"
+"1754"	"V. triumph ~  Adv. triumphantlyn. a victory; a success ~  Adj. triumphant, triumphal ~  Syn. achievement
+ پیروزى، پیروزمندانه، فتح وظفر، پیروزشدن
+
+-His career was characterized by one triumph After another.
+"
+"1755"	"V. afford ~  Adv. affordably ~  Adj. able to be done, usually refers to something you can do without damage orloss ~  Syn. economical
+ حاصل کردن، تهیه کردن، موجب شدن، از عهده برآمدن، استطاعت داشتن
+
+-The new dictionary is quite affordable
+"
+"1756"	"V. contaminate n. contamination ~  Adj. to make something impure by adding something dirty or a poisonous substance ~  Syn. pollute
+ آلوده کردن، سرایت دادن
+
+-This contaminated water supply must be closed to The public.
+"
+"1757"	"V. discern ~  Adv. discerniblyn. discernment ~  Adj. noticeable; easily seen ~  Syn. detectable
+ قابل تمیز، قابل تشخیص
+
+-a feeling of anxiety was discernible among The members of The team.
+"
+"1758"	"V. flourish  ~  Adj. active and growing; healthy ~  Syn. thriving
+ آباد، ترقى کننده
+
+-Small flourishing companies would be harmed by an increase In The minimum wage.
+"
+"1759"	"V. to support; to keep in good condition n. maintenance  ~  Syn. preserve
+ پشتیبانى کردن، نگهدارى کردن، ادامه دادن، حمایت کردن از، مدعى بودن، نگه داشتن، برقرار داشتن
+
+-The building had to be renovated Because It was not well maintained
+"
+"1760"	" n. mediocrity ~  Adj. of average quality; not good or bad ~  Syn. average
+ حد وسط، متوسط، میان حال، وسط
+
+-This is a mediocre research report.
+"
+"1761"	" Adv. negligiblyn. neglect, negligence ~  Adj. neglected, neglectful, negligent, hardly noticeable; scarcely detectable to ignore; to give little attention ~  Syn. insignificant
+ ناچیز، جزئى، بى اهمیت، قابل فراموشى
+
+-The presence of The first person singular In The poem was almost negligible
+"
+"1762"	"V. parallel n. parallel ~  Adj. being almost of the same type or time; comparable ~  Syn. similar
+ همسو، نظیر، مطابق بودن با، برابر بودن، انشعاب، همگام، متوازى، موازى کردن، برابر کردن، همزمان
+
+-We have lead parallel lives.
+"
+"1763"	" Adv. peculiarlyn. peculiarity ~  Adj. unusual; uncommon ~  Syn. strange
+ عجیب وغریب، ویژه
+
+-This plastic has a peculiar texture.
+"
+"1764"	"  ~  Adj. very strong ~  Syn. powerful
+ قوى، پرزور، نیرومند
+
+-he gave a potent speech at The convention.
+"
+"1765"	" Adv. remarkably ~  Adj. worthy of mention; uncommon ~  Syn. exceptional
+ قابل توجه، عالى، جالب توجه
+
+-The invention of The radio was a remarkable achievement.
+"
+"1766"	"V. scatter  ~  Adj. to be spread out or separated widely ~  Syn. dispersed
+ پراکنده، تار و مار
+
+-Hurricane Andrew left debris scattered throughout Miami.
+"
+"1767"	"V. solidify ~  Adv. solidlyn. solidification ~  Adj. having good quality, being well made; firm; not a gas or liquid ~  Syn. steady
+ ثابت، یکپارچه، یکسان، ماده جامد، سفت، محکم، قوى، خالص، منجمد، یک پارچه، مکعب، سه بعدى، توپر، نیرومند، قابل اطمینان
+
+-The lawyer for The defense portrayed His client as a man of solid integrity.
+"
+"1768"	"  ~  Adj. a little ~  Syn. slight
+ قدرى، مقدار نامعلومى، تاحدى، مختصرى
+
+-They feel somewhat tired After The mile run.
+"
+"1769"	" Adv. tediouslyn. tedium ~  Adj. long and tiring ~  Syn. monotonous
+ ملالت آور، خسته کننده، کسل کننده، کج خلق، ناراضى
+
+-The tedious lecture bored most of The audience.
+"
+"1770"	" Adv. short, usually in timen. brevity ~  Adj. brief ~  Syn. concisely
+ به طور خلاصه
+
+-The visiting Professor spoke briefly at The faculty meeting.
+"
+"1771"	"V. to cause to move along a fixed path; to move freely n. circulation ~  Adj. circulatory ~  Syn. move freely
+ دایر کردن، منتشر کردن، انتشار دادن، رواج دادن، بخشنامه کردن، گردش کردن، به گردش درآوردن، منتشر شدن
+
+-The news of the president's visit circulated quickly throughout the city.
+"
+"1772"	"V. consist ~  Adv. without changing; keeping the same principles, ideas, or qualityn. consistency ~  Adj. consistent ~  Syn. dependably
+ به طور موافق، بدون تناقض
+
+-The temperature must be maintained consistently at 75° centigrade.
+"
+"1773"	"V. to show or demonstrate n. exhibit, exhibition, exhibitor  ~  Syn. display
+ نمایش دادن، درمعرض نمایش قراردادن، ارائه دادن، ابراز کردن
+
+-The compound exhibits The qualities of an acid.
+"
+"1774"	"V. to establish, start up a philanthropic organization n. foundation, founder  ~  Syn. establish
+ برپاکردن، بنیاد نهادن، تأسیس کردن، ریختن، قالب کردن
+
+-The wealthy woman founded a hospital In Her home town.
+"
+"1775"	" Adv. not following established rules; not desirablen. impropriety ~  Adj. improper ~  Syn. inappropriately
+ بطورناصحیح، بطورغلط، بطور نامناسب
+
+-The disappointing outcome was a result of an improperly prepared petri dish.
+"
+"1776"	" Adv. acting without thinkingn. impulse, impulsiveness ~  Adj. impulsive ~  Syn. capriciously
+ با نیروى آنى و بدون اراده، از روى تحریک
+
+-She reacted impulsively to The loud noise.
+"
+"1777"	" n. infrequency ~  Adj. infrequent, almost never ~  Syn. rarely
+ کم، کمتر، به ندرت، گاه گاهى
+
+-Tornadoes occur infrequently In The eastern part of The United States.
+"
+"1778"	"V. isolate n. isolation ~  Adj. kept separated from others ~  Syn. secluded
+ منزوى
+
+-The failure of The communications system left The towns isolated
+"
+"1779"	" Adv. in a way clearly seen; not done secretly ~  Adj. overt ~  Syn. openly
+ آشکارا
+
+-he overtly disregarded The regulations.
+"
+"1780"	" Adv. in a deep way; showing deep knowledge of a subjectn. profundity ~  Adj. profound ~  Syn. significantly
+ به طورعمیق، زیادى
+
+-Everyone was profoundly impressed by The news reports.
+"
+"1781"	"V. sharpen ~  Adv. showing sensitivity or quick thinking; showing a quick change in directionn. sharpness ~  Adj. sharp ~  Syn. quickly
+ تند، سخت، به زیرکى، با صراحت
+
+-Car prices rose sharply over The past year.
+"
+"1782"	"V. situate n. situation ~  Adj. being found in a certain place a current condition ~  Syn. located
+ واقع شده در، واقع در، جایگزین
+
+-The resort town of Cancun is situated In The northern part of The Yucatan Peninsula.
+"
+"1783"	" Adv. following; coming after something ~  Adj. subsequent ~  Syn. afterwards
+ سپس، متعاقباً
+
+-The public applauded the president's actions, and subsequently his ratings in the polls improved.
+"
+"1784"	"  ~  Adj. unmistakably, clearly able to be determined ~  Syn. indisputable
+ خالى از اشتباه و سوء تفاهم، بى تردید
+
+-The markings of The insect provided an unmistakable identification of The species.
+"
+"1785"	" n. chaos ~  Adj. being in complete disorder and confusion ~  Syn. disorganized
+ پرهرج ومرج، بى نظم
+
+-The traffic In Seoul is often chaotic
+"
+"1786"	"V. characterize ~  Adv. characteristicallyn. characteristic, characterization ~  Adj. an easily recognized quality of something ~  Syn. typical
+ صفت اختصاصى یا ممیز، نشان ویژه علامت مشخصه، نهادین، نشان ویژه، صفت ممیزه، مشخصات، مشخصه
+
+-The markings on that butterfly are characteristic of The monarch butterfly.
+"
+"1787"	"V. controversially n. controversy ~  Adj. something that causes disagreement or argument. ~  Syn. debatable
+ مباحثه اى، جدلى، جدال آمیز، هم ستیزگرانه
+
+-The governor made a controversial decision to raise taxes.
+"
+"1788"	"V. to give an example  ~  Adj. exemplary ~  Syn. symbolize
+ بامثال فهمانیدن، بانمونه نشان دادن
+
+-The recent downturn In The housing industry exemplifies The poor economic conditions.
+"
+"1789"	"V. gratify ~  Adv. gratefullyn. gratification, gratefulness ~  Adj. grateful, giving pleasure or a feeling of accomplishment; showing thanks ~  Syn. satisfying
+ موجب خوشنودى، لذت بخش
+
+-Studying abroad can be a very gratifying experience.
+"
+"1790"	"V. interpreting, to understand the meaning of something n. interpreter, interpretation  ~  Syn. clarify
+ تفسیر کردن، ترجمه کردن، ترجمه شفاهى کردن
+
+-The ambiguous speech was very difficult to interpret
+"
+"1791"	"V. to cause something to begin n. launch, launching  ~  Syn. initiate
+ راه انداختن، شروع کردن کار، اجراى حمله، شروع عملیات، روانه کردن، مامور کردن، شروع کردن، اقدام کردن
+
+-The company launched a new program to attract more clients.
+"
+"1792"	" Adv. legitimatelyn. legitimacy ~  Adj. reasonable, lawful ~  Syn. authentic
+ عذر قانونى، حلال زاده، برحق، قانونى، مشروع
+
+-The engineer had a legitimate reason for changing The design of The building.
+"
+"1793"	" Adv. particularly ~  Adj. a certain way or thing; unusual; hard to please especially ~  Syn. specific
+ مخصوص، ویژه، خاص، دقیق، نکته بین، خصوصیات، منحصر بفرد، سختگیر
+
+-The speaker has a particular way of persuading His audience.
+"
+"1794"	" Adv. radiantlyn. radiance, radiation, radiator ~  Adj. sending out in all directions, especially heat or light ~  Syn. bright
+ تابان، گسترده، شعاع گستر، پرجلا، درخشنده، شعاعى، ساطع
+
+-The actor's radiant smile captivated the audience.
+"
+"1795"	" n. the top of a mountain range; a raised part of any surface  ~  Syn. crest
+ خاک پشته، کاکل، رشته تپه، تپه ماهور، برآمدگى، لبه، خرپشته، نوک، مرز بندى کردن، شیار دار کردن
+
+-a bald eagle stood on The ridge of The tall office building.
+"
+"1796"	"V. the length of time or distance from one limit to the other; to cross n. span  ~  Syn. cover
+ پل زدن روى رودخانه، چشمه، افسار، محدوده، گستردگى، پوشش، ظرفیت، یک وجب، فاصله معین، وجب کردن، اندازه گرفتن، پل بستن
+
+-The old man's life spanned two centuries.
+"
+"1797"	" Adv. spontaneouslyn. spontaneity ~  Adj. unplanned; uncontrolled ~  Syn. instinctive
+ خود به خودى، خود انگیز، بى اختیار، فورى
+
+-The spontaneous combustion inside The cylinder creates The power of The motor.
+"
+"1798"	"V. stream n. a natural flow of something; a pouring out  ~  Syn. river
+ روانه، جریان آب آبیارى، جویبار، جوب، رودخانه، مسیل ،جریان، نهر
+
+-There was a constant stream of information coming From The White house.
+"
+"1799"	" Adv. strikingly ~  Adj. drawing special attention to ~  Syn. remarkable
+ برجسته، قابل توجه، مؤثر، گیرنده، زننده
+
+-His striking proposal saved The company From b6ankruptcy.
+"
+"1800"	" Adv. having a tendency to do something; likelyn. aptness ~  Adj. apt ~  Syn. appropriately
+ ماهرانه، از روى لیاقت
+
+-It was an aptly timed remark.
+"
+"1801"	"V. demonstrate ~  Adv. demonstrablyn. a show or exhibit overtly showing emotion ~  Adj. demonstrative, demonstrable ~  Syn. display
+ برهان، نمایش تجربى، تظاهرات، نمایش، اثبات
+
+-The demonstration clarified The procedure for everyone.
+"
+"1802"	" n. things combined to make something; the contents of something  ~  Syn. elements
+ جزء ترکیبى، ذرات، داخل شونده، عوامل، عناصر
+
+-The ingredients of The product are kept secret.
+"
+"1803"	" Adv. in an unthinking manner; not chosen ~  Adj. involuntary ~  Syn. automatically
+ بى اختیار، بدون اراده، بطورغیرارادى یا غیرعمدى
+
+-he involuntarily agreed to work overtime.
+"
+"1804"	" Adv. marvelouslyn. something that surprises or impresses ~  Adj. marvelous ~  Syn. wonder
+ چیز شگفت، شگفتى، تعجب، اعجاز، حیرت زده شدن، شگفت داشتن
+
+-The Great Wall of China is one of the world's marvels
+"
+"1805"	"V. measure ~  Adv. measurablyn. measurement ~  Adj. able to determine how much or how many ~  Syn. assessable
+ قابل اندازه گیرى
+
+-Some personal characteristics, such as Good teaching, are hardly measurable
+"
+"1806"	"V. moderate ~  Adv. moderatelyn. moderation ~  Adj. not too much, not too little to reduce ~  Syn. medium
+ متوسط، معتدل، ملایم، میانه رو، مناسب، تعدیل کردن
+
+-She made The best of Her moderate dancing ability.
+"
+"1807"	" Adv. oddlyn. oddity ~  Adj. unusual ~  Syn. strange
+ غریب، آدم عجیب
+
+-It is odd to find a person who speaks Many languages.
+"
+"1808"	"V. reflect n. a picture or element cast back ~  Adj. reflected ~  Syn. image
+ انعکاس، بازتاب، اندیشه، تفکر، پژواک
+
+-His bright smile was a reflection of His satisfaction.
+"
+"1809"	"V. suppose ~  Adv. according to reports or hearsay; widely believed or acceptedn. supposition ~  Adj. supposed ~  Syn. presumably
+ بطور فرضى
+
+-The new trains can supposedly reach speeds of 150 miles per hour.
+"
+"1810"	"V. sustain  ~  Adj. sustenance, continuing in a constant way; remaining strong ~  Syn. consistent
+ ثابت، تند، پایدار نگهداشتن، متحمل شدن، تقویت کردن، حمایت کردن از
+
+-Sustained rainfall is The Only hope They have for relief From The drought.
+"
+"1811"	"V. symbolize ~  Adv. symbolicallyn. a sign or object that represents something or somebody marks ~  Adj. symbolic ~  Syn. marks
+ علائم
+
+-The strange symbols found In Egyptian tombs have intrigued historians for centuries.
+"
+"1812"	"V. synthesize ~  Adv. syntheticallyn. the mixing of separate things to form a whole not made by nature ~  Adj. synthetic ~  Syn. combination
+ ساخت، نتیجه گیرى، استنتاج، ترکیب، تلفیق
+
+-The language of Papiamento is a synthesis of Dutch and native Indian languages of Curacao.
+"
+"1813"	" Adv. tangiblyn. tangibility ~  Adj. real; that which can be felt ~  Syn. concrete
+ قابل لمس، محسوس، لمس کردنى
+
+-The work of a teacher seldom produces tangible results Until years After a student has graduated.
+"
+"1814"	"V. tighten ~  Adv. being fixed in place; close; leaving no freedomn. tightness ~  Adj. tight ~  Syn. firmly
+ سفت، محکم، تنگ
+
+-The shirt fits too tightly
+"
+"1815"	"V. aggravate n. aggravation ~  Adj. making worse; annoying ~  Syn. irritating
+ سخت کننده، شدید کننده
+
+-The aggravating delay was caused by road repairs.
+"
+"1816"	"V. amuse ~  Adv. amusinglyn. something that holds interest and is enjoyable ~  Adj. amusing ~  Syn. diversion
+ سرگرمى، تفریح، گیجى، گمراهى، فریب خوردگى، پذیرایى، نمایش
+
+-We listened in amusement as he tried to convince his friend to lend him $50.
+"
+"1817"	"V. conceive ~  Adv. feasibly; believable ~  Adj. conceivable ~  Syn. possibly
+ بطور امکان پذیر
+
+-They could conceivably earn first place With Their science project.
+"
+"1818"	"V. to change from one form or state to another n. conversion ~  Adj. convertible ~  Syn. alter
+ مقلوب کردن، امتیاز گرفتن، تبدیل کردن، برگرداندن، وارونه کردن، معکوس کردن
+
+-When boiled, liquids convert to gases.
+"
+"1819"	" n. cure ~  Adj. being able to restore to good condition ~  Syn. healing.
+ داراى خاصیت درمانى، علاج بخش، شفا بخش
+
+-The curative properties of certain plants have been well documented.
+"
+"1820"	"V. debilitate n. debility ~  Adj. weakening ~  Syn. weakening
+ ناتوان سازى، تضعیف
+
+-The lack of investment savings has a debilitating effect on The economy.
+"
+"1821"	"V. to use up; to reduce greatly n. depletion ~  Adj. depleted ~  Syn. consume
+ تهى کردن، خالى کردن، به ته رسانیدن
+
+-She depleted all of Her savings to buy The word processor.
+"
+"1822"	"  ~  Adj. of a certain amount; having an end; not infinite ~  Syn. limited
+ متناهى، محدود
+
+-There were a finite number of explanations for The unusual reactions.
+"
+"1823"	"V. to sense; to become aware of ~  Adv. perceptibly, perceptivelyn. perception ~  Adj. perceivable, perceptive ~  Syn. observe
+ درک کردن، دریافتن، مشاهده کردن، دیدن، ملاحظه کردن
+
+-We perceive major differences between The two political parties.
+"
+"1824"	"V. secure ~  Adv. securelyn. the feeling of freedom from danger, doubt, or worry ~  Adj. secure ~  Syn. safety
+ حفاظت، ایمنى، امنیت، آسایش خاطر، اطمینان، مصونیت، تضمین، ضامن
+
+-Her sense of security increased as Her grades improved.
+"
+"1825"	" n. toxicity ~  Adj. harmful; capable of being fatal ~  Syn. poisonous
+ مسموم، زهرآلود، سمى، زهراگین
+
+-Disposal of toxic wastes is an ongoing problem.
+"
+"1826"	"V. tranquilize ~  Adv. tranquillyn. calm; quietness ~  Adj. tranquil ~  Syn. peacefulness
+ آرامش، آسودگى، آسایش خاطر، راحت
+
+-The tranquility of The Lake at sunrise inspired a profound sense of well-being.
+"
+"1827"	"V. to catch and hold onto, usually by trickery; deceived n. trap ~  Adj. trapped ~  Syn. retain
+ سد کردن، به دام انداختن، در تله انداختن
+
+-I was trapped into paying for The meal.
+"
+"1828"	" Adv. clearly true ~  Adj. undeniable ~  Syn. absolutely
+ انکار ناپذیر
+
+-of all The planets In our solar system, Earth is undeniably The most conducive to supporting life.
+"
+"1829"	"V. underestimate  ~  Adj. guessed lower than the actual quality or quantity ~  Syn. miscalculated
+ اشتباه محاسبه کردن، اشتباه حساب کردن، پیش بینى غلط کردن
+
+-The underestimated demand for tickets made The Theater manager plan better for The next performance.
+"
+"1830"	"V. to know, remember, and accept the existence of something n. acknowledgment ~  Adj. acknowledged ~  Syn. recognize
+ تأیید کردن، قدردانى کردن، اعتراف کردن، تصدیق کردن
+
+-The foreman acknowledged The fact that There had been a mistake In The design of The house.
+"
+"1831"	"V. to gain or come to possess n. acquisition ~  Adj. acquisitive ~  Syn. obtain
+ به دست آوردن، تعیین، گرفتن، حاصل کردن، اندوختن، پیداکردن
+
+-he acquired two beautiful paintings during His visit to Taipei.
+"
+"1832"	"V. to become a part of n. assimilation  ~  Syn. incorporate
+ یکسان کردن، هم جنس کردن، شبیه ساختن، تحلیل رفتن، سازش کردن، تلفیق کردن، همانند ساختن
+
+-The United States of America has assimilated people From all parts of The world.
+"
+"1833"	"V. a variety  ~  Adj. assorted ~  Syn. selection
+ ترتیب، مجموعه، دسته بندى، طبقه بندى
+
+-you have an assortment of elective courses From which to choose.
+"
+"1834"	" n. the standard of; the degree of goodness  ~  Syn. quality
+ قطرگلوله، قطردهانه تفنگ یا توپ، کالیبر، گنجایش، استعداد، وضعیت، کیفیت
+
+-The high caliber of Her work earned Her a raise In pay.
+"
+"1835"	"V. condense  ~  Adj. made smaller; shortened; merged ~  Syn. summarized
+ فشرده، خلاصه شده، تغلیظ شده، چگالیده
+
+-This is a condensed version of The original research report.
+"
+"1836"	"V. contradict ~  Adv. not agreeing with the facts or previous&nbsp;&nbsp;statements made on the subject; declared wrongn. contradiction  ~  Syn. inconsistent
+ متضاد، متناقض، مخالف، متباین، ضد ونقیض، مغایر
+
+-It is contradictory to say that you know French After Only Studying It for three months.
+"
+"1837"	"V. to pay no attention n. disregard  ~  Syn. ignore
+ نادیده گرفتن، اعتنا نکردن، عدم رعایت
+
+-They disregarded The No parking signs and were ticketed by The police.
+"
+"1838"	"  ~  Adj. having much monetary or sentimental value; beautiful ~  Syn. cherished
+ قیمتى، فوق العاده، گرانبها، نفیس، پرارزش
+
+-This golden ring is my most precious possession.
+"
+"1839"	" Adv. prominentlyn. prominence ~  Adj. famous; having a high position ~  Syn. renowned
+ حساس، برجسته، والا
+
+-Their talent for locating oil deposits made them prominent geologists In The corporation.
+"
+"1840"	"V. require, requisition n. requirement, requisition ~  Adj. needed for a specific purpose a formal request ~  Syn. demanded
+ شرط لازم، لازمه، احتیاج، چیز ضرورى
+
+-Here is the list of requisite courses for the master's degree in biology.
+"
+"1841"	"V. to organize; to make clear n. unraveling  ~  Syn. separate
+ از هم باز کردن، از گیر در آوردن، حل کردن
+
+-The detective was not able to unravel The mystery of The missing money.
+"
+"1842"	" Adv. vaguelyn. vagueness ~  Adj. not clear; ambiguous ~  Syn. unclear
+ مبهم، غیر معلوم، سر بسته وابهام دار
+
+-She Only has vague memories of Her childhood.
+"
+"1843"	" Adv. vastly ~  Adj. very much; very large ~  Syn. huge
+ پهناور، وسیع، بزرگ، زیاد، عظیم، بیکران
+
+-I have noticed a vast improvement In your English vocabulary.
+"
+"1844"	" Adv. voluminouslyn. the amount of something contained in a space holding a lot ~  Adj. voluminous ~  Syn. quantity
+ ظرفیت، مقدار، برحجم افزودن ،برزگ شدن( حجم)
+
+-The volume of information that a computer diskette can hold is astounding.
+"
+"1845"	" n. a special quality that endears other people to the person who has this quality ~  Adj. charismatic ~  Syn. appeal
+ عطیه الهى، جذبه روحانى، گیرایى
+
+-She has a charisma that No other candidate possesses.
+"
+"1846"	" Adv. cleverlyn. cleverness ~  Adj. intelligent; resourceful ~  Syn. astute
+ زرنگ، زیرک، باهوش، با استعداد، چابک
+
+-Everyone appreciated Their clever idea.
+"
+"1847"	"V. to make someone see things your way ~  Adv. convincingly ~  Adj. convincing ~  Syn. persuade
+ متقاعد کردن، قانع کردن
+
+-They could not convince The girls to go to The dance With them.
+"
+"1848"	"V. to last; to suffer pain n. endurance ~  Adj. endurable, enduring ~  Syn. persevere
+ تحمل کردن، بردبارى کردن دربرابر، طاقت چیزى را داشتن، تاب چیزى را آوردن
+
+-How he is able to endure Living next to The airport is beyond my comprehension.
+"
+"1849"	"V. to give up; to have something taken away, usually by rule or regulation n. forfeit  ~  Syn. relinquish
+ جریمه کردن، محرومیت، خطا کردن، جریمه دادن، هدر کردن
+
+-Usually you must forfeit your native country's citizenship to become a citizen of another country.
+"
+"1850"	" Adv. precariously ~  Adj. not safe, firm, or steady ~  Syn. hazardous
+ مشروط به شرایط معینى، مشکوک، التماس کننده، پرمخاطره
+
+-The diver put himself In a precarious situation among The sharks.
+"
+"1851"	"V. severely n. severity ~  Adj. extreme; harmful ~  Syn. intense
+ سختگیرانه، سخت گیر، طاقت فرسا، شدید
+
+-The weather service issued a severe storm warning for most of Michigan.
+"
+"1852"	" Adv. sporadically ~  Adj. not consistent; irregular ~  Syn. erratic
+ تک وتوک، تک تک، پراکنده، انفرادى، گاه وبیگاه، گاه بگاه
+
+-The radio communications were subject to sporadic sunspot interference.
+"
+"1853"	" n. superiority ~  Adj. excellent quality; above all the rest ~  Syn. exceptional
+ عالى، رئیس، مافوق، ارشد، برتر، ممتاز
+
+-This is a superior fossil of a trilobite.
+"
+"1854"	" Adv. wantonly ~  Adj. done without thought or consideration ~  Syn. senseless
+ سرکش، حرف نشنو، بازیگوش، جسور، شرور شدن، گستاخ شدن، شهوترانى کردن، افراط کردن
+
+-Her wanton disregard of The rules was unexplainable.
+"
+"1855"	"V. weaken ~  Adv. weaklyn. weakness ~  Adj. not strong; incapable ~  Syn. not strong; incapable
+ سست، کم دوام، ضعیف، کم بنیه، کم زور، کم رو
+
+-The weak light was inadequate for reading.
+"
+"1856"	"  ~  Adj. found everywhere ~  Syn. extensive
+ شایع، همه جا منتشر، گسترده
+
+-There is a widespread rumor that There Will be No class next Thursday.
+"
+"1857"	" Adv. wiselyn. knowledge and understanding ~  Adj. wise ~  Syn. insight
+ فرزانگى، خرد، حکمت، عقل، دانایى، دانش، معرفت
+
+-It is often said that wisdom is The product of experience.
+"
+"1858"	" Adv. wittilyn. wit, wittiness, a joke; a funny story ~  Adj. witty ~  Syn. humor
+ بذله گویى، شوخى، لطیفه گویى، مسخره
+
+-His witticisms captivated The audience.
+"
+"1859"	"V. to make efforts to attain or gain something   ~  Syn. attract
+ اظهار عشق کردن با، عشقبازى کردن با، خواستگارى کردن، جلب لطف کردن
+
+-The directors tried to woo The support of The union.
+"

@@ -2,9 +2,8 @@
 namespace database\azvir;
 class cardusages
 {
-	public $card_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'card'            ,'type'=>'bigint@20'                       ,'foreign'=>'cards@id!id'];
+	public $cardlist_id          = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'cardlist'        ,'type'=>'int@11'                          ,'foreign'=>'cardlists@id!id'];
 	public $user_id              = ['null'=>'NO'  ,'show'=>'YES'     ,'label'=>'user'            ,'type'=>'int@10'                          ,'foreign'=>'users@id!user_displayname'];
-	public $cardcat_id           = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'cardcat'         ,'type'=>'int@10'                          ,'foreign'=>'cardcats@id!id'];
 	public $cardusage_deck       = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'deck'            ,'type'=>'smallint@5'];
 	public $cardusage_try        = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'try'             ,'type'=>'smallint@5'];
 	public $cardusage_trysuccess = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'trysuccess'      ,'type'=>'smallint@5'];
@@ -12,21 +11,15 @@ class cardusages
 	public $cardusage_lasttry    = ['null'=>'YES' ,'show'=>'YES'     ,'label'=>'lasttry'         ,'type'=>'timestamp@'];
 
 	//--------------------------------------------------------------------------------foreign
-	public function card_id()
+	public function cardlist_id()
 	{
-		$this->form()->type('select')->name('card_')->required();
+		$this->form()->type('select')->name('cardlist_')->required();
 		$this->setChild();
 	}
 	//--------------------------------------------------------------------------------foreign
 	public function user_id()
 	{
 		$this->form()->type('select')->name('user_')->required();
-		$this->setChild();
-	}
-	//--------------------------------------------------------------------------------foreign
-	public function cardcat_id()
-	{
-		$this->form()->type('select')->name('cardcat_');
 		$this->setChild();
 	}
 

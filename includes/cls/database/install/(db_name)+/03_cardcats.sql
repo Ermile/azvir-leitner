@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-06-11 18:59:28
+Date: 2016-06-16 19:40:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,11 @@ CREATE TABLE `cardcats` (
   `cardcat_status` enum('enable','disable','expire','public','private','protected') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  KEY `cardcats_users_id` (`user_id`),
-  CONSTRAINT `cardcats_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+  KEY `cardcats_users_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of cardcats
+-- ----------------------------
+INSERT INTO `cardcats` VALUES ('1', null, 'english', '504', '504', null, '504', null, null, 'enable', null);
+INSERT INTO `cardcats` VALUES ('2', null, 'english', '450', '450', null, '450', null, null, 'enable', null);
