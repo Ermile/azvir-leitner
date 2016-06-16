@@ -51,7 +51,7 @@ class step_learn
 	 */
 	public static function step1()
 	{
-		// go to next step, step4
+		// go to next step
 		step::plus();
 		// set title for
 		step::set('textTitle', 'learnCatType');
@@ -92,6 +92,12 @@ class step_learn
 		// create output message
 		$txt_text = "لطفا یکی از دسته‌بندی‌های زیر را انتخاب کنید\n\n";
 		$catList  = \lib\db\cardcats::catList($_txtCategory);
+		// if this cat type is not exist then goto step 1
+		if(count($catList) < 1)
+		{
+			step::goto(1);
+			return self::step1();
+		}
 		$result   =
 		[
 			'text'         => $txt_text,
