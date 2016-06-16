@@ -7,15 +7,7 @@ use \lib\utility\telegram\step;
 class step_learn
 {
 	private static $menu            = ["hide_keyboard" => true];
-	private static $keyboard_number =
-	[
-		'keyboard' =>
-		[
-			['1', '2'],
-			['3', '4', '5', '6'],
-			['7', '8', '9', '10', '0'],
-		],
-	];
+
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -54,7 +46,7 @@ class step_learn
 
 
 	/**
-	 * get list of food type and show it to user for select
+	 * get list of category type and show it to user for select
 	 * @return [type] [description]
 	 */
 	public static function step1()
@@ -62,16 +54,21 @@ class step_learn
 		// go to next step, step4
 		step::plus();
 		// set title for
-		step::set('textTitle', 'foodType');
+		step::set('textTitle', 'learnCatType');
 		// increase custom number
 		step::plus(1, 'i');
 		// create output message
-		$txt_text = "لطفا یکی از دسته‌بندی‌های زیر را انتخاب کنید\n\n";
-		$txt_text .= "/cancel انصراف از ثبت سفارش ";
+		$txt_text    = "لطفا یکی از انواع زیر را انتخاب کنید\n\n";
+		$txt_text    .= "/cancel انصراف";
+		$catTypeList = \lib\db\cardcats::catTypes();
+		if(count($catTypeList) === 1 && isset($catTypeList[0]))
+		{
+			return self::step2($catTypeList[0]);
+		}
 		$result   =
 		[
 			'text'         => $txt_text,
-			'reply_markup' => self::drawKeyboard('catList'),
+			'reply_markup' => self::drawKeyboard($catTypeList),
 		];
 
 		return $result;
@@ -80,78 +77,27 @@ class step_learn
 
 
 	/**
-	 * select food product name
+	 * get list of category in this type and show it to user for select
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
 	public static function step2($_txtCategory)
 	{
-		// get list of product in this category
-		$productList = product::get($_txtCategory, true);
-		// if category name is not exist or other problem show message
-		if(!$productList || !is_array($productList))
-		{
-			$txt_text = 'لطفا یکی از گزینه‌های موجود را انتخاب نمایید!';
-			$result =
-			[
-				'text'         => $txt_text,
-				'reply_markup' => self::drawKeyboard('catList'),
-			];
-		}
-		else
-		{
-			// go to next step
-			step::plus();
-			// save category
-			step::set('order_category', $_txtCategory);
-			// get question id
+		// go to next step, step4
+		step::plus();
+		// set title for
+		step::set('textTitle', 'learnCat');
+		// increase custom number
+		step::plus(1, 'i');
+		// create output message
+		$txt_text = "لطفا یکی از دسته‌بندی‌های زیر را انتخاب کنید\n\n";
+		$catList  = \lib\db\cardcats::catList($_txtCategory);
+		$result   =
+		[
+			'text'         => $txt_text,
+			'reply_markup' => self::drawKeyboard($catList),
+		];
 
-			$txt_text = "لطفا کالای مورد نظر را انتخاب کنید";
-			switch ($_txtCategory)
-			{
-				case 'پیتزا':
-					$txt_text = "چه نوع پیتزایی دوست دارید؟";
-					break;
-
-				case 'ساندویچ':
-					$txt_text = "چه ساندویجی نیاز دارید؟";
-					break;
-
-				case 'نوشیدنی':
-					$txt_text = "لطفا نوع نوشیدنی را انتخاب کنید";
-					break;
-
-				case 'پیش‌غذا':
-					$txt_text = "لطفا پیش‌غذای مورد علاقه خود را انتخاب کنید";
-					break;
-			}
-			$txt_text .= "\n\n";
-
-			// set product list with price and desc
-			foreach ($productList as $key => $productDetail)
-			{
-				$name  = $productDetail['name'];
-				$price = $productDetail['price'];
-				$desc  = $productDetail['desc'];
-				$txt_text .= "$name `$price تومان`\n";
-				if($desc)
-				{
-					// $txt_text .= "$desc \n\n";
-				}
-			}
-
-			$productList = array_column($productList, 'name');
-
-			// send photo of this category
-			$result   = product::sendPhoto($_txtCategory);
-			$result[] =
-			[
-				'text'         => $txt_text,
-				// 'reply_markup' => null,
-				'reply_markup' => self::drawKeyboard($productList),
-			];
-		}
-		// return menu
 		return $result;
 	}
 
@@ -399,11 +345,10 @@ class step_learn
 	 */
 	public static function drawKeyboard($_list = null, $_onlyArray = null)
 	{
-		if(is_string($_list))
+		if(!$_list)
 		{
-			$_list = product::get($_list);
+			return null;
 		}
-
 		if($_onlyArray === true)
 		{
 			// return array contain only list
