@@ -175,10 +175,11 @@ class step_learn
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
-	public static function step4($_txtAnswer)
+	public static function step4($_txtReaction)
 	{
+		$result = null;
 		// if user press next goto step 3 for 
-		switch ($_txtAnswer)
+		switch ($_txtReaction)
 		{
 			case 'بعدی':
 			case 'skip':
@@ -186,10 +187,51 @@ class step_learn
 				step::goto(3);
 				return self::step3();
 				break;
+
+			case 'مشاهده':
+			case 'مشاهده پشت کارت':
+			case 'مشاهده کارت':
+			case 'show card':
+			case '/show card':
+			case 'show':
+			case '/show':
+				step::plus();
+				$card_back = step::get('learn_card_back');
+				$txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
+				$keyboard  = 
+				[
+					'keyboard' =>
+					[
+						["بله", "خیر"],
+					],
+				];
+
+				$result   =
+				[
+					'text'         => $txt_text,
+					'reply_markup' => 	$keyboard,
+				];
+				break;
+
+			default:
+				$txt_text = "لطفا یکی از گزینه‌های موجود را انتخاب کنید!";
+				$result   =
+				[
+					'text'         => $txt_text,
+				];
+
+				break;
 		}
-
-
+		return $result;
 	}
+
+	public static function step5($_txtAnswer)
+	{
+		// go to next card
+		step::goto(3);
+		return self::step3();
+	}
+
 
 
 	/**
@@ -197,7 +239,7 @@ class step_learn
 	 * @param  [type] $_item [description]
 	 * @return [type]        [description]
 	 */
-	public static function step5($_item)
+	public static function step6($_item)
 	{
 		// create output text
 		$txt_text = "سوال ". step::get('i')."\n\n";
@@ -255,7 +297,7 @@ class step_learn
 	}
 
 
-	public static function step6()
+	public static function step7()
 	{
 		$final_text = "سفارش شما تکمیل شد.\n";
 		$final_text .= "تا دقایقی دیگر سفارش شما ارسال خواهد شد.\n";
