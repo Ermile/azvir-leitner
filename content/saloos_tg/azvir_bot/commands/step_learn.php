@@ -6,8 +6,7 @@ use \lib\utility\telegram\step;
 
 class step_learn
 {
-	private static $menu            = ["hide_keyboard" => true];
-
+	private static $menu           = ["hide_keyboard" => true];
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -81,7 +80,7 @@ class step_learn
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
-	public static function step2($_txtCategory)
+	public static function step2($_txtCatType)
 	{
 		// go to next step, step4
 		step::plus();
@@ -91,14 +90,16 @@ class step_learn
 		step::plus(1, 'i');
 		// create output message
 		$txt_text = "لطفا یکی از دسته‌بندی‌های زیر را انتخاب کنید\n\n";
-		$catList  = \lib\db\cardcats::catList($_txtCategory);
+		$catList  = \lib\db\cardcats::catList($_txtCatType);
 		// if this cat type is not exist then goto step 1
 		if(count($catList) < 1)
 		{
 			step::goto(1);
 			return self::step1();
 		}
-		$result   =
+		// save category type
+		step::set('learn_categoryType', $_txtCatType);
+		$result =
 		[
 			'text'         => $txt_text,
 			'reply_markup' => self::drawKeyboard($catList),
@@ -109,44 +110,57 @@ class step_learn
 
 
 	/**
-	 * select food count needed
+	 * get list of cards in this category and show it to user for answer
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
-	public static function step3($_txtProduct)
+	public static function step3($_txtCat = null)
 	{
-		$category    = step::get('order_category');
-		// check product exist or not
-		if(!product::detail($_txtProduct, true))
+		if(is_numeric($_txtCat))
 		{
-			// product not exist
-			$txt_text = "لطفا یکی از کالاهای موجود در دسته $category را انتخاب نمایید!";
-			$result   =
-			[
-				'text'         => $txt_text,
-				'reply_markup' => self::drawKeyboard($category),
-			];
+			$cat_id = $_txtCat;
+		}
+		elseif($_txtCat)
+		{
+			step::set('learn_categoryText', $_txtCat);
+			$cat_id = \lib\db\cardcats::catDetail($_txtCat);
+			// save category details
 		}
 		else
 		{
-			// product exist, go to next step
-			// go to next step
-			step::plus();
-			// save product name
-			step::set('order_product', $_txtProduct);
-
-			$txt_text = "لطفا تعداد $_txtProduct مورد نیاز را انتخاب کنید.";
-			$txt_text .= "\nدر صورتی که تعداد مورد نیاز بیش از لیست است، مقدار آن را با کیبورد وارد کنید";
-			// $txt_text = "لطفا از منوی زیر تعداد را انتخاب نمایید یا درصورت تمایل به سفارش تعداد بیشتر مقدار آن را با کیبورد وارد نمایید.";
-
-			$result   =
-			[
-				'text'         => $txt_text,
-				// 'reply_markup' => null,
-				'reply_markup' => self::$keyboard_number,
-			];
-
+			return false;
 		}
+
+		step::set('learn_category', $cat_id);
+
+		// get last card details
+		$lastCard = \lib\db\cardcats::lastCard($cat_id);
+		var_dump($lastCard);
+		
+		$card_front = 'salam';
+		$card_back  = 'سلام';
+		// set card details
+		step::set('learn_card_front', $card_front);
+		step::set('learn_card_back', $card_back);
+
+		// go to next step
+		step::plus();
+
+		$txt_text = "کارت\n".$card_front;
+		$keyboard = 
+		[
+			'keyboard' =>
+			[
+				["مشاهده پشت کارت"],
+				["بعدی"],
+			],
+		];
+
+		$result   =
+		[
+			'text'         => $txt_text,
+			'reply_markup' => 	$keyboard,
+		];
 
 		// return menu
 		return $result;
@@ -158,7 +172,7 @@ class step_learn
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
-	public static function step4($_txtNumber)
+	public static function step4($_txtAnswer)
 	{
 		$category = step::get('order_category');
 		$product  = step::get('order_product');

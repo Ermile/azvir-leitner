@@ -66,5 +66,35 @@ class cardcats
 		// return last insert id
 		return $result;
 	}
+
+
+	public static function catDetail($_catName, $_return = 'id')
+	{
+		$qry = "SELECT * FROM cardcats WHERE cardcat_title = '$_catName' LIMIT 1;";
+		// run query
+		if($_return && $_return !== 'count')
+		{
+			$result = \lib\db::get($qry, $_return, true);
+		}
+		else
+		{
+			$result = \lib\db::get($qry);
+		}
+		// if user want count of result return count of it
+		if($_return === 'count')
+		{
+			return count($result);
+		}
+		// return last insert id
+		return $result;
+	}
+
+	public static function lastCard($_cat_id)
+	{
+		$qry    = "SELECT * FROM cardlists WHERE cardcat_id = $_cat_id LIMIT 1;";
+		$result = \lib\db::get($qry, null, true);
+
+		return $result;
+	}
 }
 ?>
