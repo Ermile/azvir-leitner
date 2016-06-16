@@ -17,6 +17,7 @@ class help
 		$text .= "/504 شروع یادگیری ۵۰۴\n";
 		$text .= "/450 شروع یادگیری ۴۵۰\n";
 
+		$text .= "/feedback ثبت بازخورد\n";
 		$text .= "/contact تماس با ما\n";
 		$text .= "/about درباره _name_\n";
 		$text .= "/cancel انصراف و شروع دوباره\n";
