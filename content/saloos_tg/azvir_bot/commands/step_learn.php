@@ -130,6 +130,8 @@ class step_learn
 		{
 			return false;
 		}
+		// increase limiter
+		step::plus(1, 'limiter');
 
 		step::set('learn_category', $cat_id);
 
@@ -146,7 +148,8 @@ class step_learn
 		// go to next step
 		step::plus();
 
-		$txt_text = "کارت\n".$card_front;
+		$limiter  = step::get('limiter');
+		$txt_text = "کارت $limiter\n".$card_front;
 		$keyboard = 
 		[
 			'keyboard' =>
