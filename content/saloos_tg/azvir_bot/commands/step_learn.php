@@ -116,9 +116,9 @@ class step_learn
 	 */
 	public static function step3($_txtCat = null)
 	{
-		if(is_numeric($_txtCat))
+		if(is_numeric($_txtCat) || $_txtCat === null)
 		{
-			$cat_id = $_txtCat;
+			$cat_id = step::get('learn_category');
 		}
 		elseif($_txtCat)
 		{
@@ -168,64 +168,24 @@ class step_learn
 
 
 	/**
-	 * show continue menu
+	 * get user answer about know card or skip
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
 	public static function step4($_txtAnswer)
 	{
-		$category = step::get('order_category');
-		$product  = step::get('order_product');
-
-		// if user pass anything except number show menu again
-		if(!is_numeric($_txtNumber))
+		// if user press next goto step 3 for 
+		switch ($_txtAnswer)
 		{
-			// product not exist
-			$txt_text = 'لطفا تنها تعداد مورد نیاز خود را به صورت عددی وارد کنید!';
-			$result   =
-			[
-				'text'         => $txt_text,
-				'reply_markup' => self::$keyboard_number,
-			];
-		}
-		elseif($_txtNumber > 100)
-		{
-			// product not exist
-			$txt_text = 'این تعداد ساپورت نمی‌شود‍!';
-			$result   =
-			[
-				'text'         => $txt_text,
-				'reply_markup' => self::$keyboard_number,
-			];
-		}
-		else
-		{
-			// product exist, go to next step
-			// go to next step
-			step::plus();
-			// save product quantity
-			step::set('order_quantity', $_txtNumber);
-			// add to catd
-			self::addToCard($category, $product, $_txtNumber);
-
-			$txt_text = "*$_txtNumber عدد $product *به سبد خرید اضافه شد.\n";
-			if($_txtNumber == 0)
-			{
-				$txt_text = "*$product *از سبد خرید حذف شد.\n";
-			}
-
-			$txt_text .= self::showCard();
-			$result   =
-			[
-				'text'         => $txt_text,
-				// 'reply_markup' => null,
-				'reply_markup' => self::$keyborad_final
-			];
-
+			case 'بعدی':
+			case 'skip':
+			case '/skip':
+				step::goto(3);
+				return self::step3();
+				break;
 		}
 
-		// return menu
-		return $result;
+
 	}
 
 
