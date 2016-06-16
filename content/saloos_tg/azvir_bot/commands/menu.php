@@ -23,17 +23,15 @@ class menu
 
 			case 'return':
 			case 'بازگشت':
-				switch ($_cmd['text'])
-				{
-					case 'بازگشت به منوی اصلی':
-					default:
-						$response = user::start();
-						break;
-					case 'بازگشت به ثبت سفارش':
-						$response = self::order();
-						break;
-				}
+				// switch ($_cmd['text'])
+				// {
+				// 	case 'بازگشت به منوی اصلی':
+				// 	default:
+				// 		$response = user::start();
+				// 		break;
+				// }
 				// $response = self::returnBtn();
+				$response = user::start();
 				break;
 
 			default:
@@ -54,45 +52,6 @@ class menu
 	}
 
 
-	/**
-	 * showMenu
-	 * @return [type] [description]
-	 */
-	public static function showMenu()
-	{
-		// $menu =
-		// [
-		// 	'keyboard' =>
-		// 	[
-		// 		["ساندویچ", "پیتزا"],
-		// 		["مخلفات", "نوشیدنی"],
-		// 	],
-		// ];
-
-		$txt_caption = "محصولات فست فود کرمایل.\nشما می توانید منوی ما را در گوشی یا رایانه خود ذخیره کنید.";
-		$result =
-		[
-			[
-				'caption'   => $txt_caption,
-				'method' => 'sendPhoto',
-				// 'photo'  => new \CURLFile(realpath("static/images/telegram/kermile/menu.jpg")),
-				'photo'  => 'AgADBAADracxGxBxeQyJeNqkhwcFJxP1KBkABEaZHHvrygd_hOcBAAEC',
-			],
-		];
-		// $result['reply_markup'] = $menu;
-
-		// $result   =
-		// [
-		// 	[
-		// 		'text'         => "لطفا یکی از دسته بندی ها را انتخاب کنید",
-		// 		'reply_markup' => $menu,
-		// 	],
-		// ];
-
-
-		return $result;
-	}
-
 
 	/**
 	 * create mainmenu
@@ -106,8 +65,7 @@ class menu
 		[
 			'keyboard' =>
 			[
-				["ثبت سفارش"],
-				["مشاهده منو"],
+				["شروع یادگیری"],
 				["درباره", "ثبت بازخورد"],
 			],
 		];
@@ -129,28 +87,6 @@ class menu
 		];
 
 		// return menu
-		return $result;
-	}
-
-
-	/**
-	 * return menu
-	 * @return [type] [description]
-	 */
-	public static function main_old()
-	{
-		// disable return from main menu
-		self::$return          = false;
-		$result['text']        = 'منوی اصلی'."\r\n";
-		$result['reply_markup'] =
-		[
-			'keyboard' =>
-			[
-				["ثبت سفارش"],
-				["مشاهده منو"],
-				["درباره", "ثبت بازخورد"],
-			],
-		];
 		return $result;
 	}
 }

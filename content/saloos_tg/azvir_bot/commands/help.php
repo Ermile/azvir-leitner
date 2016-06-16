@@ -12,15 +12,11 @@ class help
 	public static function help()
 	{
 		$text = "*_fullName_*\r\n\n";
-		$text .= "دستورات زیر برای کار با ربات سرشمار در دسترس شماست:\r\n\n";
-		$text .= "/sarshomar شروع نظرسنجی‌های سرشمار\n";
-		$text .= "/psychology `تست‌های روانشناسی`\n";
-		$text .= "/civility `نظرسنجی‌های مردمی`\n";
-		// $text .= "/menu show main menu\n";
-		$text .= "/my نظرسنجی‌های من\n";
-		$text .= "/define `تعریف نظرسنجی جدید`\n";
-		// $text .= "/polls مشاهده لیست نظرسنجی‌ها\n";
-		$text .= "/profile تکمیل پروفایل\n";
+		$text .= "دستورات زیر برای کار با ربات در دسترس شماست:\r\n\n";
+		$text .= "/learn شروع یادگیری\n";
+		$text .= "/504 شروع یادگیری ۵۰۴\n";
+		$text .= "/450 شروع یادگیری ۴۵۰\n";
+
 		$text .= "/contact تماس با ما\n";
 		$text .= "/about درباره _name_\n";
 		$text .= "/cancel انصراف و شروع دوباره\n";

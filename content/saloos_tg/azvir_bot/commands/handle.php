@@ -31,37 +31,11 @@ class handle
 				$response = menu::main();
 				break;
 
-			case 'مشاهده':
-			case 'مشاهده منو':
-				$response = menu::showMenu();
-				break;
-
-			case '/order':
-			case 'order':
-			case 'سفارش':
-			case 'ثبت سفارش':
-			case 'ثبت':
-				$response = step_order::start(true);
-				break;
-
-			case 'ثبت':
-				switch ($_cmd['text'])
-				{
-					case 'نظرسنجی‌های من':
-						$response = menu_my::my();
-						break;
-
-					case 'نظرسنجی‌های موجود':
-						$response = menu_my::mypolls();
-						break;
-
-					case 'نظرسنجی‌های سرشمار':
-						$response = step_sarshomar::start();
-						break;
-
-					default:
-						break;
-				}
+			case '/learn':
+			case 'learn':
+			case 'شروع':
+			case 'شروع یادگیری':
+				$response = step_learn::start(true);
 				break;
 
 			case '/feedback':
@@ -73,17 +47,7 @@ class handle
 
 			case 'return':
 			case 'بازگشت':
-				switch ($_cmd['text'])
-				{
-					case 'بازگشت به ثبت سفارش':
-						$response = menu::polls();
-						break;
-
-					case 'بازگشت به منوی اصلی':
-					default:
-						$response = menu::main();
-						break;
-				}
+				$response = menu::main();
 				break;
 
 			default:

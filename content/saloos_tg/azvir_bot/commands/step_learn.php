@@ -4,7 +4,7 @@ namespace content\saloos_tg\azvir_bot\commands;
 use \lib\utility\telegram\tg as bot;
 use \lib\utility\telegram\step;
 
-class step_order
+class step_learn
 {
 	private static $menu            = ["hide_keyboard" => true];
 	private static $keyboard_number =
@@ -42,7 +42,7 @@ class step_order
 		// if we have result or want to skip, then call step1
 		if($result === true || $_skip === true)
 		{
-			step::start('order');
+			step::start('learn');
 			return self::step1();
 		}
 		else
