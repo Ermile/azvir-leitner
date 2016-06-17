@@ -4,6 +4,7 @@ namespace content\saloos_tg\azvir_bot\commands;
 use \lib\utility\telegram\tg as bot;
 use \lib\utility\telegram\step;
 use \lib\utility\telegram\keyboard;
+use \lib\utility\telegram\commands;
 
 class step_learn
 {
@@ -29,7 +30,7 @@ class step_learn
 		$result = null;
 		if($_skip !== true)
 		{
-			$result = step_register::start(__CLASS__, __FUNCTION__);
+			$result = commands\step_register::start(__CLASS__, __FUNCTION__);
 		}
 		// if we have result or want to skip, then call step1
 		if($result === true || $_skip === true)
