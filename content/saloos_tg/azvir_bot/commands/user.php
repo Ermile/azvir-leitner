@@ -24,6 +24,8 @@ class user
 			case '/about':
 			case 'about':
 			case 'درباره':
+			case 'درباره ℹ':
+			case 'ℹ':
 				$response = self::about();
 				break;
 
