@@ -218,7 +218,7 @@ class step_learn
 				[
 					'keyboard' =>
 					[
-						["بلدم", "نمی‌دونم"],
+						["بلدم👍", "نمی‌دونم👎"],
 					],
 				];
 
@@ -246,6 +246,8 @@ class step_learn
 		{
 			case 'بله':
 			case 'بلدم':
+			case 'بلدم👍':
+			case '👍':
 			case 'yes':
 			case '/yes':
 				// save answer true
@@ -254,6 +256,8 @@ class step_learn
 
 			case 'خیر':
 			case 'نمی‌دونم':
+			case 'نمی‌دونم👎':
+			case '👎':
 			case 'no':
 			case '/no':
 				// save answer false
