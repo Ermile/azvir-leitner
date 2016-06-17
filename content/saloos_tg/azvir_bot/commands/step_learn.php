@@ -277,12 +277,13 @@ class step_learn
 		$txt_text .= "پاس شده: \n";
 		$txt_text .= "ناموفق: \n";
 		$txt_text .= "یادگیری مجدد: \n";
+		$txt_text .= "_name_ محصولی از ارمایل\n";
 		$keyboard  =
 		[
 			'keyboard' =>
 			[
 				["شروع دوباره"],
-				["بررسی مضعیت"],
+				["بررسی وضعیت"],
 				["بازگشت"],
 			],
 		];
@@ -310,7 +311,7 @@ class step_learn
 				return self::step3();
 				break;
 
-			case 'بررسی مضعیت':
+			case 'بررسی وضعیت':
 			case 'review':
 			case '/review':
 				$txt_text = "نمایش وضعیت طبقه‌ها\n\n";
