@@ -141,7 +141,7 @@ class step_learn
 		if($limiter >= 7)
 		{
 			step::goto(6);
-			return step::goto(6);
+			return self::step6();
 		}
 		var_dump($lastCard);
 
