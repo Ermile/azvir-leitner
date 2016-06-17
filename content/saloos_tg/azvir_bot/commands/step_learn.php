@@ -96,7 +96,7 @@ class step_learn
 		// if this cat type is not exist then goto step 1
 		if(count($catList) < 1)
 		{
-			step::goto(1);
+			step::goingto(1);
 			return self::step1();
 		}
 		// save category type
@@ -144,7 +144,7 @@ class step_learn
 		$limiter  = step::get('limiter');
 		if($limiter >= 7)
 		{
-			step::goto(6);
+			step::goingto(6);
 			return self::step6();
 		}
 
@@ -195,7 +195,7 @@ class step_learn
 			case 'skip':
 			case '/skip':
 				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
-				step::goto(3);
+				step::goingto(3);
 				return self::step3();
 				break;
 
@@ -267,7 +267,7 @@ class step_learn
 		}
 
 		// go to next card
-		step::goto(3);
+		step::goingto(3);
 		return self::step3();
 	}
 
@@ -318,7 +318,7 @@ class step_learn
 			case 'learn':
 			case '/learn':
 				step::set('limiter', 0);
-				step::goto(3);
+				step::goingto(3);
 				return self::step3();
 				break;
 
