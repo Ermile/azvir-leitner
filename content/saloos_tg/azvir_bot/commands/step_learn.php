@@ -139,7 +139,7 @@ class step_learn
 
 		// get last card details
 		$user_id  = bot::$user_id;
-		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'unlearned');
+		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
 		// get limiter value
 		$limiter  = step::get('limiter');
 		if($limiter >= 7)

@@ -40,7 +40,6 @@ class cards
 		{
 			$qry .= " \nORDER BY id ASC";
 		}
-		var_dump($qry);
 
 		if($_limit)
 		{
