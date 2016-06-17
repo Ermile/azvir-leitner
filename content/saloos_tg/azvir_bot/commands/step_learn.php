@@ -194,6 +194,7 @@ class step_learn
 			case 'بعدی':
 			case 'skip':
 			case '/skip':
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
 				step::goto(3);
 				return self::step3();
 				break;
@@ -245,12 +246,14 @@ class step_learn
 			case 'yes':
 			case '/yes':
 				// save answer true
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'true');
 				break;
 
 			case 'خیر':
 			case 'no':
 			case '/no':
 				// save answer false
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'false');
 				break;
 
 			default:

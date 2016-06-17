@@ -6,7 +6,7 @@ class cards
 {
 	/**
 	 *
-	 * v1.1
+	 * v1.2
 	 */
 
 
@@ -59,13 +59,13 @@ class cards
 	private static function queryCreator($_user_id, $_cat_id, $_type)
 	{
 		$join    = "";
-		$critera = "";
+		$criteria = "";
 		switch ($_type)
 		{
 			case 'unlearned':
-				$join    = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				// $critera = "AND cardusages.cardlist_id IS NULL";
-				$critera = "AND
+				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
+				// $criteria = "AND cardusages.cardlist_id IS NULL";
+				$criteria = "AND
 							(
 								cardusages.cardlist_id IS NULL
 								OR cardusages.user_id = $_user_id
@@ -73,10 +73,10 @@ class cards
 				break;
 
 			case 'expired':
-				$critera = " AND cardusages.cardusage_expire < DATE(now())";
+				$criteria = " AND cardusages.cardusage_expire < DATE(now())";
 			case 'learned':
-				$join    = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				$critera .= " AND cardusages.user_id = $_user_id";
+				$join     = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
+				$criteria .= " AND cardusages.user_id = $_user_id";
 				break;
 
 
@@ -97,7 +97,7 @@ class cards
 			$join
 
 			WHERE cardlists.cardcat_id = $_cat_id
-			$critera
+			$criteria
 		";
 		// return created query
 		return $qry;
