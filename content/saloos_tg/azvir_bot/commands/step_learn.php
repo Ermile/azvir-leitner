@@ -30,7 +30,7 @@ class step_learn
 		$result = null;
 		if($_skip !== true)
 		{
-			$result = commands\step_register::start(__CLASS__, __FUNCTION__);
+			$result = commands\step_register::start(__CLASS__, __FUNCTION__, menu::main(true));
 		}
 		// if we have result or want to skip, then call step1
 		if($result === true || $_skip === true)
