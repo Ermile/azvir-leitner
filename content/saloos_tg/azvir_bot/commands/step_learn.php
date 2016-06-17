@@ -160,22 +160,14 @@ class step_learn
 		step::plus();
 
 		$txt_text = "کارت $limiter\n".$card_front;
-		// $keyboard =
-		// [
-		// 	'keyboard' =>
-		// 	[
-		// 		["مشاهده پاسخ ⚖"],
-		// 		["فعلا رد کن"],
-		// 	],
-		// ];
-		$list = ["مشاهده پاسخ ⚖","فعلا رد کن"];
+		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
 		[
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
-			'reply_markup' => 	keyboard::draw($list),
-			
+			'reply_markup' => keyboard::draw($list, 'fixed'),
+
 		];
 
 		// return menu
@@ -218,18 +210,22 @@ class step_learn
 				$card_back = step::get('learn_card_back');
 				// $txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
 				$txt_text  = $card_back;
-				$keyboard  =
-				[
-					'keyboard' =>
-					[
-						["بلدم ✅", "نمی‌دونم ❌"],
-					],
-				];
+				$list      = ["بلدم ✅", "نمی‌دونم ❌"];
+
+				// $keyboard  =
+				// [
+				// 	'keyboard' =>
+				// 	[
+				// 		["بلدم ✅", "نمی‌دونم ❌"],
+				// 	],
+				// ];
 
 				$result   =
 				[
 					'text'         => $txt_text,
-					'reply_markup' => 	$keyboard,
+					// 'reply_markup' => 	$keyboard,
+					'reply_markup'  => keyboard::draw($list, 'fixed'),
+
 				];
 				break;
 
@@ -301,21 +297,25 @@ class step_learn
 		$txt_text .= "ناموفق: \n";
 		$txt_text .= "یادگیری مجدد: \n";
 		$txt_text .= "_name_ محصولی از ارمایل\n";
-		$keyboard  =
-		[
-			'keyboard' =>
-			[
-				["شروع دوباره ♻"],
-				["بررسی وضعیت"],
-				["بازگشت"],
-			],
-		];
+		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
+
+		// $keyboard  =
+		// [
+		// 	'keyboard' =>
+		// 	[
+		// 		["شروع دوباره ♻"],
+		// 		["بررسی وضعیت"],
+		// 		["بازگشت"],
+		// 	],
+		// ];
 
 		// get name of question
 		$result   =
 		[
 			'text'         => $txt_text,
-			'reply_markup' => 	$keyboard,
+			// 'reply_markup' => 	$keyboard,
+			'reply_markup' => 	keyboard::draw($list, 'fixed'),
+
 		];
 		// return menu
 		return $result;
