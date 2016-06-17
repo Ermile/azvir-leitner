@@ -88,13 +88,5 @@ class cardcats
 		// return last insert id
 		return $result;
 	}
-
-	public static function lastCard($_cat_id)
-	{
-		$qry    = "SELECT * FROM cardlists WHERE cardcat_id = $_cat_id LIMIT 1;";
-		$result = \lib\db::get($qry, null, true);
-
-		return $result;
-	}
 }
 ?>

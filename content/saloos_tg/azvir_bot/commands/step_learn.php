@@ -116,37 +116,38 @@ class step_learn
 	 */
 	public static function step3($_txtCat = null)
 	{
-		if(is_numeric($_txtCat) || $_txtCat === null)
+		// get cat id
+		$cat_id = step::get('learn_category');
+		// first time it is null, then get from database and set it for next use
+		if(!$cat_id)
 		{
-			$cat_id = step::get('learn_category');
-		}
-		elseif($_txtCat)
-		{
-			step::set('learn_categoryText', $_txtCat);
 			$cat_id = \lib\db\cardcats::catDetail($_txtCat);
-			// save category details
+			step::set('learn_categoryText', $_txtCat);
+			step::set('learn_category', $cat_id);
 		}
-		else
+		// if cat is not exist
+		if(!$cat_id)
 		{
 			return false;
 		}
+
 		// increase limiter
 		step::plus(1, 'limiter');
 
-		step::set('learn_category', $cat_id);
 
 		// get last card details
-		$lastCard = \lib\db\cardcats::lastCard($cat_id);
+		$lastCard = \lib\db\cards::get($cat_id, 'all');
+		var_dump($lastCard);
+
 		$limiter  = step::get('limiter');
 		if($limiter >= 7)
 		{
 			step::goto(6);
 			return self::step6();
 		}
-		var_dump($lastCard);
 
-		$card_front = 'salam';
-		$card_back  = 'سلام';
+		$card_front = $lastCard['front'];
+		$card_back  = $lastCard['back'];
 		// set card details
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
@@ -198,11 +199,14 @@ class step_learn
 			case 'مشاهده کارت':
 			case 'show card':
 			case '/show card':
+			case 'show answer':
+			case '/show answer':
 			case 'show':
 			case '/show':
 				step::plus();
 				$card_back = step::get('learn_card_back');
-				$txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
+				// $txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
+				$txt_text  = $card_back;
 				$keyboard  =
 				[
 					'keyboard' =>
@@ -315,6 +319,7 @@ class step_learn
 			case 'review':
 			case '/review':
 				$txt_text = "نمایش وضعیت طبقه‌ها\n\n";
+				$txt_text .= "...\n\n";
 				$result   =
 				[
 					'text'         => $txt_text,
