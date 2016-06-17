@@ -16,7 +16,6 @@ class cardusages
 	 */
 	public static function saveAnswer($_user_id, $_cardlist_id, $_answer, $_spendTime = 'null')
 	{
-		var_dump(11);
 		$criteria = "user_id = $_user_id AND cardlist_id = $_cardlist_id ";
 		// get last answer of this card for this user if exist
 		// update old record to expire and get last answer
@@ -52,13 +51,17 @@ class cardusages
 				// do nothing
 				break;
 		}
+		if(!$new_deck)
+		{
+			$new_deck = 0;
+		}
 
 		var_dump($lastRecord);
 
 		$ansDate = date('Y-m-d H:i:s');
 		$expDate = date('Y-m-d H:i:s', strtotime("+2 days"));
 		// create query string
-		$qry = "INSERT INTO posts
+		$qry = "INSERT INTO cardusages
 		(
 			`user_id`,
 			`cardlist_id`,

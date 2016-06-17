@@ -38,7 +38,7 @@ class cards
 		// add order if needed
 		if($_order === true)
 		{
-			$qry .= " \nORDER BY ID ASC";
+			$qry .= " \nORDER BY id ASC";
 		}
 
 		if($_limit)
@@ -87,7 +87,7 @@ class cards
 
 		$qry =
 			"SELECT
-				cardlists.id as ID,
+				cardlists.id as id,
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
 				(SELECT paper_text from papers WHERE id = cards.card_back) as back
 			FROM

@@ -194,7 +194,7 @@ class step_learn
 			case 'بعدی':
 			case 'skip':
 			case '/skip':
-				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
+				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
 				step::goto(3);
 				return self::step3();
 				break;
