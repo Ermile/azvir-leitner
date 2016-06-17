@@ -164,8 +164,8 @@ class step_learn
 		[
 			'keyboard' =>
 			[
-				["مشاهده پشت کارت"],
-				["بعدی"],
+				["مشاهده پاسخ"],
+				["فعلا رد کن"],
 			],
 		];
 
@@ -192,6 +192,7 @@ class step_learn
 		switch ($_txtReaction)
 		{
 			case 'بعدی':
+			case 'فعلا رد کن':
 			case 'skip':
 			case '/skip':
 				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
@@ -202,6 +203,7 @@ class step_learn
 			case 'مشاهده':
 			case 'مشاهده پشت کارت':
 			case 'مشاهده کارت':
+			case 'مشاهده پاسخ':
 			case 'show card':
 			case '/show card':
 			case 'show answer':
@@ -216,7 +218,7 @@ class step_learn
 				[
 					'keyboard' =>
 					[
-						["بله", "خیر"],
+						["بلدم", "نمی‌دونم"],
 					],
 				];
 
@@ -243,6 +245,7 @@ class step_learn
 		switch ($_txtAnswer)
 		{
 			case 'بله':
+			case 'بلدم':
 			case 'yes':
 			case '/yes':
 				// save answer true
@@ -250,6 +253,7 @@ class step_learn
 				break;
 
 			case 'خیر':
+			case 'نمی‌دونم':
 			case 'no':
 			case '/no':
 				// save answer false
