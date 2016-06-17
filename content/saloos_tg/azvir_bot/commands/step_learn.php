@@ -137,8 +137,14 @@ class step_learn
 
 		// get last card details
 		$lastCard = \lib\db\cardcats::lastCard($cat_id);
+		$limiter  = step::get('limiter');
+		if($limiter >= 70)
+		{
+			step::goto(6);
+			return step::goto(6);
+		}
 		var_dump($lastCard);
-		
+
 		$card_front = 'salam';
 		$card_back  = 'سلام';
 		// set card details
@@ -148,9 +154,8 @@ class step_learn
 		// go to next step
 		step::plus();
 
-		$limiter  = step::get('limiter');
 		$txt_text = "کارت $limiter\n".$card_front;
-		$keyboard = 
+		$keyboard =
 		[
 			'keyboard' =>
 			[
@@ -178,7 +183,7 @@ class step_learn
 	public static function step4($_txtReaction)
 	{
 		$result = null;
-		// if user press next goto step 3 for 
+		// if user press next goto step 3 for
 		switch ($_txtReaction)
 		{
 			case 'بعدی':
@@ -198,7 +203,7 @@ class step_learn
 				step::plus();
 				$card_back = step::get('learn_card_back');
 				$txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
-				$keyboard  = 
+				$keyboard  =
 				[
 					'keyboard' =>
 					[
@@ -219,7 +224,6 @@ class step_learn
 				[
 					'text'         => $txt_text,
 				];
-
 				break;
 		}
 		return $result;
@@ -227,10 +231,36 @@ class step_learn
 
 	public static function step5($_txtAnswer)
 	{
+		switch ($_txtAnswer)
+		{
+			case 'بله':
+			case 'yes':
+			case '/yes':
+				// save answer true
+				break;
+
+			case 'خیر':
+			case 'no':
+			case '/no':
+				// save answer false
+				break;
+
+			default:
+				$txt_text = "لطفا یکی از گزینه‌های زیر را انتخاب کنید!";
+				$result   =
+				[
+					'text'         => $txt_text,
+				];
+				return $result;
+				break;
+		}
+
 		// go to next card
 		step::goto(3);
 		return self::step3();
 	}
+
+
 
 
 
@@ -293,25 +323,6 @@ class step_learn
 			'text' => $txt_text,
 		];
 		// return menu
-		return $result;
-	}
-
-
-	public static function step7()
-	{
-		$final_text = "سفارش شما تکمیل شد.\n";
-		$final_text .= "تا دقایقی دیگر سفارش شما ارسال خواهد شد.\n";
-
-		$result   =
-		[
-			'text'         => $final_text,
-			// 'reply_markup' => null,
-			// 'reply_markup' => $menu
-		];
-		// send order to admin of bot
-		self::sendOrder();
-		// stop order
-		step::stop();
 		return $result;
 	}
 
@@ -426,115 +437,6 @@ class step_learn
 		}
 		// $menu['keyboard'][] = ['گزینه سوم'];
 		return $menu;
-	}
-
-
-	/**
-	 * save new product to card
-	 * @param [type] $_category [description]
-	 * @param [type] $_product  [description]
-	 * @param [type] $_quantity [description]
-	 */
-	private static function addToCard($_category, $_product, $_quantity)
-	{
-		// get current order
-		$myorder = step::get('order');
-		// add this product to order
-		$myorder[$_category][$_product] = $_quantity;
-		if($_quantity == 0 && isset($myorder[$_category][$_product]))
-		{
-			unset($myorder[$_category][$_product]);
-			if(isset($myorder[$_category]) && count($myorder[$_category]) === 0)
-			{
-				unset($myorder[$_category]);
-			}
-		}
-		// save new order
-		step::set('order', $myorder);
-	}
-
-
-	/**
-	 * show user card
-	 * @return [type] [description]
-	 */
-	private static function showCard()
-	{
-		$myorder    = step::get('order');
-		$txt_card   = "سبد خرید\n";
-		$totalPrice = 0;
-		if(count($myorder) === 0 )
-		{
-			$txt_card   = "سبد خرید خالی است!\n";
-		}
-		else
-		{
-			foreach ($myorder as $category => $productList)
-			{
-				$txt_card .= "`$category`\n";
-				foreach ($productList as $product => $quantity)
-				{
-					$productDetail = product::detail($product);
-					$price = $productDetail['price'];
-					$totalPrice += $quantity * $price;
-					$txt_card .= "▫️ $product *". $quantity. "* ✕ `". $price. "`\n";
-				}
-			}
-			$txt_card .= "\nجمع کل:* $totalPrice تومان* 💰";
-		}
-		return $txt_card;
-	}
-
-
-	private static function saveCard()
-	{
-			\lib\db\posts::insertOrder(bot::$user_id, $question_id, $answer_id, $_answer_txt);
-
-	}
-
-
-	// send order to admin
-	private static function sendOrder($_desc = null)
-	{
-		$text   = "🚩 📨 سفارش جدید از ";
-		$text   .= bot::response('from', 'first_name');
-		$text   .= ' '. bot::response('from', 'last_name');
-		$text   .= ' @'. bot::response('from', 'username');
-		$text   .= "\n$_desc\n";
-		$text   .= self::showCard();
-		$text   .= "\nکد کاربر ". bot::response('from');
-
-		$menu =
-		[
-			'inline_keyboard' =>
-			[
-				[
-					[
-						'text'          => 'ثبت در سیستم',
-						'callback_data' => 'order_register',
-					],
-				],
-				[
-					[
-						'text'          => 'کاربر نیاز به تایید',
-						'callback_data' => 'order_verification',
-					],
-				],
-			],
-		];
-
-		$result =
-		[
-			'method'       => 'sendMessage',
-			'text'         => $text,
-			'chat_id'      => '46898544',
-			'reply_markup' => $menu,
-
-		];
-		var_dump($result);
-		$result = bot::sendResponse($result);
-		var_dump($result);
-		return $result;
 	}
 }
 ?>
