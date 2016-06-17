@@ -59,7 +59,6 @@ class cardusages
 			$new_deck = 0;
 		}
 
-		var_dump($lastRecord);
 
 		// create query string
 		$qry = "INSERT INTO cardusages
