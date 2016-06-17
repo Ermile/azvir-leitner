@@ -40,6 +40,7 @@ class cards
 		{
 			$qry .= " \nORDER BY id ASC";
 		}
+		var_dump($qry);
 
 		if($_limit)
 		{
@@ -58,22 +59,31 @@ class cards
 
 	private static function queryCreator($_user_id, $_cat_id, $_type)
 	{
-		$join    = "";
+		$join     = "";
 		$criteria = "";
+		// $groupby  = "";
+		$groupby  = "GROUP BY cardlists.id";
 		switch ($_type)
 		{
 			case 'unlearned':
 				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
 				// $criteria = "AND cardusages.cardlist_id IS NULL";
-				$criteria = "AND
-							(
-								cardusages.cardlist_id IS NULL
-								OR cardusages.user_id = $_user_id
-							)";
+				$criteria =
+					"AND
+					(
+						cardusages.cardusage_status = 'skip' OR
+						cardusages.cardusage_status IS NULL
+					)
+					AND
+					(
+						cardusages.cardlist_id IS NULL
+						OR cardusages.user_id = $_user_id
+					)";
 				break;
 
 			case 'expired':
 				$criteria = " AND cardusages.cardusage_expire < DATE(now())";
+				$criteria .= " AND cardusages.cardusage_status = 'enable'";
 			case 'learned':
 				$join     = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
 				$criteria .= " AND cardusages.user_id = $_user_id";
@@ -98,6 +108,7 @@ class cards
 
 			WHERE cardlists.cardcat_id = $_cat_id
 			$criteria
+			$groupby
 		";
 		// return created query
 		return $qry;

@@ -35,6 +35,8 @@ class cardusages
 		$new_deck       = $lastRecord['try'];
 		$new_try        = 1 + $lastRecord['try'];
 		$new_trysuccess = 1 + $lastRecord['trysuccess'];
+		$ansDate        = date('Y-m-d H:i:s');
+		$expDate        = date('Y-m-d H:i:s', strtotime("+2 days"));
 		// set next deck
 		switch ($_answer)
 		{
@@ -48,6 +50,7 @@ class cardusages
 
 			case 'skip':
 			default:
+				$expDate = date('Y-m-d H:i:s', strtotime("+2 minutes"));
 				// do nothing
 				break;
 		}
@@ -58,8 +61,6 @@ class cardusages
 
 		var_dump($lastRecord);
 
-		$ansDate = date('Y-m-d H:i:s');
-		$expDate = date('Y-m-d H:i:s', strtotime("+2 days"));
 		// create query string
 		$qry = "INSERT INTO cardusages
 		(
