@@ -262,8 +262,6 @@ class step_learn
 
 
 
-
-
 	/**
 	 * show last menu
 	 * @param  [type] $_item [description]
@@ -271,60 +269,69 @@ class step_learn
 	 */
 	public static function step6($_item)
 	{
+		// go to next step
+		step::plus();
+
 		// create output text
-		$txt_text = "سوال ". step::get('i')."\n\n";
-		switch ($_item)
-		{
-			case 'ادامه خرید':
-			case '/next':
-			case 'next':
-				step::goto(1);
-				return self::step1();
-				break;
-
-			case 'مشاهده سبد خرید':
-			case 'مشاهده سفارش':
-			case '/card':
-			case 'card':
-			case 'showcard':
-				$txt_text = self::showCard();
-				// $txt_text = 'بزودی نتایح تهیه و نمایش داده می‌شوند:)';
-				break;
-
-			case 'اتمام سفارش':
-			case '/paycart':
-			case 'paycart':
-				$txt_text = self::showCard();
-				step::plus();
-				return self::step6();
-				// $txt_text = 'بزودی نتایح تهیه و نمایش داده می‌شوند:)';
-				break;
-
-			case 'بازگشت به منوی اصلی':
-			case 'انصراف':
-			case '/cancel':
-			case 'cancel':
-			case '/stop':
-			case 'stop':
-			case '/return':
-			case 'return':
-				return self::stop();
-				break;
-
-			default:
-				$txt_text = 'لطفا یکی از گزینه‌های زیر را انتخاب نمایید';
-				break;
-		}
-
+		$txt_text = "وضعیت این دوره شما\n\n";
+		$txt_text .= "پاس شده: \n";
+		$txt_text .= "ناموفق: \n";
+		$txt_text .= "یادگیری مجدد: \n";
+		$keyboard  =
+		[
+			'keyboard' =>
+			[
+				["شروع دوباره"],
+				["بررسی مضعیت"],
+				["بازگشت"],
+			],
+		];
 
 		// get name of question
 		$result   =
 		[
-			'text' => $txt_text,
+			'text'         => $txt_text,
+			'reply_markup' => 	$keyboard,
 		];
 		// return menu
 		return $result;
 	}
+
+
+	public static function step7($_decision)
+	{
+		switch ($_decision)
+		{
+			case 'شروع دوباره':
+			case 'learn':
+			case '/learn':
+				step::set('limiter', 0);
+				step::goto(3);
+				return self::step3();
+				break;
+
+			case 'بررسی مضعیت':
+			case 'review':
+			case '/review':
+				$txt_text = "نمایش وضعیت طبقه‌ها\n\n";
+				$result   =
+				[
+					'text'         => $txt_text,
+				];
+				return $result;
+				break;
+
+			case 'بازگشت':
+			case 'انصراف':
+			case 'cancel':
+			case '/cancel':
+			default:
+				return self::stop(false);
+				break;
+		}
+
+	}
+
 
 
 	/**
@@ -344,14 +351,13 @@ class step_learn
 			}
 			else
 			{
-				$final_text = "انصراف از ثبت سفارش\n";
+				$final_text = "انصراف از ادامه یادگیری\n";
 			}
 			step::stop();
 		}
 		elseif($_cancel === false)
 		{
-			$final_text = "سفارش شما تکمیل شد.\n";
-			$final_text .= "تا دقایقی دیگر سفارش شما ارسال خواهد شد.\n";
+			$final_text = "بازگشت به منوی اصلی\n";
 			// complete soon
 			step::stop();
 		}
