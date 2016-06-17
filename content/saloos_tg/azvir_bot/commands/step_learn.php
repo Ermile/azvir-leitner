@@ -138,7 +138,7 @@ class step_learn
 		// get last card details
 		$lastCard = \lib\db\cardcats::lastCard($cat_id);
 		$limiter  = step::get('limiter');
-		if($limiter >= 70)
+		if($limiter >= 7)
 		{
 			step::goto(6);
 			return step::goto(6);
