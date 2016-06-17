@@ -3,6 +3,7 @@ namespace content\saloos_tg\azvir_bot\commands;
 // use telegram class as bot
 use \lib\utility\telegram\tg as bot;
 use \lib\utility\telegram\step;
+use \lib\utility\telegram\keyboard;
 
 class step_learn
 {
@@ -67,7 +68,7 @@ class step_learn
 		$result   =
 		[
 			'text'         => $txt_text,
-			'reply_markup' => self::drawKeyboard($catTypeList),
+			'reply_markup' => keyboard::draw($catTypeList),
 		];
 
 		return $result;
@@ -102,7 +103,7 @@ class step_learn
 		$result =
 		[
 			'text'         => $txt_text,
-			'reply_markup' => self::drawKeyboard($catList),
+			'reply_markup' => keyboard::draw($catList),
 		];
 
 		return $result;
@@ -385,72 +386,6 @@ class step_learn
 		];
 		// return menu
 		return $result;
-	}
-
-
-	/**
-	 * return answer keyborad array or keyboard
-	 * @param  boolean $_onlyArray [description]
-	 * @return [type]              [description]
-	 */
-	public static function drawKeyboard($_list = null, $_onlyArray = null)
-	{
-		if(!$_list)
-		{
-			return null;
-		}
-		if($_onlyArray === true)
-		{
-			// return array contain only list
-			$_list = array_keys($_list);
-			return $_list;
-		}
-
-		$menu =
-		[
-			'keyboard' => [],
-			"one_time_keyboard" => true,
-		];
-
-		// calculate number of item in each row
-		// max row can used is 3
-		$inEachRow  = 1;
-		$itemsCount = count($_list);
-		$rowUsed    = $itemsCount;
-		$rowMax     = 4;
-		// if count of items is divided by 2
-		if(($itemsCount % 2) === 0)
-		{
-			$inEachRow = 2;
-			$rowUsed   = $itemsCount / 2;
-			if($rowUsed > $rowMax)
-			{
-				if(($itemsCount % 3) === 0)
-				{
-					$inEachRow = 3;
-					$rowUsed   = $itemsCount / 3;
-				}
-			}
-		}
-		// if count of items is divided by 3
-		if($itemsCount > 6 && ($itemsCount % 3) === 0)
-		{
-			$inEachRow = 3;
-			$rowUsed   = $itemsCount / 3;
-		}
-
-		$i = 0;
-		foreach ($_list as $key => $value)
-		{
-			// calc row number
-			$row = floor($i/ $inEachRow);
-			// add to specefic row
-			$menu['keyboard'][$row][] = $value;
-			// increment counter
-			$i++;
-		}
-		// $menu['keyboard'][] = ['گزینه سوم'];
-		return $menu;
 	}
 }
 ?>
