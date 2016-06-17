@@ -36,15 +36,29 @@ private function transtext()
 	echo T_("back");                // card_back
 	echo T_("createdate");          // card_createdate
 
+	// ------------------------------------------------------------ Table cardusagedetails
+	echo T_("cardusagedetails");    // Table cardusagedetails
+	echo T_("cardusagedetail");     // cardusagedetail
+	echo T_("true");                // Enum true
+	echo T_("false");               // Enum false
+	echo T_("skip");                // Enum skip
+	echo T_("cardusage");           // cardusage_id
+	echo T_("answer");              // cardusagedetail_answer
+	echo T_("spendtime");           // cardusagedetail_spendtime
+	echo T_("deck");                // cardusagedetail_deck
+
 	// ------------------------------------------------------------ Table cardusages
 	echo T_("cardusages");          // Table cardusages
 	echo T_("cardusage");           // cardusage
 	echo T_("cardlist");            // cardlist_id
+	echo T_("answer");              // cardusage_answer
 	echo T_("deck");                // cardusage_deck
 	echo T_("try");                 // cardusage_try
 	echo T_("trysuccess");          // cardusage_trysuccess
+	echo T_("spendtime");           // cardusage_spendtime
 	echo T_("expire");              // cardusage_expire
 	echo T_("lasttry");             // cardusage_lasttry
+	echo T_("status");              // cardusage_status
 
 	// ------------------------------------------------------------ Table comments
 	echo T_("comments");            // Table comments
