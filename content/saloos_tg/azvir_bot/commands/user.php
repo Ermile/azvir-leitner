@@ -115,7 +115,7 @@ class user
 				'longitude' => '50.87914999999998',
 				'title'     => 'Ermile | ارمایل',
 				'address'   => 'ایران، قم، خیابان معلم۱۰، پلاک۸۳',
-				'address'   => '#83, Moallem 10, Moallem, Qom, Iran +9825-3773-5183',
+				'address'   => '#83, Moallem 10, Qom, Iran +9825-3773-5183',
 			],
 			// [
 			// 	'caption'   => $txt_caption,
