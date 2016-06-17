@@ -6,11 +6,11 @@ class cards
 {
 	/**
 	 *
-	 * v1.0
+	 * v1.1
 	 */
 
 
-	public static function get($_cat_id, $_type = 'all', $_order = true, $_limit = 1 )
+	public static function get($_user_id, $_cat_id, $_type = 'all', $_order = true, $_limit = 1 )
 	{
 		if(!$_cat_id)
 		{
@@ -21,13 +21,13 @@ class cards
 		{
 			case 'unlearned':
 			case 'expired':
-				$qry = self::queryCreator($_cat_id, $_type);
+				$qry = self::queryCreator($_user_id, $_cat_id, $_type);
 				break;
 
 			case 'all':
-				$qry = self::queryCreator($_cat_id, 'expired');
+				$qry = self::queryCreator($_user_id, $_cat_id, 'expired');
 				$qry .= "\nUNION\n\t\t";
-				$qry .= self::queryCreator($_cat_id, 'unlearned');
+				$qry .= self::queryCreator($_user_id, $_cat_id, 'unlearned');
 				break;
 
 			default:
@@ -40,7 +40,6 @@ class cards
 		{
 			$qry .= " \nORDER BY ID ASC";
 		}
-		var_dump($qry);
 
 		if($_limit)
 		{
@@ -57,7 +56,7 @@ class cards
 
 
 
-	private static function queryCreator($_cat_id, $_type)
+	private static function queryCreator($_user_id, $_cat_id, $_type)
 	{
 		$join    = "";
 		$critera = "";
@@ -65,13 +64,21 @@ class cards
 		{
 			case 'unlearned':
 				$join    = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				$critera = "AND cardusages.cardlist_id IS NULL";
+				// $critera = "AND cardusages.cardlist_id IS NULL";
+				$critera = "AND
+							(
+								cardusages.cardlist_id IS NULL
+								OR cardusages.user_id = $_user_id
+							)";
 				break;
 
 			case 'expired':
+				$critera = " AND cardusages.cardusage_expire < DATE(now())";
+			case 'learned':
 				$join    = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				$critera = "AND cardusages.cardusage_expire < DATE(now())";
+				$critera .= " AND cardusages.user_id = $_user_id";
 				break;
+
 
 			default:
 				return null;

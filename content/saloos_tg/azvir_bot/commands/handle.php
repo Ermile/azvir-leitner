@@ -35,7 +35,7 @@ class handle
 			case 'learn':
 			case 'شروع':
 			case 'شروع یادگیری':
-				$response = step_learn::start(true);
+				$response = step_learn::start();
 				break;
 
 			case '/feedback':

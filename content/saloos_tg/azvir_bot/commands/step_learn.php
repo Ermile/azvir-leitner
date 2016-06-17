@@ -136,9 +136,9 @@ class step_learn
 
 
 		// get last card details
-		$lastCard = \lib\db\cards::get($cat_id, 'all');
-		var_dump($lastCard);
-
+		$user_id  = bot::$user_id;
+		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
+		// get limiter value
 		$limiter  = step::get('limiter');
 		if($limiter >= 7)
 		{
@@ -146,9 +146,11 @@ class step_learn
 			return self::step6();
 		}
 
+		$card_id    = $lastCard['id'];
 		$card_front = $lastCard['front'];
 		$card_back  = $lastCard['back'];
 		// set card details
+		step::set('learn_card_id', $card_id);
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
 
