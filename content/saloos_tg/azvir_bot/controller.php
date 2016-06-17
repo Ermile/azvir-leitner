@@ -17,6 +17,7 @@ class controller extends \lib\mvc\controller
 		{
 			bot::$api_key     = '223397161:AAHIEGA4XnlkoAv4IHL3iCCBHekoYixlI2A';
 			bot::$name        = 'azvir_bot';
+			bot::$language    = 'fa_IR';
 			bot::$cmdFolder   = '\\'. __NAMESPACE__ .'\commands\\';
 			bot::$defaultText = 'تعریف نشده /help';
 			bot::$defaultMenu = commands\menu::main(true);
