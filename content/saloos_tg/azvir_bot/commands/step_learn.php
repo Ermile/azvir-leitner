@@ -278,7 +278,7 @@ class step_learn
 	 * @param  [type] $_item [description]
 	 * @return [type]        [description]
 	 */
-	public static function step6($_item)
+	public static function step6($_item = null)
 	{
 		// go to next step
 		step::plus();
