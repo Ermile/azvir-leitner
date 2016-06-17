@@ -164,7 +164,7 @@ class step_learn
 		[
 			'keyboard' =>
 			[
-				["مشاهده پاسخ"],
+				["مشاهده پاسخ ⚖"],
 				["فعلا رد کن"],
 			],
 		];
@@ -204,6 +204,7 @@ class step_learn
 			case 'مشاهده پشت کارت':
 			case 'مشاهده کارت':
 			case 'مشاهده پاسخ':
+			case 'مشاهده پاسخ ⚖':
 			case 'show card':
 			case '/show card':
 			case 'show answer':
@@ -301,7 +302,7 @@ class step_learn
 		[
 			'keyboard' =>
 			[
-				["شروع دوباره"],
+				["شروع دوباره ♻"],
 				["بررسی وضعیت"],
 				["بازگشت"],
 			],
@@ -323,6 +324,7 @@ class step_learn
 		switch ($_decision)
 		{
 			case 'شروع دوباره':
+			case 'شروع دوباره ♻':
 			case 'learn':
 			case '/learn':
 				step::set('limiter', 0);
