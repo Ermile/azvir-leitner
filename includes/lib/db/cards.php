@@ -34,7 +34,6 @@ class cards
 				return null;
 				break;
 		}
-		var_dump($qry);
 
 		// add order if needed
 		if($_order === true)
