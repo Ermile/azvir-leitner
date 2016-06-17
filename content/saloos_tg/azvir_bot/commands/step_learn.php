@@ -160,19 +160,22 @@ class step_learn
 		step::plus();
 
 		$txt_text = "کارت $limiter\n".$card_front;
-		$keyboard =
-		[
-			'keyboard' =>
-			[
-				["مشاهده پاسخ ⚖"],
-				["فعلا رد کن"],
-			],
-		];
+		// $keyboard =
+		// [
+		// 	'keyboard' =>
+		// 	[
+		// 		["مشاهده پاسخ ⚖"],
+		// 		["فعلا رد کن"],
+		// 	],
+		// ];
+		$list = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
 		[
 			'text'         => $txt_text,
-			'reply_markup' => 	$keyboard,
+			// 'reply_markup' => 	$keyboard,
+			'reply_markup' => 	keyboard::draw($list),
+			
 		];
 
 		// return menu
