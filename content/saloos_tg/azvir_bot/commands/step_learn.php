@@ -9,6 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
+	private static $maxCard        = 5;
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -139,7 +140,7 @@ class step_learn
 		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
 		// get limiter value
 		$limiter  = step::get('limiter');
-		if($limiter > 7)
+		if($limiter > self::$maxCard)
 		{
 			step::goingto(6);
 			return self::step6();
@@ -156,7 +157,8 @@ class step_learn
 		// go to next step
 		step::plus();
 
-		$txt_text = "کارت ".step::get('tryCounter')." \[`". step::get('learn_categoryText'). "`]\n".$card_front;
+		$txt_text = "کارت ".step::get('tryCounter')." از ". self::$maxCard;
+		$txt_text .= "در دسته‌ی `[". step::get('learn_categoryText'). "]`\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
