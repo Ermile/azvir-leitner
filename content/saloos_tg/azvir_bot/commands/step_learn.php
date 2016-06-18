@@ -295,12 +295,45 @@ class step_learn
 	{
 		// go to next step
 		step::plus();
+		$result_try =
+		[
+			'total'   => step::get('tryCounter')-1,
+			'success' => step::get('trySuccess'),
+			'fail'    => step::get('tryFail'),
+			'skip'    => step::get('trySkip'),
+		];
 
 		// create output text
-		$txt_text = "وضعیت بازبینی *". step::get('tryCounter'). "* کارت این دوره\n\n";
-		$txt_text .= "*پاس شده: ". step::get('trySuccess'). "*\n";
-		$txt_text .= "ناموفق: ". step::get('tryFail'). "\n";
-		$txt_text .= "نادیده گرفته‌شده: ". step::get('trySkip')."\n";
+		$txt_text = "وضعیت بازبینی *". $result_try['total']. "* کارت این دوره\n\n";
+		foreach ($result_try as $key => $value)
+		{
+			$result_try[$key.'P'] = $value * 100 / $result_try['total'];
+			$result_try[$key.'P'] = round($result_try[$key.'P'], 2);
+			$shapeCounter         = $result_try[$key.'P'] / 10;
+			switch ($key)
+			{
+				case 'success':
+					$shape = "⚫️";
+					break;
+
+				case 'fail':
+					$shape = "🔴";
+					break;
+
+				case 'skip':
+					$shape = "⚪️";
+					break;
+
+				default:
+					$shape = '';
+					break;
+			}
+			$txt_text = str_repeat($shape, $shapeCounter);
+		}
+		$txt_text .= "\n";
+		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
+		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
+		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n";
 		$txt_text .= "_name_ محصولی از ارمایل\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
 
