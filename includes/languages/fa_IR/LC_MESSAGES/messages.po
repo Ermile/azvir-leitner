@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2016-06-18 14:35+0430\n"
-"PO-Revision-Date: 2016-06-18 14:40+0430\n"
+"POT-Creation-Date: 2016-06-18 18:55+0430\n"
+"PO-Revision-Date: 2016-06-18 18:56+0430\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -16,6 +16,21 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 "X-Poedit-SearchPathExcluded-0: ../../../.././includes/cls/mahdi\n"
+
+#: ../../../.././content/saloos_tg/azvir_bot/commands/step_learn.php:446
+#: ../../../.././includes/languages/static_translation.php:82
+msgid "Success"
+msgstr "موفقیت‌آمیز"
+
+#: ../../../.././content/saloos_tg/azvir_bot/commands/step_learn.php:452
+#: ../../../.././includes/languages/static_translation.php:83
+msgid "Fail"
+msgstr "ناموفق"
+
+#: ../../../.././content/saloos_tg/azvir_bot/commands/step_learn.php:457
+#: ../../../.././includes/languages/trans_addons.php:67
+msgid "Skip"
+msgstr "خروج"
 
 #: ../../../.././content_app/cats/model.php:30
 #: ../../../.././content_app/learn/model.php:30
@@ -1583,10 +1598,6 @@ msgstr "→ بعدی"
 #: ../../../.././includes/languages/trans_addons.php:66
 msgid "← Back"
 msgstr "قبلی ←"
-
-#: ../../../.././includes/languages/trans_addons.php:67
-msgid "Skip"
-msgstr "خروج"
 
 #: ../../../.././includes/languages/trans_addons.php:68
 msgid "Done"

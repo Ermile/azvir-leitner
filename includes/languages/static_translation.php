@@ -79,6 +79,8 @@ function transtext()
 	** Your new static text that does not exist on this project! Add them manually in below lines
 	**/
 	echo T_('Report');
+	echo T_('Success');
+	echo T_('Fail');
 
 
 
