@@ -156,7 +156,7 @@ class step_learn
 		// go to next step
 		step::plus();
 
-		$txt_text = "کارت ".step::get('tryCounter')." [`". step::get('learn_categoryText'). "`]\n".$card_front;
+		$txt_text = "کارت ".step::get('tryCounter')." \[`". step::get('learn_categoryText'). "`]\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
