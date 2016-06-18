@@ -158,8 +158,8 @@ class step_learn
 		step::plus();
 
 		$txt_text = "`[". step::get('learn_categoryText'). "]` ";
-		$txt_text = "کارت ".step::get('tryCounter')." از ". self::$maxCard;
-		$txt_text .= $card_front;
+		$txt_text .= "کارت ".step::get('tryCounter')." از ". self::$maxCard;
+		$txt_text .= "\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
