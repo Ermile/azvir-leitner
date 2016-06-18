@@ -296,7 +296,7 @@ class step_learn
 	public static function step6($_item = null)
 	{
 		// go to next step
-		// step::plus();
+		step::plus();
 		$result_try =
 		[
 			'total'   => step::get('tryCounter')-1,
