@@ -428,39 +428,47 @@ class step_learn
 
 	private static function calcPercentage($_list, $_result = false)
 	{
-		$txt   = "";
+		$txt_shapes = "";
+		$txt_result = "";
 		$total = array_sum($_list);
 		foreach ($_list as $key => $value)
 		{
-			$shape = '';
+			$shape           = '';
+			$key_new         = $key.'P';
+			$_list[$key_new] = $value * 100 / $total;
+			$_list[$key_new] = round($_list[$key_new], -1);
+			$shapeCounter    = $_list[$key_new] / 10;
 			switch ($key)
 			{
 				case 'true':
 				case 'success':
-					$shape = "⚫️";
+					$shape      = "⚫️";
+					$txt_result .= $shape. " ". T_('Success')." $value (". $_list[$key_new]. "%)\n";
 					break;
 
 				case 'false':
 				case 'fail':
-					$shape = "🔴";
+					$shape      = "🔴";
+					$txt_result .= $shape. " ". T_('Fail')." $value (". $_list[$key_new]. "%)\n";
 					break;
 
 				case 'skip':
-					$shape = "⚪️";
+					$shape      = "⚪️";
+					$txt_result .= $shape. " ". T_('Skip')." $value (". $_list[$key_new]. "%)\n";
 					break;
 			}
-			$key          = $key.'P';
-			$_list[$key]  = $value * 100 / $total;
-			$_list[$key]  = round($_list[$key], -1);
-			$shapeCounter = $_list[$key] / 10;
-			$txt          .= str_repeat($shape, $shapeCounter);
+			$txt_shapes  .= str_repeat($shape, $shapeCounter);
 		}
 
 		if($_result === 'array')
 		{
 			return $_list;
 		}
-		return $txt;
+		if($_result === 'all')
+		{
+			return $txt_shapes. "\n\n". $txt_result;
+		}
+		return $txt_shapes;
 	}
 
 	public static function showSummary()
@@ -472,7 +480,8 @@ class step_learn
 		$list = \lib\db\cardusages::cardAnswerSummary(bot::$user_id, step::get('learn_category'));
 		$txt .= "دفعات تلاش ". array_sum($list). "\n";
 		$txt .= "آمار تلاش ". "\n";
-		$txt .= self::calcPercentage($list);
+		$txt .= self::calcPercentage($list, 'all');
+		$txt .= "\nمحصولی از امایل". "\n";
 
 
 		return $txt;
