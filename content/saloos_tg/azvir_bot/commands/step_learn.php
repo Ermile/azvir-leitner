@@ -140,7 +140,7 @@ class step_learn
 		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
 		// get limiter value
 		$limiter  = step::get('limiter');
-		if($limiter > self::$maxCard)
+		if($limiter >= self::$maxCard)
 		{
 			step::goingto(6);
 			return self::step6();
@@ -156,9 +156,10 @@ class step_learn
 
 		// go to next step
 		step::plus();
-
+		$limiter = $limiter +1;
 		$txt_text = "`[". step::get('learn_categoryText'). "]` ";
-		$txt_text .= "کارت ".step::get('tryCounter')." از ". self::$maxCard;
+		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
+		// if has skip show in list
 		$txt_text .= "\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
@@ -295,7 +296,7 @@ class step_learn
 	public static function step6($_item = null)
 	{
 		// go to next step
-		step::plus();
+		// step::plus();
 		$result_try =
 		[
 			'total'   => step::get('tryCounter')-1,
@@ -329,7 +330,7 @@ class step_learn
 					$shape = '';
 					break;
 			}
-			$txt_text = str_repeat($shape, $shapeCounter);
+			$txt_text .= str_repeat($shape, $shapeCounter);
 		}
 		$txt_text .= "\n";
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
