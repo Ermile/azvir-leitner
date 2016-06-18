@@ -297,41 +297,18 @@ class step_learn
 	{
 		// go to next step
 		step::plus();
+		$try_total = step::get('tryCounter')-1;
 		$result_try =
 		[
-			'total'   => step::get('tryCounter')-1,
+			// 'total'   => step::get('tryCounter')-1,
 			'success' => step::get('trySuccess'),
 			'fail'    => step::get('tryFail'),
 			'skip'    => step::get('trySkip'),
 		];
 
 		// create output text
-		$txt_text = "وضعیت بازبینی *". $result_try['total']. "* کارت این دوره\n\n";
-		foreach ($result_try as $key => $value)
-		{
-			$result_try[$key.'P'] = $value * 100 / $result_try['total'];
-			$result_try[$key.'P'] = round($result_try[$key.'P'], 2);
-			$shapeCounter         = $result_try[$key.'P'] / 10;
-			switch ($key)
-			{
-				case 'success':
-					$shape = "⚫️";
-					break;
-
-				case 'fail':
-					$shape = "🔴";
-					break;
-
-				case 'skip':
-					$shape = "⚪️";
-					break;
-
-				default:
-					$shape = '';
-					break;
-			}
-			$txt_text .= str_repeat($shape, $shapeCounter);
-		}
+		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n\n";
+		$txt_text .= self::calcPercentage($result_try, $try_total);
 		$txt_text .= "\n";
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
@@ -447,12 +424,46 @@ class step_learn
 	}
 
 
+	private static function calcPercentage($_list, $_total, $_onlyArray = false)
+	{
+		$txt = "";
+		foreach ($_list as $key => $value)
+		{
+			$shape = '';
+			switch ($key)
+			{
+				case 'success':
+					$shape = "⚫️";
+					break;
+
+				case 'fail':
+					$shape = "🔴";
+					break;
+
+				case 'skip':
+					$shape = "⚪️";
+					break;
+			}
+			$key          = $key.'P';
+			$_list[$key]  = $value * 100 / $_total;
+			$_list[$key]  = round($_list[$key], -1);
+			$shapeCounter = $_list[$key] / 10;
+			$txt          .= str_repeat($shape, $shapeCounter);
+		}
+
+		if($_onlyArray)
+		{
+			return $_list;
+		}
+		return $txt;
+	}
+
 	public static function showSummary()
 	{
-		$txt = "خلاصه آمار دسته‌ی `[". step::get('learn_categoryText'). "]`\n";
-		$txt .= "کل کارت: ";
-		$txt .= "دفعات تلاش: ";
-		$txt .= "آمار تلاش: ";
+		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
+		$txt .= "کل کارت: ". "\n";
+		$txt .= "دفعات تلاش: ". "\n";
+		$txt .= "آمار تلاش: ". "\n";
 
 
 		return $txt;
