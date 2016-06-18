@@ -6055,16 +6055,15 @@ a:before, a:after {
 #headerwrap h1 {
 	color: #ffffff;
 	font-size: 50px;
-	font-weight: 400;
+	font-weight: 700;
 	text-align: center;
-	letter-spacing: 3px;
+	
 }
 #headerwrap p {
 	color: #fff;
 	font-size: 22px;
 	font-weight: 300;
 	text-align: center;
-	letter-spacing: 1px;
 }
 #headerwrap .icon {
 	color: #ffffff;
@@ -6076,7 +6075,7 @@ a:before, a:after {
 	text-shadow: 0px 20px 7px #3da8ae;
 }
 #headerwrap .btn {
-	font-weight: 500;
+	font-weight: 700;
 	font-size: 20px;
 	margin: 50px 0;
 	background-color: #ffbf00;
@@ -6363,3 +6362,6 @@ body .header {
 	line-height: 38px;
 }
 }
+
+
+
