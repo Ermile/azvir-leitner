@@ -521,7 +521,10 @@ private function transtext()
 	echo T_("Register Address");                                                      // Line 376 Seperate
 	echo T_("By completing your profile, help us to present better service.");        // Line 377 Seperate
 	echo T_("We will thank you for this.");                                           // Line 378 Seperate
-	echo T_(" ");                                                                     // Line 381 Seperate
+	echo T_("Your phone number registered successfully;)");                           // Line 380 Seperate
+	echo T_("We dont need another users contact:?)");                                 // Line 381 Seperate
+	echo T_("We need mobile number!");                                                // Line 382 Seperate
+	echo T_(" ");                                                                     // Line 386 Seperate
 
 	//-----------------------------------------saloos-addons\includes\macro\forms.html
 	echo T_("Select");                                                                // Line 80

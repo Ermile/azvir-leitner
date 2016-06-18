@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2016-06-17 17:38+0430\n"
-"PO-Revision-Date: 2016-06-17 17:38+0430\n"
+"POT-Creation-Date: 2016-06-18 14:35+0430\n"
+"PO-Revision-Date: 2016-06-18 14:40+0430\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile <J.Evazzadeh@gmail.com>\n"
 "Language: fa_IR\n"
@@ -48,7 +48,7 @@ msgid "disable"
 msgstr "غیرفعال"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:10
-#: ../../../.././includes/cls/database/azvir/translation.php:46
+#: ../../../.././includes/cls/database/azvir/translation.php:59
 msgid "expire"
 msgstr "منقضی شده"
 
@@ -69,65 +69,66 @@ msgid "id"
 msgstr "کد"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:15
-#: ../../../.././includes/cls/database/azvir/translation.php:163
+#: ../../../.././includes/cls/database/azvir/translation.php:177
 msgid "user"
 msgstr "کاربر"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:16
-#: ../../../.././includes/cls/database/azvir/translation.php:128
-#: ../../../.././includes/cls/database/azvir/translation.php:140
+#: ../../../.././includes/cls/database/azvir/translation.php:142
+#: ../../../.././includes/cls/database/azvir/translation.php:154
 #: ../../../.././includes/mvc/model.php:51
 msgid "type"
 msgstr "نوع"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:17
-#: ../../../.././includes/cls/database/azvir/translation.php:73
-#: ../../../.././includes/cls/database/azvir/translation.php:94
-#: ../../../.././includes/cls/database/azvir/translation.php:123
-#: ../../../.././includes/cls/database/azvir/translation.php:141
+#: ../../../.././includes/cls/database/azvir/translation.php:87
+#: ../../../.././includes/cls/database/azvir/translation.php:108
+#: ../../../.././includes/cls/database/azvir/translation.php:137
+#: ../../../.././includes/cls/database/azvir/translation.php:155
 #: ../../../.././includes/languages/trans_addons.php:407
 msgid "title"
 msgstr "عنوان"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:18
-#: ../../../.././includes/cls/database/azvir/translation.php:124
-#: ../../../.././includes/cls/database/azvir/translation.php:142
+#: ../../../.././includes/cls/database/azvir/translation.php:138
+#: ../../../.././includes/cls/database/azvir/translation.php:156
 msgid "slug"
 msgstr "نامک"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:19
-#: ../../../.././includes/cls/database/azvir/translation.php:74
-#: ../../../.././includes/cls/database/azvir/translation.php:144
+#: ../../../.././includes/cls/database/azvir/translation.php:88
+#: ../../../.././includes/cls/database/azvir/translation.php:158
 msgid "desc"
 msgstr "توضیح"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:20
-#: ../../../.././includes/cls/database/azvir/translation.php:59
-#: ../../../.././includes/cls/database/azvir/translation.php:97
-#: ../../../.././includes/cls/database/azvir/translation.php:125
-#: ../../../.././includes/cls/database/azvir/translation.php:143
+#: ../../../.././includes/cls/database/azvir/translation.php:73
+#: ../../../.././includes/cls/database/azvir/translation.php:111
+#: ../../../.././includes/cls/database/azvir/translation.php:139
+#: ../../../.././includes/cls/database/azvir/translation.php:157
 msgid "url"
 msgstr "نشانی اینترنتی"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:21
-#: ../../../.././includes/cls/database/azvir/translation.php:63
-#: ../../../.././includes/cls/database/azvir/translation.php:133
-#: ../../../.././includes/cls/database/azvir/translation.php:146
+#: ../../../.././includes/cls/database/azvir/translation.php:77
+#: ../../../.././includes/cls/database/azvir/translation.php:147
+#: ../../../.././includes/cls/database/azvir/translation.php:160
 msgid "parent"
 msgstr "والد"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:22
-#: ../../../.././includes/cls/database/azvir/translation.php:130
+#: ../../../.././includes/cls/database/azvir/translation.php:144
 msgid "count"
 msgstr "تعداد"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:23
-#: ../../../.././includes/cls/database/azvir/translation.php:62
-#: ../../../.././includes/cls/database/azvir/translation.php:85
-#: ../../../.././includes/cls/database/azvir/translation.php:98
-#: ../../../.././includes/cls/database/azvir/translation.php:107
-#: ../../../.././includes/cls/database/azvir/translation.php:132
-#: ../../../.././includes/cls/database/azvir/translation.php:174
+#: ../../../.././includes/cls/database/azvir/translation.php:61
+#: ../../../.././includes/cls/database/azvir/translation.php:76
+#: ../../../.././includes/cls/database/azvir/translation.php:99
+#: ../../../.././includes/cls/database/azvir/translation.php:112
+#: ../../../.././includes/cls/database/azvir/translation.php:121
+#: ../../../.././includes/cls/database/azvir/translation.php:146
+#: ../../../.././includes/cls/database/azvir/translation.php:188
 msgid "status"
 msgstr "وضعیت"
 
@@ -140,7 +141,7 @@ msgid "cardlists"
 msgstr "لیست کارت‌ها"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:28
-#: ../../../.././includes/cls/database/azvir/translation.php:42
+#: ../../../.././includes/cls/database/azvir/translation.php:53
 msgid "cardlist"
 msgstr "لیست کارت‌ها"
 
@@ -162,308 +163,340 @@ msgid "back"
 msgstr "پشت"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:37
-#: ../../../.././includes/cls/database/azvir/translation.php:86
-#: ../../../.././includes/cls/database/azvir/translation.php:176
+#: ../../../.././includes/cls/database/azvir/translation.php:100
+#: ../../../.././includes/cls/database/azvir/translation.php:190
 msgid "createdate"
 msgstr "تاریخ ایجاد"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:40
-msgid "cardusages"
-msgstr "کارت‌های استفاده‌شده"
+msgid "cardusagedetails"
+msgstr "جزئیات استفاده کارت‌ها"
 
 #: ../../../.././includes/cls/database/azvir/translation.php:41
+msgid "cardusagedetail"
+msgstr "جزئیات استفاده کارت‌ها"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:42
+msgid "true"
+msgstr "درست"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:43
+msgid "false"
+msgstr "نادرست"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:44
+msgid "skip"
+msgstr "پرش"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:45
+#: ../../../.././includes/cls/database/azvir/translation.php:52
 msgid "cardusage"
 msgstr "کارت‌های استفاده‌شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:43
+#: ../../../.././includes/cls/database/azvir/translation.php:46
+#: ../../../.././includes/cls/database/azvir/translation.php:54
+msgid "answer"
+msgstr "پاسخ"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:47
+#: ../../../.././includes/cls/database/azvir/translation.php:58
+msgid "spendtime"
+msgstr "زمان صرف‌شده"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:48
+#: ../../../.././includes/cls/database/azvir/translation.php:55
 msgid "deck"
 msgstr "دسته"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:44
+#: ../../../.././includes/cls/database/azvir/translation.php:51
+msgid "cardusages"
+msgstr "کارت‌های استفاده‌شده"
+
+#: ../../../.././includes/cls/database/azvir/translation.php:56
 msgid "try"
 msgstr "دفعات تلاش"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:45
+#: ../../../.././includes/cls/database/azvir/translation.php:57
 msgid "trysuccess"
 msgstr "دفعات تلاش موفقیت آمیز"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:47
+#: ../../../.././includes/cls/database/azvir/translation.php:60
 msgid "lasttry"
 msgstr "آخرین تلاش"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:50
-#: ../../../.././includes/cls/database/azvir/translation.php:155
+#: ../../../.././includes/cls/database/azvir/translation.php:64
+#: ../../../.././includes/cls/database/azvir/translation.php:169
 msgid "comments"
 msgstr "دیدگاه ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:51
-#: ../../../.././includes/cls/database/azvir/translation.php:129
+#: ../../../.././includes/cls/database/azvir/translation.php:65
+#: ../../../.././includes/cls/database/azvir/translation.php:143
 msgid "comment"
 msgstr "دیدگاه"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:52
+#: ../../../.././includes/cls/database/azvir/translation.php:66
 msgid "approved"
 msgstr "تایید شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:53
+#: ../../../.././includes/cls/database/azvir/translation.php:67
 msgid "unapproved"
 msgstr "تایید نشده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:54
+#: ../../../.././includes/cls/database/azvir/translation.php:68
 msgid "spam"
 msgstr "هرزنامه"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:55
+#: ../../../.././includes/cls/database/azvir/translation.php:69
 msgid "deleted"
 msgstr "حذف شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:56
-#: ../../../.././includes/cls/database/azvir/translation.php:116
+#: ../../../.././includes/cls/database/azvir/translation.php:70
+#: ../../../.././includes/cls/database/azvir/translation.php:130
 #: ../../../.././includes/languages/trans_addon.php:184
 #: ../../../.././includes/languages/trans_addons.php:336
 msgid "post"
 msgstr "نوشته ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:57
+#: ../../../.././includes/cls/database/azvir/translation.php:71
 msgid "author"
 msgstr "کاربر"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:58
-#: ../../../.././includes/cls/database/azvir/translation.php:170
+#: ../../../.././includes/cls/database/azvir/translation.php:72
+#: ../../../.././includes/cls/database/azvir/translation.php:184
 msgid "email"
 msgstr "رایانامه"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:60
-#: ../../../.././includes/cls/database/azvir/translation.php:95
-#: ../../../.././includes/cls/database/azvir/translation.php:126
+#: ../../../.././includes/cls/database/azvir/translation.php:74
+#: ../../../.././includes/cls/database/azvir/translation.php:109
+#: ../../../.././includes/cls/database/azvir/translation.php:140
 msgid "content"
 msgstr "محتوا"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:61
 #: ../../../.././includes/cls/database/azvir/translation.php:75
-#: ../../../.././includes/cls/database/azvir/translation.php:84
-#: ../../../.././includes/cls/database/azvir/translation.php:96
-#: ../../../.././includes/cls/database/azvir/translation.php:106
-#: ../../../.././includes/cls/database/azvir/translation.php:127
-#: ../../../.././includes/cls/database/azvir/translation.php:145
-#: ../../../.././includes/cls/database/azvir/translation.php:173
+#: ../../../.././includes/cls/database/azvir/translation.php:89
+#: ../../../.././includes/cls/database/azvir/translation.php:98
+#: ../../../.././includes/cls/database/azvir/translation.php:110
+#: ../../../.././includes/cls/database/azvir/translation.php:120
+#: ../../../.././includes/cls/database/azvir/translation.php:141
+#: ../../../.././includes/cls/database/azvir/translation.php:159
+#: ../../../.././includes/cls/database/azvir/translation.php:187
 msgid "meta"
 msgstr "متا"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:64
+#: ../../../.././includes/cls/database/azvir/translation.php:78
 #: ../../../.././includes/languages/trans_addons.php:348
 msgid "visitor"
 msgstr "بازدیدکننده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:67
+#: ../../../.././includes/cls/database/azvir/translation.php:81
 msgid "logitems"
 msgstr "مواردلاگ‌ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:68
 #: ../../../.././includes/cls/database/azvir/translation.php:82
+#: ../../../.././includes/cls/database/azvir/translation.php:96
 msgid "logitem"
 msgstr "موارد لاگ"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:69
+#: ../../../.././includes/cls/database/azvir/translation.php:83
 msgid "critical"
 msgstr "بحرانی"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:70
+#: ../../../.././includes/cls/database/azvir/translation.php:84
 msgid "high"
 msgstr "بالا"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:71
+#: ../../../.././includes/cls/database/azvir/translation.php:85
 msgid "medium"
 msgstr "متوسط"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:72
+#: ../../../.././includes/cls/database/azvir/translation.php:86
 msgid "low"
 msgstr "کم"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:76
+#: ../../../.././includes/cls/database/azvir/translation.php:90
 msgid "priority"
 msgstr "اولویت"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:79
+#: ../../../.././includes/cls/database/azvir/translation.php:93
 msgid "logs"
 msgstr "لاگ‌ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:80
+#: ../../../.././includes/cls/database/azvir/translation.php:94
 msgid "log"
 msgstr "لاگ"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:81
+#: ../../../.././includes/cls/database/azvir/translation.php:95
 msgid "deliver"
 msgstr "تحویل‌داده‌شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:83
+#: ../../../.././includes/cls/database/azvir/translation.php:97
 msgid "data"
 msgstr "داده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:89
+#: ../../../.././includes/cls/database/azvir/translation.php:103
 msgid "notifications"
 msgstr "آگاه سازی ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:90
+#: ../../../.././includes/cls/database/azvir/translation.php:104
 msgid "notification"
 msgstr "آگاه سازی"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:91
+#: ../../../.././includes/cls/database/azvir/translation.php:105
 msgid "read"
 msgstr "خوانده شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:92
+#: ../../../.././includes/cls/database/azvir/translation.php:106
 msgid "unread"
 msgstr "خوانده نشده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:93
+#: ../../../.././includes/cls/database/azvir/translation.php:107
 msgid "user sender"
 msgstr "کاربر فرستنده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:101
+#: ../../../.././includes/cls/database/azvir/translation.php:115
 msgid "options"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:102
+#: ../../../.././includes/cls/database/azvir/translation.php:116
 #: ../../../.././includes/languages/trans_addon.php:188
 #: ../../../.././includes/languages/trans_addons.php:344
 msgid "option"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:103
+#: ../../../.././includes/cls/database/azvir/translation.php:117
 msgid "cat"
 msgstr "دسته"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:104
+#: ../../../.././includes/cls/database/azvir/translation.php:118
 msgid "key"
 msgstr "کلید"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:105
+#: ../../../.././includes/cls/database/azvir/translation.php:119
 msgid "value"
 msgstr "مقدار"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:110
+#: ../../../.././includes/cls/database/azvir/translation.php:124
 msgid "papers"
 msgstr "اسناد"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:111
+#: ../../../.././includes/cls/database/azvir/translation.php:125
 msgid "paper"
 msgstr "سند"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:112
+#: ../../../.././includes/cls/database/azvir/translation.php:126
 msgid "text"
 msgstr "متن"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:115
-#: ../../../.././includes/cls/database/azvir/translation.php:151
+#: ../../../.././includes/cls/database/azvir/translation.php:129
+#: ../../../.././includes/cls/database/azvir/translation.php:165
 msgid "posts"
 msgstr "نوشته ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:117
+#: ../../../.././includes/cls/database/azvir/translation.php:131
 msgid "open"
 msgstr "باز"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:118
+#: ../../../.././includes/cls/database/azvir/translation.php:132
 msgid "closed"
 msgstr "بسته"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:119
+#: ../../../.././includes/cls/database/azvir/translation.php:133
 msgid "publish"
 msgstr "زمان انتشار"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:120
+#: ../../../.././includes/cls/database/azvir/translation.php:134
 msgid "draft"
 msgstr "پیش نویس"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:121
+#: ../../../.././includes/cls/database/azvir/translation.php:135
 msgid "schedule"
 msgstr "زمان بندی شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:122
-#: ../../../.././includes/cls/database/azvir/translation.php:139
+#: ../../../.././includes/cls/database/azvir/translation.php:136
+#: ../../../.././includes/cls/database/azvir/translation.php:153
 msgid "language"
 msgstr "زبان"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:131
-#: ../../../.././includes/cls/database/azvir/translation.php:159
+#: ../../../.././includes/cls/database/azvir/translation.php:145
+#: ../../../.././includes/cls/database/azvir/translation.php:173
 msgid "order"
 msgstr "ترتیب"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:134
+#: ../../../.././includes/cls/database/azvir/translation.php:148
 msgid "publishdate"
 msgstr "زمان انتشار"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:137
+#: ../../../.././includes/cls/database/azvir/translation.php:151
 msgid "terms"
 msgstr "عبارت ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:138
-#: ../../../.././includes/cls/database/azvir/translation.php:156
+#: ../../../.././includes/cls/database/azvir/translation.php:152
+#: ../../../.././includes/cls/database/azvir/translation.php:170
 msgid "term"
 msgstr "عبارت"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:149
+#: ../../../.././includes/cls/database/azvir/translation.php:163
 msgid "termusages"
 msgstr "موارد استفاده عبارت"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:150
-#: ../../../.././includes/cls/database/azvir/translation.php:157
+#: ../../../.././includes/cls/database/azvir/translation.php:164
+#: ../../../.././includes/cls/database/azvir/translation.php:171
 msgid "termusage"
 msgstr "محل استفاده عبارت"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:152
+#: ../../../.././includes/cls/database/azvir/translation.php:166
 msgid "products"
 msgstr "کالاها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:153
+#: ../../../.././includes/cls/database/azvir/translation.php:167
 msgid "attachments"
 msgstr "ضمیمه ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:154
+#: ../../../.././includes/cls/database/azvir/translation.php:168
 msgid "files"
 msgstr "فایل ها"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:158
+#: ../../../.././includes/cls/database/azvir/translation.php:172
 msgid "foreign"
 msgstr "کلیدخارجی"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:162
+#: ../../../.././includes/cls/database/azvir/translation.php:176
 msgid "users"
 msgstr "کاربران"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:164
+#: ../../../.././includes/cls/database/azvir/translation.php:178
 msgid "active"
 msgstr "فعال"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:165
+#: ../../../.././includes/cls/database/azvir/translation.php:179
 msgid "awaiting"
 msgstr "در حال انتظار"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:166
+#: ../../../.././includes/cls/database/azvir/translation.php:180
 msgid "deactive"
 msgstr "غیرفعال"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:167
+#: ../../../.././includes/cls/database/azvir/translation.php:181
 msgid "removed"
 msgstr "حذف شده"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:168
+#: ../../../.././includes/cls/database/azvir/translation.php:182
 msgid "filter"
 msgstr "فیلتر"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:169
+#: ../../../.././includes/cls/database/azvir/translation.php:183
 msgid "mobile"
 msgstr "موبایل"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:171
+#: ../../../.././includes/cls/database/azvir/translation.php:185
 msgid "pass"
 msgstr "کلمه عبور"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:172
+#: ../../../.././includes/cls/database/azvir/translation.php:186
 msgid "displayname"
 msgstr "نام برای نمایش عمومی"
 
-#: ../../../.././includes/cls/database/azvir/translation.php:175
+#: ../../../.././includes/cls/database/azvir/translation.php:189
 msgid "permission"
 msgstr "سطح دسترسی"
 
@@ -1462,7 +1495,7 @@ msgid "edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/trans_addon.php:218
-#: ../../../.././includes/languages/trans_addons.php:527
+#: ../../../.././includes/languages/trans_addons.php:530
 #: ../../../.././includes/languages/twig_translation.php:9
 msgid "Select"
 msgstr "انتخاب"
@@ -2709,6 +2742,18 @@ msgid "We will thank you for this."
 msgstr "ما از این اقدام شما تشکر می‌کنیم."
 
 #: ../../../.././includes/languages/trans_addons.php:524
+msgid "Your phone number registered successfully;)"
+msgstr "شماره موبایل شما با موفقیت ثبت شد;)"
+
+#: ../../../.././includes/languages/trans_addons.php:525
+msgid "We dont need another users contact:?)"
+msgstr "ما به مخاطب سایر کاربران نیاز نداریم:؟)"
+
+#: ../../../.././includes/languages/trans_addons.php:526
+msgid "We need mobile number!"
+msgstr "ما به شماره موبایل نیاز داریم!"
+
+#: ../../../.././includes/languages/trans_addons.php:527
 msgid " "
 msgstr " "
 

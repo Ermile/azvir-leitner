@@ -182,6 +182,7 @@ class step_learn
 	 */
 	public static function step4($_txtReaction)
 	{
+		step::plus(1, 'tryCounter');
 		$result = null;
 		// if user press next goto step 3 for
 		switch ($_txtReaction)
@@ -190,6 +191,7 @@ class step_learn
 			case 'فعلا رد کن':
 			case 'skip':
 			case '/skip':
+				step::plus(1, 'trySkip');
 				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
 				step::goingto(3);
 				return self::step3();
@@ -250,6 +252,7 @@ class step_learn
 			case '👍':
 			case 'yes':
 			case '/yes':
+				step::plus(1, 'trySuccess');
 				// save answer true
 				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'true');
 				break;
@@ -260,6 +263,7 @@ class step_learn
 			case '👎':
 			case 'no':
 			case '/no':
+				step::plus(1, 'tryFail');
 				// save answer false
 				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'false');
 				break;
@@ -292,10 +296,10 @@ class step_learn
 		step::plus();
 
 		// create output text
-		$txt_text = "وضعیت این دوره شما\n\n";
-		$txt_text .= "پاس شده: \n";
-		$txt_text .= "ناموفق: \n";
-		$txt_text .= "یادگیری مجدد: \n";
+		$txt_text = "وضعیت بازبینی *". step::get('tryCounter'). "* کارت این دوره\n\n";
+		$txt_text .= "*پاس شده: ". step::get('trySuccess'). "*\n";
+		$txt_text .= "ناموفق: ". step::get('tryFail'). "\n";
+		$txt_text .= "نادیده گرفته‌شده: ". step::get('trySkip')."\n";
 		$txt_text .= "_name_ محصولی از ارمایل\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
 
