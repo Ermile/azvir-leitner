@@ -88,5 +88,17 @@ class cardcats
 		// return last insert id
 		return $result;
 	}
+
+
+	public static function cardCount($_cat_id)
+	{
+		if(!is_numeric($_cat_id))
+		{
+			return false;
+		}
+		$qry = "SELECT count(*) as total from cardlists WHERE cardcat_id = $_cat_id;";
+		$result = \lib\db::get($qry, 'total', true);
+		return $result;
+	}
 }
 ?>

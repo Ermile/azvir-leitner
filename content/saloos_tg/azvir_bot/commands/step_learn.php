@@ -308,7 +308,7 @@ class step_learn
 
 		// create output text
 		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n\n";
-		$txt_text .= self::calcPercentage($result_try, $try_total);
+		$txt_text .= self::calcPercentage($result_try);
 		$txt_text .= "\n";
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
@@ -424,9 +424,10 @@ class step_learn
 	}
 
 
-	private static function calcPercentage($_list, $_total, $_onlyArray = false)
+	private static function calcPercentage($_list, $_onlyArray = false)
 	{
-		$txt = "";
+		$txt   = "";
+		$total = array_sum($_list);
 		foreach ($_list as $key => $value)
 		{
 			$shape = '';
@@ -445,7 +446,7 @@ class step_learn
 					break;
 			}
 			$key          = $key.'P';
-			$_list[$key]  = $value * 100 / $_total;
+			$_list[$key]  = $value * 100 / $total;
 			$_list[$key]  = round($_list[$key], -1);
 			$shapeCounter = $_list[$key] / 10;
 			$txt          .= str_repeat($shape, $shapeCounter);
@@ -461,9 +462,13 @@ class step_learn
 	public static function showSummary()
 	{
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
-		$txt .= "کل کارت: ". "\n";
+
+
+		$txt .= "کل کارت: ". \lib\db\cardcats::catCount(step::get('learn_category')). "\n";
 		$txt .= "دفعات تلاش: ". "\n";
 		$txt .= "آمار تلاش: ". "\n";
+		$list = [];
+		$txt .= self::calcPercentage($list);
 
 
 		return $txt;
