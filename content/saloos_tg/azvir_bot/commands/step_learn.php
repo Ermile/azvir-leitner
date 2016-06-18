@@ -191,6 +191,7 @@ class step_learn
 			case 'فعلا رد کن':
 			case 'skip':
 			case '/skip':
+				bot::$skipText = false;
 				step::plus(1, 'trySkip');
 				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
 				step::goingto(3);
@@ -341,6 +342,7 @@ class step_learn
 
 	public static function step7($_decision)
 	{
+		bot::$skipText = false;
 		switch ($_decision)
 		{
 			case 'شروع دوباره':
@@ -424,7 +426,7 @@ class step_learn
 	}
 
 
-	private static function calcPercentage($_list, $_onlyArray = false)
+	private static function calcPercentage($_list, $_result = false)
 	{
 		$txt   = "";
 		$total = array_sum($_list);
@@ -433,10 +435,12 @@ class step_learn
 			$shape = '';
 			switch ($key)
 			{
+				case 'true':
 				case 'success':
 					$shape = "⚫️";
 					break;
 
+				case 'false':
 				case 'fail':
 					$shape = "🔴";
 					break;
@@ -452,7 +456,7 @@ class step_learn
 			$txt          .= str_repeat($shape, $shapeCounter);
 		}
 
-		if($_onlyArray)
+		if($_result === 'array')
 		{
 			return $_list;
 		}
@@ -464,10 +468,10 @@ class step_learn
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 
 
-		$txt .= "کل کارت: ". \lib\db\cardcats::catCount(step::get('learn_category')). "\n";
-		$txt .= "دفعات تلاش: ". "\n";
-		$txt .= "آمار تلاش: ". "\n";
-		$list = [];
+		$txt .= "کل کارت: ". \lib\db\cardcats::cardCount(step::get('learn_category')). "\n";
+		$list = \lib\db\cardusages::cardAnswerSummary(bot::$user_id, step::get('learn_category'));
+		$txt .= "دفعات تلاش ". array_sum($list). "\n";
+		$txt .= "آمار تلاش ". "\n";
 		$txt .= self::calcPercentage($list);
 
 

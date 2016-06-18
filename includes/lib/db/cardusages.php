@@ -94,5 +94,27 @@ class cardusages
 
 		return $answerId;
 	}
+
+	public static function cardAnswerSummary($_user_id, $_cat_id)
+	{
+		if(!is_numeric($_cat_id))
+		{
+			return false;
+		}
+		$qry =
+			"SELECT
+				count(*) as total,
+				cardusages.cardusage_answer as type
+			FROM cardusages
+			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
+			WHERE
+				user_id = $_user_id AND
+				cardlists.cardcat_id = $_cat_id
+			GROUP BY type
+		";
+		$result = \lib\db::get($qry, ['type', 'total']);
+		return $result;
+	}
+
 }
 ?>
