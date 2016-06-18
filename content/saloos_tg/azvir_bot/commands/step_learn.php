@@ -378,8 +378,9 @@ class step_learn
 			case 'بررسی وضعیت':
 			case 'review':
 			case '/review':
-				$txt_text = "نمایش وضعیت طبقه‌ها\n\n";
-				$txt_text .= "...\n\n";
+				// $txt_text = "نمایش وضعیت طبقه‌ها\n\n";
+				// $txt_text .= "...\n\n";
+				$txt_text = self::showSummary();
 				$result   =
 				[
 					'text'         => $txt_text,
@@ -443,6 +444,18 @@ class step_learn
 		];
 		// return menu
 		return $result;
+	}
+
+
+	public static function showSummary()
+	{
+		$txt = "خلاصه آمار دسته‌ی `[". step::get('learn_categoryText'). "]`\n";
+		$txt .= "کل کارت: ";
+		$txt .= "دفعات تلاش: ";
+		$txt .= "آمار تلاش: ";
+
+
+		return $txt;
 	}
 }
 ?>
