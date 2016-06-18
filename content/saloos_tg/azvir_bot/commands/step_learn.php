@@ -132,7 +132,8 @@ class step_learn
 		{
 			return false;
 		}
-
+		// add try number
+		step::plus(1, 'tryCounter');
 		// get last card details
 		$user_id  = bot::$user_id;
 		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
@@ -155,7 +156,7 @@ class step_learn
 		// go to next step
 		step::plus();
 
-		$txt_text = "کارت $limiter\n".$card_front;
+		$txt_text = "کارت ".step::get('tryCounter')." [`". step::get('learn_categoryText'). "`]\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =
@@ -178,7 +179,6 @@ class step_learn
 	 */
 	public static function step4($_txtReaction)
 	{
-		step::plus(1, 'tryCounter');
 		$result = null;
 		// if user press next goto step 3 for
 		switch ($_txtReaction)
