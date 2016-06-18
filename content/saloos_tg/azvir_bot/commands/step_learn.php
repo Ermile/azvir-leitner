@@ -133,10 +133,6 @@ class step_learn
 			return false;
 		}
 
-		// increase limiter
-		step::plus(1, 'limiter');
-
-
 		// get last card details
 		$user_id  = bot::$user_id;
 		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
@@ -208,6 +204,9 @@ class step_learn
 			case '/show answer':
 			case 'show':
 			case '/show':
+				// increase limiter
+				step::plus(1, 'limiter');
+				// go to next step
 				step::plus();
 				$card_back = step::get('learn_card_back');
 				// $txt_text  = "آیا این کارت را به خاطر داشتید؟\n". $card_back;
