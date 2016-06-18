@@ -1,10 +1,10 @@
 <?php
 namespace content\saloos_tg\azvir_bot\commands;
 // use telegram class as bot
-use \lib\utility\telegram\tg as bot;
-use \lib\utility\telegram\step;
-use \lib\utility\telegram\keyboard;
-use \lib\utility\telegram\commands;
+use \lib\telegram\tg as bot;
+use \lib\telegram\step;
+use \lib\telegram\keyboard;
+use \lib\telegram\commands;
 
 class step_learn
 {
