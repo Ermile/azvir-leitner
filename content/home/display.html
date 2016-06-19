@@ -19,9 +19,12 @@
     <a class="navbar-brand" href="#home">{{site.title}}</a> </div>
    <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
-     <li><a href="#home" class="smoothScroll">{%trans "Home"%}</a></li>
+     <li> <a href="#home" class="smoothScroll">{%trans "Home"%}</a></li>
      <li> <a href="#about" class="smoothScroll">{%trans "About"%}</a></li>
      <li> <a href="#services" class="smoothScroll">{%trans "Features"%}</a></li>
+{%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
+     <li> <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct class="langlist">{{lang}}</a></li>
+{%endfor%}
     </ul>
    </div>
    <!--/.nav-collapse -->
