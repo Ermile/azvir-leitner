@@ -2,39 +2,21 @@
 private function transtext()
 {
 
-	// ------------------------------------------------------------ Table cardcats
-	echo T_("cardcats");            // Table cardcats
-	echo T_("cardcat");             // cardcat
-	echo T_("enable");              // Enum enable
-	echo T_("disable");             // Enum disable
-	echo T_("expire");              // Enum expire
-	echo T_("public");              // Enum public
-	echo T_("private");             // Enum private
-	echo T_("protected");           // Enum protected
-	echo T_("id");                  // id
-	echo T_("user");                // user_id
-	echo T_("type");                // cardcat_type
-	echo T_("title");               // cardcat_title
-	echo T_("slug");                // cardcat_slug
-	echo T_("desc");                // cardcat_desc
-	echo T_("url");                 // cardcat_url
-	echo T_("parent");              // cardcat_parent
-	echo T_("count");               // cardcat_count
-	echo T_("status");              // cardcat_status
-	echo T_("modified");            // date_modified
-
 	// ------------------------------------------------------------ Table cardlists
 	echo T_("cardlists");           // Table cardlists
 	echo T_("cardlist");            // cardlist
-	echo T_("cardcat");             // cardcat_id
+	echo T_("id");                  // id
+	echo T_("term");                // term_id
 	echo T_("card");                // card_id
 
 	// ------------------------------------------------------------ Table cards
 	echo T_("cards");               // Table cards
 	echo T_("card");                // card
+	echo T_("user");                // user_id
 	echo T_("front");               // card_front
 	echo T_("back");                // card_back
 	echo T_("createdate");          // card_createdate
+	echo T_("modified");            // date_modified
 
 	// ------------------------------------------------------------ Table cardusagedetails
 	echo T_("cardusagedetails");    // Table cardusagedetails
@@ -50,14 +32,17 @@ private function transtext()
 	// ------------------------------------------------------------ Table cardusages
 	echo T_("cardusages");          // Table cardusages
 	echo T_("cardusage");           // cardusage
+	echo T_("enable");              // Enum enable
+	echo T_("disable");             // Enum disable
+	echo T_("expire");              // Enum expire
 	echo T_("cardlist");            // cardlist_id
-	echo T_("answer");              // cardusage_answer
 	echo T_("deck");                // cardusage_deck
 	echo T_("try");                 // cardusage_try
 	echo T_("trysuccess");          // cardusage_trysuccess
 	echo T_("spendtime");           // cardusage_spendtime
 	echo T_("expire");              // cardusage_expire
 	echo T_("lasttry");             // cardusage_lasttry
+	echo T_("meta");                // cardusage_meta
 	echo T_("status");              // cardusage_status
 
 	// ------------------------------------------------------------ Table comments
@@ -167,7 +152,8 @@ private function transtext()
 	echo T_("attachments");         // Enum attachments
 	echo T_("files");               // Enum files
 	echo T_("comments");            // Enum comments
-	echo T_("term");                // term_id
+	echo T_("cards");               // Enum cards
+	echo T_("notifications");       // Enum notifications
 	echo T_("termusage");           // termusage_id
 	echo T_("foreign");             // termusage_foreign
 	echo T_("order");               // termusage_order
