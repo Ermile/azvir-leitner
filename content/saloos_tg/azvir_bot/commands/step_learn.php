@@ -496,7 +496,7 @@ class step_learn
 		$count_total   = \lib\db\cardcats::cardCount($category);
 		$count_remined = 0;
 		$list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
-		if($list)
+		if(!$list)
 		{
 			$list =
 			[
