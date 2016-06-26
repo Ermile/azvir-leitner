@@ -16,27 +16,37 @@ class cardusages
 	 */
 	public static function saveAnswer($_user_id, $_cardlist_id, $_answer, $_spendTime = 'null')
 	{
+		$answer         = null;
+		$new_deck       = 0;
+		$new_try        = 0;
+		$new_trysuccess = 0;
+		$ansDate        = date('Y-m-d H:i:s');
+		// replace with algorithm of expiration
+		$expDate        = date('Y-m-d H:i:s', strtotime("+2 days"));
+
 		$criteria = "user_id = $_user_id AND cardlist_id = $_cardlist_id ";
 		// get last answer of this card for this user if exist
-		// update old record to expire and get last answer
+		// select old values
 		$qry =
-			"UPDATE cardusages SET cardusage_status = 'expire' WHERE $criteria AND cardusage_status = 'enable';
-			SELECT
+			"SELECT
 				id as id,
 				cardusage_deck as deck,
 				cardusage_try as try,
-				cardusage_trysuccess as trysuccess
+				cardusage_trysuccess as trysuccess,
+				cardusage_spendtime as spendtime,
+				cardusage_meta as meta
 			FROM cardusages
 			WHERE $criteria
 			ORDER BY id DESC
 			LIMIT 1
 			";
 		$lastRecord     = \lib\db::get($qry, null, true);
-		$new_deck       = $lastRecord['try'];
-		$new_try        = 1 + $lastRecord['try'];
-		$new_trysuccess = 1 + $lastRecord['trysuccess'];
-		$ansDate        = date('Y-m-d H:i:s');
-		$expDate        = date('Y-m-d H:i:s', strtotime("+2 days"));
+		if($lastRecord)
+		{
+			$new_deck       = $lastRecord['deck'];
+			$new_try        = 1 + $lastRecord['try'];
+			$new_trysuccess = 1 + $lastRecord['trysuccess'];
+		}
 		// set next deck
 		switch ($_answer)
 		{
@@ -50,49 +60,75 @@ class cardusages
 
 			case 'skip':
 			default:
+				$new_deck -= 1;
 				$expDate = date('Y-m-d H:i:s', strtotime("+2 minutes"));
 				// do nothing
 				break;
 		}
-		if(!$new_deck)
+		if(!$new_deck || $new_deck <0)
 		{
 			$new_deck = 0;
 		}
 
 
-		// create query string
-		$qry = "INSERT INTO cardusages
-		(
-			`user_id`,
-			`cardlist_id`,
-			`cardusage_answer`,
-			`cardusage_deck`,
-			`cardusage_try`,
-			`cardusage_trysuccess`,
-			`cardusage_spendtime`,
-			`cardusage_expire`,
-			`cardusage_lasttry`,
-			`cardusage_status`
-		)
-		VALUES
-		(
-			$_user_id,
-			$_cardlist_id,
-			'$_answer',
-			$new_deck,
-			$new_try,
-			$new_trysuccess,
-			$_spendTime,
-			'$expDate',
-			'$ansDate',
-			'enable'
-		)";
-		// run query
-		$result        = \lib\db::query($qry);
-		// return last insert id
-		$answerId    = \lib\db::insert_id();
+		// if has record update it
+		if($lastRecord)
+		{
+			var_dump('update');
+			// create query string
+			$qry = "UPDATE cardusages
+			SET
+				`cardusage_deck` = $new_deck,
+				`cardusage_try` = $new_try,
+				`cardusage_trysuccess` = $new_trysuccess,
+				`cardusage_spendtime` = $_spendTime,
+				`cardusage_expire` = '$expDate',
+				`cardusage_lasttry` = '$ansDate'
+			WHERE $criteria
+			)";
+			var_dump($qry);
+			$result = \lib\db::query($qry);
+			var_dump($result);
+			$answer = true;
+		}
+		else
+		{
+			var_dump('insert');
+			// create query string to insert answer
+			$qry = "INSERT INTO cardusages
+			(
+				`user_id`,
+				`cardlist_id`,
+				`cardusage_deck`,
+				`cardusage_try`,
+				`cardusage_trysuccess`,
+				`cardusage_spendtime`,
+				`cardusage_expire`,
+				`cardusage_lasttry`,
+				`cardusage_meta`,
+				`cardusage_status`
+			)
+			VALUES
+			(
+				$_user_id,
+				$_cardlist_id,
+				$new_deck,
+				$new_try,
+				$new_trysuccess,
+				$_spendTime,
+				'$expDate',
+				'$ansDate',
+				'NULL',
+				'enable'
+			)";
+			// run query
+			$result = \lib\db::query($qry);
+			// return last insert id
+			$answer = \lib\db::insert_id();
+		}
 
-		return $answerId;
+
+		return $answer;
 	}
 
 	public static function cardAnswerSummary($_user_id, $_cat_id)
