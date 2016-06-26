@@ -149,6 +149,9 @@ class step_learn
 		$card_id    = $lastCard['id'];
 		$card_front = $lastCard['front'];
 		$card_back  = $lastCard['back'];
+		// get tag of this card
+		$card_tag   = \lib\db\cards::tag($card_id);
+
 		if(!$card_front)
 		{
 			$card_front = "روی کارت خالی است!";
@@ -165,10 +168,10 @@ class step_learn
 		// go to next step
 		step::plus();
 		$limiter = $limiter +1;
-		$txt_text = "`[". step::get('learn_categoryText'). "]` ";
+		$txt_text = "`[". step::get('learn_categoryText'). "-". $card_tag."]` ";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
-		$txt_text .= "\n".$card_front;
+		$txt_text .= "\n\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
 
 		$result   =

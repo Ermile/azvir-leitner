@@ -112,5 +112,27 @@ class cards
 		// return created query
 		return $qry;
 	}
+
+
+	public static function tag($_card)
+	{
+		$qry =
+		"SELECT
+			terms.term_meta as category,
+			terms.term_title as title
+		FROM
+			terms
+		INNER JOIN termusages ON termusages.term_id = terms.id
+		
+		WHERE
+			termusages.termusage_foreign = 'cards' AND
+			termusages.termusage_id = $_card
+		LIMIT 1
+		";
+
+		$result = \lib\db::get($qry, 'title', true);
+		return $result;
+	}
+
 }
 ?>
