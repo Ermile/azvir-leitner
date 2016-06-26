@@ -14,15 +14,9 @@ class cardcats
 	 * check signup and if can add new user
 	 * @return [type] [description]
 	 */
-	public static function catTypes($_return = 'type', $_parent = 'NULL')
+	public static function catTypes($_return = 'type')
 	{
 		$qry = "SELECT term_meta as type FROM terms WHERE term_type = 'cat_card' GROUP BY type";
-		if($_parent)
-		{
-			$qry .= " AND term_parent = $_parent";
-		}
-		// add group by
-		$qry .= " GROUP BY type";
 
 		// run query
 		if($_return && $_return !== 'count')
@@ -49,7 +43,7 @@ class cardcats
 	 */
 	public static function catList($_type = null, $_return = 'title')
 	{
-		$qry = "SELECT term_title as title FROM terms WHERE term_type = 'cat_card'";
+		$qry = "SELECT term_title as title FROM terms WHERE term_type = 'cat_card' AND term_parent IS NULL";
 		if($_type)
 		{
 			$qry .= " AND term_meta = '$_type'";
