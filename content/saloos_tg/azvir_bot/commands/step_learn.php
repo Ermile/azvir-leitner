@@ -167,7 +167,7 @@ class step_learn
 		[
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
-			'reply_markup' => keyboard::draw($list, 'fixed', 'inline_keyboard'),
+			'reply_markup' => keyboard::draw($list, 'fixed', 'keyboard'),
 
 		];
 
