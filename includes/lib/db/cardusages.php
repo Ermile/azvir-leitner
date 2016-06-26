@@ -16,11 +16,13 @@ class cardusages
 	 */
 	public static function saveAnswer($_user_id, $_cardlist_id, $_answer, $_spendTime = 'null')
 	{
-		$answer         = null;
-		$new_deck       = 0;
-		$new_try        = 0;
-		$new_trysuccess = 0;
-		$ansDate        = date('Y-m-d H:i:s');
+		$answer           = null;
+		$new_deck         = 0;
+		$new_try          = 0;
+		$new_trysuccess   = 0;
+		$answer_id        = null;
+		$answer_spendtime = 0;
+		$ansDate          = date('Y-m-d H:i:s');
 		// replace with algorithm of expiration
 		$expDate        = date('Y-m-d H:i:s', strtotime("+2 days"));
 
@@ -43,6 +45,7 @@ class cardusages
 		$lastRecord     = \lib\db::get($qry, null, true);
 		if($lastRecord)
 		{
+			$answer_id      = $lastRecord['id'];
 			$new_deck       = $lastRecord['deck'];
 			$new_try        = 1 + $lastRecord['try'];
 			$new_trysuccess = 1 + $lastRecord['trysuccess'];
@@ -85,7 +88,7 @@ class cardusages
 				`cardusage_expire` = '$expDate',
 				`cardusage_lasttry` = '$ansDate'
 			WHERE $criteria
-			)";
+			";
 			var_dump($qry);
 			$result = \lib\db::query($qry);
 			var_dump($result);
@@ -122,13 +125,33 @@ class cardusages
 				'enable'
 			)";
 			// run query
-			$result = \lib\db::query($qry);
+			$result    = \lib\db::query($qry);
 			// return last insert id
-			$answer = \lib\db::insert_id();
+			$answer_id = \lib\db::insert_id();
+
 		}
 
+		$qryDetails = "INSERT INTO cardusagedetails
+		(
+			`cardusage_id`,
+			`cardusagedetail_answer`,
+			`cardusagedetail_spendtime`,
+			`cardusagedetail_deck`
+		)
+		VALUES
+		(
+			$answer_id,
+			$_answer,
+			$answer_spendtime,
+			$new_deck
+		)";
+		// run query
+		$result = \lib\db::query($qryDetails);
+		// return last insert id
+		$answer = \lib\db::insert_id();
 
-		return $answer;
+
+		return $answer_id;
 	}
 
 	public static function cardAnswerSummary($_user_id, $_cat_id)

@@ -149,6 +149,14 @@ class step_learn
 		$card_id    = $lastCard['id'];
 		$card_front = $lastCard['front'];
 		$card_back  = $lastCard['back'];
+		if(!$card_front)
+		{
+			$card_front = "روی کارت خالی است!";
+		}
+		if(!$card_back)
+		{
+			$card_back = "پشت کارت خالی است!";
+		}
 		// set card details
 		step::set('learn_card_id', $card_id);
 		step::set('learn_card_front', $card_front);
