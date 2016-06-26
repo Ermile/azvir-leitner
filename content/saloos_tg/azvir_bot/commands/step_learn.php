@@ -315,6 +315,13 @@ class step_learn
 			'fail'    => step::get('tryFail'),
 			'skip'    => step::get('trySkip'),
 		];
+		foreach ($result_try as $key => $value)
+		{
+			if(!$value)
+			{
+				$result_try[$key] = 0;
+			}
+		}
 
 		// create output text
 		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n\n";
@@ -482,18 +489,50 @@ class step_learn
 
 	public static function showSummary()
 	{
+		$category      = step::get('learn_category');
+		$count_total   = \lib\db\cardcats::cardCount($category);
+		$count_remined = 0;
+		$list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
+		if($list)
+		{
+			$list =
+			[
+				0 => 0
+			];
+		}
+		$count_learned = array_sum($list);
+		$count_remined = $count_total - $count_learned;
+		// create array to get inline chart of total
+		$list_total    =
+		[
+			'success' => $count_learned,
+			'skip' => $count_remined,
+		];
+		$list_total_chart = self::calcPercentage($list_total);
+
+		if($count_learned < $count_total)
+		{
+			$list[0] = $list[0] + ($count_total - $count_learned);
+		}
+
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
-
-
-		$txt .= "کل کارت: ". \lib\db\cardcats::cardCount(step::get('learn_category')). "\n";
-		$list = \lib\db\cardusages::cardAnswerSummary(bot::$user_id, step::get('learn_category'));
-		$txt .= "دفعات تلاش ". array_sum($list). "\n";
-		$txt .= "آمار تلاش ". "\n";
-		$txt .= self::calcPercentage($list, 'all');
+		// total analytics
+		$txt .= $list_total_chart."\n";
+		$txt .= "کل کارت $count_total عدد\n";
+		$txt .= "یادگرفته‌شده‌ها $count_learned \n";
+		$txt .= "منتظر یادگیری شما $count_remined \n";
+		// analytic of each deck
+		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
+		$txt .= self::calcChart($list, 'all');
 		$txt .= "\nمحصولی از امایل". "\n";
 
 
 		return $txt;
+	}
+
+	public static function calcChart($_input)
+	{
+
 	}
 }
 ?>

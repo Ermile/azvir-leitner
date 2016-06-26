@@ -185,16 +185,16 @@ class cardusages
 		$qry =
 			"SELECT
 				count(*) as total,
-				cardusages.cardusage_deck as type
+				cardusages.cardusage_deck as deck
 			FROM cardusages
 			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
 			WHERE
 				user_id = $_user_id AND
 				cardlists.term_id = $_cat_id
-			GROUP BY type
+			GROUP BY deck
+			ORDER BY deck
 		";
-		var_dump($qry);
-		$result = \lib\db::get($qry, ['type', 'total']);
+		$result = \lib\db::get($qry, ['deck', 'total']);
 		return $result;
 	}
 }
