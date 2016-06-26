@@ -109,7 +109,7 @@ class cardusages
 			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
 			WHERE
 				user_id = $_user_id AND
-				cardlists.cardcat_id = $_cat_id
+				cardlists.term_id = $_cat_id
 			GROUP BY type
 		";
 		$result = \lib\db::get($qry, ['type', 'total']);
@@ -131,7 +131,7 @@ class cardusages
 			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
 			WHERE
 				user_id = $_user_id AND
-				cardlists.cardcat_id = $_cat_id
+				cardlists.term_id = $_cat_id
 			GROUP BY type
 		";
 		var_dump($qry);

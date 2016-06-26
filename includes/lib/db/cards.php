@@ -105,7 +105,7 @@ class cards
 			INNER JOIN cards ON cardlists.card_id = cards.id
 			$join
 
-			WHERE cardlists.cardcat_id = $_cat_id
+			WHERE cardlists.term_id = $_cat_id
 			$criteria
 			$groupby
 		";
