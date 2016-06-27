@@ -529,6 +529,9 @@ class step_learn
 			$list[0] = $list[0] + ($count_total - $count_learned);
 		}
 
+		$chart  = self::calcChart($list, T_('Deck'));
+		$chart2  = self::calcChartVertical($list);
+
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
@@ -537,7 +540,8 @@ class step_learn
 		$txt .= "منتظر یادگیری شما $count_remined \n";
 		// analytic of each deck
 		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
-		$txt .= self::calcChart($list, T_('Deck'));
+		$txt .= $chart. "\n";
+		$txt .= $chart2;
 		$txt .= "\nمحصولی از امایل". "\n";
 
 
@@ -571,6 +575,13 @@ class step_learn
 
 			$result .= str_repeat($shape, $_inputList[$key.'C']);
 			$result .= "\n";
+
+			if($_onlyArray)
+			{
+				$_inputList[$key] = $_inputList[$key_new];
+				unset($_inputList[$key_new]);
+				unset($_inputList[$key.'C']);
+			}
 		}
 
 		if($_onlyArray)
@@ -578,6 +589,56 @@ class step_learn
 			return $_inputList;
 		}
 		return $result;
+	}
+
+
+
+	public static function calcChartVertical($_datalist)
+	{
+		$row = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
+		$datalist = self::calcChart($_datalist, null, true);
+		$datalist[3] = 120;
+		$datalist[4] = 28;
+		$datalist[5] = 60;
+		var_dump($datalist);
+		$chart = "";
+		$max = 10;
+
+		for ($i=0; $i < $max; $i++)
+		{ 
+			$chart_row = "";
+			foreach ($datalist as $key => $value)
+			{
+				if($i === 0)
+				{
+					if(isset($row[$key]))
+					{
+						$chart_row .= $row[$key];
+					}
+					else
+					{
+						$chart_row .= $key;
+					}
+				}
+				else
+				{
+					if(($value/ $max) > $i)
+					{
+						$chart_row .= "⬛";
+					}
+					else
+					{
+						$chart_row .= "⬜";
+					}
+					// $count = round($_inputList[$key_new] / $divider, 0);
+
+				}
+			}
+			
+			$chart = $chart_row."\n". $chart;
+		}
+		$chart .= "\n تمام";
+		return $chart;
 	}
 }
 ?>
