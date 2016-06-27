@@ -147,6 +147,7 @@ class step_learn
 		}
 
 		$card_id    = $lastCard['id'];
+		$card_deck  = $lastCard['deck'];
 		$card_front = $lastCard['front'];
 		$card_back  = $lastCard['back'];
 		// get tag of this card
@@ -162,13 +163,20 @@ class step_learn
 		}
 		// set card details
 		step::set('learn_card_id', $card_id);
+		step::set('learn_card_deck', $card_deck);
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
+
+		$card_deck_txt = "";
+		if($card_deck)
+		{
+			$card_deck_txt = '-'. $card_deck;
+		}
 
 		// go to next step
 		step::plus();
 		$limiter = $limiter +1;
-		$txt_text = "`[". step::get('learn_categoryText'). "-". $card_tag."]` ";
+		$txt_text = "`[". step::get('learn_categoryText'). "-". $card_tag. $card_deck_txt ."]` ";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;

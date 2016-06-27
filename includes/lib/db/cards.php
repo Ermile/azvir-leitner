@@ -116,6 +116,7 @@ class cards
 		$qry =
 			"SELECT
 				cardlists.id as id,
+				cardusages.cardusage_deck as deck,
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
 				(SELECT paper_text from papers WHERE id = cards.card_back) as back
 			FROM
