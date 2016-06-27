@@ -24,9 +24,7 @@ class cardusages
 		$answer_spendtime = 0;
 		$ansDate          = date('Y-m-d H:i:s');
 		// replace with algorithm of expiration
-		$expDate        = date('Y-m-d H:i:s', strtotime("+2 days"));
-
-		$criteria = "user_id = $_user_id AND cardlist_id = $_cardlist_id ";
+		$criteria         = "user_id = $_user_id AND cardlist_id = $_cardlist_id ";
 		// get last answer of this card for this user if exist
 		// select old values
 		$qry =
@@ -66,7 +64,6 @@ class cardusages
 			case 'skip':
 			default:
 				$new_deck -= 1;
-				$expDate = date('Y-m-d H:i:s', strtotime("+5 minutes"));
 				// do nothing
 				break;
 		}
@@ -74,7 +71,8 @@ class cardusages
 		{
 			$new_deck = 0;
 		}
-
+		// calculate expire date
+		$expDate = self::calcExpire($new_deck);
 
 		// if has record update it
 		if($lastRecord)
@@ -87,7 +85,7 @@ class cardusages
 				`cardusage_trysuccess` = $new_trySuccess,
 				`cardusage_spendtime` = $answer_spendtime,
 				`cardusage_expire` = '$expDate',
-				`cardusage_lasttry` = '$ansDate'
+				`cardusage_lasttry` = '$ansDate',
 				`cardusage_status` = 'enable'
 			WHERE $criteria
 			";
@@ -195,6 +193,81 @@ class cardusages
 		";
 		$result = \lib\db::get($qry, ['deck', 'total']);
 		return $result;
+	}
+
+
+	/**
+	 * calculate expire date with 3 type of scheduling
+	 * @param  [type] $_deck   [description]
+	 * @param  string $_method [description]
+	 * @return [type]          [description]
+	 */
+	public static function calcExpire($_deck ,$_method = 'quadratic')
+	{
+		// scheduling time on each deck
+		$scheduling =
+		[
+			'linear' =>
+			[
+				0  => '+5 minutes',
+				1  => '+1 days',
+				2  => '+2 days',
+				3  => '+3 days',
+				4  => '+4 days',
+				5  => '+5 days',
+				6  => '+6 days',
+				7  => '+7 days',
+				8  => '+8 days',
+				9  => '+9 days',
+				10 => '+10 days',
+			],
+			'quadratic' =>
+			[
+				0  => '+5 minutes',
+				1  => '+1 days',
+				2  => '+4 days',
+				3  => '+9 days',
+				4  => '+16 days',
+				5  => '+25 days',
+				6  => '+36 days',
+				7  => '+49 days',
+				8  => '+64 days',
+				9  => '+81 days',
+				10 => '+100 days',
+			],
+			'exponential' =>
+			[
+				0  => '+5 minutes',
+				1  => '+1 days',
+				2  => '+2 days',
+				3  => '+4 days',
+				4  => '+8 days',
+				5  => '+16 days',
+				6  => '+32 days',
+				7  => '+64 days',
+				8  => '+128 days',
+				9  => '+256 days',
+				10 => '+512 days',
+			],
+		];
+
+		// set exptime for each deck
+		if(isset($scheduling[$_method][$_deck]))
+		{
+			$expDate = $scheduling[$_method][$_deck];
+		}
+		elseif($_deck > 9)
+		{
+			$expDate = $scheduling[$_method][10];
+		}
+		else
+		{
+			$expDate = $scheduling[$_method][0];
+		}
+
+		$expDate = date('Y-m-d H:i:s', strtotime($expDate));
+		// return final date
+		return $expDate;
 	}
 }
 ?>
