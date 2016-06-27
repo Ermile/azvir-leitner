@@ -9,7 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 5;
+	private static $maxCard        = 2;
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -338,9 +338,9 @@ class step_learn
 		}
 
 		// create output text
-		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n\n";
+		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n";
 		$txt_text .= self::calcPercentage($result_try);
-		$txt_text .= "\n";
+		$txt_text .= "\n\n";
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n";
@@ -531,22 +531,53 @@ class step_learn
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
-		$txt .= $list_total_chart."\n";
+		$txt .= $list_total_chart."\n\n";
 		$txt .= "کل کارت $count_total عدد\n";
 		$txt .= "یادگرفته‌شده‌ها $count_learned \n";
 		$txt .= "منتظر یادگیری شما $count_remined \n";
 		// analytic of each deck
 		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
-		$txt .= self::calcChart($list, 'all');
+		$txt .= self::calcChart($list, T_('Deck'));
 		$txt .= "\nمحصولی از امایل". "\n";
 
 
 		return $txt;
 	}
 
-	public static function calcChart($_input)
+	public static function calcChart($_inputList, $_showtext = true, $_onlyArray = false)
 	{
+		$result  = "";
+		$shape   = "⬜️";
+		$total   = array_sum($_inputList);
+		$divider = 10;
 
+		foreach ($_inputList as $key => $value)
+		{
+			$key_new              = $key.'P';
+			$_inputList[$key_new] = $value * 100 / $total;
+			$_inputList[$key_new] = round($_inputList[$key_new], 1);
+			$_inputList[$key.'C'] = round($_inputList[$key_new] / $divider, 0);
+
+			// add prefix
+			if($_showtext)
+			{
+				$result .= "`[";
+				if(is_string($_showtext))
+				{
+					$result .= $_showtext;
+				}
+				$result .= $key. "]` ";
+			}
+
+			$result .= str_repeat($shape, $_inputList[$key.'C']);
+			$result .= "\n";
+		}
+
+		if($_onlyArray)
+		{
+			return $_inputList;
+		}
+		return $result;
 	}
 }
 ?>
