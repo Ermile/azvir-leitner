@@ -25,10 +25,13 @@ CREATE TABLE `cardusagedetails` (
   `cardusagedetail_answer` enum('true','false','skip','') CHARACTER SET utf8 NOT NULL,
   `cardusagedetail_spendtime` int(11) unsigned DEFAULT NULL,
   `cardusagedetail_deck` smallint(5) unsigned DEFAULT NULL,
+  `cardusagedetail_datetime` datetime DEFAULT NULL,
+  `cardusagedetail_meta` mediumtext,
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `cardusagedetails_ibfk_1` (`cardusage_id`),
   CONSTRAINT `cardusagedetails_ibfk_1` FOREIGN KEY (`cardusage_id`) REFERENCES `cardusages` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cardusagedetails

@@ -28,7 +28,7 @@ CREATE TABLE `cardlists` (
   KEY `cardlists_ibfk_3` (`term_id`),
   CONSTRAINT `cardlists_ibfk_1` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `cardlists_ibfk_3` FOREIGN KEY (`term_id`) REFERENCES `terms` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1451 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1451 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cardlists

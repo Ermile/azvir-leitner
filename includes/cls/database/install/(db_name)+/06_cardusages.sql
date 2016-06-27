@@ -31,6 +31,7 @@ CREATE TABLE `cardusages` (
   `cardusage_lasttry` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `cardusage_meta` mediumtext,
   `cardusage_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
+  `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `cardusages_users_id` (`user_id`),
   KEY `cardusages_ibfk_4` (`cardlist_id`),
