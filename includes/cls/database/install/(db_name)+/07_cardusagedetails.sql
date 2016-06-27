@@ -30,7 +30,7 @@ CREATE TABLE `cardusagedetails` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `cardusagedetails_ibfk_1` (`cardusage_id`),
-  CONSTRAINT `cardusagedetails_ibfk_1` FOREIGN KEY (`cardusage_id`) REFERENCES `cardusages` (`id`) ON UPDATE CASCADE
+  CONSTRAINT `cardusagedetails_ibfk_1` FOREIGN KEY (`cardusage_id`) REFERENCES `cardusages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
