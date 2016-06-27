@@ -20,6 +20,7 @@ class cards
 		switch ($_type)
 		{
 			case 'unlearned':
+			case 'learned':
 			case 'expired':
 				$qry = self::queryCreator($_user_id, $_cat_id, $_type);
 				break;
@@ -67,24 +68,42 @@ class cards
 			case 'unlearned':
 				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
 				// $criteria = "AND cardusages.cardlist_id IS NULL";
+				// $criteria =
+				// 	"AND
+				// 	(
+				// 		cardusages.cardusage_status = 'skip' OR
+				// 		cardusages.cardusage_status IS NULL
+				// 	)
+				// 	AND
+				// 	(
+				// 		cardusages.cardlist_id IS NULL
+				// 		OR cardusages.user_id = $_user_id
+				// 	)";
 				$criteria =
 					"AND
 					(
-						cardusages.cardusage_status = 'skip' OR
-						cardusages.cardusage_status IS NULL
-					)
-					AND
-					(
 						cardusages.cardlist_id IS NULL
-						OR cardusages.user_id = $_user_id
+						OR
+						(
+							cardusages.cardlist_id IS NOT NULL AND
+							cardusages.user_id <> $_user_id
+						)
 					)";
 				break;
 
+			// list expired cards
 			case 'expired':
-				$criteria = " AND cardusages.cardusage_expire < DATE(now())";
-				$criteria .= " AND cardusages.cardusage_status = 'enable'";
+				$criteria = " AND cardusages.cardusage_expire < now()";
+			// list learned cards
 			case 'learned':
+				if(!$criteria)
+				{
+					$criteria = " AND cardusages.cardusage_expire > now()";
+				}
+			// list all cards at least one time is checked
+			case 'checked':
 				$join     = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
+				$criteria .= " AND cardusages.cardusage_status <> 'disable'";
 				$criteria .= " AND cardusages.user_id = $_user_id";
 				break;
 
@@ -123,7 +142,7 @@ class cards
 		FROM
 			terms
 		INNER JOIN termusages ON termusages.term_id = terms.id
-		
+
 		WHERE
 			termusages.termusage_foreign = 'cards' AND
 			termusages.termusage_id = $_card

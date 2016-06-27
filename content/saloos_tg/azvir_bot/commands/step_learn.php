@@ -205,7 +205,6 @@ class step_learn
 				bot::$skipText = false;
 				step::plus(1, 'trySkip');
 				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
-				var_dump($r);
 				step::goingto(3);
 				return self::step3();
 				break;

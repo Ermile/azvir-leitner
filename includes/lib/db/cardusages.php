@@ -77,7 +77,6 @@ class cardusages
 		// if has record update it
 		if($lastRecord)
 		{
-			var_dump('update');
 			// create query string
 			$qry = "UPDATE cardusages
 			SET
@@ -89,14 +88,11 @@ class cardusages
 				`cardusage_lasttry` = '$ansDate'
 			WHERE $criteria
 			";
-			var_dump($qry);
 			$result = \lib\db::query($qry);
-			var_dump($result);
 			$answer = true;
 		}
 		else
 		{
-			var_dump('insert');
 			// create query string to insert answer
 			$qry = "INSERT INTO cardusages
 			(
