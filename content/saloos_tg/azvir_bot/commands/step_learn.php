@@ -154,11 +154,11 @@ class step_learn
 
 		if(!$card_front)
 		{
-			$card_front = "روی کارت خالی است!";
+			$card_front = "روی کارت خالی است!\nلطفا به مدیر اطلاع دهید!";
 		}
 		if(!$card_back)
 		{
-			$card_back = "پشت کارت خالی است!";
+			$card_back = "پشت کارت خالی است!\nلطفا به مدیر اطلاع دهید!";
 		}
 		// set card details
 		step::set('learn_card_id', $card_id);
@@ -181,6 +181,7 @@ class step_learn
 			'reply_markup' => keyboard::draw($list, 'fixed', 'keyboard'),
 
 		];
+		step::set('learn_card_sendDate', strtotime(date('Y-m-d H:i:s')));
 
 		// return menu
 		return $result;
@@ -194,6 +195,12 @@ class step_learn
 	 */
 	public static function step4($_txtReaction)
 	{
+		$spendTime = strtotime(date('Y-m-d H:i:s')) - step::get('learn_card_sendDate');
+		if($spendTime < 1)
+		{
+			return false;
+		}
+
 		$result = null;
 		// if user press next goto step 3 for
 		switch ($_txtReaction)
@@ -204,7 +211,7 @@ class step_learn
 			case '/skip':
 				bot::$skipText = false;
 				step::plus(1, 'trySkip');
-				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip');
+				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip', $spendTime);
 				step::goingto(3);
 				return self::step3();
 				break;
@@ -259,6 +266,11 @@ class step_learn
 
 	public static function step5($_txtAnswer)
 	{
+		$spendTime = strtotime(date('Y-m-d H:i:s')) - step::get('learn_card_sendDate');
+		if($spendTime < 3)
+		{
+			return false;
+		}
 		switch ($_txtAnswer)
 		{
 			case 'بله':
@@ -269,7 +281,7 @@ class step_learn
 			case '/yes':
 				step::plus(1, 'trySuccess');
 				// save answer true
-				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'true');
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'true', $spendTime);
 				break;
 
 			case 'خیر':
@@ -280,7 +292,7 @@ class step_learn
 			case '/no':
 				step::plus(1, 'tryFail');
 				// save answer false
-				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'false');
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'false', $spendTime);
 				break;
 
 			default:

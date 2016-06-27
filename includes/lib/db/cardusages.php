@@ -19,7 +19,7 @@ class cardusages
 		$answer           = null;
 		$new_deck         = 0;
 		$new_try          = 0;
-		$new_trysuccess   = 0;
+		$new_trySuccess   = 0;
 		$answer_id        = null;
 		$answer_spendtime = 0;
 		$ansDate          = date('Y-m-d H:i:s');
@@ -45,10 +45,11 @@ class cardusages
 		$lastRecord     = \lib\db::get($qry, null, true);
 		if($lastRecord)
 		{
-			$answer_id      = $lastRecord['id'];
-			$new_deck       = $lastRecord['deck'];
-			$new_try        = 1 + $lastRecord['try'];
-			$new_trysuccess = 1 + $lastRecord['trysuccess'];
+			$answer_id        = $lastRecord['id'];
+			$new_deck         = $lastRecord['deck'];
+			$new_try          = 1 + $lastRecord['try'];
+			$new_trySuccess   = 1 + $lastRecord['trysuccess'];
+			$answer_spendtime = $lastRecord['spendtime'] + $_spendTime;
 		}
 		// set next deck
 		switch ($_answer)
@@ -64,7 +65,7 @@ class cardusages
 			case 'skip':
 			default:
 				$new_deck -= 1;
-				$expDate = date('Y-m-d H:i:s', strtotime("+2 minutes"));
+				$expDate = date('Y-m-d H:i:s', strtotime("+5 minutes"));
 				// do nothing
 				break;
 		}
@@ -82,8 +83,8 @@ class cardusages
 			SET
 				`cardusage_deck` = $new_deck,
 				`cardusage_try` = $new_try,
-				`cardusage_trysuccess` = $new_trysuccess,
-				`cardusage_spendtime` = $_spendTime,
+				`cardusage_trysuccess` = $new_trySuccess,
+				`cardusage_spendtime` = $answer_spendtime,
 				`cardusage_expire` = '$expDate',
 				`cardusage_lasttry` = '$ansDate'
 			WHERE $criteria
@@ -113,7 +114,7 @@ class cardusages
 				$_cardlist_id,
 				$new_deck,
 				$new_try,
-				$new_trysuccess,
+				$new_trySuccess,
 				$_spendTime,
 				'$expDate',
 				'$ansDate',
@@ -137,7 +138,7 @@ class cardusages
 		VALUES
 		(
 			$answer_id,
-			$_answer,
+			'$_answer',
 			$answer_spendtime,
 			$new_deck
 		)";
