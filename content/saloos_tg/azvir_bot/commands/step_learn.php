@@ -627,16 +627,21 @@ class step_learn
 				}
 				else
 				{
-					if(($value/ (100 / $max)) > $i)
+					if(($value / (100 / $max)) > $i)
 					{
-						$chart_row .= "⬛";
+						if($value % (100 / $max))
+						{
+							$chart_row .= '🔳';
+						}
+						else
+						{
+							$chart_row .= "⬛";
+						}
 					}
 					else
 					{
 						$chart_row .= "⬜";
 					}
-					// $count = round($_inputList[$key_new] / $divider, 0);
-
 				}
 			}
 
