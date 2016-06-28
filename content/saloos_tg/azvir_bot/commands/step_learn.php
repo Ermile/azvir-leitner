@@ -594,7 +594,7 @@ class step_learn
 
 		if($_onlyArray)
 		{
-			$_inputList = ksort($_inputList);
+			ksort($_inputList);
 			return $_inputList;
 		}
 		return $result;
