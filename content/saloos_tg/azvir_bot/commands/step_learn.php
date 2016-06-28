@@ -357,8 +357,9 @@ class step_learn
 		$txt_text .= "\n\n";
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
-		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n";
-		$txt_text .= "_name_ محصولی از ارمایل\n";
+		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
+		$txt_text .= self::calcChartVertical($list)."\n";
+		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
 
 		// $keyboard  =
