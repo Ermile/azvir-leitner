@@ -9,7 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 2;
+	private static $maxCard        = 10;
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -555,7 +555,7 @@ class step_learn
 		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
 		// $txt .= $chart. "\n";
 		$txt .= $chart2;
-		$txt .= "\nمحصولی از امایل". "\n";
+		$txt .= "\nخدمتی از ارمایل @Ermile". "\n";
 
 
 		return $txt;
