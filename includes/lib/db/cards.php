@@ -35,6 +35,7 @@ class cards
 				return null;
 				break;
 		}
+		$groupby  = "GROUP BY cardlists.id";
 
 		// add order if needed
 		if($_order === true)
@@ -62,8 +63,6 @@ class cards
 	{
 		$join     = "";
 		$criteria = "";
-		// $groupby  = "";
-		$groupby  = "GROUP BY cardlists.id";
 		switch ($_type)
 		{
 			case 'unlearned':
@@ -128,7 +127,6 @@ class cards
 
 			WHERE cardlists.term_id = $_cat_id
 			$criteria
-			$groupby
 		";
 		// return created query
 		return $qry;
