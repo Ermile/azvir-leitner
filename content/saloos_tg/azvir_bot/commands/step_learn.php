@@ -9,7 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 2;
+	private static $maxCard        = 10;
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -358,7 +358,7 @@ class step_learn
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
-		$txt_text .= "جزئیات آمار کارت‌های یادگرفته‌شده‌". "\n";
+		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌". "\n";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
