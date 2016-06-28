@@ -176,7 +176,7 @@ class step_learn
 		// go to next step
 		step::plus();
 		$limiter = $limiter +1;
-		$txt_text = "`[". step::get('learn_categoryText'). "-". $card_tag. $card_deck_txt ."]` ";
+		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag. $card_deck_txt ."]` ";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
@@ -613,7 +613,7 @@ class step_learn
 		$max = 10;
 
 		for ($i=0; $i < $max; $i++)
-		{ 
+		{
 			$chart_row = "";
 			foreach ($datalist as $key => $value)
 			{
@@ -642,7 +642,7 @@ class step_learn
 
 				}
 			}
-			
+
 			$chart = $chart_row."\n". $chart;
 		}
 		$chart .= "\n تمام";
