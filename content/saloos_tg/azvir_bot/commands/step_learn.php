@@ -629,7 +629,7 @@ class step_learn
 				{
 					if(($value / (100 / $max)) > $i)
 					{
-						if($value % (100 / $max))
+						if($value / (100 / $max) === 0 && $value % (100 / $max))
 						{
 							$chart_row .= '🔳';
 						}
