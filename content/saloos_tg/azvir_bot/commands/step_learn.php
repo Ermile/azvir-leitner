@@ -181,12 +181,17 @@ class step_learn
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
 		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
+		$list     =
+		[
+			['text' => "مشاهده پاسخ ⚖", 'callback_data' => 'cb_showanswer'],
+			['text' => "فعلا رد کن", 'callback_data' => 'cb_skip'],
+		];
 
 		$result   =
 		[
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
-			'reply_markup' => keyboard::draw($list, 'fixed', 'keyboard'),
+			'reply_markup' => keyboard::draw($list, 'fixed', 'inline_keyboard'),
 
 		];
 		step::set('learn_card_sendDate', strtotime(date('Y-m-d H:i:s')));
