@@ -616,7 +616,7 @@ class step_learn
 		$devider  = 100 / $max;
 
 		// draw 4 deck in chart
-		for ($i=0; $i < 5; $i++)
+		for ($i=0; $i < 4; $i++)
 		{
 			if(!isset($datalist[$i]))
 			{
