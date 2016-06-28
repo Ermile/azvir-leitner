@@ -606,10 +606,6 @@ class step_learn
 	{
 		$row = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$datalist = self::calcChart($_datalist, null, true);
-		$datalist[3] = 120;
-		$datalist[4] = 28;
-		$datalist[5] = 60;
-		var_dump($datalist);
 		$chart = "";
 		$max = 10;
 
