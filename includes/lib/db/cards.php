@@ -89,6 +89,13 @@ class cards
 							cardusages.user_id <> $_user_id
 						)
 					)";
+
+				$criteria =
+					"AND
+					(
+						cardusages.cardlist_id IS NULL
+					)";
+
 				break;
 
 			// list expired cards
