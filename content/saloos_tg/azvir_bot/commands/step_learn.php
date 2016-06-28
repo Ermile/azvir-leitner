@@ -9,7 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 10;
+	private static $maxCard        = 2;
 	private static $keyborad_final =
 	[
 		'keyboard' =>
@@ -358,7 +358,7 @@ class step_learn
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
-		$txt_text .= self::calcChartVertical($list)."\n";
+		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
 
@@ -608,8 +608,12 @@ class step_learn
 
 
 
-	public static function calcChartVertical($_datalist)
+	public static function calcChartVertical($_datalist = null)
 	{
+		if(!$_datalist)
+		{
+			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
+		}
 		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$datalist = self::calcChart($_datalist, null, true);
 		$chart    = "";
