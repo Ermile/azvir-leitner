@@ -537,7 +537,6 @@ class step_learn
 			$list[0] = $list[0] + ($count_total - $count_learned);
 		}
 
-		$chart  = self::calcChart($list, T_('Deck'));
 		$chart2  = self::calcChartVertical($list);
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
@@ -561,7 +560,7 @@ class step_learn
 		$result  = "";
 		$shape   = "⬜️";
 		$total   = array_sum($_inputList);
-		$divider = 10;
+		$divider = 15;
 
 		foreach ($_inputList as $key => $value)
 		{
@@ -607,7 +606,18 @@ class step_learn
 		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$datalist = self::calcChart($_datalist, null, true);
 		$chart    = "";
-		$max      = 15;
+		$max      = 10;
+		$devider  = 100 / $max;
+
+		for ($i=0; $i < 5; $i++)
+		{
+			if(!isset($datalist[$i]))
+			{
+				$datalist[$i] = 0;
+			}
+		}
+
+
 
 		for ($i=0; $i < $max; $i++)
 		{
@@ -627,16 +637,13 @@ class step_learn
 				}
 				else
 				{
-					if(($value / (100 / $max)) > $i)
+					if(($value / $devider) >= $i)
 					{
-						if($value / (100 / $max) === 0 && $value % (100 / $max))
-						{
-							$chart_row .= '🔳';
-						}
-						else
-						{
-							$chart_row .= "⬛";
-						}
+						$chart_row .= "⬛";
+					}
+					elseif(($value / $devider) >= $i-1 && $value < $devider && $value / $devider)
+					{
+						$chart_row .= '🔳';
 					}
 					else
 					{
