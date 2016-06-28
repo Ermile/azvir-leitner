@@ -380,7 +380,7 @@ class step_learn
 
 	public static function step7($_decision)
 	{
-		bot::$skipText = false;
+		// bot::$skipText = false;
 		switch ($_decision)
 		{
 			case 'شروع دوباره':
@@ -609,6 +609,7 @@ class step_learn
 		$max      = 10;
 		$devider  = 100 / $max;
 
+		// draw 4 deck in chart
 		for ($i=0; $i < 5; $i++)
 		{
 			if(!isset($datalist[$i]))
@@ -616,8 +617,6 @@ class step_learn
 				$datalist[$i] = 0;
 			}
 		}
-
-
 
 		for ($i=0; $i < $max; $i++)
 		{
