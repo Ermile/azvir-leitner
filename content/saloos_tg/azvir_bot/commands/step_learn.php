@@ -604,10 +604,10 @@ class step_learn
 
 	public static function calcChartVertical($_datalist)
 	{
-		$row = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
+		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$datalist = self::calcChart($_datalist, null, true);
-		$chart = "";
-		$max = 10;
+		$chart    = "";
+		$max      = 20;
 
 		for ($i=0; $i < $max; $i++)
 		{
@@ -627,7 +627,7 @@ class step_learn
 				}
 				else
 				{
-					if(($value/ $max) > $i)
+					if(($value/ (100 / $max)) > $i)
 					{
 						$chart_row .= "⬛";
 					}
