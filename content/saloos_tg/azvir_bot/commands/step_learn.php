@@ -541,7 +541,8 @@ class step_learn
 
 		if($count_learned < $count_total)
 		{
-			$list[0] = $list[0] + ($count_total - $count_learned);
+			$list[0] = isset($list[0])? $list[0]: 0;
+			$list[0] =  + ($count_total - $count_learned);
 		}
 
 		$chart2  = self::calcChartVertical($list);
@@ -600,7 +601,6 @@ class step_learn
 
 		if($_onlyArray)
 		{
-			ksort($_inputList);
 			return $_inputList;
 		}
 		return $result;
@@ -613,7 +613,9 @@ class step_learn
 		if(!$_datalist)
 		{
 			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
+			// unset($_datalist[0]);
 		}
+		ksort($_datalist);
 		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$datalist = self::calcChart($_datalist, null, true);
 		$chart    = "";
@@ -621,7 +623,7 @@ class step_learn
 		$devider  = 100 / $max;
 
 		// draw 4 deck in chart
-		for ($i=0; $i < 4; $i++)
+		for ($i=1; $i < 4; $i++)
 		{
 			if(!isset($datalist[$i]))
 			{
