@@ -548,7 +548,7 @@ class step_learn
 		$txt .= "منتظر یادگیری شما $count_remined \n";
 		// analytic of each deck
 		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
-		$txt .= $chart. "\n";
+		// $txt .= $chart. "\n";
 		$txt .= $chart2;
 		$txt .= "\nمحصولی از امایل". "\n";
 
@@ -642,7 +642,6 @@ class step_learn
 
 			$chart = $chart_row."\n". $chart;
 		}
-		$chart .= "\n تمام";
 		return $chart;
 	}
 }
