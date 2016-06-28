@@ -358,6 +358,7 @@ class step_learn
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
+		$txt_text .= "جزئیات آمار کارت‌های یادگرفته‌شده‌". "\n";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
@@ -551,13 +552,13 @@ class step_learn
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
 		$txt .= "کل کارت $count_total عدد\n";
-		$txt .= "یادگرفته‌شده‌ها $count_learned \n";
-		$txt .= "منتظر یادگیری شما $count_remined \n";
+		$txt .= "یادگرفته‌شده‌ها $count_learned\n";
+		$txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
-		$txt .= "\n\nجزئیات آمار کارت‌ها ". "\n";
+		$txt .= "\n\nجزئیات آمار کل کارت‌ها". "\n";
 		// $txt .= $chart. "\n";
 		$txt .= $chart2;
-		$txt .= "\nخدمتی از ارمایل @Ermile". "\n";
+		$txt .= "\nازویر خدمتی از ارمایل @Ermile". "\n";
 
 
 		return $txt;
