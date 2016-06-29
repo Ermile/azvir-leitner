@@ -351,7 +351,7 @@ class step_learn
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
-		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌";
+		$txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 
@@ -487,7 +487,7 @@ class step_learn
 			{
 				case 'true':
 				case 'success':
-					$shape      = "⚫️";
+					$shape      = "🔵";
 					$txt_result .= $shape. " ". T_('Success')." $value (". $_list[$key_new]. "%)\n";
 					break;
 
@@ -498,7 +498,7 @@ class step_learn
 					break;
 
 				case 'skip':
-					$shape      = "⚪️";
+					$shape      = "⚪";
 					$txt_result .= $shape. " ". T_('Skip')." $value (". $_list[$key_new]. "%)\n";
 					break;
 			}
@@ -545,6 +545,7 @@ class step_learn
 			$list[0] =  + ($count_total - $count_learned);
 		}
 
+		$chart  = self::calcChart($list, 'Deck');
 		$chart2  = self::calcChartVertical($list);
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
@@ -554,9 +555,9 @@ class step_learn
 		$txt .= "یادگرفته‌شده‌ها $count_learned\n";
 		$txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
-		$txt .= "\n\nجزئیات آمار کل کارت‌ها". "\n";
-		// $txt .= $chart. "\n";
-		$txt .= $chart2;
+		$txt .= "\n\nجزئیات آمار کل کارت‌ها ". "\n";
+		$txt .= $chart2. "\n\n";
+		$txt .= $chart. "\n";
 		$txt .= "\nازویر خدمتی از ارمایل @Ermile". "\n";
 
 
@@ -585,7 +586,7 @@ class step_learn
 				{
 					$result .= $_showtext;
 				}
-				$result .= $key. "]` ";
+				$result .= $key. "] ". str_pad($value, 3). "` ";
 			}
 
 			$result .= str_repeat($shape, $_inputList[$key.'C']);
@@ -593,7 +594,7 @@ class step_learn
 
 			if($_onlyArray)
 			{
-				$_inputList[$key] = $_inputList[$key_new];
+				$_inputList[$key] = (int)round($_inputList[$key_new], 0);
 				unset($_inputList[$key_new]);
 				unset($_inputList[$key.'C']);
 			}
@@ -653,14 +654,29 @@ class step_learn
 				}
 				else
 				{
-					if(($value / $devider) >= $i)
+					$fill         = $value / $devider;
+					$fill_divided = $fill - $i +1;
+
+					// empty or full
+					if($fill_divided > 0)
 					{
-						$chart_row .= "⬛";
+						// if this row is full
+						if($fill_divided >= 1.0)
+						{
+							$chart_row .= "⬛";
+						}
+						// if more than half
+						elseif($fill_divided >= 0.5)
+						{
+							$chart_row .= '🔲';
+						}
+						// if less than half
+						else
+						{
+							$chart_row .= '🔳';
+						}
 					}
-					elseif(($value / $devider) >= $i-1 && $value < $devider && $value / $devider)
-					{
-						$chart_row .= '🔳';
-					}
+					// if empty
 					else
 					{
 						$chart_row .= "⬜";
