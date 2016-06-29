@@ -567,7 +567,7 @@ class step_learn
 	public static function calcChart($_inputList, $_showtext = true, $_onlyArray = false)
 	{
 		$result  = "";
-		$shape   = "⬜️";
+		$shape   = "🔷";
 		$total   = array_sum($_inputList);
 		$divider = 15;
 
