@@ -9,17 +9,8 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 10;
-	private static $keyborad_final =
-	[
-		'keyboard' =>
-		[
-			// ["ادامه خرید", "مشاهده سبد خرید"],
-			["ادامه خرید"],
-			["اتمام سفارش"],
-			["انصراف"],
-		],
-	];
+	private static $maxCard        = 1;
+	private static $keyborad_final = [ "ادامه ♻", "وضعیت 📊", "بازگشت 🔙"];
 
 	/**
 	 * create define menu that allow user to select
@@ -363,11 +354,6 @@ class step_learn
 		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
-		$list     = 
-		[
-			["ادامه ♻", "وضعیت 📊"],
-			["بازگشت 🔙"],
-		];
 
 		// $keyboard  =
 		// [
@@ -384,7 +370,7 @@ class step_learn
 		[
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
-			'reply_markup' => 	keyboard::draw($list),
+			'reply_markup' => 	keyboard::draw(self::$keyborad_final),
 
 		];
 		// return menu
@@ -414,9 +400,12 @@ class step_learn
 				// $txt_text = "نمایش وضعیت طبقه‌ها\n\n";
 				// $txt_text .= "...\n\n";
 				$txt_text = self::showSummary();
+				var_dump(self::$keyborad_final);
 				$result   =
 				[
 					'text'         => $txt_text,
+					'reply_markup' => 	keyboard::draw(self::$keyborad_final),
+
 				];
 				return $result;
 				break;
