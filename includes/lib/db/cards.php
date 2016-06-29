@@ -130,8 +130,7 @@ class cards
 					)
 					OR
 					(
-						cardusages.id NOT IN(SELECT id FROM cardusages WHERE user_id = $_user_id ) OR
-						cardusages.id IS NULL
+						cardlists.id NOT IN(SELECT cardlist_id FROM cardusages WHERE user_id = $_user_id )
 					)
 				)
 				";
