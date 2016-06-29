@@ -9,7 +9,7 @@ use \lib\telegram\commands;
 class step_learn
 {
 	private static $menu           = ["hide_keyboard" => true];
-	private static $maxCard        = 1;
+	private static $maxCard        = 10;
 	private static $keyborad_final = [ "ادامه ♻", "وضعیت 📊", "بازگشت 🔙"];
 
 	/**
