@@ -180,7 +180,7 @@ class step_learn
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
-		$list     = ["مشاهده پاسخ ⚖","فعلا رد کن"];
+		$list     = ["پاسخ ⚖","فعلا رد کن"];
 		// $list     =
 		// [
 		// 	['text' => "مشاهده پاسخ ⚖", 'callback_data' => 'showanswer'],
@@ -235,6 +235,8 @@ class step_learn
 			case 'مشاهده کارت':
 			case 'مشاهده پاسخ':
 			case 'مشاهده پاسخ ⚖':
+			case 'پاسخ ⚖':
+			case 'پاسخ':
 			case 'show card':
 			case '/show card':
 			case 'show answer':
