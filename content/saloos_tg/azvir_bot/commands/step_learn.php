@@ -363,7 +363,11 @@ class step_learn
 		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
-		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
+		$list     = 
+		[
+			["ادامه ♻", "وضعیت 📊"],
+			["بازگشت 🔙"],
+		];
 
 		// $keyboard  =
 		// [
@@ -380,7 +384,7 @@ class step_learn
 		[
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
-			'reply_markup' => 	keyboard::draw($list, 'fixed'),
+			'reply_markup' => 	keyboard::draw($list),
 
 		];
 		// return menu
@@ -395,6 +399,7 @@ class step_learn
 		{
 			case 'شروع دوباره':
 			case 'شروع دوباره ♻':
+			case 'ادامه ♻':
 			case 'learn':
 			case '/learn':
 				step::set('limiter', 0);
@@ -403,6 +408,7 @@ class step_learn
 				break;
 
 			case 'بررسی وضعیت':
+			case 'وضعیت 📊':
 			case 'review':
 			case '/review':
 				// $txt_text = "نمایش وضعیت طبقه‌ها\n\n";
@@ -416,6 +422,8 @@ class step_learn
 				break;
 
 			case 'بازگشت':
+			case 'بازگشت 🔙':
+			case '🔙':
 			case 'انصراف':
 			case 'cancel':
 			case '/cancel':
