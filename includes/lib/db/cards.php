@@ -172,10 +172,7 @@ class cards
 
 			WHERE
 				cardlists.term_id = $_cat_id AND
-				(
-					cardusages.user_id = $_user_id OR
-					cardusages.user_id IS NULL
-				) AND
+
 				$criteria
 		";
 		// return created query
