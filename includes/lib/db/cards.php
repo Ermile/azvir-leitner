@@ -22,14 +22,16 @@ class cards
 			case 'unlearned':
 			case 'learned':
 			case 'expired':
+			case 'all':
+				$qry = self::queryCreator($_user_id, $_cat_id, $_type);
 				$qry = self::queryCreator($_user_id, $_cat_id, $_type);
 				break;
 
-			case 'all':
-				$qry = self::queryCreator($_user_id, $_cat_id, 'expired');
-				$qry .= "\nUNION\n\t\t";
-				$qry .= self::queryCreator($_user_id, $_cat_id, 'unlearned');
-				break;
+			// case 'all':
+			// 	$qry = self::queryCreator($_user_id, $_cat_id, 'expired');
+			// 	$qry .= "\nUNION\n\t\t";
+			// 	$qry .= self::queryCreator($_user_id, $_cat_id, 'unlearned');
+			// 	break;
 
 			default:
 				return null;
@@ -67,9 +69,9 @@ class cards
 		{
 			case 'unlearned':
 				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				// $criteria = "AND cardusages.cardlist_id IS NULL";
+				// $criteria = "cardusages.cardlist_id IS NULL";
 				// $criteria =
-				// 	"AND
+				// 	"
 				// 	(
 				// 		cardusages.cardusage_status = 'skip' OR
 				// 		cardusages.cardusage_status IS NULL
@@ -80,8 +82,7 @@ class cards
 				// 		OR cardusages.user_id = $_user_id
 				// 	)";
 				$criteria =
-					"AND
-					(
+					"					(
 						cardusages.cardlist_id IS NULL
 						OR
 						(
@@ -90,28 +91,50 @@ class cards
 						)
 					)";
 
-				$criteria =
-					"AND
+				// $criteria =
+				// 	"
+				// 	(
+				// 		cardusages.cardlist_id IS NULL
+				// 	)";
+
+				break;
+
+			// list expired card as first then list unlearned card for this user
+			case 'all':
+				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
+				$criteria ="
+				(
+					(
+						cardusages.cardusage_expire < now() AND
+						cardusages.cardusage_status <> 'disable' AND
+						cardusages.user_id = $_user_id
+					)
+					OR
 					(
 						cardusages.cardlist_id IS NULL
-					)";
-
+					)
+					OR
+					(
+						cardusages.user_id <> $_user_id
+					)
+				)
+				";
 				break;
 
 			// list expired cards
 			case 'expired':
-				$criteria = " AND cardusages.cardusage_expire < now()";
+				$criteria = "cardusages.cardusage_expire < now() AND ";
 			// list learned cards
 			case 'learned':
 				if(!$criteria)
 				{
-					$criteria = " AND cardusages.cardusage_expire > now()";
+					$criteria = "cardusages.cardusage_expire > now() AND ";
 				}
 			// list all cards at least one time is checked
 			case 'checked':
 				$join     = "INNER JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				$criteria .= " AND cardusages.cardusage_status <> 'disable'";
-				$criteria .= " AND cardusages.user_id = $_user_id";
+				$criteria .= "\n". "cardusages.cardusage_status <> 'disable' AND";
+				$criteria .= "\n". "cardusages.user_id = $_user_id";
 				break;
 
 
@@ -123,7 +146,7 @@ class cards
 		$qry =
 			"SELECT
 				cardlists.id as id,
-				cardusages.cardusage_deck as deck,
+				IF(cardusages.user_id <> $_user_id, null, cardusages.cardusage_deck) as deck,
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
 				(SELECT paper_text from papers WHERE id = cards.card_back) as back
 			FROM
@@ -132,7 +155,7 @@ class cards
 			INNER JOIN cards ON cardlists.card_id = cards.id
 			$join
 
-			WHERE cardlists.term_id = $_cat_id
+			WHERE cardlists.term_id = $_cat_id AND
 			$criteria
 		";
 		// return created query
