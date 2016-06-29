@@ -102,7 +102,7 @@ class cards
 			// list expired card as first then list unlearned card for this user
 			case 'all':
 				$join     = "LEFT JOIN cardusages ON cardusages.cardlist_id = cardlists.id";
-				$criteria ="
+				$criteria = "
 				(
 					(
 						cardusages.cardusage_expire < now() AND
@@ -116,6 +116,20 @@ class cards
 					OR
 					(
 						cardusages.user_id <> $_user_id
+					)
+				)
+				";
+
+				$criteria = "
+				(
+					(
+						cardusages.cardusage_expire < now() AND
+						cardusages.cardusage_status <> 'disable' AND
+						cardusages.user_id = $_user_id
+					)
+					OR
+					(
+						cardusages.cardlist_id IS NULL
 					)
 				)
 				";
