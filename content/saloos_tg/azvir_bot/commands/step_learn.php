@@ -347,7 +347,7 @@ class step_learn
 		// create output text
 		$txt_text    = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n";
 		$txt_text    .= self::calcPercentage($result_try);
-		$txt_text    .= "\n\n";
+		$txt_text    .= "\n";
 		// show rummary if exist
 		$txt_summary = '';
 		if($result_try['success'])
@@ -365,8 +365,7 @@ class step_learn
 			$txt_summary .= $result_try['skip']. ' نادیده گرفته‌شده';
 		}
 
-		$txt_text .= "\n";
-		$txt_text .= $txt_summary;
+		$txt_text .= $txt_summary. "\n";
 		// $txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
