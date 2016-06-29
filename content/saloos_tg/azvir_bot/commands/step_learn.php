@@ -345,12 +345,27 @@ class step_learn
 		}
 
 		// create output text
-		$txt_text = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n";
-		$txt_text .= self::calcPercentage($result_try);
-		$txt_text .= "\n\n";
-		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
-		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
-		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
+		$txt_text    = "وضعیت بازبینی *". $try_total. "* کارت این دوره\n";
+		$txt_text    .= self::calcPercentage($result_try);
+		$txt_text    .= "\n\n";
+		// show rummary if exist
+		$txt_summary = '';
+		if($result_try['success'])
+		{
+			$txt_summary .= "*". $result_try['success']. " پاس شده*";
+		}
+		if($result_try['fail'])
+		{
+			$txt_summary =	$txt_summary? $txt_summary." و ": '';
+			$txt_summary .= $result_try['fail']. ' ناموفق';
+		}
+		if($result_try['skip'])
+		{
+			$txt_summary =	$txt_summary? $txt_summary." و ": '';
+			$txt_summary .= $result_try['skip']. ' نادیده گرفته‌شده';
+		}
+
+		$txt_text .= $txt_summary;
 		$txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
