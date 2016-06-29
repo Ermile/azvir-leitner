@@ -556,9 +556,9 @@ class step_learn
 		$txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
 		// $txt .= "\n\nجزئیات آمار کل کارت‌ها ". "\n";
-		$txt .= $chart2. "\n\n";
+		$txt .= $chart2. "\n";
 		$txt .= $chart. "\n";
-		$txt .= "\nازویر خدمتی از ارمایل @Ermile". "\n";
+		$txt .= "ازویر خدمتی از ارمایل @Ermile". "\n";
 
 
 		return $txt;
