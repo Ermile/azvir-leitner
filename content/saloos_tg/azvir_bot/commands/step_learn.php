@@ -352,7 +352,7 @@ class step_learn
 		$txt_summary = '';
 		if($result_try['success'])
 		{
-			$txt_summary .= "*". $result_try['success']. " پاس شده*";
+			$txt_summary .= "*". $result_try['success']. " پاس‌شده*";
 		}
 		if($result_try['fail'])
 		{
@@ -365,8 +365,9 @@ class step_learn
 			$txt_summary .= $result_try['skip']. ' نادیده گرفته‌شده';
 		}
 
+		$txt_text .= "\n";
 		$txt_text .= $txt_summary;
-		$txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
+		// $txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 
@@ -704,7 +705,7 @@ class step_learn
 		// add total of rows into chart first row
 		if($total)
 		{
-			$chart = $total. "\n". $chart;
+			$chart = "جزئیات $total کارت‌های مرورشده\n". $chart;
 		}
 		return $chart;
 	}
