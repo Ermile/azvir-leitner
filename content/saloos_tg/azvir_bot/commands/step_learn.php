@@ -124,8 +124,6 @@ class step_learn
 		{
 			return false;
 		}
-		// add try number
-		step::plus(1, 'tryCounter');
 		// get last card details
 		$user_id  = bot::$user_id;
 		$lastCard = \lib\db\cards::get($user_id, $cat_id, 'all');
@@ -136,6 +134,8 @@ class step_learn
 			step::goingto(6);
 			return self::step6();
 		}
+		// add try number
+		step::plus(1, 'tryCounter');
 
 		$card_id    = $lastCard['id'];
 		$card_deck  = $lastCard['deck'];
