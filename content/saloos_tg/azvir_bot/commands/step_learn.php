@@ -551,9 +551,9 @@ class step_learn
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
-		$txt .= "کل کارت $count_total عدد\n";
-		$txt .= "یادگرفته‌شده‌ها $count_learned\n";
-		$txt .= "منتظر یادگیری شما $count_remined\n";
+		$txt .= "شما $count_learned تا از $count_total کارت را مرورکرده‌اید\n";
+		// $txt .= "یادگرفته‌شده‌ها $count_learned\n";
+		// $txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
 		// $txt .= "\n\nجزئیات آمار کل کارت‌ها ". "\n";
 		$txt .= $chart2. "\n";
