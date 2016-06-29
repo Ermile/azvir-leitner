@@ -415,7 +415,6 @@ class step_learn
 				// $txt_text = "نمایش وضعیت طبقه‌ها\n\n";
 				// $txt_text .= "...\n\n";
 				$txt_text = self::showSummary();
-				var_dump(self::$keyborad_final);
 				$result   =
 				[
 					'text'         => $txt_text,
