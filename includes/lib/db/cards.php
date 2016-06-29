@@ -169,8 +169,13 @@ class cards
 			INNER JOIN cards ON cardlists.card_id = cards.id
 			$join
 
-			WHERE cardlists.term_id = $_cat_id AND
-			$criteria
+			WHERE
+				cardlists.term_id = $_cat_id AND
+				(
+					cardusages.user_id = $_user_id OR
+					cardusages.user_id IS NULL
+				) AND
+				$criteria
 		";
 		// return created query
 		return $qry;
