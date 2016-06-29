@@ -358,7 +358,7 @@ class step_learn
 		$txt_text .= "*پاس شده: ". $result_try['success']. "*\n";
 		$txt_text .= "ناموفق: ". $result_try['fail']. "\n";
 		$txt_text .= "نادیده گرفته‌شده: ". $result_try['skip']."\n\n";
-		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌". "\n";
+		$txt_text .= "جزئیات آمار کارت‌های مرورشده‌";
 		$txt_text .= self::calcChartVertical()."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 		$list     = ["شروع دوباره ♻", "بررسی وضعیت", "بازگشت"];
@@ -611,17 +611,21 @@ class step_learn
 
 	public static function calcChartVertical($_datalist = null)
 	{
-		if(!$_datalist)
-		{
-			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
-			// unset($_datalist[0]);
-		}
-		ksort($_datalist);
 		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
-		$datalist = self::calcChart($_datalist, null, true);
 		$chart    = "";
 		$max      = 10;
 		$devider  = 100 / $max;
+		$total    = null;
+
+		if(!$_datalist)
+		{
+			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
+			$total     = array_sum($_datalist);
+			
+			// unset($_datalist[0]);
+		}
+		ksort($_datalist);
+		$datalist = self::calcChart($_datalist, null, true);
 
 		// draw 4 deck in chart
 		for ($i=1; $i < 4; $i++)
@@ -666,6 +670,11 @@ class step_learn
 			}
 
 			$chart = $chart_row."\n". $chart;
+		}
+		// add total of rows into chart first row
+		if($total)
+		{
+			$chart = $total. "\n". $chart;
 		}
 		return $chart;
 	}
