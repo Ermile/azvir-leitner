@@ -192,7 +192,7 @@ class step_learn
 			'text'         => $txt_text,
 			// 'reply_markup' => 	$keyboard,
 			// 'reply_markup' => keyboard::draw($list, 'fixed', 'inline_keyboard'),
-			'reply_markup' => keyboard::draw($list, 'fixed', 'keyboard'),
+			'reply_markup' => keyboard::draw($list),
 
 		];
 		step::set('learn_card_sendDate', strtotime(date('Y-m-d H:i:s')));
@@ -262,7 +262,7 @@ class step_learn
 				[
 					'text'         => $txt_text,
 					// 'reply_markup' => 	$keyboard,
-					'reply_markup'  => keyboard::draw($list, 'fixed'),
+					'reply_markup'  => keyboard::draw($list),
 
 				];
 				break;
