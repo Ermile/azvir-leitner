@@ -328,7 +328,7 @@ class step_learn
 	{
 		// go to next step
 		step::plus();
-		$try_total = step::get('tryCounter')-1;
+		$try_total = step::get('tryCounter');
 		$result_try =
 		[
 			// 'total'   => step::get('tryCounter')-1,
