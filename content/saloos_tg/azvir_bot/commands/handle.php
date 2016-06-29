@@ -42,6 +42,8 @@ class handle
 			case 'feedback':
 			case 'ثبت':
 			case 'ثبت بازخورد':
+			case 'بازخورد 💡':
+			case '💡':
 				$response = step_feedback::start();
 				break;
 
