@@ -43,8 +43,9 @@ class handle
 			case 'ثبت':
 			case 'ثبت بازخورد':
 			case 'بازخورد 💡':
+			case 'بازخورد':
 			case '💡':
-				$response = step_feedback::start();
+				$response = \lib\telegram\commands\step_feedback::start();
 				break;
 
 			case 'return':
