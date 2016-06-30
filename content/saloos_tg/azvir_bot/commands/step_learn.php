@@ -624,7 +624,7 @@ class step_learn
 			$key_new              = $key.'P';
 			$_inputList[$key_new] = $value * 100 / $total;
 			$_inputList[$key_new] = round($_inputList[$key_new], 1);
-			$_inputList[$key.'C'] = round($_inputList[$key_new] / $divider, 0);
+			$_inputList[$key.'C'] = ceil($_inputList[$key_new] / $divider);
 
 			// add prefix
 			if($_showtext)
