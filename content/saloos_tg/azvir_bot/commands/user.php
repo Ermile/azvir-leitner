@@ -60,6 +60,13 @@ class user
 				$response = self::register($_cmd['command'], $_cmd);
 				break;
 
+			case '/leitner':
+			case 'leitner':
+			case 'لایتنر':
+				$response = self::leitner();
+				break;
+
+
 			case '/help':
 			case 'help':
 			case '؟':
@@ -244,5 +251,33 @@ class user
 
 		return $result;
 	}
+
+
+	/**
+	 * leitner description
+	 * @return [type] [description]
+	 */
+	public static function leitner()
+	{
+		$txt_desc = "هرگاه به یک رفتار بلافاصله و به صورت آنی پاداشی داده شود آن رفتار تکرار خواهد شد.\nلذا هر بار که شما به معنای لغتی پرسیده‌شده، صحیح جواب دهید، احساس رضایتی که بلافاصله ایجاد می‌شود شما را به ادامهٔ این کار تشویق می‌کند، تمرکز شما را بر کار افزایش می‌دهد و شما را به موضوع علاقه‌مند می‌کند.\n\n";
+		$txt_desc .= "در این روش مطابق شکل زیر کارت‌ها در صورت پاسخ صحیح به خانه بعدی منتقل می‌شوند و بازه زمانی تکرار آن‌ها هم بیشتر می‌شود.";
+		$txt_desc .= "";
+
+		$result   =
+		[
+			[
+				'text'         => $txt_desc,
+			],
+			[
+				'method' => 'sendSticker',
+				'sticker'  => new \CURLFile(realpath("static/images/telegram/Leitner_system_animation.gif")),
+				// 'photo'  => 'AAQEABNoTGswAARvvqFAPsF0y5fsAAIC',
+			]
+		];
+
+		return $result;
+	}
+
+
 }
 ?>
