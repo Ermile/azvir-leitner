@@ -72,7 +72,7 @@ class cardusages
 			$new_deck = 0;
 		}
 		// calculate expire date
-		$expDate = self::calcExpire($new_deck);
+		$expDate = self::calcExpire($new_deck, $_answer);
 
 		// if has record update it
 		if($lastRecord)
@@ -202,7 +202,7 @@ class cardusages
 	 * @param  string $_method [description]
 	 * @return [type]          [description]
 	 */
-	public static function calcExpire($_deck ,$_method = 'quadratic')
+	public static function calcExpire($_deck ,$_type, $_method = 'quadratic')
 	{
 		// scheduling time on each deck
 		$scheduling =
@@ -254,7 +254,14 @@ class cardusages
 		// set exptime for each deck
 		if(isset($scheduling[$_method][$_deck]))
 		{
-			$expDate = $scheduling[$_method][$_deck];
+			if($_type === 'skip')
+			{
+				$expDate = '+30 minutes';
+			}
+			else
+			{
+				$expDate = $scheduling[$_method][$_deck];
+			}
 		}
 		elseif($_deck > 9)
 		{
