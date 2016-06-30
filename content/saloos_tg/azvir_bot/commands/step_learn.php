@@ -158,16 +158,17 @@ class step_learn
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
 
-		$card_deck_txt = "";
-		if($card_deck)
+		$card_deck_txt = T_('New');
+		var_dump($card_deck);
+		if($card_deck !== null)
 		{
-			$card_deck_txt = '-'. $card_deck;
+			$card_deck_txt = T_('Deck').$card_deck;
 		}
 
 		// go to next step
 		step::plus();
 		$limiter = $limiter +1;
-		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag. $card_deck_txt ."]`\n";
+		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag ."] $card_deck_txt`\n";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
@@ -635,7 +636,7 @@ class step_learn
 		{
 			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
 			$total     = array_sum($_datalist);
-			
+
 			// unset($_datalist[0]);
 		}
 		ksort($_datalist);
