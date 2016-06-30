@@ -164,6 +164,7 @@ class cards
 				IF(cardusages.user_id <> $_user_id, null, cardusages.cardusage_deck) as deck,
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
 				(SELECT paper_text from papers WHERE id = cards.card_back) as back,
+				ROUND(cardusages.cardusage_trysuccess * 100 / cardusages.cardusage_try)as ratio,
 				cardusages.cardusage_expire > now() as status,
 				cardusages.cardusage_expire as expire
 			FROM

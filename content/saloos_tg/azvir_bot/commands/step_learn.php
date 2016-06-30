@@ -156,12 +156,13 @@ class step_learn
 		// add try number
 		step::plus(1, 'tryCounter');
 
-		$card_id       = $lastCard['id'];
-		$card_deck     = $lastCard['deck'];
-		$card_front    = $lastCard['front'];
-		$card_back     = $lastCard['back'];
-		$card_status   = $lastCard['status'];
-		$card_expire   = $lastCard['expire'];
+		$card_id     = $lastCard['id'];
+		$card_deck   = $lastCard['deck'];
+		$card_front  = $lastCard['front'];
+		$card_back   = $lastCard['back'];
+		$card_status = $lastCard['status'];
+		$card_expire = $lastCard['expire'];
+		$card_ratio  = $lastCard['ratio'];
 		// get tag of this card
 		$card_tag   = \lib\db\cards::tag($card_id);
 
@@ -203,6 +204,11 @@ class step_learn
 		$limiter = $limiter +1;
 		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag ."]` $card_status\n";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
+		// add success ration
+		if($card_ratio)
+		{
+			$txt_text .= "` - ". $card_ratio. "%`";
+		}
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
 		$list     = ["پاسخ ⚖","فعلا رد کن"];
