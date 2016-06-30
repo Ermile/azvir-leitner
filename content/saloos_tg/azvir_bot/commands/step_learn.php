@@ -108,8 +108,26 @@ class step_learn
 	 * @param  [type] $_answer_txt [description]
 	 * @return [type]            [description]
 	 */
-	public static function step3($_txtCat = null)
+	public static function step3($_txtCat = null, $_direct = false)
 	{
+		if($_direct)
+		{
+			step::start('learn');
+			step::goingto(3);
+			switch ($_txtCat)
+			{
+				case '/504':
+				case '504':
+				case '/450':
+				case '450':
+					step::set('learn_categoryType', 'english');
+
+					break;
+				
+				default:
+					break;
+			}
+		}
 		// get cat id
 		$cat_id = step::get('learn_category');
 		// first time it is null, then get from database and set it for next use
@@ -718,7 +736,7 @@ class step_learn
 		// add total of rows into chart first row
 		if($total)
 		{
-			$chart = "جزئیات $total کارت‌های مرورشده\n". $chart;
+			$chart = "جزئیات $total کارت مرورشده\n". $chart;
 		}
 		return $chart;
 	}

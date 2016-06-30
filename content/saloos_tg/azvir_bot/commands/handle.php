@@ -38,6 +38,11 @@ class handle
 				$response = step_learn::start();
 				break;
 
+			case '/504':
+			case '/450':
+				$response = step_learn::step3($_cmd['command'], true);
+				break;
+
 			case '/feedback':
 			case 'feedback':
 			case 'ثبت':
