@@ -117,11 +117,12 @@ class step_learn
 			switch ($_txtCat)
 			{
 				case '/504':
-				case '504':
 				case '/450':
+					$_txtCat = substr($_txtCat, 1);
+
+				case '504':
 				case '450':
 					step::set('learn_categoryType', 'english');
-
 					break;
 				
 				default:
