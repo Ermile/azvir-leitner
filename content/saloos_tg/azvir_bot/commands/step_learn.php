@@ -642,7 +642,7 @@ class step_learn
 
 			if($_onlyArray)
 			{
-				$_inputList[$key] = (int)round($_inputList[$key_new], 0);
+				$_inputList[$key] = (int)ceil($_inputList[$key_new]);
 				unset($_inputList[$key_new]);
 				unset($_inputList[$key.'C']);
 			}
