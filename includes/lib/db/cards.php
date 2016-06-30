@@ -163,7 +163,9 @@ class cards
 				cardlists.id as id,
 				IF(cardusages.user_id <> $_user_id, null, cardusages.cardusage_deck) as deck,
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
-				(SELECT paper_text from papers WHERE id = cards.card_back) as back
+				(SELECT paper_text from papers WHERE id = cards.card_back) as back,
+				cardusages.cardusage_expire > now() as status,
+				cardusages.cardusage_expire as expire
 			FROM
 				cardlists
 

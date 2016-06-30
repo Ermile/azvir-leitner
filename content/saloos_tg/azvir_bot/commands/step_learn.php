@@ -137,10 +137,12 @@ class step_learn
 		// add try number
 		step::plus(1, 'tryCounter');
 
-		$card_id    = $lastCard['id'];
-		$card_deck  = $lastCard['deck'];
-		$card_front = $lastCard['front'];
-		$card_back  = $lastCard['back'];
+		$card_id       = $lastCard['id'];
+		$card_deck     = $lastCard['deck'];
+		$card_front    = $lastCard['front'];
+		$card_back     = $lastCard['back'];
+		$card_status   = $lastCard['status'];
+		$card_expire   = $lastCard['expire'];
 		// get tag of this card
 		$card_tag   = \lib\db\cards::tag($card_id);
 
@@ -158,17 +160,29 @@ class step_learn
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
 
-		$card_deck_txt = T_('New');
+		// add status of this card
 		var_dump($card_deck);
-		if($card_deck !== null)
+		var_dump($card_status);
+		if($card_status == 0)
 		{
-			$card_deck_txt = T_('Deck').$card_deck;
+			$card_status = T_('Deck'). $card_deck. "\n";
+			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired');
+		}
+		elseif($card_status == 1)
+		{
+			$card_status = T_('Learned');
+			$card_status .= T_('Deck'). $card_deck."\n";
+			$card_status .= \lib\utility::humanTiming($card_expire);
+		}
+		else
+		{
+			$card_status = T_('New');
 		}
 
 		// go to next step
 		step::plus();
 		$limiter = $limiter +1;
-		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag ."] $card_deck_txt`\n";
+		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag ."]` $card_status\n";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// if has skip show in list
 		$txt_text .= "\n\n".$card_front;
