@@ -45,6 +45,7 @@ class handle
 			case 'بازخورد 💡':
 			case 'بازخورد':
 			case '💡':
+				step::set('menu', menu::main(true));
 				$response = \lib\telegram\commands\step_feedback::start();
 				break;
 
