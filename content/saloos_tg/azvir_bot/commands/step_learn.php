@@ -599,11 +599,13 @@ class step_learn
 
 		$chart  = self::calcChart($list, 'Deck');
 		$chart2  = self::calcChartVertical($list);
+		$currentPoint = \lib\db\users::getDetail(bot::$user_id, 'option_meta', 'user%', 'points');
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
 		$txt .= "شما $count_learned تا از $count_total کارت را مرورکرده‌اید\n";
+		$txt .= "امتیاز شما ". $currentPoint;
 		// $txt .= "یادگرفته‌شده‌ها $count_learned\n";
 		// $txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
