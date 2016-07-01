@@ -147,9 +147,26 @@ class cardusages
 		// return last insert id
 		$answer = \lib\db::insert_id();
 
+		// get current point
+		// save user points
+		$newpoint = 3;
+
+		$userDetail =
+		[
+			'user'   => $_user_id,
+			'cat'    => 'user_'.$_user_id,
+			'key'    => 'points',
+			'value'  => 'telegram',
+			'meta'   => '++',
+		];
+
+		// save in options table
+		\lib\utility\option::set($userDetail, true);
 
 		return $answer_id;
 	}
+
+
 
 	public static function cardAnswerSummary($_user_id, $_cat_id)
 	{

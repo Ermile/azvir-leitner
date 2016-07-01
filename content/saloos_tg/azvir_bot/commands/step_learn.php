@@ -181,8 +181,6 @@ class step_learn
 		step::set('learn_card_back', $card_back);
 
 		// add status of this card
-		var_dump($card_deck);
-		var_dump($card_status);
 		if($card_status == 0)
 		{
 			$card_status = T_('Deck'). $card_deck. "\n";
