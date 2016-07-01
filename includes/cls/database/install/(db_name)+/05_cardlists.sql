@@ -24,6 +24,7 @@ CREATE TABLE `cardlists` (
   `term_id` int(10) unsigned NOT NULL,
   `card_id` bigint(20) unsigned NOT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `cardlist_unique` (`term_id`,`card_id`),
   KEY `cardlists_ibfk_1` (`card_id`),
   KEY `cardlists_ibfk_3` (`term_id`),
   CONSTRAINT `cardlists_ibfk_1` FOREIGN KEY (`card_id`) REFERENCES `cards` (`id`) ON UPDATE CASCADE,

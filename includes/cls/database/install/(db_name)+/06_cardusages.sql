@@ -33,6 +33,7 @@ CREATE TABLE `cardusages` (
   `cardusage_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `unique` (`user_id`,`cardlist_id`) USING BTREE,
   KEY `cardusages_users_id` (`user_id`),
   KEY `cardusages_ibfk_4` (`cardlist_id`),
   CONSTRAINT `cardusages_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
