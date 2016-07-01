@@ -124,7 +124,7 @@ class step_learn
 				case '450':
 					step::set('learn_categoryType', 'english');
 					break;
-				
+
 				default:
 					break;
 			}
@@ -208,7 +208,7 @@ class step_learn
 			$txt_text .= "` - ". $card_ratio. "%`";
 		}
 		// if has skip show in list
-		$txt_text .= "\n\n".$card_front;
+		$txt_text .= "\n\n*".$card_front. "*";
 		$list     = ["پاسخ ⚖","فعلا رد کن"];
 		// $list     =
 		// [
