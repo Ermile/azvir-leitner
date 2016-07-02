@@ -203,7 +203,7 @@ class step_learn
 		$txt_text = "`[". step::get('learn_categoryText'). '-'. $card_id. '-'. $card_tag ."]` $card_status\n";
 		$txt_text .= "کارت ". $limiter . " از ". self::$maxCard;
 		// add success ration
-		if($card_ratio)
+		if($card_ratio !== null)
 		{
 			$txt_text .= "` - ". $card_ratio. "%`";
 		}
