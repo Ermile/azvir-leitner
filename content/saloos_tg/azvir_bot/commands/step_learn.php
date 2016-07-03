@@ -197,7 +197,7 @@ class step_learn
 			{
 				$card_status = self::$deck_symbols[$card_deck]. "\n";
 			}
-			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired');
+			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired'). '❗';
 		}
 		elseif($card_status === '1')
 		{
