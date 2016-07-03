@@ -42,7 +42,7 @@ class cards
 		// add order if needed
 		if($_order === true)
 		{
-			$qry .= " \nORDER BY id ASC";
+			$qry .= " \nORDER BY deck DESC, id ASC";
 		}
 		var_dump($qry);
 
