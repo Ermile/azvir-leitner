@@ -105,7 +105,7 @@ class cards
 				// $criteria = "
 				// (
 				// 	(
-				// 		cardusages.cardusage_expire < now() AND
+				// 		cardusages.cardusage_expire < '". date('Y-m-d H:i:s'). "' AND
 				// 		cardusages.cardusage_status <> 'disable' AND
 				// 		cardusages.user_id = $_user_id
 				// 	)
@@ -124,7 +124,7 @@ class cards
 				$criteria = "
 				(
 					(
-						cardusages.cardusage_expire < now() AND
+						cardusages.cardusage_expire < '". date('Y-m-d H:i:s'). "' AND
 						cardusages.cardusage_status <> 'disable' AND
 						cardusages.user_id = $_user_id
 					)
@@ -138,12 +138,12 @@ class cards
 
 			// list expired cards
 			case 'expired':
-				$criteria = "cardusages.cardusage_expire < now() AND ";
+				$criteria = "cardusages.cardusage_expire < '". date('Y-m-d H:i:s'). "' AND ";
 			// list learned cards
 			case 'learned':
 				if(!$criteria)
 				{
-					$criteria = "cardusages.cardusage_expire > now() AND ";
+					$criteria = "cardusages.cardusage_expire > '". date('Y-m-d H:i:s'). "' AND ";
 				}
 			// list all cards at least one time is checked
 			case 'checked':
@@ -165,7 +165,7 @@ class cards
 				(SELECT paper_text from papers WHERE id = cards.card_front) as front,
 				(SELECT paper_text from papers WHERE id = cards.card_back) as back,
 				ROUND(cardusages.cardusage_trysuccess * 100 / cardusages.cardusage_try)as ratio,
-				cardusages.cardusage_expire > now() as status,
+				cardusages.cardusage_expire > '". date('Y-m-d H:i:s'). "' as status,
 				cardusages.cardusage_expire as expire
 			FROM
 				cardlists
