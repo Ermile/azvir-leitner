@@ -11,7 +11,7 @@ class step_learn
 	private static $menu           = ["hide_keyboard" => true];
 	private static $maxCard        = 10;
 	private static $keyborad_final = [ "ادامه ♻", "وضعیت 📊", "بازگشت 🔙"];
-	private static $deck_symbols   = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
+	private static $deck_symbols   = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟', 'new' => '🆕'];
 
 	/**
 	 * create define menu that allow user to select
@@ -664,7 +664,6 @@ class step_learn
 
 	public static function calcChartVertical($_addUnlearned = false)
 	{
-		$row         = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 		$chart       = "";
 		$max         = 10;
 		$devider     = 100 / $max;
@@ -711,9 +710,9 @@ class step_learn
 			{
 				if($i === 0)
 				{
-					if(isset($row[$deck]))
+					if(isset(self::$deck_symbols[$deck]))
 					{
-						$chart_row .= $row[$deck];
+						$chart_row .= self::$deck_symbols[$deck];
 					}
 					else
 					{

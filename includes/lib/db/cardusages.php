@@ -249,13 +249,8 @@ class cardusages
 		
 		if($_addUnlearned)
 		{
-			// calc unlearned card, total
-			if(!isset($result[0]['total']))
-			{
-				$result[0]['total'] = 0;
-			}
-			$result[0]['total']     = $result[0]['total'] + self::$total_unlearned;
-			$result[0]['unlearned'] = self::$total_unlearned;
+			$result['new']['total']     = self::$total_unlearned;
+			$result['new']['unlearned'] = self::$total_unlearned;
 		}
 
 		return $result;
