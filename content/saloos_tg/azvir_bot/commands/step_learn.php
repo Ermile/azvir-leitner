@@ -584,7 +584,7 @@ class step_learn
 		return $txt_shapes;
 	}
 
-	public static function showSummary()
+	public static function showSummary($_legend = true)
 	{
 		$category      = step::get('learn_category');
 		// $list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
@@ -602,8 +602,21 @@ class step_learn
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
-		$txt .= "شما ". \lib\db\cardusages::$total_checked. " تا از ". \lib\db\cardusages::$total. " کارت را مرورکرده‌اید";
-		$txt .= " و دارای *$currentPoint امتیاز* می‌باشید.\n";
+		// $txt .= "شما ". \lib\db\cardusages::$total_checked. " تا از ". \lib\db\cardusages::$total. " کارت را مرورکرده‌اید";
+		// $txt .= " و دارای *$currentPoint امتیاز* می‌باشید.\n";
+
+		if($_legend)
+		{
+			
+			$txt .= 'ℹ کل کارت‌ها '. \lib\db\cardusages::$total.' عدد'. "\n";
+			$txt .= '✅ '. \lib\db\cardusages::$total_checked.' مرورشده'. "\n";
+			$txt .= '⬛ '. \lib\db\cardusages::$total_learned.' یادگرفته‌شده'. "\n";
+			$txt .= '🅾 '. \lib\db\cardusages::$total_expired.' منقضی‌شده'. "\n";
+			$txt .= '🆕 '. \lib\db\cardusages::$total_unlearned.' هنوز بررسی‌نشده'. "\n";
+			$txt .= '🔆 در نهایت شما *'. $currentPoint.' امتیاز* کسب کرده‌اید.'. "\n\n";
+
+		}
+
 		// $txt .= "یادگرفته‌شده‌ها $count_learned\n";
 		// $txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
