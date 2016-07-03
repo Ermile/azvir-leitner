@@ -573,7 +573,7 @@ class step_learn
 		$category      = step::get('learn_category');
 		// $list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
 		// $chart  = self::calcChart($list, 'total');
-		$chart2  = self::calcChartVertical(false);
+		$chart2  = self::calcChartVertical(true);
 		$currentPoint = \lib\db\users::getDetail(bot::$user_id, 'option_meta', 'user%', 'points');
 		// create array to get inline chart of total
 		$list_total    =
