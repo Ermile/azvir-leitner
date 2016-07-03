@@ -181,8 +181,11 @@ class step_learn
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
 
+var_dump($card_status);
+var_dump($card_deck);
+
 		// add status of this card
-		if($card_status === 0)
+		if($card_status === '0')
 		{
 			if(isset(self::$deck_symbols[$card_deck]))
 			{
@@ -190,7 +193,7 @@ class step_learn
 			}
 			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired');
 		}
-		elseif($card_status === 1)
+		elseif($card_status === '1')
 		{
 			$card_status = '🆗';
 			if(isset(self::$deck_symbols[$card_deck]))
