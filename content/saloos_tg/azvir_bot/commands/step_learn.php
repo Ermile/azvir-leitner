@@ -138,6 +138,15 @@ class step_learn
 			$cat_id = \lib\db\cardcats::catDetail($_txtCat);
 			step::set('learn_categoryText', $_txtCat);
 			step::set('learn_category', $cat_id);
+
+			$txt_text = self::showSummary();
+			$msg      =
+			[
+				'text'         => $txt_text,
+				'reply_markup' => 	keyboard::draw(self::$keyborad_final),
+
+			];
+			$result = bot::sendResponse($msg);
 		}
 		// if cat is not exist
 		if(!$cat_id)
@@ -180,9 +189,6 @@ class step_learn
 		step::set('learn_card_deck', $card_deck);
 		step::set('learn_card_front', $card_front);
 		step::set('learn_card_back', $card_back);
-
-var_dump($card_status);
-var_dump($card_deck);
 
 		// add status of this card
 		if($card_status === '0')
