@@ -11,6 +11,7 @@ class step_learn
 	private static $menu           = ["hide_keyboard" => true];
 	private static $maxCard        = 10;
 	private static $keyborad_final = [ "ادامه ♻", "وضعیت 📊", "بازگشت 🔙"];
+	private static $deck_symbols   = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
 
 	/**
 	 * create define menu that allow user to select
@@ -183,13 +184,19 @@ class step_learn
 		// add status of this card
 		if($card_status === 0)
 		{
-			$card_status = T_('Deck'). $card_deck. "\n";
+			if(isset(self::$deck_symbols[$card_deck]))
+			{
+				$card_status = self::$deck_symbols[$card_deck]. "\n";
+			}
 			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired');
 		}
 		elseif($card_status === 1)
 		{
-			$card_status = T_('Learned');
-			$card_status .= T_('Deck'). $card_deck."\n";
+			$card_status = '🆗';
+			if(isset(self::$deck_symbols[$card_deck]))
+			{
+				$card_status = self::$deck_symbols[$card_deck]. "\n";
+			}
 			$card_status .= \lib\utility::humanTiming($card_expire);
 		}
 		else
