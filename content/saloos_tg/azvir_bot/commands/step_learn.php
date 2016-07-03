@@ -181,12 +181,12 @@ class step_learn
 		step::set('learn_card_back', $card_back);
 
 		// add status of this card
-		if($card_status == 0)
+		if($card_status === 0)
 		{
 			$card_status = T_('Deck'). $card_deck. "\n";
 			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired');
 		}
-		elseif($card_status == 1)
+		elseif($card_status === 1)
 		{
 			$card_status = T_('Learned');
 			$card_status .= T_('Deck'). $card_deck."\n";
@@ -194,7 +194,7 @@ class step_learn
 		}
 		else
 		{
-			$card_status = T_('New');
+			$card_status = '🆕';
 		}
 
 		// go to next step
