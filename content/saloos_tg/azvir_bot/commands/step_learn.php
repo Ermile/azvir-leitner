@@ -139,7 +139,7 @@ class step_learn
 			step::set('learn_categoryText', $_txtCat);
 			step::set('learn_category', $cat_id);
 
-			$txt_text = self::showSummary();
+			$txt_text = self::showSummary(false);
 			$msg      =
 			[
 				'text'         => $txt_text,
@@ -604,15 +604,16 @@ class step_learn
 		$txt .= $list_total_chart."\n\n";
 		// $txt .= "شما ". \lib\db\cardusages::$total_checked. " تا از ". \lib\db\cardusages::$total. " کارت را مرورکرده‌اید";
 		// $txt .= " و دارای *$currentPoint امتیاز* می‌باشید.\n";
+		$txt .= $chart2. "\n";
 
 		if($_legend)
 		{
 			
-			$txt .= 'ℹ کل کارت‌ها '. \lib\db\cardusages::$total.' عدد'. "\n";
-			$txt .= '✅ '. \lib\db\cardusages::$total_checked.' مرورشده'. "\n";
-			$txt .= '⬛ '. \lib\db\cardusages::$total_learned.' یادگرفته‌شده'. "\n";
-			$txt .= '🅾 '. \lib\db\cardusages::$total_expired.' منقضی‌شده'. "\n";
-			$txt .= '🆕 '. \lib\db\cardusages::$total_unlearned.' هنوز بررسی‌نشده'. "\n";
+			$txt .= 'ℹ '. str_pad('/all', 10). ' کل کارت‌ها '. \lib\db\cardusages::$total.' عدد'. "\n";
+			$txt .= '✅ '. str_pad('/checked', 10). ' '. \lib\db\cardusages::$total_checked.' مرورشده'. "\n";
+			$txt .= '⬛ '. str_pad('/learned', 10). ' '. \lib\db\cardusages::$total_learned.' یادگرفته‌شده'. "\n";
+			$txt .= '🅾 '. str_pad('/expired', 10). ' '. \lib\db\cardusages::$total_expired.' منقضی‌شده'. "\n";
+			$txt .= '🆕 '. str_pad('/unlearned', 10). ' '. \lib\db\cardusages::$total_unlearned.' هنوز بررسی‌نشده'. "\n";
 			$txt .= '🔆 در نهایت شما *'. $currentPoint.' امتیاز* کسب کرده‌اید.'. "\n\n";
 
 		}
@@ -621,7 +622,6 @@ class step_learn
 		// $txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
 		// $txt .= "\n\nجزئیات آمار کل کارت‌ها ". "\n";
-		$txt .= $chart2. "\n";
 		// $txt .= $chart. "\n";
 		$txt .= "ازویر خدمتی از ارمایل @Ermile". "\n";
 
