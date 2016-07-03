@@ -8,7 +8,11 @@ class cardusages
 	 *
 	 * v1.0
 	 */
-
+	public static $total           = 0;
+	public static $total_checked   = 0;
+	public static $total_learned   = 0;
+	public static $total_expired   = 0;
+	public static $total_unlearned = 0;
 
 	/**
 	 * save question answers
@@ -190,7 +194,7 @@ class cardusages
 	}
 
 
-	public static function cardAnswerDeck($_user_id, $_cat_id)
+	public static function cardAnswerDeck($_user_id, $_cat_id, $_addUnlearned = true)
 	{
 		if(!is_numeric($_cat_id))
 		{
@@ -199,16 +203,61 @@ class cardusages
 		$qry =
 			"SELECT
 				count(*) as total,
-				cardusages.cardusage_deck as deck
+				cardusages.cardusage_deck as deck,
+				IF(cardusages.cardusage_expire > now(), 'expired', 'learned') as status
 			FROM cardusages
 			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
 			WHERE
 				user_id = $_user_id AND
 				cardlists.term_id = $_cat_id
-			GROUP BY deck
-			ORDER BY deck
+			GROUP BY deck, status
+			ORDER BY deck, status desc
 		";
-		$result = \lib\db::get($qry, ['deck', 'total']);
+		$qry_result = \lib\db::get($qry);
+		$result     = [];
+
+		foreach ($qry_result as $key => $value)
+		{
+			$deck          = isset($value['deck']) ? $value['deck']: null;
+			$status        = isset($value['status']) ? $value['status']: null;
+			$total_checked = isset($value['total']) ? $value['total']: 0;
+
+			if(!isset($result[$deck]['total']))
+			{
+				$result[$deck]['total'] = 0;
+			}
+			$result[$deck]['total'] = $result[$deck]['total'] + $total_checked;
+
+			// calc total of each type
+			self::$total_checked    = self::$total_checked + $total_checked;
+			
+			if($status === 'learned')
+			{
+				self::$total_learned = self::$total_learned + $total_checked;
+			}
+			elseif($status === 'expired')
+			{
+				self::$total_expired = self::$total_expired + $total_checked;
+			}
+
+			$result[$deck][$status] = (int)$total_checked;
+		}
+		
+		// get total cards in this category
+		self::$total            = \lib\db\cardcats::cardCount($_cat_id);
+		self::$total_unlearned  = self::$total - self::$total_checked;
+		
+		if($_addUnlearned)
+		{
+			// calc unlearned card, total
+			if(!isset($result[0]['total']))
+			{
+				$result[0]['total'] = 0;
+			}
+			$result[0]['total']     = $result[0]['total'] + self::$total_unlearned;
+			$result[0]['unlearned'] = self::$total_unlearned;
+		}
+
 		return $result;
 	}
 

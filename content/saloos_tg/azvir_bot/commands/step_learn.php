@@ -405,7 +405,7 @@ class step_learn
 
 		$txt_text .= $txt_summary. "\n";
 		// $txt_text .= "جزئیات آمار کارت‌های مرورشده ‌";
-		$txt_text .= self::calcChartVertical()."\n";
+		$txt_text .= self::calcChartVertical(false)."\n";
 		$txt_text .= "_name_ خدمتی از ارمایل @Ermile\n";
 
 		// $keyboard  =
@@ -571,55 +571,38 @@ class step_learn
 	public static function showSummary()
 	{
 		$category      = step::get('learn_category');
-		$count_total   = \lib\db\cardcats::cardCount($category);
-		$count_remined = 0;
-		$list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
-		if(!$list)
-		{
-			$list =
-			[
-				0 => 0
-			];
-		}
-		$count_learned = array_sum($list);
-		$count_remined = $count_total - $count_learned;
+		// $list          = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, $category);
+		// $chart  = self::calcChart($list, 'total');
+		$chart2  = self::calcChartVertical(false);
+		$currentPoint = \lib\db\users::getDetail(bot::$user_id, 'option_meta', 'user%', 'points');
 		// create array to get inline chart of total
 		$list_total    =
 		[
-			'success' => $count_learned,
-			'skip' => $count_remined,
+			'success' => \lib\db\cardusages::$total_checked,
+			'skip'    => \lib\db\cardusages::$total_unlearned,
 		];
 		$list_total_chart = self::calcPercentage($list_total);
-
-		if($count_learned < $count_total)
-		{
-			$list[0] = isset($list[0])? $list[0]: 0;
-			$list[0] =  + ($count_total - $count_learned);
-		}
-
-		$chart  = self::calcChart($list, 'Deck');
-		$chart2  = self::calcChartVertical($list);
-		$currentPoint = \lib\db\users::getDetail(bot::$user_id, 'option_meta', 'user%', 'points');
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
 		// total analytics
 		$txt .= $list_total_chart."\n\n";
-		$txt .= "شما $count_learned تا از $count_total کارت را مرورکرده‌اید";
+		$txt .= "شما ". \lib\db\cardusages::$total_checked. " تا از ". \lib\db\cardusages::$total. " کارت را مرورکرده‌اید";
 		$txt .= " و دارای *$currentPoint امتیاز* می‌باشید.\n";
 		// $txt .= "یادگرفته‌شده‌ها $count_learned\n";
 		// $txt .= "منتظر یادگیری شما $count_remined\n";
 		// analytic of each deck
 		// $txt .= "\n\nجزئیات آمار کل کارت‌ها ". "\n";
 		$txt .= $chart2. "\n";
-		$txt .= $chart. "\n";
+		// $txt .= $chart. "\n";
 		$txt .= "ازویر خدمتی از ارمایل @Ermile". "\n";
 
 
 		return $txt;
 	}
 
-	public static function calcChart($_inputList, $_showtext = true, $_onlyArray = false)
+	public static function calcChart($_inputList, $_column = 'all', $_onlyArray = false)
 	{
+		$_showtext = true;
 		$result  = "";
 		$shape   = "🔷";
 		$total   = array_sum($_inputList);
@@ -663,28 +646,43 @@ class step_learn
 
 
 
-	public static function calcChartVertical($_datalist = null)
+	public static function calcChartVertical($_addUnlearned = false)
 	{
-		$row      = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
-		$chart    = "";
-		$max      = 10;
-		$devider  = 100 / $max;
-		$total    = null;
-
-		if(!$_datalist)
+		$row         = ['0⃣', '1⃣', '2⃣', '3⃣', '4⃣', '5⃣', '6⃣', '7⃣', '8⃣', '9⃣', '🔟'];
+		$chart       = "";
+		$max         = 10;
+		$devider     = 100 / $max;
+		$datalist    = [];
+		$_datalist   = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'), $_addUnlearned);
+		if($_addUnlearned)
 		{
-			$_datalist = \lib\db\cardusages::cardAnswerDeck(bot::$user_id, step::get('learn_category'));
-			$total     = array_sum($_datalist);
-
-			// unset($_datalist[0]);
+			$total_cards = \lib\db\cardusages::$total;
 		}
+		else
+		{
+			$total_cards = \lib\db\cardusages::$total_checked;
+		}
+		// unset($_datalist[0]);
 		ksort($_datalist);
-		$datalist = self::calcChart($_datalist, null, true);
+
+		// change values to percentage in all condition
+		foreach ($_datalist as $deck => $deckValues)
+		{
+			$total     = isset($deckValues['total'])? $deckValues['total']: 0;
+			$learned   = isset($deckValues['learned'])? $deckValues['learned']: 0;
+			$expired   = isset($deckValues['expired'])? $deckValues['expired']: 0;
+			$unlearned = isset($deckValues['unlearned'])? $deckValues['unlearned']: 0;
+			
+			$datalist[$deck]['total']     = (int)ceil($total * 100 / $total_cards);
+			$datalist[$deck]['learned']   = (int)ceil($learned * 100 / $total);
+			$datalist[$deck]['expired']   = (int)ceil($expired * 100 / $total);
+			$datalist[$deck]['unlearned'] = (int)ceil($unlearned * 100 / $total);
+		}
 
 		// draw 4 deck in chart
 		for ($i=1; $i < 4; $i++)
 		{
-			if(!isset($datalist[$i]))
+			if(!isset($_datalist[$i]))
 			{
 				$datalist[$i] = 0;
 			}
@@ -693,41 +691,90 @@ class step_learn
 		for ($i=0; $i < $max; $i++)
 		{
 			$chart_row = "";
-			foreach ($datalist as $key => $value)
+			foreach ($datalist as $deck => $deckValues)
 			{
 				if($i === 0)
 				{
-					if(isset($row[$key]))
+					if(isset($row[$deck]))
 					{
-						$chart_row .= $row[$key];
+						$chart_row .= $row[$deck];
 					}
 					else
 					{
-						$chart_row .= $key;
+						$chart_row .= $deck;
 					}
 				}
 				else
 				{
-					$fill         = $value / $devider;
-					$fill_divided = $fill - $i +1;
+					$fill           = $deckValues['total'] / $devider;
+					$fill_divided   = $fill - $i +1;
+					if(!isset($deckValues['learned']))
+					{
+						$deckValues['learned'] = 0;
+					}
+					if(!isset($deckValues['unlearned']))
+					{
+						$deckValues['unlearned'] = 0;
+					}
+					$fill_learned   = round($fill * $deckValues['learned'] / 100, 1);
+					$fill_expired   = round($fill * $deckValues['expired'] / 100, 1);
+					$fill_unlearned = round($fill * $deckValues['unlearned'] / 100, 1);
+
+					if(($fill_learned - $i) > 0)
+					{
+						$fill_type = 'learned';
+					}
+					elseif(($fill_unlearned - $i) > 0)
+					{
+						$fill_type = 'unlearned';
+					}
+					else
+					{
+						$fill_type = 'expired';
+					}
 
 					// empty or full
 					if($fill_divided > 0)
 					{
-						// if this row is full
-						if($fill_divided >= 1.0)
+						// if show normal value learned
+						switch ($fill_type)
 						{
-							$chart_row .= "⬛";
-						}
-						// if more than half
-						elseif($fill_divided >= 0.5)
-						{
-							$chart_row .= '🔲';
-						}
-						// if less than half
-						else
-						{
-							$chart_row .= '🔳';
+							case 'learned':
+								// if this row is full
+								if($fill_divided >= 1.0)
+								{
+									$chart_row .= "⬛";
+								}
+								// if more than half
+								elseif($fill_divided >= 0.5)
+								{
+									$chart_row .= '🔲';
+								}
+								// if less than half
+								else
+								{
+									$chart_row .= '🔳';
+								}
+								break;
+							
+							case 'unlearned':
+								$chart_row .= '✳';
+								break;
+
+
+							case 'expired':
+								if($fill_divided >= 1)
+								{
+									$chart_row .= "🅾";
+								}
+								else
+								{
+									$chart_row .= "🔺";
+								}
+								break;
+
+							default:
+								break;
 						}
 					}
 					// if empty
@@ -741,10 +788,10 @@ class step_learn
 			$chart = $chart_row."\n". $chart;
 		}
 		// add total of rows into chart first row
-		if($total)
-		{
-			$chart = "جزئیات $total کارت مرورشده\n". $chart;
-		}
+		// if($total)
+		// {
+		// 	$chart = "جزئیات $total کارت مرورشده\n". $chart;
+		// }
 		return $chart;
 	}
 }
