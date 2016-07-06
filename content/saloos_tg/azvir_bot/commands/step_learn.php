@@ -732,7 +732,13 @@ class step_learn
 		}
 
 		// get max row to draw only until top row
+		var_dump(88888888);
+		// unset($datalist['new']);
+		// var_dump($datalist);
 		$maxRow = max($datalist);
+		$maxRow = max(array_column($datalist, 'total'));
+		var_dump($maxRow);
+		$maxRow = ceil($maxRow / $max);
 		var_dump($maxRow);
 
 		// draw 4 deck in chart
