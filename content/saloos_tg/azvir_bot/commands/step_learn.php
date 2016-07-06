@@ -731,6 +731,9 @@ class step_learn
 			}
 		}
 
+		// get max row to draw only until top row
+		$maxRow = max($datalist);
+
 		// draw 4 deck in chart
 		for ($i=1; $i < 4; $i++)
 		{
@@ -755,6 +758,10 @@ class step_learn
 					{
 						$chart_row .= $deck;
 					}
+				}
+				if($i > $maxRow)
+				{
+					// do nothing
 				}
 				else
 				{
