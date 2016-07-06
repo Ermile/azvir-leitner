@@ -705,6 +705,17 @@ class step_learn
 			$datalist[$deck]['learned']   = (int)ceil($learned * 100 / $total);
 			$datalist[$deck]['expired']   = (int)ceil($expired * 100 / $total);
 			$datalist[$deck]['unlearned'] = (int)ceil($unlearned * 100 / $total);
+
+			$chart .= "\n";
+			if(isset(self::$deck_symbols[$deck]))
+			{
+				$chart .= self::$deck_symbols[$deck];
+			}
+			else
+			{
+				$chart .= $deck;
+			}
+			$chart .= str_pad($total.',', 4). " 🔵$learned, 🔴$expired, ⚪$unlearned";
 		}
 
 		// draw 4 deck in chart
