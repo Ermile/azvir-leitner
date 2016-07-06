@@ -912,9 +912,9 @@ INSERT IGNORE INTO `papers` VALUES ('881', 'go quickly\n\nگریختن، فرا�
 INSERT IGNORE INTO `papers` VALUES ('882', 'open to attack\n\nآسیب پذیر، شکننده، ضعیف');
 INSERT IGNORE INTO `papers` VALUES ('883', 'mean\n\nدلالت داشتن، اهمیت داشتن، معنی داشتن');
 INSERT IGNORE INTO `papers` VALUES ('884', 'stories that attempt to explain something in nature\n\nاسطوره، افسانه');
-INSERT IGNORE INTO `papers` VALUES ('885', 'associate\n\nتهیه کردن، آماده کردن');
-INSERT IGNORE INTO `papers` VALUES ('886', 'cause very great pain to\n\nهمقطار، شریک، همکار');
-INSERT IGNORE INTO `papers` VALUES ('887', 'to supply\n\nزجر دادن، بهستوه آوردن، عذاب');
+INSERT IGNORE INTO `papers` VALUES ('885', 'cause very great pain to\n\nهمقطار، شریک، همکار');
+INSERT IGNORE INTO `papers` VALUES ('886', '	torment, suffering\n\nزجر دادن، بهستوه آوردن، عذاب');
+INSERT IGNORE INTO `papers` VALUES ('887', 'to supply\n\nتهیه کردن، آماده کردن');
 INSERT IGNORE INTO `papers` VALUES ('888', 'faithfulness\n\nوفاداری، صداقت، پایبندی');
 INSERT IGNORE INTO `papers` VALUES ('889', 'person who offer one`s service\n\nداوطلب، داوطلبانه');
 INSERT IGNORE INTO `papers` VALUES ('890', 'to harm or injure\n\nخسارت، لطمه');
