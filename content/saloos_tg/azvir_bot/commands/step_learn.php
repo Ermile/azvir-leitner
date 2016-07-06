@@ -166,7 +166,8 @@ class step_learn
 		// add try number
 		step::plus(1, 'tryCounter');
 
-		$card_id     = $lastCard['id'];
+		$id          = $lastCard['id'];
+		$card_id     = $lastCard['card_id'];
 		$card_deck   = $lastCard['deck'];
 		$card_front  = $lastCard['front'];
 		$card_back   = $lastCard['back'];
@@ -174,7 +175,7 @@ class step_learn
 		$card_expire = $lastCard['expire'];
 		$card_ratio  = $lastCard['ratio'];
 		// get tag of this card
-		$card_tag   = \lib\db\cards::tag($card_id);
+		$card_tag   = \lib\db\cards::tag($id);
 
 		if(!$card_front)
 		{
@@ -185,6 +186,7 @@ class step_learn
 			$card_back = "پشت کارت خالی است!\nلطفا به مدیر اطلاع دهید!";
 		}
 		// set card details
+		step::set('learn_id', $id);
 		step::set('learn_card_id', $card_id);
 		step::set('learn_card_deck', $card_deck);
 		step::set('learn_card_front', $card_front);
@@ -270,7 +272,7 @@ class step_learn
 			case '/skip':
 				bot::$skipText = false;
 				step::plus(1, 'trySkip');
-				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'skip', $spendTime);
+				$r = \lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_id'), 'skip', $spendTime);
 				step::goingto(3);
 				return self::step3();
 				break;
@@ -342,7 +344,7 @@ class step_learn
 			case '/yes':
 				step::plus(1, 'trySuccess');
 				// save answer true
-				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'true', $spendTime);
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_id'), 'true', $spendTime);
 				break;
 
 			case 'خیر':
@@ -353,7 +355,7 @@ class step_learn
 			case '/no':
 				step::plus(1, 'tryFail');
 				// save answer false
-				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_card_id'), 'false', $spendTime);
+				\lib\db\cardusages::saveAnswer(bot::$user_id, step::get('learn_id'), 'false', $spendTime);
 				break;
 
 			default:
@@ -763,16 +765,27 @@ class step_learn
 				}
 				else
 				{
+					var_dump($deckValues);
+					if(!is_array($deckValues))
+					{
+						$deckValues = [];
+					}
+					$deckDefaultValues = 
+					[
+						'total'     => 0,
+						'learned'   => 0,
+						'expired'   => 0,
+						'unlearned' => 0,
+					];
+					$deckValues = array_merge($deckDefaultValues, $deckValues);
+
+					// $deckValues['total']     = (!isset($deckValues['total']))? 0;
+					// $deckValues['learned']   = (!isset($deckValues['learned']))? 0;
+					// $deckValues['expired']   = (!isset($deckValues['expired']))? 0;
+					// $deckValues['unlearned'] = (!isset($deckValues['unlearned']))? 0;
+
 					$fill           = $deckValues['total'] / $devider;
 					$fill_divided   = $fill - $i +1;
-					if(!isset($deckValues['learned']))
-					{
-						$deckValues['learned'] = 0;
-					}
-					if(!isset($deckValues['unlearned']))
-					{
-						$deckValues['unlearned'] = 0;
-					}
 					$fill_learned   = round($fill * $deckValues['learned'] / 100, 1);
 					$fill_expired   = round($fill * $deckValues['expired'] / 100, 1);
 					$fill_unlearned = round($fill * $deckValues['unlearned'] / 100, 1);
