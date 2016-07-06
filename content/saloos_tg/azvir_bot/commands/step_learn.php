@@ -759,11 +759,11 @@ class step_learn
 					$fill_expired   = round($fill * $deckValues['expired'] / 100, 1);
 					$fill_unlearned = round($fill * $deckValues['unlearned'] / 100, 1);
 
-					if(($fill_learned - $i) > 0)
+					if(($fill_learned - $i +1) > 0)
 					{
 						$fill_type = 'learned';
 					}
-					elseif(($fill_unlearned - $i) > 0)
+					elseif(($fill_unlearned - $i +1) > 0)
 					{
 						$fill_type = 'unlearned';
 					}
