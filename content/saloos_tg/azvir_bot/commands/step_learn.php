@@ -197,7 +197,7 @@ class step_learn
 			{
 				$card_status = self::$deck_symbols[$card_deck]. "\n";
 			}
-			$card_status .= \lib\utility::humanTiming($card_expire). ' '. T_('Expired'). '❗';
+			$card_status .= 'در '. \lib\utility::humanTiming($card_expire). ' '. T_('Expired'). '❗';
 		}
 		elseif($card_status === '1')
 		{
@@ -221,7 +221,7 @@ class step_learn
 		// add success ration
 		if($card_ratio !== null)
 		{
-			$txt_text .= "` - ". $card_ratio. "%`";
+			$txt_text .= "` - ". $card_ratio. "درصد`";
 		}
 		// if has skip show in list
 		$txt_text .= "\n\n*".$card_front. "*";
@@ -468,7 +468,7 @@ class step_learn
 			case '/review':
 				// $txt_text = "نمایش وضعیت طبقه‌ها\n\n";
 				// $txt_text .= "...\n\n";
-				$txt_text = self::showSummary();
+				$txt_text = self::showSummary(true);
 				$result   =
 				[
 					'text'         => $txt_text,
@@ -584,6 +584,7 @@ class step_learn
 		return $txt_shapes;
 	}
 
+
 	public static function showSummary($_legend = true)
 	{
 		$category      = step::get('learn_category');
@@ -597,25 +598,34 @@ class step_learn
 			'success' => \lib\db\cardusages::$total_checked,
 			'skip'    => \lib\db\cardusages::$total_unlearned,
 		];
-		$list_total_chart = self::calcPercentage($list_total);
 
 		$txt = "خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
-		// total analytics
-		$txt .= $list_total_chart."\n\n";
+
 		// $txt .= "شما ". \lib\db\cardusages::$total_checked. " تا از ". \lib\db\cardusages::$total. " کارت را مرورکرده‌اید";
 		// $txt .= " و دارای *$currentPoint امتیاز* می‌باشید.\n";
 		$txt .= $chart2. "\n";
 
 		if($_legend)
 		{
+			// total analytics
+			$list_total_chart = self::calcPercentage($list_total);
+			$txt_msg = "راهنمای خلاصه آمار سری کارت‌های `[". step::get('learn_categoryText'). "]`\n";
+			$txt_msg .= $list_total_chart."\n\n";
 			
-			$txt .= 'ℹ '. str_pad('/all', 10). ' کل کارت‌ها '. \lib\db\cardusages::$total.' عدد'. "\n";
-			$txt .= '✅ '. str_pad('/checked', 10). ' '. \lib\db\cardusages::$total_checked.' مرورشده'. "\n";
-			$txt .= '⬛ '. str_pad('/learned', 10). ' '. \lib\db\cardusages::$total_learned.' یادگرفته‌شده'. "\n";
-			$txt .= '🅾 '. str_pad('/expired', 10). ' '. \lib\db\cardusages::$total_expired.' منقضی‌شده'. "\n";
-			$txt .= '🆕 '. str_pad('/unlearned', 10). ' '. \lib\db\cardusages::$total_unlearned.' هنوز بررسی‌نشده'. "\n";
-			$txt .= '🔆 در نهایت شما *'. $currentPoint.' امتیاز* کسب کرده‌اید.'. "\n\n";
+			// show last chart legend
+			$txt_msg .= 'ℹ '. str_pad('/all', 10). ' کل کارت‌ها '. \lib\db\cardusages::$total.' عدد'. "\n";
+			$txt_msg .= '✅ '. str_pad('/checked', 10). ' '. \lib\db\cardusages::$total_checked.' مرورشده'. "\n";
+			$txt_msg .= '⬛ '. str_pad('/learned', 10). ' '. \lib\db\cardusages::$total_learned.' یادگرفته‌شده'. "\n";
+			$txt_msg .= '🅾 '. str_pad('/expired', 10). ' '. \lib\db\cardusages::$total_expired.' منقضی‌شده'. "\n";
+			$txt_msg .= '🆕 '. str_pad('/unlearned', 10). ' '. \lib\db\cardusages::$total_unlearned.' هنوز بررسی‌نشده'. "\n";
+			$txt_msg .= '🔆 در نهایت شما *'. $currentPoint.' امتیاز* کسب کرده‌اید.'. "\n\n";
 
+			$msg      =
+			[
+				'text'         => $txt_msg,
+
+			];
+			$result = bot::sendResponse($msg);
 		}
 
 		// $txt .= "یادگرفته‌شده‌ها $count_learned\n";
@@ -628,6 +638,7 @@ class step_learn
 
 		return $txt;
 	}
+
 
 	public static function calcChart($_inputList, $_column = 'all', $_onlyArray = false)
 	{
@@ -675,7 +686,7 @@ class step_learn
 
 
 
-	public static function calcChartVertical($_addUnlearned = false)
+	public static function calcChartVertical($_addUnlearned = false, $_detail = false)
 	{
 		$chart       = "";
 		$max         = 10;
@@ -705,16 +716,19 @@ class step_learn
 			$datalist[$deck]['expired']   = (int)ceil($expired * 100 / $total);
 			$datalist[$deck]['unlearned'] = (int)ceil($unlearned * 100 / $total);
 
-			$chart .= "\n";
-			if(isset(self::$deck_symbols[$deck]))
+			if($_detail)
 			{
-				$chart .= self::$deck_symbols[$deck];
+				$chart .= "\n";
+				if(isset(self::$deck_symbols[$deck]))
+				{
+					$chart .= self::$deck_symbols[$deck];
+				}
+				else
+				{
+					$chart .= $deck;
+				}
+				$chart .= str_pad($total.',', 4). " 🔵$learned, 🔴$expired, ⚪$unlearned";
 			}
-			else
-			{
-				$chart .= $deck;
-			}
-			$chart .= str_pad($total.',', 4). " 🔵$learned, 🔴$expired, ⚪$unlearned";
 		}
 
 		// draw 4 deck in chart
