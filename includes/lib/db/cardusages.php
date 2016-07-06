@@ -247,10 +247,19 @@ class cardusages
 		self::$total            = \lib\db\cardcats::cardCount($_cat_id);
 		self::$total_unlearned  = self::$total - self::$total_checked;
 		
+		ksort($result);
+
 		if($_addUnlearned)
 		{
-			$result['new']['total']     = self::$total_unlearned;
-			$result['new']['unlearned'] = self::$total_unlearned;
+			$unlearned =
+			[
+				'new' =>
+				[
+					'total'     => self::$total_unlearned,
+					'unlearned' => self::$total_unlearned,
+				]
+			];
+			$result = $unlearned + $result;
 		}
 
 		return $result;

@@ -691,7 +691,6 @@ class step_learn
 			$total_cards = \lib\db\cardusages::$total_checked;
 		}
 		// unset($_datalist[0]);
-		ksort($_datalist);
 
 		// change values to percentage in all condition
 		foreach ($_datalist as $deck => $deckValues)
