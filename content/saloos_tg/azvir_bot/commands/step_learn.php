@@ -744,7 +744,7 @@ class step_learn
 			}
 		}
 
-		for ($i=0; $i < $max; $i++)
+		for ($i=0; $i < $max && $i < $maxRow; $i++)
 		{
 			$chart_row = "";
 			foreach ($datalist as $deck => $deckValues)
@@ -759,10 +759,6 @@ class step_learn
 					{
 						$chart_row .= $deck;
 					}
-				}
-				elseif($i > $maxRow)
-				{
-					// do nothing
 				}
 				else
 				{
