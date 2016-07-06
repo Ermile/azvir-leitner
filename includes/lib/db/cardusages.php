@@ -204,7 +204,7 @@ class cardusages
 			"SELECT
 				count(*) as total,
 				cardusages.cardusage_deck as deck,
-				IF(cardusages.cardusage_expire > '". date('Y-m-d H:i:s'). "', 'expired', 'learned') as status
+				IF(cardusages.cardusage_expire < '". date('Y-m-d H:i:s'). "', 'expired', 'learned') as status
 			FROM cardusages
 			INNER JOIN cardlists ON cardusages.cardlist_id = cardlists.id
 			WHERE
