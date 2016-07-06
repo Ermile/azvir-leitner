@@ -897,7 +897,7 @@ INSERT IGNORE INTO `papers` VALUES ('866', 'keep in\n\nنگه داشتن، مح�
 INSERT IGNORE INTO `papers` VALUES ('867', 'not busy\n\nبیکار، تنبل، بی فایده');
 INSERT IGNORE INTO `papers` VALUES ('868', 'person who loved very much\n\nبت، محبوب');
 INSERT IGNORE INTO `papers` VALUES ('869', 'joke\n\nلطیفه، شوخی، مزاح، تمسخر');
-INSERT IGNORE INTO `papers` VALUES ('870', 'loving one`s country\n\nمیهن پرست');
+INSERT IGNORE INTO `papers` VALUES ('870', 'loving ones country\n\nمیهن پرست');
 INSERT IGNORE INTO `papers` VALUES ('871', 'disagree\n\nاختلاف، مجادله، مبارزه کردن، مقاومت کردن');
 INSERT IGNORE INTO `papers` VALUES ('872', 'bravery\n\nشجاعت، دلیری');
 INSERT IGNORE INTO `papers` VALUES ('873', 'crazy person\n\nدیوانه، مجنون، بسیار احمق');
@@ -916,7 +916,7 @@ INSERT IGNORE INTO `papers` VALUES ('885', 'cause very great pain to\n\nهمقط
 INSERT IGNORE INTO `papers` VALUES ('886', '	torment, suffering\n\nزجر دادن، بهستوه آوردن، عذاب');
 INSERT IGNORE INTO `papers` VALUES ('887', 'to supply\n\nتهیه کردن، آماده کردن');
 INSERT IGNORE INTO `papers` VALUES ('888', 'faithfulness\n\nوفاداری، صداقت، پایبندی');
-INSERT IGNORE INTO `papers` VALUES ('889', 'person who offer one`s service\n\nداوطلب، داوطلبانه');
+INSERT IGNORE INTO `papers` VALUES ('889', 'person who offer ones service\n\nداوطلب، داوطلبانه');
 INSERT IGNORE INTO `papers` VALUES ('890', 'to harm or injure\n\nخسارت، لطمه');
 INSERT IGNORE INTO `papers` VALUES ('891', 'having a high pitch\n\nتیز، روشن، صدای بالا داشتن، شدید');
 INSERT IGNORE INTO `papers` VALUES ('892', 'full of fun\n\nخوشحال، بذله گو');
@@ -981,7 +981,7 @@ INSERT IGNORE INTO `papers` VALUES ('950', 'soak\n\nخیس کردن، خیسان
 INSERT IGNORE INTO `papers` VALUES ('951', 'crowd number\n\nگروه، دسته، خیل');
 INSERT IGNORE INTO `papers` VALUES ('952', 'move unsteadily from side to side\n\nجنبیدن، لرزیدن، تلوتلو خوردن');
 INSERT IGNORE INTO `papers` VALUES ('953', 'noise\n\nهمهمه، غوغا، سروصدا، آشوب');
-INSERT IGNORE INTO `papers` VALUES ('954', 'go down on one`s kneel\n\nزانو زدن، به زانو درآوردن');
+INSERT IGNORE INTO `papers` VALUES ('954', 'go down on ones kneel\n\nزانو زدن، به زانو درآوردن');
 INSERT IGNORE INTO `papers` VALUES ('955', 'sad\n\nمایوس، افسرده، دلگیر، اندوهگین');
 INSERT IGNORE INTO `papers` VALUES ('956', 'willing to obey\n\nفرمانبردار، مطیع، حرف شنو،');
 INSERT IGNORE INTO `papers` VALUES ('957', 'go back\n\nکنار کشیدن، عقب رفتن، دست کشیدن');
