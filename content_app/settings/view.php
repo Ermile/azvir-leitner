@@ -18,6 +18,7 @@ class view extends \mvc\view
 		}
 		$this->data->datarow = $datarow;
 		// var_dump($this->data->datarow);
+		$this->include->js    = true;
 	}
 }
 ?>

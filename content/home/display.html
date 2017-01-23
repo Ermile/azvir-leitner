@@ -1,110 +1,76 @@
 {%extends display.mvc%}
 
 {%block head_css%}
-<link rel="stylesheet"        href="{{url.static}}assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="{{url.static}}css/style.css">
 {%endblock%}
 
-
-{%block foot_js%}
-{%endblock%}
-
-
-{%block body%}
-<div id="navbar-main">
- <!-- Fixed navbar -->
- <div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-    <a class="navbar-brand" href="#home">{{site.title}}</a> </div>
-   <div class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-right">
-     <li> <a href="#home" class="smoothScroll">{%trans "Home"%}</a></li>
-     <li> <a href="#about" class="smoothScroll">{%trans "About"%}</a></li>
-     <li> <a href="#services" class="smoothScroll">{%trans "Features"%}</a></li>
-{%for key, lang in site.langlist if site.langlist|length >1 and site.currentlang != key|slice(0, 2)%}
-     <li> <a href="{{url.root}}{%if site.defaultLang != key|slice(0, 2) %}{{key|slice(0, 2)}}/{%endif%}{{url.path}}" hreflang="{{key|slice(0, 2)}}" data-direct class="langlist">{{lang}}</a></li>
-{%endfor%}
-    </ul>
-   </div>
-   <!--/.nav-collapse -->
+{%block content%}
+<div id="PageUp">
+  <div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
   </div>
- </div>
+  <div id="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve" width="512px" height="512px"><path d="M326.189,64.625c-19.406-31.47-39.899-50.819-54.728-59.622v99.491h75.313C340.756,90.463,333.888,77.112,326.189,64.625z    " /><path d="M482.497,135.415h-91.912c9.705,33.237,15.388,68.772,16.646,105.126h104.771    C509.804,203.344,499.71,167.648,482.497,135.415z" /><path d="M358.293,135.415H271.46v105.126h104.828C374.932,203.914,368.785,168.28,358.293,135.415z" /><path d="M29.504,135.415C12.292,167.648,2.197,203.344,0,240.541h104.769c1.257-36.353,6.941-71.888,16.646-105.126H29.504z" /><path d="M104.769,271.461H0c2.197,37.197,12.292,72.894,29.504,105.126h91.911C111.711,343.348,106.028,307.814,104.769,271.461z" /><path d="M159.495,463.603c-10.696-17.346-19.932-36.176-27.631-56.097h-82.86c7.711,10.489,16.263,20.472,25.641,29.85    c32.342,32.342,71.804,54.964,114.847,66.442C179.066,492.382,168.89,478.839,159.495,463.603z" /><path d="M437.354,74.646C405.013,42.304,365.55,19.682,322.507,8.204c10.427,11.415,20.603,24.957,29.998,40.193    c10.696,17.347,19.932,36.176,27.631,56.098h82.86C455.284,94.007,446.732,84.024,437.354,74.646z" /><path d="M185.812,64.626c-7.699,12.486-14.567,25.837-20.584,39.87h75.313V5.003C225.711,13.806,205.217,33.155,185.812,64.626z" /><path d="M74.646,74.646c-9.378,9.378-17.93,19.361-25.641,29.85h82.86c7.699-19.922,16.935-38.751,27.631-56.098    c9.394-15.236,19.571-28.779,29.998-40.193C146.45,19.682,106.987,42.306,74.646,74.646z" /><path d="M271.46,271.461v105.126h86.833c10.492-32.864,16.64-68.499,17.995-105.126H271.46z" /><path d="M407.231,271.461c-1.257,36.353-6.941,71.888-16.646,105.126h91.911c17.213-32.234,27.307-67.929,29.504-105.126H407.231z    " /><path d="M380.136,407.507L380.136,407.507c-7.699,19.921-16.935,38.75-27.631,56.097c-9.394,15.236-19.571,28.779-29.998,40.194    c43.043-11.477,82.505-34.101,114.847-66.442c9.378-9.378,17.93-19.361,25.642-29.85H380.136z" /><path d="M165.228,407.506c6.017,14.032,12.885,27.383,20.584,39.87c19.405,31.47,39.898,50.819,54.728,59.622v-99.491H165.228z" /><path d="M271.459,407.505v99.492c14.83-8.802,35.323-28.151,54.728-59.622c7.699-12.486,14.567-25.837,20.584-39.87H271.459z" /><path d="M135.712,271.461c1.356,36.627,7.503,72.262,17.996,105.126h86.833V271.461H135.712z" /><path d="M153.708,135.415c-10.492,32.864-16.64,68.499-17.996,105.126h104.829V135.415H153.708z" />
+    </svg>
+  </div>
+  <h1>Learn & Enjoy</h1>
+  <p>Azvir uses Leitner flashcards to make memorizing facts <br>not only more efficient but also more fun.</p>
+  <a href="pages\flipcard\index.html">Start to Learn</a>
 </div>
 
-<!-- ==== HEADERWRAP ==== -->
-<div id="headerwrap" name="home">
- <header class="clearfix"> <i class="fa fa-language icon"></i>
-  <h1>{%trans "Learn & Enjoy"%}</h1>
-  <p>{{site.title}} {%trans "uses Leitner flashcards to make memorizing facts"%}<br />{%trans "not only more efficient but also more fun."%}
-   </p>
-   <a href="https://telegram.me/azvir_bot?ref=site" class="btn btn-lg" target="_blank">{%trans "Start learn with fun"%}</a>
-  </header>
-</div>
-<!-- /headerwrap -->
 
-<!-- ==== ABOUT ==== -->
-<div id="about" name="about">
- <div class="container">
-  <div class="row white">
-   <h2 class="centered">{%trans "ABOUT US"%}</h2>
-   <hr>
-   <div class="col-md-6"> <img class="img-responsive" src="{{url.static}}assets/img/about/about1.jpg" align=""> </div>
-   <div class="col-md-6">
-    <h3>{%trans "Who we are"%}</h3>
-    <p>{%trans "We are some developer and try to create usefull tools. our another tools is comming soon"%}</p>
-    <h3>{%trans "Why choose our service?"%}</h3>
-    <p>{%trans "In past we use <a href='http://sourceforge.net/projects/jmemorize/' target='_blank'>jmemorize</a> and enjoy using it."%} {%trans "It written in Java and depending on Os."%} {%trans "We decide to create a service like jmemorize and help people to learn with Leitner flashcard with fun and enjoy using it."%}
+<div id="PageMiddle" class="row auto">
+  <h2>ABOUT US</h2>
+  <hr />
+  <div class="span6 ">
+    <img src="static/images/About.jpg">
+  </div>
+  <div class="span6 ">
+    <h3>Who we are?</h3>
+    <p>We are some developer and try to create usefull tools. our another tools is comming soon</p>
+    <h3>Why choose our service?</h3>
+    <p>in past we use jmemorize and enjoy using it. It written in Java and depending on Os. We decide to create a service like jmemorize and help people to learn with Leitner flashcard with fun and enjoy using it.</p>
+  </div>
+
+</div>
+
+<div id="PageDown">
+  <div class="row container">
+    <h2>OUR FEATURES</h2>
+    <hr />
+    <p class="large">Azvir manages your learn progress and features categories, Unicode flashcard texts, statistics and an intuitive interface.
     </p>
-   </div>
-  </div>
-  <!-- row -->
- </div>
-</div>
-<!-- container -->
 
-<!-- ==== SERVICES ==== -->
-<div id="services" name="services">
- <div class="container">
-  <div class="row">
-   <h2 class="centered">{%trans "OUR FEATURES"%}</h2>
-   <hr>
-   <div class="col-lg-8 col-lg-offset-2">
-    <p class="large">{{site.title}} {%trans "manages your learn progress and features categories, Unicode flashcard texts, statistics and an intuitive interface."%}</p>
-   </div>
-   <div class="col-lg-4 callout"> <i class="fa fa-desktop fa-3x"></i>
-    <h3>{%trans "Responsive Design"%}</h3>
-    <p>{%trans "You can use our service in all of your device in any resolution."%}</p>
-   </div>
-   <div class="col-lg-4 callout"> <i class="fa fa-gears fa-3x"></i>
-    <h3>{%trans "Web Development"%}</h3>
-    <p>{%trans "We develope features and improve usability of this service."%}</p>
-   </div>
-   <div class="col-lg-4 callout"> <i class="fa fa-line-chart fa-3x"></i>
-    <h3>{%trans "Learn Faster"%}</h3>
-    <p>{%trans "with this service based on Leitner flashcard we help you learn faster than usual and enjoy!"%}</p>
-   </div>
-  </div>
-  <!-- row -->
- </div>
-</div>
-<!-- container -->
+    <div class="span4">
+      <i class="fa fa-desktop fa-3x"></i>
+      <h3>Responsive Design</h3>
+      <p>You can use our service in all of your device in any resolution.</p>
+    </div>
 
+    <div class="span4">
+      <i class="fa fa-gears fa-3x"></i>
+      <h3>Web Development</h3>
+      <p>We develope features and improve usability of this service.</p>
+    </div>
 
-<div id="footerwrap">
- <div class="container">
-  <div class="row">
-   <div class="col-md-8"> <span class="copyright">{%trans "Copyright"%} &copy; {%trans "2015"%} {{site.title}}. {%trans "Powered by"%} <a href="http://saloos.ir" target="_blank" title="قدرت گرفته از سالوس | Saloos">{%trans "Saloos"%}</a> {%trans "in"%} <a href="https://ermile.com" target="_blank">{%trans "Ermile"%}</a>.</span></div>
-   <div class="col-md-4">
-    <ul class="list-inline social-buttons">
-     <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-     <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
-     <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
-     <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
-    </ul>
-   </div>
-  </div>
- </div>
+    <div class="span4">
+      <i class="fa fa-line-chart fa-3x"></i>
+      <h3>Learn Faster</h3>
+      <p>with this service based on Leitner flashcard we help you learn faster than usual and enjoy!</p>
+    </div>
+    </div>
 </div>
 
+<footer>
+  Copyright © 2015 Azvir. Powered by Saloos in Ermile.
+</footer>
 {%endblock%}

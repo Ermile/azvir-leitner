@@ -1,0 +1,211 @@
+{%extends display.mvc%}
+{%block head_css%}<style type="text/css"></style>{%endblock%}
+{%block content%}
+
+<div id="setting">
+	<ul class="tab-navigate">
+		<li data-tab-navigate="general">General</li>
+		<li data-tab-navigate="scheduling">Scheduling</li>
+		<li data-tab-navigate="advansed">Advansed </li>
+	</ul>
+	<ul class="tab-content">
+		<li data-tab-content="general">
+			<div>
+				<div>
+					<h4> cards to learn</h4>
+					<div class="hr"></div>
+					<select>
+						<option>504/season2</option>
+						<option>season1</option>
+						<option>season3</option>
+						<option>season4</option>
+						<option>season5</option>
+						<option>season6</option>
+						<option>season7</option>
+					</select>
+					<form>
+						<input type="radio" name="cards" id="a" value="" checked>
+						<label for="a">Just unlearned cards</label><br>
+
+						<input type="radio" name="cards" id="b" value="">
+						<label for="b">Just expired cards</label><br>
+
+						<input type="radio" name="cards" id="c" value="">
+						<label for="c">Just selected cards</label><br>
+
+						<input type="radio" name="cards" id="d" value="">
+						<label for="d">all cards</label><br>
+					</form>
+					<div class="delimiters">
+						<h4> delimiters</h4>
+						<div class="hr"></div>
+						<form action="">
+							<input type="checkbox" name="vehicle" value="" id="e">
+							<label for="e">end seson when a certaint time limite  has been reached</label><br>
+							<span>Minute limite</span>
+							<input type="number" name="quantity" min="1" max="500" value="1"><br>
+
+							<input type="checkbox" name="vehicle" value="" id="f">
+							<label for="f">restric number of cards to test this season to card limit</label><br>
+							<span>Cards limite</span>
+							<input type="number" name="quantity" min="1" max="500" value="2"><br>
+
+							<input type="checkbox" name="vehicle" value="" id="g">
+							<label for="g">dont retest cards that have been faild in this season</label><br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-tab-content="advansed">
+			<div>
+				<div >
+					<h4>Cards order</h4>
+					<div class="hr"></div>
+					<P> percent of cards that should not be sorted by their deck level</P>
+					<div class="range-slider">range slider</div>
+					<form>
+						<input type="checkbox" name="vehicle" value="" id="e9">
+						<label for="e9">Group cards by categories while learning</label><br>
+
+						<input type="radio" name="cards" id="c2" value="">
+						<label for="c2">show categories in normal order</label><br>
+
+						<input type="radio" name="cards" id="d10" value="">
+						<label for="d10">show categories in random order</label><br>
+					</form>
+					<div class="side-mode">
+						<h4>side mode</h4>
+						<div class="hr"></div>
+						<form action="">
+							<input type="radio" name="cards" id="d1" value="">
+							<label for="d1">learned in normal mode</label><br>
+							<input type="radio" name="cards" id="d2" value="">
+							<label for="d2">learned with flipcard side </label><br>
+							<input type="radio" name="cards" id="d3" value="">
+							<label for="d3">learned in random mode</label><br>
+							<input type="radio" name="cards" id="d4" value="">
+							<label for="d4">learned each card sides often as specifide</label><br>
+
+							<span>front side.</span>
+							<input type="number" name="quantity" min="1" max="500" value="1"><br>
+
+							<span>flipe side  .</span>
+							<input type="number" name="quantity" min="1" max="500" value="1"><br>
+						</form>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-tab-content="scheduling">
+			<div>
+				<div id="Schedule">
+					<h4>Schedule prestes</h4>
+					<select>
+						<option>Liner (default)</option>
+						<option>custom</option>
+						<option>carm</option>
+						<option>constant</option>
+						<option>exponential</option>
+						<option>Qadratic</option>
+					</select>
+
+					<div class="delimiters">
+						<form action="">
+
+							<label for="e101">Delay after level 01</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span> </br>
+
+							<label for="e102">Delay after level 02</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e103">Delay after level 03</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e104">Delay after level 04</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e105">Delay after level 05</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e106">Delay after level 06</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e107">Delay after level 07</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e108">Delay after level 08</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e109">Delay after level 09</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+
+							<label for="e1010">Delay after level 10</label>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Days</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Hours</span>
+							<input type="number" name="quantity" min="1" max="500" value="1">
+							<span>Minute</span></br>
+						</form>
+						<input type="checkbox" name="vehicle" value="" id="f20">
+						<label id="f21" for="f20">Use fixed experenation hours and minutes</label><br>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+{%endblock%}
+
+
+
+{%block foot_js%}
+<script type="text/javascript" src="static/js/tab.js"></script>
+<script type="text/javascript"></script>
+{%endblock%}

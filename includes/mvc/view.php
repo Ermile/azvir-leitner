@@ -17,8 +17,8 @@ class view extends \lib\mvc\view
 
 		// $this->url->MainStatic       = false;
 		// $this->include->css_main     = false;
-		$this->include->css          = true;
-		$this->include->js           = false;
+		// $this->include->css          = true;
+		// $this->include->js           = false;
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 

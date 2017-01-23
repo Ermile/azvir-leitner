@@ -1,0 +1,40 @@
+{%extends display.mvc%}
+
+{%block head_css%}
+<style type="text/css"></style>
+{%endblock%}
+
+{%block content%}
+<button id="open-modals">Open Modal</button>
+
+<div id="modal">
+	<div class="info-card">
+		<div class="front">
+			<span   class="close" title="Close Modal">&times;</span>
+			<p> front <br /> front <br />front<br /> front<br /> front </p>
+			<div class="btn">click</div>
+		</div>
+
+		<div class="back">
+			<span  class="close" title="Close Modal">&times;</span>
+			<p> back <br /> back<br /> back<br /> back<br /> back </p>
+			<div class="btn">click</div>
+		</div>
+	</div>
+
+	<!-- 	<div class="second_card">
+			<span  class="close" title="Close Modal">&times;</span>
+			back <br /> back<br /> back<br /> back<br /> back
+			<div class="btn">click</div>
+		</div> -->
+</div>
+
+
+
+
+{%endblock%}
+
+
+{%block foot_js%}
+<script type="text/javascript"></script>
+{%endblock%}

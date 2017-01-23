@@ -1,0 +1,41 @@
+{%extends display.mvc%}
+
+
+{%block content%}
+
+<div class="row">
+	<div class="span2">
+		<div id="profile">
+			<img src="static/images/avatar.jpg">
+			<span class="row"> Mohammad Ali</span>
+		</div>
+		<div id="last-visit">
+			<time>last Try:<strong>15 dayes ago</strong></time>
+		</div>
+		<div class="easy-access">
+			<span>Easy Access</span>
+			<a href="#">Ask Me</a>
+			<a href="#">creat new card</a>
+			<a href="#">add categories</a>
+		</div>
+	</div>
+
+	<div class="span10">
+		<div class="row">
+			<div class="span6">
+				<div id="chart-total-category">
+				</div>
+			</div>
+			<div class="span6">
+				<div id='chart-total-cards'>
+				</div>
+			</div>
+		</div>
+		<div >
+			<div id="chart-total-history">
+			</div>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

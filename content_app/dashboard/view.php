@@ -1,5 +1,5 @@
 <?php
-namespace content_app\cards;
+namespace content_app\dashboard;
 
 class view extends \mvc\view
 {
@@ -8,8 +8,6 @@ class view extends \mvc\view
 		$this->include->datatable = true;
 
 		$this->data->datatable = $this->model()->datatable('cards');
-
-		$this->include->js    = true;
 
 		$this->global->js = array($this->url->myStatic.'js/datatable/jquery.dataTables.min.js');
 
