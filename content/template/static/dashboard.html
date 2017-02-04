@@ -3,8 +3,71 @@
 
 {%block content%}
 
-<div class="row">
-<h1> this is dashboard</h1>
+<div id="dashboard" class="row">
+	<header>
+		<div class="container">
+			<div class="info">
+				<div class="picture">
+					<img src="static/images/profile.jpg">
+				</div>
+				<div class="name">
+					<div class="jack"><span>Jack</span></div>
+					<hr class="name-hr">
+					<div class="logout"><a href="#">Log out</a></div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	<div class="container">
+		<div class="row up">
+			<div class="span5">
+				<h3>All Categories</h3>
+				<hr class="name-hr">
+				<div id="bar-stacked-chart"></div>
+			</div>
+			<div class="span3 up-middle">
+					<div id="half-cake-chart">2.1</div>
+				<div id="half-cake-chart2">
+					<h3>Ask Me</h3>
+					<hr class="name-hr">
+				</div>
+			</div>
+			<div class="span4">
+				<h3>Most Failed Cards</h3>
+				<hr class="name-hr">
+			</div>
+		</div>
+
+		<div class="row down">
+			<div class="span8">
+				<h3>Total Chart Progress</h3>
+				<hr class="name-hr">
+			</div>
+			<div class="span4">
+				<div class="down-right-up">
+					<h3>Average Time Work</h3>
+					<hr class="name-hr">
+				</div>
+				<div class="row down-right-down">
+					<div class="span6">
+						<h3>Time Cards</h3>
+						<hr class="name-hr">
+					</div>
+					<div class="span6">
+						<h3>Last Try</h3>
+						<hr class="name-hr">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
 {%endblock%}

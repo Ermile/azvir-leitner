@@ -520,3 +520,91 @@ $("#general").click(function()
         $("#tab-general div").addClass ("show_li")
     };
 });
+
+
+
+// ------------------------------------------------------>> page dashboards >>
+
+Highcharts.chart('bar-stacked-chart', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['504', 'Vocabs', 'Ielts', 'Toefl', 'Words']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [{
+        name: 'Learned',
+        data: [10, 80, 40, 70, 5]
+    }, {
+        name: 'Failed',
+        data: [60, 10, 0, 20, 25]
+    }, {
+        name: 'Unlearned',
+        data: [30, 10, 60, 10, 70]
+    }]
+});
+
+
+
+
+$(document).ready(function () {
+
+    // Build the chart
+    Highcharts.chart('half-cake-chart', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: ''
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Learned',
+                y: 60
+            }, {
+                name: 'Failed',
+                y: 25,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Unlearned',
+                y: 15
+            }]
+        }]
+    });
+});
