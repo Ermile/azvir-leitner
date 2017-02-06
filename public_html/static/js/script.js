@@ -732,21 +732,50 @@ AmCharts.makeChart("total-chart-progress",
             );
 
 $(document).ready(function(){
-    $("#profile").click(function(){
-        $("#profile_nav").fadeToggle();
+    $("#profile").click(function(e){
+        $("#profile_nav").stop().fadeToggle(function(){
+            $(this).toggleClass('isOpen');
+        });
+        e.preventDefault();
+        e.stopPropagation();
+    });
+
+    $('#profile_nav').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    });
+
+    $('body').click(function(e){
+        if ( $("#profile_nav").hasClass('isOpen') )
+        {
+            $("#profile_nav").stop().fadeOut().removeClass('isOpen');
+        }
     });
 });
 
-$(window).click( function(event){
-    var profile = $("#profile");
-    console.log(event.target)
-    console.log(profile)
-    var click_target = event.target;
-    var target = click_target.parents("profile");
-    if (event.target == profile)
-    {
-        console.log(111)
-        $("#profile_nav").fadeOut();
-    }
-});
+// $(window).click( function(event){
+//     var profile = $("#profile");
+//     console.log(event.target)
+//     console.log(profile)
+//     var click_target = event.target;
+//     var target = click_target.parents("profile");
+//     if (event.target == profile)
+//     {
+//         console.log(111)
+//         $("#profile_nav").fadeOut();
+//     }
+// });
 
+
+// $('#open-modal').click(function(){
+//     $('#modal').fadeIn('slow');
+// });
+
+// var modal = $('#modal');
+// $(window).click(function(event){
+//     var target = event.target;
+//     if ( $(target).attr('id') == 'modal' )
+//     {
+//         modal.fadeOut('slow');
+//     }
+// });
