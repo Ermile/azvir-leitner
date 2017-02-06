@@ -567,7 +567,7 @@ Highcharts.chart('bar-stacked-chart', {
 $(document).ready(function () {
 
     // Build the chart
-    Highcharts.chart('half-cake-chart11', {
+    $('#half-cake-chart11').highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -730,3 +730,23 @@ AmCharts.makeChart("total-chart-progress",
                     ]
                 }
             );
+
+$(document).ready(function(){
+    $("#profile").click(function(){
+        $("#profile_nav").fadeToggle();
+    });
+});
+
+$(window).click( function(event){
+    var profile = $("#profile");
+    console.log(event.target)
+    console.log(profile)
+    var click_target = event.target;
+    var target = click_target.parents("profile");
+    if (event.target == profile)
+    {
+        console.log(111)
+        $("#profile_nav").fadeOut();
+    }
+});
+

@@ -8,15 +8,17 @@
 
 	<header>
 		<div class="container">
-			<div class="info">
+			<div class="info box-shadow" id="profile">
 				<img src="static/images/profile.jpg">
-				<span>Jack Smith</span>
+				<span>Jack Smith <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
 			</div>
+			<ul id="profile_nav" class="box-shadow">
+				<li><a href="#"> <i class="fa fa-user" aria-hidden="true"></i> User Profile </a></li>
+				<li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i>Setting </a></li>
+				<li><a href="#"> <i class="fa fa-sign-out" aria-hidden="true"></i>Logout </a></li>
+			</ul>
 		</div>
 	</header>
-
-
-
 
 
 
@@ -27,7 +29,7 @@
 			<div class="span5 box-shadow">
 				<h3>All Categories <i class="fa fa-bar-chart" aria-hidden="true"></i></h3>
 				<hr class="name-hr">
-				<div id="bar-stacked-chart"></div>
+				<div id="bar-stacked-chart" class=""></div>
 			</div>
 			<div class="span3 up-middle">
 				<div class="box-shadow">
@@ -117,6 +119,6 @@
 <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
 <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
 <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
-<script type="text/javascript" src="https:http://cdn.amcharts.com/lib/3/serial.js"></script>
+<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/serial.js"></script>
 <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
 {%endblock%}
