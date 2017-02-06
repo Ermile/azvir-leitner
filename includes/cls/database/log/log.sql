@@ -18304,3 +18304,21 @@
 				 AND post_status = 'publish' 
 				LIMIT 1
 			
+
+#---------------------------------------------------------------------- /dashboard
+#0.001230001449585s
+#1ms
+
+				SELECT
+					*
+				FROM
+					posts
+				WHERE
+				(
+					post_language IS NULL OR
+					post_language = 'en'
+				) AND
+				post_url = 'dashboard'
+				 AND post_status = 'publish' 
+				LIMIT 1
+			
