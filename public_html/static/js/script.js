@@ -642,3 +642,91 @@ AmCharts.makeChart("half-cake-chart",
                     ]
                 }
             );
+
+
+AmCharts.makeChart("total-chart-progress",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "startDuration": 1,
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-1",
+                            "lineAlpha": 0,
+                            "title": "Success",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-2",
+                            "lineAlpha": 0,
+                            "title": "Practice",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": ""
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true
+                    },
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": ""
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "week 1",
+                            "column-1": "1",
+                            "column-2": "2"
+                        },
+                        {
+                            "category": "week 2",
+                            "column-1": "3",
+                            "column-2": "4"
+                        },
+                        {
+                            "category": "week 3",
+                            "column-1": "4",
+                            "column-2": "6"
+                        },
+                        {
+                            "category": "week 4",
+                            "column-1": "4",
+                            "column-2": "5"
+                        },
+                        {
+                            "category": "week 5",
+                            "column-1": "8",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "week 6",
+                            "column-1": "12",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "week 7",
+                            "column-1": "9",
+                            "column-2": "11"
+                        }
+                    ]
+                }
+            );
