@@ -151,7 +151,7 @@ label#f21 {margin-left: 0}
 
 
 /*--------------------------------------------- >> dashboard >>*/
-#dashboard {background-color: #f9f9f9; padding:.65em; max-width: 1500px; margin: 0 auto}
+#dashboard {background-color: #f9f9f9; padding:.65em; max-width: 1400px; margin: 0 auto}
 #dashboard .up {height: 30.5em; width: 100%; margin-bottom: 1%}
 #dashboard .up > .span4 {background-color: #fff; height: 100%;}
 #dashboard .up > .up-middle { height: 100%}
@@ -162,11 +162,10 @@ label#f21 {margin-left: 0}
 #dashboard .up > .span5 { height: 100%}
 #dashboard .down {height:33em; width:100%;}
 #dashboard .down > .span8{ background-color: #fff; height: 100%}
-#dashboard .down > .span4 {height: 49%}
 #dashboard .down-up {background-color: #fff; height: 100%}
 #dashboard .down-up > .span6 {background-color: #fff}
-#dashboard .down-right-up {background-color: #fff; height: 100%}
-#dashboard .down-right-down {height: 100%; margin-top: 2%}
+#dashboard .down-right-up {background-color: #fff;}
+#dashboard .down-right-down { margin-top: 2%}
 #dashboard .down-right-down > .span6 {background-color: #fff; height: 100%}
 #dashboard header { float: left; display: inline-block; height:20em;z-index: 11;position: relative;background-color: #ddd }
 #dashboard header .info {display: inline-block; width: 100%; background-color: #fefefe;height: 5em; padding: .5em; cursor: pointer;}
@@ -200,13 +199,14 @@ label#f21 {margin-left: 0}
 .down-right-up .daily {width: 100%;padding: 1.7em}
 
 #total-chart-progress{width: 100%; height: 28.9em; background-color: #FFFFFF;}
-.down-right-up .daily div { display: inline-block; width: 32%; height: 8.5em}
-.daily div{padding: 0 1em; text-align: center; font-size: 1.1em; position: relative;}
-.daily div span {display: block;margin-bottom: 3.8em; font-size: 1.1em}
+.down-right-up .daily div { display: inline-block; width: 24%; height: 7.5em}
+.daily div{/*padding: 0 1em;*/ text-align: center; font-size: 1.1em; position: relative;}
+.daily div span {display: block;margin-bottom: 3.8em; font-size: .9em}
 .daily div:nth-child(2) {border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;}
+.daily div:nth-child(3) {border-right: 1px solid #e0e0e0;}
 .down-right-down div div {padding: 1em; text-align: center;font-size: 1.4em;margin-top: 3.5em;}
 .box-shadow {box-shadow: 0px 0px 4px 0px rgba(189,189,189,1);}
-.down .span8 nav {text-align: center; margin: 1em auto; display: inline-block; padding-left: 36%;}
+.down .span8 nav {text-align: center;margin: 1.5em auto 0em auto; display: inline-block; padding-left: 36%;}
 .down .span8 nav a { text-align: center; background-color: #e9e9e9; padding: .6em 1.8em; font-size: 1.1em; color: #333; transition: .3s}
 .down .span8 nav a:hover {background-color: #d8d7d7}
 .down .span8 nav a.active {background-color: #d8d7d7}
