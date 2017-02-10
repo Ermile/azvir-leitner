@@ -525,41 +525,41 @@ $("#general").click(function()
 
 // ------------------------------------------------------>> page dashboards >>
 
-Highcharts.chart('bar-stacked-chart', {
-    chart: {
-        type: 'bar'
-    },
-    title: {
-        text: ''
-    },
-    xAxis: {
-        categories: ['504', 'Vocabs', 'Ielts', 'Toefl', 'Words']
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: ''
-        }
-    },
-    legend: {
-        reversed: true
-    },
-    plotOptions: {
-        series: {
-            stacking: 'normal'
-        }
-    },
-    series: [{
-        name: 'Learned',
-        data: [10, 80, 40, 70, 5]
-    }, {
-        name: 'Failed',
-        data: [60, 10, 0, 20, 25]
-    }, {
-        name: 'Unlearned',
-        data: [30, 10, 60, 10, 70]
-    }]
-});
+// Highcharts.chart('bar-stacked-chart', {
+//     chart: {
+//         type: 'bar'
+//     },
+//     title: {
+//         text: ''
+//     },
+//     xAxis: {
+//         categories: ['504', 'Vocabs', 'Ielts', 'Toefl', 'Words']
+//     },
+//     yAxis: {
+//         min: 0,
+//         title: {
+//             text: ''
+//         }
+//     },
+//     legend: {
+//         reversed: true
+//     },
+//     plotOptions: {
+//         series: {
+//             stacking: 'normal'
+//         }
+//     },
+//     series: [{
+//         name: 'Learned',
+//         data: [10, 80, 40, 70, 5]
+//     }, {
+//         name: 'Failed',
+//         data: [60, 10, 0, 20, 25]
+//     }, {
+//         name: 'Unlearned',
+//         data: [30, 10, 60, 10, 70]
+//     }]
+// });
 
 
 
