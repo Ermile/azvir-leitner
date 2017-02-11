@@ -161,7 +161,7 @@ label#f21 {margin-left: 0}
 #dashboard .up  #half-cake-chart2 {height:13.1em; margin-top: 3%}
 #dashboard .up > .span5 { height: 100%}
 #dashboard .down {height:33em; width:100%;}
-#dashboard .down > .span8{ background-color: #fff; height: 100%}
+#dashboard .down > .span8{ background-color: #fff;}
 #dashboard .down-up {background-color: #fff; height: 100%}
 #dashboard .down-up > .span6 {background-color: #fff}
 #dashboard .down-right-up {background-color: #fff;}
@@ -213,4 +213,4 @@ label#f21 {margin-left: 0}
 #total-chart-progress a {display: none!important}
 #profile_nav {display: none;}
 #main {display: inline-block;}
-#total-chart-progress {height: 26em;}
+#total-chart-progress {height: 24.2em;}
