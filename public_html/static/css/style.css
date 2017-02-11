@@ -152,12 +152,12 @@ label#f21 {margin-left: 0}
 
 /*--------------------------------------------- >> dashboard >>*/
 #dashboard {background-color: #f9f9f9; padding:.65em; max-width: 1400px; margin: 0 auto}
-#dashboard .up {height: 30.5em; width: 100%; margin-bottom: 1%}
-#dashboard .up > .span4 {background-color: #fff; height: 100%;}
-#dashboard .up > .up-middle { height: 100%}
+#dashboard .up {height: 26.5em; width: 100%; margin-bottom: 2%}
+#dashboard .up > .span4 {background-color: #fff;}
+/*#dashboard .up > .up-middle { height: 100%}*/
 #dashboard .up > .up-middle > div {background-color: #fff}
 #dashboard .up > .up-middle > .down {margin-top: 3%}
-#dashboard .up  #half-cake-chart {height: 27.6em}
+#dashboard .up  #half-cake-chart {height: 23.4em}
 #dashboard .up  #half-cake-chart2 {height:13.1em; margin-top: 3%}
 #dashboard .up > .span5 { height: 100%}
 #dashboard .down {height:33em; width:100%;}
@@ -166,8 +166,8 @@ label#f21 {margin-left: 0}
 #dashboard .down-up > .span6 {background-color: #fff}
 #dashboard .down-right-up {background-color: #fff;}
 #dashboard .down-right-down { margin-top: 2%}
-#dashboard .down-right-down > .span6 {background-color: #fff; height: 100%}
-#dashboard header { float: left; display: inline-block; height:20em;z-index: 11;position: relative;background-color: #ddd }
+#dashboard .down-right-down > .span6 {background-color: #fff;}
+#dashboard header { float: left; display: inline-block; height:20em;z-index: 11;position: relative;}
 #dashboard header .info {display: inline-block; width: 100%; background-color: #fefefe;height: 5em; padding: .5em; cursor: pointer;}
 #dashboard header .info img {height: 4em; width: 4em; border-radius: 50px; vertical-align: middle; }
 #dashboard header .info span {font-size: 1.5em; margin-left: .25em}
@@ -201,10 +201,10 @@ label#f21 {margin-left: 0}
 #total-chart-progress{width: 100%; height: 28.9em; background-color: #FFFFFF;}
 .down-right-up .daily div { display: inline-block; width: 24%; height: 7.5em}
 .daily div{/*padding: 0 1em;*/ text-align: center; font-size: 1.1em; position: relative;}
-.daily div span {display: block;margin-bottom: 3.8em; font-size: .9em}
+.daily div span {display: block;margin-bottom: 3.8em; font-size: 1em}
 .daily div:nth-child(2) {border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;}
 .daily div:nth-child(3) {border-right: 1px solid #e0e0e0;}
-.down-right-down div div {padding: 1em; text-align: center;font-size: 1.4em;margin-top: 3.5em;}
+.down-right-down div div {padding: 1em; text-align: center;font-size: 1.4em; line-height: 4em}
 .box-shadow {box-shadow: 0px 0px 4px 0px rgba(189,189,189,1);}
 .down .span8 nav {text-align: center;margin: 1.5em auto 0em auto; display: inline-block; padding-left: 36%;}
 .down .span8 nav a { text-align: center; background-color: #e9e9e9; padding: .6em 1.8em; font-size: 1.1em; color: #333; transition: .3s}
