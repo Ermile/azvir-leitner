@@ -152,25 +152,25 @@ label#f21 {margin-left: 0}
 
 /*--------------------------------------------- >> dashboard >>*/
 #dashboard {background-color: #f9f9f9; padding:.65em; max-width: 1400px; margin: 0 auto}
-#dashboard .up {height: 26.5em; width: 100%; margin-bottom: 2%}
-#dashboard .up > .span4 {background-color: #fff;}
+#dashboard .up {width: 100%; margin-bottom: 2%}
+/*#dashboard .up > .span4 {background-color: #fff;}*/
 /*#dashboard .up > .up-middle { height: 100%}*/
 #dashboard .up > .up-middle > div {background-color: #fff}
 #dashboard .up > .up-middle > .down {margin-top: 3%}
-#dashboard .up  #half-cake-chart {height: 23.4em}
+#dashboard .up  #half-cake-chart {height: 25.4em}
 #dashboard .up  #half-cake-chart2 {height:13.1em; margin-top: 3%}
-#dashboard .up > .span5 { height: 100%}
-#dashboard .down {height:33em; width:100%;}
+#dashboard .up > .span5 { height: 100%; background-color: #fff}
+#dashboard .down {width:100%;}
 #dashboard .down > .span8{ background-color: #fff;}
 #dashboard .down-up {background-color: #fff; height: 100%}
 #dashboard .down-up > .span6 {background-color: #fff}
 #dashboard .down-right-up {background-color: #fff;}
-#dashboard .down-right-down { margin-top: 2%}
+#dashboard .down-right-down { margin-top: 6%}
 #dashboard .down-right-down > .span6 {background-color: #fff;}
 #dashboard header { float: left; display: inline-block; height:20em;z-index: 11;position: relative;}
 #dashboard header .info {display: inline-block; width: 100%; background-color: #fefefe;height: 5em; padding: .5em; cursor: pointer;}
 #dashboard header .info img {height: 4em; width: 4em; border-radius: 50px; vertical-align: middle; }
-#dashboard header .info span {font-size: 1.5em; margin-left: .25em}
+#dashboard header .info span {font-size: 1em; margin-left: .25em}
 #dashboard header .info span i {margin-left: 1em}
 #dashboard header ul {background-color: yellow; position: absolute;right: 0; top: 5em;}
 #dashboard header ul li {display: block;line-height: 40px;border-bottom: 1px solid #e1eaef;width: 100%;float: left;}
@@ -185,7 +185,7 @@ label#f21 {margin-left: 0}
 #half-cake-chart .amcharts-main-div .amcharts-chart-div a {display: none!important}
 #half-cake-chart2 a {font-size: 2.3em; text-align: center; display:inline-block; line-height: 4em; color: #888; padding-left: 4em;}
 #half-cake-chart2 a:hover{color: #232323;}
-#dashboard .most-failed-cards > div {padding: 1.7em; overflow: hidden;}
+#dashboard .most-failed-cards > div {padding: 1.6em; overflow: hidden; background-color: #fff}
 #dashboard .most-failed-cards li.have-margin {padding: 0; border: 0; border-bottom: 1px solid #e3ebf4;margin: .2em 0;}
 #dashboard .most-failed-cards li {font-size: 1.2em;padding: 5px 0 5px 15px;position: relative;}
 #dashboard .most-failed-cards li:nth-child(1)  {border-left: 3px solid #e84f4c}
@@ -204,7 +204,7 @@ label#f21 {margin-left: 0}
 .daily div span {display: block;margin-bottom: 3.8em; font-size: 1em}
 .daily div:nth-child(2) {border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;}
 .daily div:nth-child(3) {border-right: 1px solid #e0e0e0;}
-.down-right-down div div {padding: 1em; text-align: center;font-size: 1.4em; line-height: 4em}
+.down-right-down div div {padding: 1em; text-align: center;font-size: 1.4em; line-height: 4.6em}
 .box-shadow {box-shadow: 0px 0px 4px 0px rgba(189,189,189,1);}
 .down .span8 nav {text-align: center;margin: 1.5em auto 0em auto; display: inline-block; padding-left: 36%;}
 .down .span8 nav a { text-align: center; background-color: #e9e9e9; padding: .6em 1.8em; font-size: 1.1em; color: #333; transition: .3s}
@@ -213,4 +213,6 @@ label#f21 {margin-left: 0}
 #total-chart-progress a {display: none!important}
 #profile_nav {display: none;}
 #main {display: inline-block;}
-#total-chart-progress {height: 24.2em;}
+#total-chart-progress {height: 22.9em;}
+.amcharts-main-div {height: 25em}
+.amcharts-chart-div a {display: none!important}

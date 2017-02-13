@@ -779,3 +779,87 @@ $(document).ready(function(){
 //         modal.fadeOut('slow');
 //     }
 // });
+//
+//
+
+
+    AmCharts.makeChart("bar-stacked-chart",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "rotate": true,
+                    "startDuration": 1,
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-1",
+                            "title": "graph 1",
+                            "type": "column",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-2",
+                            "title": "graph 2",
+                            "type": "column",
+                            "valueField": "column-2"
+                        },
+                        {
+                            "fillAlphas": 1,
+                            "id": "AmGraph-4",
+                            "title": "graph 4",
+                            "type": "column",
+                            "valueField": "column-3"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "stackType": "100%",
+                            "title": ""
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": ""
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "405 Words",
+                            "column-1": 18,
+                            "column-2": 5,
+                            "column-3": 9
+                        },
+                        {
+                            "category": "Toefl",
+                            "column-1": 6,
+                            "column-2": 15,
+                            "column-3": 4
+                        },
+                        {
+                            "category": "Essentional",
+                            "column-1": 6,
+                            "column-2": 7,
+                            "column-3": 3
+                        },
+                        {
+                            "category": "Iltes",
+                            "column-1": 2,
+                            "column-2": 3,
+                            "column-3": 6
+                        }
+                    ]
+                }
+            );
