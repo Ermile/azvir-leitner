@@ -617,38 +617,40 @@ AmCharts.makeChart("half-cake-chart",
                     "labelsEnabled": false,
                     "titleField": "category",
                     "valueField": "column-1",
-                    "allLabels": [],
+                    "allLabels": [
+                        {
+                            "id": "Label-1"
+                        },
+                        {
+                            "id": "Label-2"
+                        }
+                    ],
                     "balloon": {},
-                    "legend": {
-                        "enabled": true,
-                        "align": "center",
-                        "equalWidths": false,
-                        "markerType": "circle"
-                    },
                     "titles": [],
                     "dataProvider": [
                         {
-                            "category": "Unlearned",
-                            "column-1": 40
+                            "category": "category 1",
+                            "column-1": 8
                         },
                         {
-                            "category": "Failed",
-                            "column-1": 25
+                            "category": "category 2",
+                            "column-1": 7
                         },
                         {
-                            "category": "learned",
-                            "column-1": 35
+                            "category": "category 3",
+                            "column-1": 4
                         }
                     ]
                 }
             );
 
 
+
+
 AmCharts.makeChart("total-chart-progress",
                 {
                     "type": "serial",
                     "categoryField": "category",
-                    "startDuration": 1,
                     "theme": "default",
                     "categoryAxis": {
                         "gridPosition": "start"
@@ -753,34 +755,6 @@ $(document).ready(function(){
     });
 });
 
-// $(window).click( function(event){
-//     var profile = $("#profile");
-//     console.log(event.target)
-//     console.log(profile)
-//     var click_target = event.target;
-//     var target = click_target.parents("profile");
-//     if (event.target == profile)
-//     {
-//         console.log(111)
-//         $("#profile_nav").fadeOut();
-//     }
-// });
-
-
-// $('#open-modal').click(function(){
-//     $('#modal').fadeIn('slow');
-// });
-
-// var modal = $('#modal');
-// $(window).click(function(event){
-//     var target = event.target;
-//     if ( $(target).attr('id') == 'modal' )
-//     {
-//         modal.fadeOut('slow');
-//     }
-// });
-//
-//
 
 
     AmCharts.makeChart("bar-stacked-chart",
@@ -788,7 +762,6 @@ $(document).ready(function(){
                     "type": "serial",
                     "categoryField": "category",
                     "rotate": true,
-                    "startDuration": 1,
                     "categoryAxis": {
                         "gridPosition": "start"
                     },
@@ -863,3 +836,16 @@ $(document).ready(function(){
                     ]
                 }
             );
+
+
+$('.tab-cake').each(function()
+{
+    var first_content = $('[data-tab-navigate]', this).eq(0).attr('data-tab-navigate');
+    $('[data-tab-content=' + first_content + ']').addClass('active');
+
+    $('[data-tab-navigate]', this).click(function(){
+        var navigate = $(this).attr('data-tab-navigate');
+        $('[data-tab-content]').removeClass('active');
+        $('[data-tab-content=' + navigate + ']').addClass('active');
+    });
+});

@@ -146,7 +146,7 @@ div.hr {width: 100%; height: 2px; background-color: #ccc;display: inline-block; 
 label#f21 {margin-left: 0}
 
 /*--------------------------------------------- >> dashboard >>*/
-#dashboard {background-color: #e5edff; padding:.65em; max-width: 1400px; margin: 0 auto}
+#dashboard {background-color: #eaddd0; padding:.65em; max-width: 1400px; margin: 0 auto}
 #dashboard .up {width: 100%; margin-bottom: 2%}
 #dashboard .up > .up-middle > div {background-color: #fff}
 #dashboard .up > .up-middle > .down {margin-top: 3%}
@@ -172,7 +172,7 @@ label#f21 {margin-left: 0}
 #dashboard header ul li a i {margin-right: 1em}
 #dashboard .name-hr {display: block; height: 1px; border: 0; margin: 0em 0; padding: 0; background-image: -webkit-linear-gradient(left,#e9e9e9,#ccc,#bbb,#ccc,#e9e9e9); position: relative; border: none; width: 100%}
 .name-hr {background-image: -webkit-linear-gradient(left,#e9e9e9,#ccc,#bbb,#ccc,#e9e9e9)}
-#dashboard h3 {margin: 0; padding-left: 1.5em; background-color: #bbd0ff; position: relative;font-size: 1.3em}
+#dashboard h3 {    margin: 0; padding-left: 1.5em; background-color: #4a6886; position: relative; font-size: 1.3em; color: #efefef;}
 #dashboard h3 > i {position: absolute;right: 1.5em;top: .6em;}
 #half-cake-chart{width: 100%; background-color: #FFFFFF;}
 #half-cake-chart .amcharts-main-div .amcharts-chart-div a {display: none!important}
@@ -181,13 +181,8 @@ label#f21 {margin-left: 0}
 #dashboard .most-failed-cards > div {padding: 1.6em; overflow: hidden; background-color: #fff}
 #dashboard .most-failed-cards li.have-margin {padding: 0; border: 0; border-bottom: 1px solid #e3ebf4;margin: .2em 0;}
 #dashboard .most-failed-cards li {font-size: 1.2em;padding: 5px 0 5px 15px;position: relative;}
-#dashboard .most-failed-cards li:nth-child(1)  {border-left: 3px solid #e84f4c}
-#dashboard .most-failed-cards li:nth-child(3)  {border-left: 3px solid #66b7ef}
-#dashboard .most-failed-cards li:nth-child(5)  {border-left: 3px solid #bb69aa}
-#dashboard .most-failed-cards li:nth-child(7)  {border-left: 3px solid #40b930}
-#dashboard .most-failed-cards li:nth-child(9)  {border-left: 3px solid #842c2d}
-#dashboard .most-failed-cards li:nth-child(11) {border-left: 3px solid #76d4ce}
-#dashboard .most-failed-cards li:nth-child(13) {border-left: 3px solid #ff9e01}
+#dashboard .most-failed-cards li:nth-child(odd) {border-left: 3px solid #a2a2a2; cursor: default;}
+#dashboard .most-failed-cards li:nth-child(odd):hover {border-left: 3px solid #4a6886; background-color: #eaeaea}
 #dashboard .most-failed-cards li span {position: absolute;right: 1em;}
 .down-right-up .daily {width: 100%;padding: 1.7em}
 #total-chart-progress{width: 100%; height: 28.9em; background-color: #FFFFFF;}
@@ -208,3 +203,9 @@ label#f21 {margin-left: 0}
 #total-chart-progress {height: 22.9em;}
 .amcharts-main-div {height: 25em}
 .amcharts-chart-div a {display: none!important}
+#chart-progress .tab-cake {margin: .2em 0; text-align: center;}
+#chart-progress .tab-cake li{margin: 0 auto; display: inline-block; font-size: 1.3em; background-color: #e1e1e1; padding: .5em; cursor: pointer;}
+#chart-progress .tab-cake li:hover {background-color: #b2b2b2}
+
+#dashboard {-webkit-touch-callout: none;  -webkit-user-select: none;  -khtml-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;
+}
