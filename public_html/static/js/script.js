@@ -487,30 +487,6 @@ $("div.btn").click(function()
     }
 });
 
-// --------------------------------- setting page
-// $("#general").click(function()
-// {
-//     $("#tab-general").show();
-//     $("#tab-advansed").hide();
-//     $("#tab-scheduling").hide();
-
-// });
-
-// $("#advansed").click(function()
-// {
-//     $("#tab-advansed").show();
-//     $("#tab-general").hide();
-//     $("#tab-scheduling").hide();
-
-// });
-
-// $("#scheduling").click(function()
-// {
-//     $("#tab-scheduling").show();
-//     $("#tab-advansed").hide();
-//     $("#tab-general").hide();
-
-// });
 
 $("#general").click(function()
 {
@@ -521,45 +497,6 @@ $("#general").click(function()
     };
 });
 
-
-
-// ------------------------------------------------------>> page dashboards >>
-
-// Highcharts.chart('bar-stacked-chart', {
-//     chart: {
-//         type: 'bar'
-//     },
-//     title: {
-//         text: ''
-//     },
-//     xAxis: {
-//         categories: ['504', 'Vocabs', 'Ielts', 'Toefl', 'Words']
-//     },
-//     yAxis: {
-//         min: 0,
-//         title: {
-//             text: ''
-//         }
-//     },
-//     legend: {
-//         reversed: true
-//     },
-//     plotOptions: {
-//         series: {
-//             stacking: 'normal'
-//         }
-//     },
-//     series: [{
-//         name: 'Learned',
-//         data: [10, 80, 40, 70, 5]
-//     }, {
-//         name: 'Failed',
-//         data: [60, 10, 0, 20, 25]
-//     }, {
-//         name: 'Unlearned',
-//         data: [30, 10, 60, 10, 70]
-//     }]
-// });
 
 
 
@@ -609,7 +546,6 @@ $(document).ready(function () {
     });
 });
 
-
 AmCharts.makeChart("half-cake-chart",
                 {
                     "type": "pie",
@@ -617,15 +553,10 @@ AmCharts.makeChart("half-cake-chart",
                     "labelsEnabled": false,
                     "titleField": "category",
                     "valueField": "column-1",
-                    "allLabels": [
-                        {
-                            "id": "Label-1"
-                        },
-                        {
-                            "id": "Label-2"
-                        }
-                    ],
-                    "balloon": {},
+                    "allLabels": [],
+                    "balloon": {
+                        "adjustBorderColor": false
+                    },
                     "titles": [],
                     "dataProvider": [
                         {
@@ -634,11 +565,11 @@ AmCharts.makeChart("half-cake-chart",
                         },
                         {
                             "category": "category 2",
-                            "column-1": 7
+                            "column-1": 5
                         },
                         {
                             "category": "category 3",
-                            "column-1": 4
+                            "column-1": 6
                         }
                     ]
                 }
@@ -647,91 +578,14 @@ AmCharts.makeChart("half-cake-chart",
 
 
 
-AmCharts.makeChart("total-chart-progress",
-                {
-                    "type": "serial",
-                    "categoryField": "category",
-                    "theme": "default",
-                    "categoryAxis": {
-                        "gridPosition": "start"
-                    },
-                    "trendLines": [],
-                    "graphs": [
-                        {
-                            "balloonText": "[[title]] of [[category]]:[[value]]",
-                            "fillAlphas": 0.7,
-                            "id": "AmGraph-1",
-                            "lineAlpha": 0,
-                            "title": "Success",
-                            "valueField": "column-1"
-                        },
-                        {
-                            "balloonText": "[[title]] of [[category]]:[[value]]",
-                            "fillAlphas": 0.7,
-                            "id": "AmGraph-2",
-                            "lineAlpha": 0,
-                            "title": "Practice",
-                            "valueField": "column-2"
-                        }
-                    ],
-                    "guides": [],
-                    "valueAxes": [
-                        {
-                            "id": "ValueAxis-1",
-                            "title": ""
-                        }
-                    ],
-                    "allLabels": [],
-                    "balloon": {},
-                    "legend": {
-                        "enabled": true
-                    },
-                    "titles": [
-                        {
-                            "id": "Title-1",
-                            "size": 15,
-                            "text": ""
-                        }
-                    ],
-                    "dataProvider": [
-                        {
-                            "category": "week 1",
-                            "column-1": "1",
-                            "column-2": "2"
-                        },
-                        {
-                            "category": "week 2",
-                            "column-1": "3",
-                            "column-2": "4"
-                        },
-                        {
-                            "category": "week 3",
-                            "column-1": "4",
-                            "column-2": "6"
-                        },
-                        {
-                            "category": "week 4",
-                            "column-1": "4",
-                            "column-2": "5"
-                        },
-                        {
-                            "category": "week 5",
-                            "column-1": "8",
-                            "column-2": "13"
-                        },
-                        {
-                            "category": "week 6",
-                            "column-1": "12",
-                            "column-2": "13"
-                        },
-                        {
-                            "category": "week 7",
-                            "column-1": "9",
-                            "column-2": "11"
-                        }
-                    ]
-                }
-            );
+
+
+
+
+
+
+
+
 
 $(document).ready(function(){
     $("#profile").click(function(e){
@@ -848,4 +702,277 @@ $('.tab-cake').each(function()
         $('[data-tab-content]').removeClass('active');
         $('[data-tab-content=' + navigate + ']').addClass('active');
     });
+});
+
+
+
+
+AmCharts.makeChart("total-chart-progress-daily",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-1",
+                            "lineAlpha": 0,
+                            "title": "Success",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-2",
+                            "lineAlpha": 0,
+                            "title": "Practice",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": ""
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true
+                    },
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": ""
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "day 1",
+                            "column-1": "1",
+                            "column-2": "2"
+                        },
+                        {
+                            "category": "day 2",
+                            "column-1": "3",
+                            "column-2": "4"
+                        },
+                        {
+                            "category": "day 3",
+                            "column-1": "4",
+                            "column-2": "6"
+                        },
+                        {
+                            "category": "day 4",
+                            "column-1": "4",
+                            "column-2": "5"
+                        },
+                        {
+                            "category": "day 5",
+                            "column-1": "8",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "day 6",
+                            "column-1": "12",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "day 7",
+                            "column-1": "9",
+                            "column-2": "11"
+                        }
+                    ]
+                }
+            );
+
+AmCharts.makeChart("total-chart-progress-weekly",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-1",
+                            "lineAlpha": 0,
+                            "title": "Success",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-2",
+                            "lineAlpha": 0,
+                            "title": "Practice",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": ""
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true
+                    },
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": ""
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "week 1",
+                            "column-1": "1",
+                            "column-2": "3"
+                        },
+                        {
+                            "category": "week 2",
+                            "column-1": "8",
+                            "column-2": "10"
+                        },
+                        {
+                            "category": "week 3",
+                            "column-1": "3",
+                            "column-2": "7"
+                        },
+                        {
+                            "category": "week 4",
+                            "column-1": "9",
+                            "column-2": "15"
+                        },
+                        {
+                            "category": "week 5",
+                            "column-1": "19",
+                            "column-2": "25"
+                        },
+                        {
+                            "category": "week 6",
+                            "column-1": "12",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "week 7",
+                            "column-1": "9",
+                            "column-2": "11"
+                        }
+                    ]
+                }
+            );
+
+AmCharts.makeChart("total-chart-progress-monthly",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-1",
+                            "lineAlpha": 0,
+                            "title": "Success",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 0.7,
+                            "id": "AmGraph-2",
+                            "lineAlpha": 0,
+                            "title": "Practice",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": ""
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true
+                    },
+                    "titles": [
+                        {
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": ""
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "month 1",
+                            "column-1": "10",
+                            "column-2": "20"
+                        },
+                        {
+                            "category": "month 2",
+                            "column-1": "30",
+                            "column-2": "40"
+                        },
+                        {
+                            "category": "month 3",
+                            "column-1": "25",
+                            "column-2": "30"
+                        },
+                        {
+                            "category": "month 4",
+                            "column-1": "40",
+                            "column-2": "50"
+                        },
+                        {
+                            "category": "month 5",
+                            "column-1": "18",
+                            "column-2": "19"
+                        },
+                        {
+                            "category": "month 6",
+                            "column-1": "12",
+                            "column-2": "13"
+                        },
+                        {
+                            "category": "month 7",
+                            "column-1": "80",
+                            "column-2": "110"
+                        }
+                    ]
+                }
+            );
+
+
+
+// $(".tab-cake>li").click(function () {
+//     $(".tab-cake>li").removeClass("active");
+//     $(this).addClass("active");
+// });
+
+$(".tab-cake>li").click(function () {
+    $(".tab-cake>li").removeClass("active");
+    $(this).addClass("active");
 });

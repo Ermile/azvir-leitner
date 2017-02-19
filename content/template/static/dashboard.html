@@ -4,12 +4,12 @@
 {%block content%}
 <div id="dashboard" class="row">
 	<header class="span2">
-		<div >
-			<div class="info box-shadow" id="profile">
-				<img src="static/images/profile.jpg">
-				<span>Jack Smith <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+		<div id="profile">
+			<div class="info" >
+				<div><img src="static/images/profile.jpg"></div>
+				<div>Jack Smith</div>
 			</div>
-			<ul id="profile_nav" class="box-shadow">
+			<ul>
 				<li><a href="#"> <i class="fa fa-user" aria-hidden="true"></i> User Profile </a></li>
 				<li><a href="#"> <i class="fa fa-cog" aria-hidden="true"></i>Setting </a></li>
 				<li><a href="#"> <i class="fa fa-sign-out" aria-hidden="true"></i>Logout </a></li>
@@ -59,7 +59,7 @@
 						<h3>Ask Me <i class="fa fa-graduation-cap" aria-hidden="true"></i></h3>
 						<hr class="name-hr">
 						<div>
-							<time><a href="#">Let's Go</a></time>
+							<time><a href="#">Let's Learn</a></time>
 						</div>
 					</div>
 					<div class="span6 box-shadow">
@@ -76,22 +76,22 @@
 			<div class="span8 box-shadow">
 				<h3>Total Chart Progress <i class="fa fa-line-chart" aria-hidden="true"></i></i></h3>
 				<hr class="name-hr">
-				<!-- <nav >
-					<a href="#">Daily</a>
-					<a href="#" class="active">Weekly</a>
-					<a href="#">Monthly</a>
-				</nav>
-				<div id="total-chart-progress"></div> -->
-				<div id="chart-progress">
+				<div id="chart-progress" class="chart-progress">
 					<ul class="tab-cake">
-						<li data-tab-navigate="general">General</li>
-						<li data-tab-navigate="scheduling">Scheduling</li>
-						<li data-tab-navigate="advansed">Advansed </li>
+						<li data-tab-navigate="Daily" class="active">Daily</li>
+						<li data-tab-navigate="Weekly">Weekly</li>
+						<li data-tab-navigate="Monthly">Monthly </li>
 					</ul>
 					<ul class="tab-content">
-						<li data-tab-content="general">General**</li>
-						<li data-tab-content="scheduling">Scheduling**</li>
-						<li data-tab-content="advansed">Advansed**</li>
+						<li data-tab-content="Daily" >
+							<div id="total-chart-progress-daily"></div>
+						</li>
+						<li data-tab-content="Weekly">
+							<div id="total-chart-progress-weekly"></div>
+						</li>
+						<li data-tab-content="Monthly">
+							<div id="total-chart-progress-monthly"></div>
+						</li>
 					</ul>
 				</div>
 
@@ -114,6 +114,8 @@
 						<li>Platitude <span>10%</span></li>
 						<li class="have-margin"></li>
 						<li>Compunction <span>7%</span></li>
+						<li class="have-margin"></li>
+						<li>Extention <span>5%</span></li>
 						<li class="have-margin"></li>
 					</ul>
 				</div>
