@@ -159,6 +159,7 @@ label#f21 {margin-left: 0}
 #dashboard .down-right-up {background-color: #fff;}
 #dashboard .down-right-down { margin-top: 6%}
 #dashboard .down-right-down > .span6 {background-color: #fff;}
+#dashboard .down-right-down .last-try {cursor: default;}
 #dashboard header { background-color: #4ec3cc}
 #dashboard header .info { padding: 1.5em; cursor: default; color: #FFF;}
 #dashboard header .info img {border-radius: 50%; border: 6px solid #c4dadc}
@@ -177,10 +178,10 @@ label#f21 {margin-left: 0}
 #half-cake-chart2 a:hover{color: #232323;}
 #dashboard .most-failed-cards > div {padding: 1.6em; overflow: hidden; background-color: #fff}
 #dashboard .most-failed-cards li {font-size: 1.3em;padding: 5px 0 5px 15px;position: relative;border-bottom: 1px solid #e3ebf4;border-left: 3px solid rgba(162, 162, 162, 0); cursor: default;}
-#dashboard .most-failed-cards li:hover {border-left: 3px solid #4aa5ad; background-color: #f1f1f1}
+#dashboard .most-failed-cards li:hover {border-left: 3px solid #4aa5ad; background-color: #d3fcff}
 #dashboard .most-failed-cards li{transition: .3s}
 #dashboard .most-failed-cards li span {position: absolute;right: 1em;}
-.down-right-up .daily {width: 100%;padding: 1em}
+.down-right-up .daily {width: 100%;padding: 1em;cursor: default;}
 #total-chart-progress{width: 100%; height: 28.9em; background-color: #FFFFFF;}
 .down-right-up .daily div { display: inline-block; width: 32%;}
 .daily div{text-align: center; font-size: 1.1em; position: relative;}
