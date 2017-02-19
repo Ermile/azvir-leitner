@@ -710,6 +710,8 @@ $('.tab-cake').each(function()
 AmCharts.makeChart("total-chart-progress-daily",
                 {
                     "type": "serial",
+                    "startDuration": "",
+                    "startEffect":"easeOutSine",
                     "categoryField": "category",
                     "theme": "default",
                     "categoryAxis": {
@@ -796,6 +798,8 @@ AmCharts.makeChart("total-chart-progress-daily",
 AmCharts.makeChart("total-chart-progress-weekly",
                 {
                     "type": "serial",
+                    "startDuration": "",
+                    "startEffect":"easeOutSine",
                     "categoryField": "category",
                     "theme": "default",
                     "categoryAxis": {
@@ -882,6 +886,8 @@ AmCharts.makeChart("total-chart-progress-weekly",
 AmCharts.makeChart("total-chart-progress-monthly",
                 {
                     "type": "serial",
+                    "startDuration": "",
+                    "startEffect":"easeOutSine",
                     "categoryField": "category",
                     "theme": "default",
                     "categoryAxis": {
