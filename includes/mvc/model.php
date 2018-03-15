@@ -10,11 +10,11 @@ class model extends \lib\mvc\model
 		$param_search = \lib\utility::get('search');
 
 		// $cpModule     = $this->cpModule();
-		$cpModule     = $this->Module();
+		$cpModule     = \lib\url::module();
 		$mytype       = null;
 
 
-		// set columns 
+		// set columns
 		// get all fields of table and filter fields name for show in datatable, access from columns variable
 		switch ($cpModule)
 		{
@@ -115,12 +115,12 @@ class model extends \lib\mvc\model
 			$qry = $qry->and($cpModule['prefix']."_title", 'LIKE', "'%$param_search%'");
 
 			$qry = $qry->or($cpModule['prefix']."_slug", 'LIKE', "'%$param_search%'");
-			
+
 			$qry = $qry->or($cpModule['prefix']."_url", 'LIKE', "'%$param_search%'");
 
 			$qry = $qry->groupClose('g_search');
 
-			
+
 		}
 		$datatable  = ['draw' => $param_draw, 'total' => $total, 'filter' => $qry->select()->num()];
 
@@ -149,7 +149,7 @@ class model extends \lib\mvc\model
 
 		$qry = $qry->limit($param_start, $param_length);
 		$tmp_result = $qry->order($param_sortby, $param_order);
-		
+
 
 
 		// get only datatable fields on sql for optimizing size of json
@@ -198,7 +198,7 @@ class model extends \lib\mvc\model
 					case 'term_status':
 						$tmp_result[$id][$key] = T_($value);
 						break;
-					
+
 					default:
 						# code...
 						break;
